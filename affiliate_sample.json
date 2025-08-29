@@ -1,0 +1,77 @@
+{
+  "model": "Affiliate",
+  "steps": [
+    {
+      "id": 1,
+      "parentId": 0,
+      "title": "İş Modeli Seç",
+      "description": "Affiliate ile başlıyoruz.",
+      "options": [
+        "Dijital",
+        "Fiziksel"
+      ],
+      "links": []
+    },
+    {
+      "id": 2,
+      "parentId": 1,
+      "title": "Platform Seç",
+      "description": "ClickBank / Digistore24 vb.",
+      "options": [
+        "Free",
+        "Paid"
+      ],
+      "links": [
+        "https://www.clickbank.com/"
+      ]
+    },
+    {
+      "id": 3,
+      "parentId": 2,
+      "title": "Ürün Araştırma",
+      "description": "TikTok trendleri, Reddit, YouTube.",
+      "options": [
+        "Free"
+      ],
+      "links": [
+        "https://ads.tiktok.com/business/creativecenter"
+      ]
+    },
+    {
+      "id": 4,
+      "parentId": 3,
+      "title": "Rakip Analizi",
+      "description": "Kim nasıl tanıtıyor?",
+      "options": [],
+      "links": []
+    },
+    {
+      "id": 5,
+      "parentId": 4,
+      "title": "Kanal Seçimi",
+      "description": "TikTok / YouTube / Blog / Email",
+      "options": [
+        "TikTok",
+        "YouTube",
+        "Blog"
+      ],
+      "links": []
+    },
+    {
+      "id": 6,
+      "parentId": 5,
+      "title": "İçerik Planı",
+      "description": "İlk 7 gün için plan.",
+      "options": [],
+      "links": []
+    },
+    {
+      "id": 7,
+      "parentId": 6,
+      "title": "İlk Yayın",
+      "description": "İlk postları at.",
+      "options": [],
+      "links": []
+    }
+  ]
+}

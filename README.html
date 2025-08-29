@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Steplify JSON Formatı</title><link rel="stylesheet" href="styles.css"/></head><body class="doc">
+<h1>Steplify — JSON Formatı</h1>
+<p>Uygulama aşağıdaki JSON yapısını bekler. <code>model</code> adı ve <code>steps</code> listesi zorunludur.</p>
+<pre><code>{
+  "model": "Affiliate",
+  "steps": [
+    {"id": 1, "parentId": 0, "title": "Başlık", "description": "Açıklama", "options": ["Free","Paid"], "links": ["https://..."]},
+    {"id": 2, "parentId": 1, "title": "...", "description": "...", "options": [], "links": []}
+  ]
+}</code></pre>
+<p><b>Not:</b> İlk 5 adım ücretsizdir; 6 ve sonrası Premium kilitlidir.</p>
+</body></html>

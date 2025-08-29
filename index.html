@@ -2,10 +2,58 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
-  <title>Steplify MVP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Steplify — Roadmap MVP</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Steplify MVP Çalışıyor 🚀</h1>
-  <p>Bu bir test yayınıdır. Vercel deploy için hazır.</p>
+  <header class="topbar">
+    <div class="brand">Steplify <span class="badge">MVP</span></div>
+    <div class="actions">
+      <label class="btn small">
+        JSON Yükle
+        <input id="jsonInput" type="file" accept=".json" hidden />
+      </label>
+      <select id="modelSelect" class="select"></select>
+      <button id="resetProgress" class="btn outline small">İlerlemeyi Sıfırla</button>
+      <a id="premiumBtn" class="btn primary small" href="#" target="_blank" rel="noopener">Premium'a Geç</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <h3 id="sidebarTitle">Adımlar</h3>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+      <ul id="stepsList" class="steps"></ul>
+    </aside>
+    <section class="content">
+      <div id="stepView" class="card">
+        <h2>Hoş geldin 👋</h2>
+        <p>Soldan bir adım seç veya kendi JSON'unu yükle. <b>Freemium:</b> İlk 5 adım ücretsiz, sonrası kilitli.</p>
+        <p class="muted">İlerleme tarayıcında saklanır (localStorage). JSON format dokümanı için <a href="README.html" target="_blank">README</a>.</p>
+        <div class="demo-tip">
+          <strong>Demo:</strong> Aşağıdaki butonla örnek playbook'ları yükleyebilirsin.
+          <div style="margin-top:.5rem">
+            <button id="loadSample" class="btn small">Örnekleri Yükle</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="rightbar">
+      <div class="card">
+        <h3>Kaynaklar</h3>
+        <ul id="linksList" class="links"></ul>
+      </div>
+      <div class="card info">
+        <h4>Freemium</h4>
+        <p>İlk 5 adım açık. 6. ve sonrası için <b>Premium</b> gerekiyor.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="foot">© 2025 Steplify — Basit plan, net adımlar.</footer>
+  <script src="app.js"></script>
 </body>
 </html>
