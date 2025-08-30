@@ -4,13 +4,14 @@ let models = {};    // { modelName: steps[] }
 let currentModel = null;
 
 const DATA_FILES = [
-  {name:"Affiliate", path:"/data/affiliate.json"},
-  {name:"Dropshipping", path:"/data/dropshipping.json"},
-  {name:"YouTube", path:"/data/youtube.json"},
-  {name:"Print on Demand", path:"/data/pod.json"},
-  {name:"E-ticaret", path:"/data/eticaret.json"},
-  {name:"Freelance", path:"/data/freelance.json"},
+  {name:"Affiliate",         path:"/public/data/affiliate.json"},
+  {name:"Dropshipping",      path:"/public/data/dropshipping.json"},
+  {name:"YouTube",           path:"/public/data/youtube.json"},
+  {name:"Print on Demand",   path:"/public/data/pod.json"},
+  {name:"E-ticaret",         path:"/public/data/eticaret.json"},
+  {name:"Freelance",         path:"/public/data/freelance.json"},
 ];
+
 
 const els = {
   jsonInput: document.getElementById('jsonInput'),
