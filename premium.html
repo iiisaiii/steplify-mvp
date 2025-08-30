@@ -1,8 +1,41 @@
-<!doctype html><meta charset="utf-8">
+<!doctype html>
+<html lang="tr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Steplify Premium</title>
-<h1>Premium yakında!</h1>
-<p>Ödeme altyapısını bağlıyoruz. Bu arada e-posta bırak:</p>
-<form action="https://formspree.io/f/xxxx" method="POST">
-  <input name="email" type="email" placeholder="E-posta" required>
-  <button type="submit">Haberdar et</button>
-</form>
+<style>
+  body{font-family:system-ui,Inter,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f8fafc;color:#111}
+  .wrap{max-width:800px;margin:40px auto;padding:24px;background:#fff;border:1px solid #eee;border-radius:16px}
+  h1{margin:0 0 8px}
+  .muted{color:#64748b;margin:8px 0 16px}
+  .grid{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+  .card{border:1px solid #eee;border-radius:12px;padding:16px}
+  .price{font-size:28px;font-weight:700;margin:8px 0}
+  .btn{display:inline-block;background:#111;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none}
+  .btn.secondary{background:#2563eb}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <h1>Steplify Premium</h1>
+  <p class="muted">Tüm adımların kilidi açılsın, yeni playbook’lar otomatik eklensin.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Tek Model</h3>
+      <div class="price">₺99</div>
+      <p class="muted">Seçtiğin bir modelin tüm adımlarını aç.</p>
+      <!-- Şimdilik linki boş bırakıyoruz; Paddle linkini buraya yapıştıracaksın -->
+      <a class="btn" href="YOUR_PADDLE_CHECKOUT_LINK?passthrough=tek&success=https://steplify.net/premium-success.html">Satın Al</a>
+    </div>
+    <div class="card">
+      <h3>Tüm Modeller</h3>
+      <div class="price">₺299</div>
+      <p class="muted">Tüm modellerin kilidi açılsın.</p>
+      <a class="btn secondary" href="YOUR_PADDLE_CHECKOUT_LINK_ALL?passthrough=tum&success=https://steplify.net/premium-success.html">Satın Al</a>
+    </div>
+  </div>
+
+  <p class="muted">Satın alma sonrası otomatik olarak açılış sayfasına dönecek ve Premium aktif olacaktır.</p>
+  <p><a href="/">← Ana sayfaya dön</a></p>
+</div>
+</html>
