@@ -1,5 +1,15 @@
 /* Steplify MVP — JSON'ları /data/ klasöründen otomatik yükler + freemium kilit */
 const FREE_LIMIT = 5;
+const PREMIUM_KEY = "steplify_premium";   // localStorage anahtarı
+
+function isPremium() {
+  try { return localStorage.getItem(PREMIUM_KEY) === "1"; } catch(_) { return false; }
+}
+function setPremium(v) {
+  localStorage.setItem(PREMIUM_KEY, v ? "1" : "0");
+}
+
+const FREE_LIMIT = 5;
 let models = {};    // { modelName: steps[] }
 let currentModel = null;
 
@@ -58,7 +68,7 @@ function renderSteps(){
   order.forEach((s, idx)=>{
     const li = document.createElement('li');
     li.className = 'step';
-    const locked = idx >= FREE_LIMIT;
+    const locked = (idx >= FREE_LIMIT) && !isPremium();
     if(locked) li.classList.add('locked');
 
     const cb = document.createElement('input');
@@ -122,9 +132,13 @@ function showStep(step, index){
 
   if(index >= FREE_LIMIT){
     const lock = document.createElement('div'); lock.className='card'; lock.style.marginTop='12px'; lock.style.background='#fff7ed'; lock.style.borderColor='#fdba74';
-    lock.innerHTML = `<b>Premium Kilit</b><br/>Bu adımı görmek için Premium'a geç (`+
-      `<a href="#" target="_blank" rel="noopener">Tek Model 99 TL</a> / `+
-      `<a href="#" target="_blank" rel="noopener">Tümü 299 TL</a>).`;
+    lock.innerHTML = `
+      <b>Premium Kilit</b><br/>
+      Bu adımı görmek için Premium'a geç.
+      <div style="margin-top:8px">
+        <a id="buyPremium" class="btn small primary" href="/premium.html">Premium'a Geç</a>
+      </div>
+    `;
     els.stepView.appendChild(lock);
   }
 }
@@ -159,3 +173,9 @@ els.jsonInput.addEventListener('change', (e)=>{
 });
 
 document.addEventListener('DOMContentLoaded', loadDataFiles);
+
+// sayfanın en altına, DOMContentLoaded'dan hemen sonra
+if (new URLSearchParams(location.search).get("unlock") === "1") {
+  setPremium(true);
+}
+
