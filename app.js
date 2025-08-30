@@ -10,7 +10,6 @@ function setPremium(v) {
   localStorage.setItem(PREMIUM_KEY, v ? "1" : "0");
 }
 
-const FREE_LIMIT = 5;
 let models = {};    // { modelName: steps[] }
 let currentModel = null;
 
