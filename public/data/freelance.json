@@ -1,0 +1,232 @@
+{
+  "model": "Freelance",
+  "steps": [
+    {
+      "id": 1,
+      "parentId": 0,
+      "title": "Beceri Belirleme",
+      "description": "Hangi alanda hizmet vereceksin? (tasarım, yazılım, çeviri, içerik, sosyal medya).",
+      "options": [
+        "Tasarım",
+        "Yazılım",
+        "Çeviri",
+        "İçerik",
+        "Sosyal Medya"
+      ],
+      "links": []
+    },
+    {
+      "id": 2,
+      "parentId": 1,
+      "title": "Portföy Hazırlık",
+      "description": "Daha önce yaptığın işlerden örnek veya demo projeler hazırla.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Canva",
+        "Behance"
+      ]
+    },
+    {
+      "id": 3,
+      "parentId": 2,
+      "title": "Profil Platformu Seç",
+      "description": "Freelance iş bulacağın yeri seç.",
+      "options": [
+        "Upwork",
+        "Fiverr",
+        "Bionluk",
+        "Freelancer.com"
+      ],
+      "links": [
+        "Upwork",
+        "Fiverr"
+      ]
+    },
+    {
+      "id": 4,
+      "parentId": 3,
+      "title": "Profil Aç",
+      "description": "Profesyonel fotoğraf, başlık, açıklama ekle.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 5,
+      "parentId": 4,
+      "title": "Hizmet Paketleri Belirle",
+      "description": "Net hizmet tanımları yap (örn. 500 kelime blog yazısı, logo tasarımı).",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 6,
+      "parentId": 5,
+      "title": "Fiyatlandırma",
+      "description": "Başlangıçta düşük fiyatla başla, sonra yükselt.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Fiverr örnekleri"
+      ]
+    },
+    {
+      "id": 7,
+      "parentId": 6,
+      "title": "İlk İş Başvurusu",
+      "description": "Küçük projelere teklif ver.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Upwork"
+      ]
+    },
+    {
+      "id": 8,
+      "parentId": 7,
+      "title": "İyi Teklif Yazımı",
+      "description": "Müşteriye özel, kısa ve çözüm odaklı yaz.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 9,
+      "parentId": 8,
+      "title": "İlk İş Teslimi",
+      "description": "Zamanında ve kaliteli teslim et.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 10,
+      "parentId": 9,
+      "title": "Geri Bildirim Al",
+      "description": "Müşteriden yorum iste, profiline koy.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 11,
+      "parentId": 10,
+      "title": "Profil Güçlendirme",
+      "description": "Daha fazla iş aldıkça portföy ve yorum sayın artacak.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 12,
+      "parentId": 11,
+      "title": "Nişleşme",
+      "description": "En iyi yaptığın alana odaklan, fiyatı artır.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 13,
+      "parentId": 12,
+      "title": "Sosyal Medya Kullan",
+      "description": "LinkedIn, Twitter, Instagram’da işlerini paylaş.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 14,
+      "parentId": 13,
+      "title": "Networking",
+      "description": "Freelance topluluklarına katıl (Discord, Facebook grupları).",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 15,
+      "parentId": 14,
+      "title": "Ekstra Gelir Kanalları",
+      "description": "Kendi web siteni aç → portföy + teklif toplama.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Wix",
+        "WordPress"
+      ]
+    },
+    {
+      "id": 16,
+      "parentId": 15,
+      "title": "Otomasyon Araçları",
+      "description": "Faturalandırma, zaman takibi, iş yönetimi.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Toggl",
+        "Notion"
+      ]
+    },
+    {
+      "id": 17,
+      "parentId": 16,
+      "title": "Daha Büyük İşlere Başvur",
+      "description": "Daha yüksek bütçeli müşterilere teklif ver.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Upwork"
+      ]
+    },
+    {
+      "id": 18,
+      "parentId": 17,
+      "title": "Teklif Oranını İyileştir",
+      "description": "Kazanma oranını analiz et, strateji değiştir.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 19,
+      "parentId": 18,
+      "title": "Geliri Çeşitlendir",
+      "description": "Eğitim, e-kitap, kurs çıkar → pasif gelir.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Gumroad"
+      ]
+    },
+    {
+      "id": 20,
+      "parentId": 19,
+      "title": "Uzun Vadeli Müşteri İlişkisi",
+      "description": "Tek seferlik iş yerine düzenli müşteri hedefle.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link
+1,0,Niş Belirleme,"Kanalın konusu ne olacak? (Eğlence, Eğitim, Finans, Oyun, Pet, Vlog).","[Eğlence, Eğitim, Oyun, Finans, Pet, Vlog]",
+2,1,Hedef Kitleyi Tanımla,"Kim izleyecek? Yaş, ilgi alanı, dil.",–,
+3,2,Kanal Adı ve Marka,"Akılda kalıcı, nişe uygun isim seç. Logo/baner tasarla.",–,"Canva, Looka"
+4,3,Ekipman Seçimi,"Telefon, mikrofon, ışık → temel ekipmanla başla.",–,
+5,4,İçerik Türü Seç,Nasıl içerik üreteceksin?,"[Shorts, Uzun Video, Canlı Yayın]",
+6,5,Shorts Stratejisi,"15–60 saniyelik kısa videolar, trend sesler.",–,TikTok Creative Center
+7,5,Uzun Video Stratejisi,"5–15 dakikalık videolar; bilgi, eğlence, tutorial.",–,
+8,5,Canlı Yayın,Haftada 1–2 canlı yayın ile etkileşim.,–,StreamYard
+9,6,İçerik Takvimi,Haftada en az 3 Shorts + 1 uzun video hedefle.,–,Google Calendar
+10,9,Script & Hazırlık,Videolar için kısa senaryolar çıkar.,–,ChatGPT
+11,10,Çekim & Montaj,"CapCut, Premiere, Final Cut kullan.",–,CapCut
+12,11,Thumbnail Tasarımı,Canva ile ilgi çekici görseller.,–,Canva
+13,11,SEO Optimizasyonu,"Başlık, açıklama, etiketlerde anahtar kelimeler.",–,"TubeBuddy, VidIQ"
+14,13,Yayın Planı,Belirli gün ve saatlerde video yükle.,–,YouTube Studio
+15,14,İlk Yorum & Etkileşim,"Videona ilk yorumu kendin yaz, CTA ekle.",–,
+16,14,Topluluk Kullanımı,"Topluluk sekmesinden anket, görsel paylaş.",–,
+17,15,Analiz & Ölçüm,"İzlenme süresi, CTR, retention ölç.",–,YouTube Analytics
+18,17,Optimize,"En çok izlenen içerikleri analiz et, benzerlerini çek.",–,
+19,18,Monetization (1000 sub + 4000 saat),YouTube Partner Program’a başvur.,–,YouTube Studio
+20,19,Geliri Çeşitlendir,"Sponsorluk, affiliate link, ürün satışı.",–,"Amazon Affiliate, Patreon"

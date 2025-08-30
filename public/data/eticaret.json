@@ -1,0 +1,226 @@
+{
+  "model": "E-ticaret",
+  "steps": [
+    {
+      "id": 1,
+      "parentId": 0,
+      "title": "Ürün Seçimi",
+      "description": "Kendi üretebildiğin veya stokladığın ürünü seç.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 2,
+      "parentId": 1,
+      "title": "Pazar Araştırması",
+      "description": "Ürününe talep var mı? Trend ve rekabet analizi.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Trendyol",
+        "Amazon"
+      ]
+    },
+    {
+      "id": 3,
+      "parentId": 2,
+      "title": "Marka Oluştur",
+      "description": "Marka adı, logo, domain.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Canva",
+        "Namecheap"
+      ]
+    },
+    {
+      "id": 4,
+      "parentId": 3,
+      "title": "Şirketleşme",
+      "description": "Vergi için şirket kur (şahıs şirketi yeterli).",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Gelir İdaresi Başkanlığı"
+      ]
+    },
+    {
+      "id": 5,
+      "parentId": 4,
+      "title": "E-ticaret Platformu Seç",
+      "description": "Shopify, WooCommerce, Trendyol, Hepsiburada.",
+      "options": [
+        "Shopify",
+        "WooCommerce",
+        "Pazar Yeri"
+      ],
+      "links": []
+    },
+    {
+      "id": 6,
+      "parentId": 5,
+      "title": "Shopify/WooCommerce Kurulumu",
+      "description": "Tema yükle, ürün kategorilerini oluştur.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Shopify"
+      ]
+    },
+    {
+      "id": 7,
+      "parentId": 6,
+      "title": "Ödeme Entegrasyonu",
+      "description": "iyzico, PayTR, Shopier.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "iyzico"
+      ]
+    },
+    {
+      "id": 8,
+      "parentId": 7,
+      "title": "Kargo & Depo",
+      "description": "Yurtiçi Kargo, Aras Kargo, depolama çözümü.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 9,
+      "parentId": 8,
+      "title": "Ürün Fotoğraf & Açıklama",
+      "description": "Profesyonel fotoğraf + SEO uyumlu açıklama.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 10,
+      "parentId": 9,
+      "title": "Fiyatlandırma Stratejisi",
+      "description": "Maliyet + %30–70 kâr marjı.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 11,
+      "parentId": 10,
+      "title": "Lansman Öncesi Hazırlık",
+      "description": "Sosyal medya hesaplarını aç (IG, TikTok).",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 12,
+      "parentId": 11,
+      "title": "İlk Lansman",
+      "description": "5–10 ürünle başla.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 13,
+      "parentId": 12,
+      "title": "Pazarlama Kanalı Seç",
+      "description": "TikTok, Instagram, Google Ads, Influencer.",
+      "options": [
+        "TikTok",
+        "Instagram",
+        "Google Ads",
+        "Influencer"
+      ],
+      "links": []
+    },
+    {
+      "id": 14,
+      "parentId": 13,
+      "title": "TikTok Stratejisi",
+      "description": "Ürün kullanımını gösteren videolar.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 15,
+      "parentId": 13,
+      "title": "Instagram Stratejisi",
+      "description": "Reels + story reklamları.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 16,
+      "parentId": 13,
+      "title": "Google Ads",
+      "description": "Anahtar kelimeye yönelik reklam.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Google Ads"
+      ]
+    },
+    {
+      "id": 17,
+      "parentId": 13,
+      "title": "Influencer Marketing",
+      "description": "Hedef kitleye uygun mikro influencer’lar.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 18,
+      "parentId": 14,
+      "title": "İlk Satış Takibi",
+      "description": "Pixel/Analytics kur → hangi kanal satış getiriyor gör.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "GA4"
+      ]
+    },
+    {
+      "id": 19,
+      "parentId": 18,
+      "title": "Optimize & Scale",
+      "description": "Çalışan kanala bütçe artır, yeni ürün ekle.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 20,
+      "parentId": 19,
+      "title": "Büyüme",
+      "description": "Distribütör anlaşmaları, yurtdışı satış.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    }
+  ]
+}

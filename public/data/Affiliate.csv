@@ -1,0 +1,21 @@
+StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link
+1,0,İş Modeli Seç,Affiliate marketing ile gelir elde etmeye başlamak istiyorsun. Önce ürün türünü seçelim.,"[Dijital Ürünler, Fiziksel Ürünler]",
+2,1,Dijital mi Fiziksel mi?,"Dijital ürünler (kurs, yazılım, e-kitap) genelde yüksek komisyon (%30–60). Fiziksel ürünler (Amazon, Trendyol, Hepsiburada) daha düşük (%5–15) ama çok talep var.","[Dijital, Fiziksel]",
+3,2,Dijital → Platform Seç,"Dijital için en popüler platformlar: ClickBank, Digistore24, JVZoo, Udemy Affiliate, AppSumo.","[Free, Paid Tools]","ClickBank, Digistore24"
+4,2,Fiziksel → Platform Seç,"Fiziksel için en popüler: Amazon Associates, Trendyol Partner, Hepsiburada Affiliate, AliExpress Affiliate.","[Free, Paid Tools]","Amazon Associates, Trendyol Partner"
+5,3,Ürün Araştırma,Hangi ürün satacak? Araştırma yap.,"[Free: TikTok trendleri, YouTube, Reddit] [Paid: Semrush, Ahrefs, AdSpy]",TikTok Creative Center
+6,4,Ürün Araştırma,"Fiziksel ürünlerde Trendyol çok satanlar, Amazon Best Sellers, TikTok #viral ürün listeleri.","[Free, Paid]",Amazon Best Sellers
+7,5,Rakip Analizi,Seçilen ürün için rakiplerin nasıl tanıtım yaptığını incele.,–,"Similarweb, TikTok search"
+8,6,Rakip Analizi,"Fiziksel ürünlerde pazar rekabeti, kargo süresi, komisyon oranlarını kontrol et.",–,Amazon reviews
+9,7,Promosyon Kanalı Seç,Ürünü nerede tanıtacaksın?,"[TikTok, Instagram, YouTube, Blog, Email]",
+10,9,TikTok Stratejisi,"Kısa videolar üret, trend sesleri kullan. 3–5 video/gün hedefle.",–,TikTok Creative Center
+11,9,Instagram Stratejisi,"Reels + Carousel paylaşımları, hashtag araştırması.",–,Meta Ads Lib
+12,9,YouTube Stratejisi,"Review videoları, Top 5 içerikleri, SEO odaklı başlıklar.",–,TubeBuddy
+13,9,Blog Stratejisi,"WordPress aç, SEO ile organik trafik çek.",–,WordPress
+14,9,Email Stratejisi,Email listesi kur (lead magnet → free e-book).,–,"Mailchimp, Systeme.io"
+15,10,Paid Ads (Opsiyonel),TikTok Ads veya Meta Ads ile ürününe trafik çek.,"[Low Budget, High Budget]",TikTok Ads
+16,11,Paid Ads (Opsiyonel),Instagram reklamları ile trafik çek.,–,Meta Ads Manager
+17,12,Paid Ads (Opsiyonel),YouTube Ads (skippable in-stream).,–,Google Ads
+18,13,SEO Araçları Kullan,"Blog için Ahrefs, Semrush, Ubersuggest gibi araçlarla anahtar kelime seç.","[Free: Ubersuggest] [Paid: Ahrefs, Semrush]",Ahrefs
+19,14,Email Funnel Kur,5–7 adımlı otomatik email serisi: Hoş geldin → Değer → Satış.,–,Mailchimp Automation
+20,15,İlk Satış ve Optimize,İlk satış geldiğinde hangi kanaldan geldiğini analiz et. Başarılı kanala daha çok yatırım yap.,–,"Google Analytics, TikTok Pixel"

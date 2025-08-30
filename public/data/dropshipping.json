@@ -1,0 +1,257 @@
+{
+  "model": "Dropshipping",
+  "steps": [
+    {
+      "id": 1,
+      "parentId": 0,
+      "title": "İş Modeli Seç",
+      "description": "Dropshipping ile başlayacaksın. Önce mağaza altyapını belirle.",
+      "options": [
+        "Shopify",
+        "WordPress/WooCommerce",
+        "Diğer"
+      ],
+      "links": [
+        "Shopify",
+        "WooCommerce"
+      ]
+    },
+    {
+      "id": 2,
+      "parentId": 1,
+      "title": "Shopify mı WooCommerce mi?",
+      "description": "Shopify hızlı kurulum, WooCommerce daha ucuz ama teknik.",
+      "options": [
+        "Shopify",
+        "WooCommerce"
+      ],
+      "links": []
+    },
+    {
+      "id": 3,
+      "parentId": 2,
+      "title": "Niş Seçimi",
+      "description": "Belirli bir ürün kategorisine odaklan: ev ürünleri, aksesuar, pet, elektronik.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "TrendHunter",
+        "TikTok Creative Center"
+      ]
+    },
+    {
+      "id": 4,
+      "parentId": 3,
+      "title": "Ürün Araştırma",
+      "description": "Satacak ürünleri bul.",
+      "options": [
+        "Free: TikTok",
+        "Amazon",
+        "Trendyol] [Paid: Ecomhunt",
+        "Minea",
+        "AdSpy"
+      ],
+      "links": [
+        "Amazon Best Sellers",
+        "Ecomhunt"
+      ]
+    },
+    {
+      "id": 5,
+      "parentId": 4,
+      "title": "Rakip Analizi",
+      "description": "Rakip mağazaların ürünlerini, fiyatlarını ve reklamlarını incele.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Similarweb",
+        "Meta Ads Library"
+      ]
+    },
+    {
+      "id": 6,
+      "parentId": 5,
+      "title": "Tedarikçi Platformu Seç",
+      "description": "Ürünü nereden göndereceksin?",
+      "options": [
+        "AliExpress",
+        "CJdropshipping",
+        "Spocket",
+        "Türkiye Tedarikçileri"
+      ],
+      "links": [
+        "CJdropshipping",
+        "Spocket"
+      ]
+    },
+    {
+      "id": 7,
+      "parentId": 6,
+      "title": "Tedarikçi Güvenilirlik Kontrolü",
+      "description": "Teslimat süresi, iade politikası, yorumlar.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "AliExpress reviews"
+      ]
+    },
+    {
+      "id": 8,
+      "parentId": 7,
+      "title": "Mağaza Kurulumu",
+      "description": "Shopify/WooCommerce mağazanda tema seç, menü ve koleksiyonları oluştur.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Shopify Themes"
+      ]
+    },
+    {
+      "id": 9,
+      "parentId": 8,
+      "title": "Mağaza Tasarımı",
+      "description": "Anasayfa → güven veren tasarım, ürün sayfası → açıklama + görseller.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Canva",
+        "Pagefly"
+      ]
+    },
+    {
+      "id": 10,
+      "parentId": 9,
+      "title": "Ödeme Yöntemleri",
+      "description": "Kredi kartı, PayPal, Shopier veya iyzico entegrasyonu.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "iyzico",
+        "PayPal"
+      ]
+    },
+    {
+      "id": 11,
+      "parentId": 10,
+      "title": "Kargo & İade Politikası",
+      "description": "Kullanıcıya net kargo süresi ve iade koşulları belirt.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 12,
+      "parentId": 8,
+      "title": "Ürün Ekleme",
+      "description": "Seçilen ürünleri mağazaya yükle, açıklamalar optimize et.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Oberlo (Shopify)",
+        "CJ App"
+      ]
+    },
+    {
+      "id": 13,
+      "parentId": 12,
+      "title": "Fiyatlandırma Stratejisi",
+      "description": "Ürün fiyatı = Tedarikçi fiyatı + kargo + %30–50 kâr marjı.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 14,
+      "parentId": 13,
+      "title": "Pazarlama Kanalı Seç",
+      "description": "Hangi platformda tanıtım yapacaksın?",
+      "options": [
+        "TikTok",
+        "Instagram",
+        "Facebook",
+        "Google Ads"
+      ],
+      "links": []
+    },
+    {
+      "id": 15,
+      "parentId": 14,
+      "title": "TikTok Ads",
+      "description": "Viral video reklamları ile düşük maliyetli satış denemeleri.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "TikTok Ads Manager"
+      ]
+    },
+    {
+      "id": 16,
+      "parentId": 14,
+      "title": "Instagram/Facebook Ads",
+      "description": "Carousel + Reels reklamları ile trafik çek.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Meta Ads Manager"
+      ]
+    },
+    {
+      "id": 17,
+      "parentId": 14,
+      "title": "Google Ads",
+      "description": "Arama reklamları (yüksek niyetli trafik).",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Google Ads"
+      ]
+    },
+    {
+      "id": 18,
+      "parentId": 14,
+      "title": "Influencer Marketing",
+      "description": "Mikro influencer’lara ücretsiz ürün gönder, affiliate anlaşması yap.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Upfluence"
+      ]
+    },
+    {
+      "id": 19,
+      "parentId": 15,
+      "title": "İlk Satış Takibi",
+      "description": "Pixel/Analytics kur → hangi reklam çalışıyor gör.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "TikTok Pixel",
+        "GA4"
+      ]
+    },
+    {
+      "id": 20,
+      "parentId": 19,
+      "title": "Optimize & Scale",
+      "description": "Çalışan ürünü ölçeklendir, bütçeyi artır, ikinci ürün ekle.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    }
+  ]
+}

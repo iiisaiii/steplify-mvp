@@ -1,0 +1,21 @@
+StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link
+1,0,Ürün Seçimi,Kendi üretebildiğin veya stokladığın ürünü seç.,–,
+2,1,Pazar Araştırması,Ürününe talep var mı? Trend ve rekabet analizi.,–,"Trendyol, Amazon"
+3,2,Marka Oluştur,"Marka adı, logo, domain.",–,"Canva, Namecheap"
+4,3,Şirketleşme,Vergi için şirket kur (şahıs şirketi yeterli).,–,Gelir İdaresi Başkanlığı
+5,4,E-ticaret Platformu Seç,"Shopify, WooCommerce, Trendyol, Hepsiburada.","[Shopify, WooCommerce, Pazar Yeri]",
+6,5,Shopify/WooCommerce Kurulumu,"Tema yükle, ürün kategorilerini oluştur.",–,Shopify
+7,6,Ödeme Entegrasyonu,"iyzico, PayTR, Shopier.",–,iyzico
+8,7,Kargo & Depo,"Yurtiçi Kargo, Aras Kargo, depolama çözümü.",–,
+9,8,Ürün Fotoğraf & Açıklama,Profesyonel fotoğraf + SEO uyumlu açıklama.,–,
+10,9,Fiyatlandırma Stratejisi,Maliyet + %30–70 kâr marjı.,–,
+11,10,Lansman Öncesi Hazırlık,"Sosyal medya hesaplarını aç (IG, TikTok).",–,
+12,11,İlk Lansman,5–10 ürünle başla.,–,
+13,12,Pazarlama Kanalı Seç,"TikTok, Instagram, Google Ads, Influencer.","[TikTok, Instagram, Google Ads, Influencer]",
+14,13,TikTok Stratejisi,Ürün kullanımını gösteren videolar.,–,
+15,13,Instagram Stratejisi,Reels + story reklamları.,–,
+16,13,Google Ads,Anahtar kelimeye yönelik reklam.,–,Google Ads
+17,13,Influencer Marketing,Hedef kitleye uygun mikro influencer’lar.,–,
+18,14,İlk Satış Takibi,Pixel/Analytics kur → hangi kanal satış getiriyor gör.,–,GA4
+19,18,Optimize & Scale,"Çalışan kanala bütçe artır, yeni ürün ekle.",–,
+20,19,Büyüme,"Distribütör anlaşmaları, yurtdışı satış.",–,

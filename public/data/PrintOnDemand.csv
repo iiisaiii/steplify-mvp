@@ -1,0 +1,21 @@
+StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link
+1,0,Platform Seç,"Print on Demand yapacağın yeri seç: Shopify + POD app veya hazır pazar yerleri (Etsy, Redbubble, Teespring).","[Shopify+App, Etsy, Redbubble, Teespring]","Printful, Printify"
+2,1,Niş Belirle,"Hedef kitleni seç (hayvansever, fitness, motivasyon, gamer).",–,"Pinterest, TikTok"
+3,2,Ürün Türü Seç,"Tişört, kupa, çanta, telefon kılıfı.",–,Printful
+4,3,Tasarım Araştır,"Trend tasarımları bul, ilham al.","[Free: Pinterest, TikTok] [Paid: Creative Market, Envato]","Pinterest, Envato"
+5,4,Tasarım Üret,"Canva, Photoshop veya AI ile tasarım yap.",–,"Canva, MidJourney"
+6,5,Telif Kontrolü,Tasarımların telif hakkı olmadığından emin ol.,–,TMSearch
+7,6,Mağaza Kur (Shopify),"Tema yükle, POD app bağla (Printful/Printify).",–,Shopify
+8,7,Ürün Yükle,Tasarımlarını mağazana ekle.,–,Printify
+9,8,Fiyatlandırma,Maliyet + kâr marjı (genelde %30–50).,–,
+10,9,Pazar Yeri Kur (Etsy),"Etsy hesabı aç, mağazanı tasarla.",–,Etsy
+11,10,Ürün Optimize,SEO uyumlu başlık ve açıklamalar yaz.,–,Marmalead
+12,11,Fotoğraf Mockup,Ürün görselleri için mockup hazırla.,–,Placeit
+13,12,İlk Lansman,5–10 ürünle mağazanı aç.,–,
+14,13,Pazarlama Kanalı Seç,"TikTok, Instagram, Pinterest.","[TikTok, Instagram, Pinterest]",
+15,14,TikTok Stratejisi,"Tasarım sürecini paylaş, trend ses kullan.",–,TikTok Creative Center
+16,14,Instagram Stratejisi,"Reel + carousel, hedef kitle hashtagleri.",–,
+17,14,Pinterest Stratejisi,"Ürün görsellerini pinle, backlink oluştur.",–,Pinterest
+18,15,Paid Ads (Opsiyonel),TikTok Ads / Meta Ads ile mağazaya trafik çek.,–,TikTok Ads
+19,17,Influencer İşbirliği,"Mikro influencer’lara ürün gönder, komisyonla sat.",–,Upfluence
+20,18,Ölçekle,"En çok satan ürünlere bütçe artır, yeni niş dene.",–,

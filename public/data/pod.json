@@ -1,0 +1,246 @@
+{
+  "model": "Print on Demand",
+  "steps": [
+    {
+      "id": 1,
+      "parentId": 0,
+      "title": "Platform Seç",
+      "description": "Print on Demand yapacağın yeri seç: Shopify + POD app veya hazır pazar yerleri (Etsy, Redbubble, Teespring).",
+      "options": [
+        "Shopify+App",
+        "Etsy",
+        "Redbubble",
+        "Teespring"
+      ],
+      "links": [
+        "Printful",
+        "Printify"
+      ]
+    },
+    {
+      "id": 2,
+      "parentId": 1,
+      "title": "Niş Belirle",
+      "description": "Hedef kitleni seç (hayvansever, fitness, motivasyon, gamer).",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Pinterest",
+        "TikTok"
+      ]
+    },
+    {
+      "id": 3,
+      "parentId": 2,
+      "title": "Ürün Türü Seç",
+      "description": "Tişört, kupa, çanta, telefon kılıfı.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Printful"
+      ]
+    },
+    {
+      "id": 4,
+      "parentId": 3,
+      "title": "Tasarım Araştır",
+      "description": "Trend tasarımları bul, ilham al.",
+      "options": [
+        "Free: Pinterest",
+        "TikTok] [Paid: Creative Market",
+        "Envato"
+      ],
+      "links": [
+        "Pinterest",
+        "Envato"
+      ]
+    },
+    {
+      "id": 5,
+      "parentId": 4,
+      "title": "Tasarım Üret",
+      "description": "Canva, Photoshop veya AI ile tasarım yap.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Canva",
+        "MidJourney"
+      ]
+    },
+    {
+      "id": 6,
+      "parentId": 5,
+      "title": "Telif Kontrolü",
+      "description": "Tasarımların telif hakkı olmadığından emin ol.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "TMSearch"
+      ]
+    },
+    {
+      "id": 7,
+      "parentId": 6,
+      "title": "Mağaza Kur (Shopify)",
+      "description": "Tema yükle, POD app bağla (Printful/Printify).",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Shopify"
+      ]
+    },
+    {
+      "id": 8,
+      "parentId": 7,
+      "title": "Ürün Yükle",
+      "description": "Tasarımlarını mağazana ekle.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Printify"
+      ]
+    },
+    {
+      "id": 9,
+      "parentId": 8,
+      "title": "Fiyatlandırma",
+      "description": "Maliyet + kâr marjı (genelde %30–50).",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 10,
+      "parentId": 9,
+      "title": "Pazar Yeri Kur (Etsy)",
+      "description": "Etsy hesabı aç, mağazanı tasarla.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Etsy"
+      ]
+    },
+    {
+      "id": 11,
+      "parentId": 10,
+      "title": "Ürün Optimize",
+      "description": "SEO uyumlu başlık ve açıklamalar yaz.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Marmalead"
+      ]
+    },
+    {
+      "id": 12,
+      "parentId": 11,
+      "title": "Fotoğraf Mockup",
+      "description": "Ürün görselleri için mockup hazırla.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Placeit"
+      ]
+    },
+    {
+      "id": 13,
+      "parentId": 12,
+      "title": "İlk Lansman",
+      "description": "5–10 ürünle mağazanı aç.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 14,
+      "parentId": 13,
+      "title": "Pazarlama Kanalı Seç",
+      "description": "TikTok, Instagram, Pinterest.",
+      "options": [
+        "TikTok",
+        "Instagram",
+        "Pinterest"
+      ],
+      "links": []
+    },
+    {
+      "id": 15,
+      "parentId": 14,
+      "title": "TikTok Stratejisi",
+      "description": "Tasarım sürecini paylaş, trend ses kullan.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "TikTok Creative Center"
+      ]
+    },
+    {
+      "id": 16,
+      "parentId": 14,
+      "title": "Instagram Stratejisi",
+      "description": "Reel + carousel, hedef kitle hashtagleri.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    },
+    {
+      "id": 17,
+      "parentId": 14,
+      "title": "Pinterest Stratejisi",
+      "description": "Ürün görsellerini pinle, backlink oluştur.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Pinterest"
+      ]
+    },
+    {
+      "id": 18,
+      "parentId": 15,
+      "title": "Paid Ads (Opsiyonel)",
+      "description": "TikTok Ads / Meta Ads ile mağazaya trafik çek.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "TikTok Ads"
+      ]
+    },
+    {
+      "id": 19,
+      "parentId": 17,
+      "title": "Influencer İşbirliği",
+      "description": "Mikro influencer’lara ürün gönder, komisyonla sat.",
+      "options": [
+        "–"
+      ],
+      "links": [
+        "Upfluence"
+      ]
+    },
+    {
+      "id": 20,
+      "parentId": 18,
+      "title": "Ölçekle",
+      "description": "En çok satan ürünlere bütçe artır, yeni niş dene.",
+      "options": [
+        "–"
+      ],
+      "links": []
+    }
+  ]
+}
