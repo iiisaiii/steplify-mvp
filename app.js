@@ -153,10 +153,11 @@ async function loadDataFiles(){
       if(obj && obj.model && Array.isArray(obj.steps)){
         models[obj.model] = obj.steps;
       }
-    }catch(e){/* yoksa geç */}
+    }catch(e){/* geç */}
   }
   renderModels();
 }
+document.addEventListener('DOMContentLoaded', loadDataFiles);
 
 els.modelSelect.addEventListener('change', e=>{ currentModel = e.target.value; renderSteps(); });
 els.resetProgress.addEventListener('click', ()=>{ if(!currentModel) return; localStorage.removeItem(lsKey(currentModel)); renderSteps(); });
@@ -172,8 +173,6 @@ els.jsonInput.addEventListener('change', (e)=>{
   };
   reader.readAsText(file, 'utf-8');
 });
-
-document.addEventListener('DOMContentLoaded', loadDataFiles);
 
 // sayfanın en altına, DOMContentLoaded'dan hemen sonra
 if (new URLSearchParams(location.search).get("unlock") === "1") {
