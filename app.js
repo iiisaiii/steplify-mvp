@@ -1,4 +1,5 @@
 /* Steplify MVP — JSON'ları /data/ klasöründen otomatik yükler + freemium kilit */
+console.log('Steplify app v2');
 const FREE_LIMIT = 5;
 const PREMIUM_KEY = "steplify_premium";   // localStorage anahtarı
 
