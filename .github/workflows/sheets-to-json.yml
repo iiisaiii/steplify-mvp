@@ -1,0 +1,46 @@
+name: Sheets to JSON
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 */6 * * *"
+jobs:
+  build-json:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: mkdir -p public/data scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: CSV URL'lerini ayarla (BURAYA LİNKLERİ YAPIŞTIR)
+        run: |
+          echo "AFFILIATE_CSV_URL=BURAYA_AFFILIATE_CSV"    >> $GITHUB_ENV
+          echo "DROPSHIPPING_CSV_URL=BURAYA_DROPSHIPPING" >> $GITHUB_ENV
+          echo "YOUTUBE_CSV_URL=BURAYA_YOUTUBE"           >> $GITHUB_ENV
+          echo "POD_CSV_URL=BURAYA_POD"                   >> $GITHUB_ENV
+          echo "ETICARET_CSV_URL=BURAYA_ETICARET"         >> $GITHUB_ENV
+          echo "FREELANCE_CSV_URL=BURAYA_FREELANCE"       >> $GITHUB_ENV
+      - name: Dönüştürücü mevcut mu?
+        run: |
+          test -f scripts/sheets_to_json.py && python -V && echo "OK"
+      - name: CSV indir
+        run: |
+          curl -L "$AFFILIATE_CSV_URL"    -o public/data/Affiliate.csv || true
+          curl -L "$DROPSHIPPING_CSV_URL" -o public/data/Dropshipping.csv || true
+          curl -L "$YOUTUBE_CSV_URL"      -o public/data/YouTube.csv || true
+          curl -L "$POD_CSV_URL"          -o public/data/PrintOnDemand.csv || true
+          curl -L "$ETICARET_CSV_URL"     -o public/data/Eticaret.csv || true
+          curl -L "$FREELANCE_CSV_URL"    -o public/data/Freelance.csv || true
+      - name: CSV -> JSON
+        run: |
+          python scripts/sheets_to_json.py --in "public/data/Affiliate.csv"     --model "Affiliate"        --out "public/data/affiliate.json" || true
+          python scripts/sheets_to_json.py --in "public/data/Dropshipping.csv"  --model "Dropshipping"     --out "public/data/dropshipping.json" || true
+          python scripts/sheets_to_json.py --in "public/data/YouTube.csv"       --model "YouTube"          --out "public/data/youtube.json" || true
+          python scripts/sheets_to_json.py --in "public/data/PrintOnDemand.csv" --model "Print on Demand"  --out "public/data/pod.json" || true
+          python scripts/sheets_to_json.py --in "public/data/Eticaret.csv"      --model "E-ticaret"        --out "public/data/eticaret.json" || true
+          python scripts/sheets_to_json.py --in "public/data/Freelance.csv"     --model "Freelance"        --out "public/data/freelance.json" || true
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update JSONs from Google Sheets"
