@@ -16,12 +16,12 @@ jobs:
           python-version: '3.11'
       - name: CSV URL'lerini ayarla (BURAYA LİNKLERİ YAPIŞTIR)
         run: |
-          echo "AFFILIATE_CSV_URL=BURAYA_AFFILIATE_CSV"    >> $GITHUB_ENV
-          echo "DROPSHIPPING_CSV_URL=BURAYA_DROPSHIPPING" >> $GITHUB_ENV
-          echo "YOUTUBE_CSV_URL=BURAYA_YOUTUBE"           >> $GITHUB_ENV
-          echo "POD_CSV_URL=BURAYA_POD"                   >> $GITHUB_ENV
-          echo "ETICARET_CSV_URL=BURAYA_ETICARET"         >> $GITHUB_ENV
-          echo "FREELANCE_CSV_URL=BURAYA_FREELANCE"       >> $GITHUB_ENV
+          echo "AFFILIATE_CSV_URL=https://docs.google.com/spreadsheets/d/e/2PACX-1vSMomDs4g1BbwtX2ID3pryNIMJEUJxQ7YNztKzOf1DKW8BeoZAFcitlh1dKV7Z3pq0Rmrkg_PhhqZjW/pub?gid=0&single=true&output=csv"    >> $GITHUB_ENV
+          echo "DROPSHIPPING_CSV_URL=https://docs.google.com/spreadsheets/d/e/2PACX-1vSMomDs4g1BbwtX2ID3pryNIMJEUJxQ7YNztKzOf1DKW8BeoZAFcitlh1dKV7Z3pq0Rmrkg_PhhqZjW/pub?gid=1666144334&single=true&output=csv" >> $GITHUB_ENV
+          echo "YOUTUBE_CSV_URL=https://docs.google.com/spreadsheets/d/e/2PACX-1vSMomDs4g1BbwtX2ID3pryNIMJEUJxQ7YNztKzOf1DKW8BeoZAFcitlh1dKV7Z3pq0Rmrkg_PhhqZjW/pub?gid=1527298631&single=true&output=csv"           >> $GITHUB_ENV
+          echo "POD_CSV_URL=https://docs.google.com/spreadsheets/d/e/2PACX-1vSMomDs4g1BbwtX2ID3pryNIMJEUJxQ7YNztKzOf1DKW8BeoZAFcitlh1dKV7Z3pq0Rmrkg_PhhqZjW/pub?gid=1467649199&single=true&output=csv"                   >> $GITHUB_ENV
+          echo "ETICARET_CSV_URL=https://docs.google.com/spreadsheets/d/e/2PACX-1vSMomDs4g1BbwtX2ID3pryNIMJEUJxQ7YNztKzOf1DKW8BeoZAFcitlh1dKV7Z3pq0Rmrkg_PhhqZjW/pub?gid=1352595480&single=true&output=csv"         >> $GITHUB_ENV
+          echo "FREELANCE_CSV_URL=https://docs.google.com/spreadsheets/d/e/2PACX-1vSMomDs4g1BbwtX2ID3pryNIMJEUJxQ7YNztKzOf1DKW8BeoZAFcitlh1dKV7Z3pq0Rmrkg_PhhqZjW/pub?gid=1524612554&single=true&output=csv"       >> $GITHUB_ENV
       - name: Dönüştürücü mevcut mu?
         run: |
           test -f scripts/sheets_to_json.py && python -V && echo "OK"
