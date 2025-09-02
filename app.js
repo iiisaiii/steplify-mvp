@@ -165,55 +165,80 @@ function renderModels(){
 function computeOrder(steps){ return steps.slice().sort((a,b)=>a.id-b.id); }
 
 function renderSteps(){
+  // Güvenlik: model yoksa veya adım yoksa UI'yı temizle
+  if (!currentModel || !models[currentModel] || !Array.isArray(models[currentModel]) || models[currentModel].length === 0) {
+    els.sidebarTitle.textContent = 'Adımlar';
+    els.stepsList.innerHTML = '';
+    els.linksList.innerHTML = '';
+    els.progressBar.style.width = '0%';
+    els.progressBar.title = '0% tamamlandı';
+    return;
+  }
+
   const sels = getSelections(currentModel);
-  const steps = (models[currentModel]||[]);
-  els.sidebarTitle.textContent = `Adımlar — ${currentModel}`;
-  els.stepsList.innerHTML = '';
+  const steps = models[currentModel] || [];
   const order = computeOrder(steps);
   const progress = getProgress(currentModel);
+
+  els.sidebarTitle.textContent = `Adımlar — ${currentModel}`;
+  els.stepsList.innerHTML = '';
+
   let doneCount = 0;
 
-  order.forEach((s, idx)=>{
+  order.forEach((s, idx) => {
     const li = document.createElement('li');
     li.className = 'step';
-    const locked = (idx >= FREE_LIMIT) && !isPremium();
-    if(locked) li.classList.add('locked');
 
+    const locked = (idx >= FREE_LIMIT) && !isPremium();
+    if (locked) li.classList.add('locked');
+
+    // checkbox
     const cb = document.createElement('input');
     cb.type = 'checkbox';
     cb.disabled = locked;
     cb.checked = !!progress[s.id];
-    if(cb.checked) doneCount++;
-    cb.addEventListener('click',(e)=>{
+    if (cb.checked) doneCount++;
+
+    cb.addEventListener('click', (e) => {
       e.stopPropagation();
       const p = getProgress(currentModel);
       p[s.id] = !!e.target.checked;
       setProgress(currentModel, p);
-      renderSteps();
+      renderSteps();           // yalnızca liste/bar güncelleniyor
     });
 
+    // başlık + meta
     const title = document.createElement('div');
-    title.className = 'title'; title.textContent = `${s.id}. ${s.title}`;
+    title.className = 'title';
+    title.textContent = `${s.id}. ${s.title}`;
+
     const meta = document.createElement('div');
-    meta.className = 'meta'; meta.textContent = s.parentId ? `Üst adım: ${s.parentId}` : 'Kök adım';
+    meta.className = 'meta';
+    meta.textContent = s.parentId ? `Üst adım: ${s.parentId}` : 'Kök adım';
+
     const chosen = sels[s.id];
-    if (chosen) {
-      meta.textContent += ` • Seçim: ${chosen}`;
-    }
+    if (chosen) meta.textContent += ` • Seçim: ${chosen}`;
 
     const row = document.createElement('div');
-    row.style.display='flex'; row.style.flexDirection='column';
-    row.appendChild(title); row.appendChild(meta);
+    row.style.display = 'flex';
+    row.style.flexDirection = 'column';
+    row.appendChild(title);
+    row.appendChild(meta);
 
-    li.appendChild(cb); li.appendChild(row);
-    li.addEventListener('click', ()=> showStep(s, idx));
+    li.appendChild(cb);
+    li.appendChild(row);
+
+    // listedeki elemana tıklayınca adımı göster
+    li.addEventListener('click', () => showStep(s, idx));
+
     els.stepsList.appendChild(li);
   });
 
-  const pct = steps.length ? Math.round(doneCount/steps.length*100) : 0;
+  const pct = steps.length ? Math.round((doneCount / steps.length) * 100) : 0;
   els.progressBar.style.width = `${pct}%`;
   els.progressBar.title = `${pct}% tamamlandı`;
 }
+
 
 function showStep(step, index){
   // İçeriği sıfırla
