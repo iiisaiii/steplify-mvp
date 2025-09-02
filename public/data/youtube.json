@@ -117,7 +117,8 @@
       ],
       "links": [
         "ChatGPT"
-      ]
+      ],
+      "visibleIf": "step:1=Yüzsüz"
     },
     {
       "id": 11,
@@ -129,7 +130,8 @@
       ],
       "links": [
         "CapCut"
-      ]
+      ],
+      "visibleIf": "step:1=Yüzlü"
     },
     {
       "id": 12,

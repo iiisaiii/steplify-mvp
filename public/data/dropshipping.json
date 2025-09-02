@@ -25,7 +25,8 @@
         "Shopify",
         "WooCommerce"
       ],
-      "links": []
+      "links": [],
+      "visibleIf": "step:1=Shopify"
     },
     {
       "id": 3,

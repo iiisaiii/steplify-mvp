@@ -1,21 +1,21 @@
-StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link
-1,0,İş Modeli Seç,Dropshipping ile başlayacaksın. Önce mağaza altyapını belirle.,"[Shopify, WordPress/WooCommerce, Diğer]","Shopify, WooCommerce"
-2,1,Shopify mı WooCommerce mi?,"Shopify hızlı kurulum, WooCommerce daha ucuz ama teknik.","[Shopify, WooCommerce]",
-3,2,Niş Seçimi,"Belirli bir ürün kategorisine odaklan: ev ürünleri, aksesuar, pet, elektronik.",–,"TrendHunter, TikTok Creative Center"
-4,3,Ürün Araştırma,Satacak ürünleri bul.,"[Free: TikTok, Amazon, Trendyol] [Paid: Ecomhunt, Minea, AdSpy]","Amazon Best Sellers, Ecomhunt"
-5,4,Rakip Analizi,"Rakip mağazaların ürünlerini, fiyatlarını ve reklamlarını incele.",–,"Similarweb, Meta Ads Library"
-6,5,Tedarikçi Platformu Seç,Ürünü nereden göndereceksin?,"[AliExpress, CJdropshipping, Spocket, Türkiye Tedarikçileri]","CJdropshipping, Spocket"
-7,6,Tedarikçi Güvenilirlik Kontrolü,"Teslimat süresi, iade politikası, yorumlar.",–,AliExpress reviews
-8,7,Mağaza Kurulumu,"Shopify/WooCommerce mağazanda tema seç, menü ve koleksiyonları oluştur.",–,Shopify Themes
-9,8,Mağaza Tasarımı,"Anasayfa → güven veren tasarım, ürün sayfası → açıklama + görseller.",–,"Canva, Pagefly"
-10,9,Ödeme Yöntemleri,"Kredi kartı, PayPal, Shopier veya iyzico entegrasyonu.",–,"iyzico, PayPal"
-11,10,Kargo & İade Politikası,Kullanıcıya net kargo süresi ve iade koşulları belirt.,–,
-12,8,Ürün Ekleme,"Seçilen ürünleri mağazaya yükle, açıklamalar optimize et.",–,"Oberlo (Shopify), CJ App"
-13,12,Fiyatlandırma Stratejisi,Ürün fiyatı = Tedarikçi fiyatı + kargo + %30–50 kâr marjı.,–,
-14,13,Pazarlama Kanalı Seç,Hangi platformda tanıtım yapacaksın?,"[TikTok, Instagram, Facebook, Google Ads]",
-15,14,TikTok Ads,Viral video reklamları ile düşük maliyetli satış denemeleri.,–,TikTok Ads Manager
-16,14,Instagram/Facebook Ads,Carousel + Reels reklamları ile trafik çek.,–,Meta Ads Manager
-17,14,Google Ads,Arama reklamları (yüksek niyetli trafik).,–,Google Ads
-18,14,Influencer Marketing,"Mikro influencer’lara ücretsiz ürün gönder, affiliate anlaşması yap.",–,Upfluence
-19,15,İlk Satış Takibi,Pixel/Analytics kur → hangi reklam çalışıyor gör.,–,"TikTok Pixel, GA4"
-20,19,Optimize & Scale,"Çalışan ürünü ölçeklendir, bütçeyi artır, ikinci ürün ekle.",–,
+StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link,GörünürEğer
+1,0,İş Modeli Seç,Dropshipping ile başlayacaksın. Önce mağaza altyapını belirle.,"[Shopify, WordPress/WooCommerce, Diğer]","Shopify, WooCommerce",
+2,1,Shopify mı WooCommerce mi?,"Shopify hızlı kurulum, WooCommerce daha ucuz ama teknik.","[Shopify, WooCommerce]",,step:1=Shopify
+3,2,Niş Seçimi,"Belirli bir ürün kategorisine odaklan: ev ürünleri, aksesuar, pet, elektronik.",–,"TrendHunter, TikTok Creative Center",
+4,3,Ürün Araştırma,Satacak ürünleri bul.,"[Free: TikTok, Amazon, Trendyol] [Paid: Ecomhunt, Minea, AdSpy]","Amazon Best Sellers, Ecomhunt",
+5,4,Rakip Analizi,"Rakip mağazaların ürünlerini, fiyatlarını ve reklamlarını incele.",–,"Similarweb, Meta Ads Library",
+6,5,Tedarikçi Platformu Seç,Ürünü nereden göndereceksin?,"[AliExpress, CJdropshipping, Spocket, Türkiye Tedarikçileri]","CJdropshipping, Spocket",
+7,6,Tedarikçi Güvenilirlik Kontrolü,"Teslimat süresi, iade politikası, yorumlar.",–,AliExpress reviews,
+8,7,Mağaza Kurulumu,"Shopify/WooCommerce mağazanda tema seç, menü ve koleksiyonları oluştur.",–,Shopify Themes,
+9,8,Mağaza Tasarımı,"Anasayfa → güven veren tasarım, ürün sayfası → açıklama + görseller.",–,"Canva, Pagefly",
+10,9,Ödeme Yöntemleri,"Kredi kartı, PayPal, Shopier veya iyzico entegrasyonu.",–,"iyzico, PayPal",
+11,10,Kargo & İade Politikası,Kullanıcıya net kargo süresi ve iade koşulları belirt.,–,,
+12,8,Ürün Ekleme,"Seçilen ürünleri mağazaya yükle, açıklamalar optimize et.",–,"Oberlo (Shopify), CJ App",
+13,12,Fiyatlandırma Stratejisi,Ürün fiyatı = Tedarikçi fiyatı + kargo + %30–50 kâr marjı.,–,,
+14,13,Pazarlama Kanalı Seç,Hangi platformda tanıtım yapacaksın?,"[TikTok, Instagram, Facebook, Google Ads]",,
+15,14,TikTok Ads,Viral video reklamları ile düşük maliyetli satış denemeleri.,–,TikTok Ads Manager,
+16,14,Instagram/Facebook Ads,Carousel + Reels reklamları ile trafik çek.,–,Meta Ads Manager,
+17,14,Google Ads,Arama reklamları (yüksek niyetli trafik).,–,Google Ads,
+18,14,Influencer Marketing,"Mikro influencer’lara ücretsiz ürün gönder, affiliate anlaşması yap.",–,Upfluence,
+19,15,İlk Satış Takibi,Pixel/Analytics kur → hangi reklam çalışıyor gör.,–,"TikTok Pixel, GA4",
+20,19,Optimize & Scale,"Çalışan ürünü ölçeklendir, bütçeyi artır, ikinci ürün ekle.",–,,

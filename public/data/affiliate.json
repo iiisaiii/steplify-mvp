@@ -21,7 +21,8 @@
         "Dijital",
         "Fiziksel"
       ],
-      "links": []
+      "links": [],
+      "visibleIf": "step:1=Dijital Ürünler"
     },
     {
       "id": 3,
@@ -35,7 +36,8 @@
       "links": [
         "ClickBank",
         "Digistore24"
-      ]
+      ],
+      "visibleIf": "step:1=Dijital Ürünler"
     },
     {
       "id": 4,

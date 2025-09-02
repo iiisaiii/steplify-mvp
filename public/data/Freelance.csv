@@ -1,21 +1,21 @@
-StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link
-1,0,Beceri Belirleme,"Hangi alanda hizmet vereceksin? (tasarım, yazılım, çeviri, içerik, sosyal medya).","[Tasarım, Yazılım, Çeviri, İçerik, Sosyal Medya]",
-2,1,Portföy Hazırlık,Daha önce yaptığın işlerden örnek veya demo projeler hazırla.,–,"Canva, Behance"
-3,2,Profil Platformu Seç,Freelance iş bulacağın yeri seç.,"[Upwork, Fiverr, Bionluk, Freelancer.com]","Upwork, Fiverr"
-4,3,Profil Aç,"Profesyonel fotoğraf, başlık, açıklama ekle.",–,
-5,4,Hizmet Paketleri Belirle,"Net hizmet tanımları yap (örn. 500 kelime blog yazısı, logo tasarımı).",–,
-6,5,Fiyatlandırma,"Başlangıçta düşük fiyatla başla, sonra yükselt.",–,Fiverr örnekleri
-7,6,İlk İş Başvurusu,Küçük projelere teklif ver.,–,Upwork
-8,7,İyi Teklif Yazımı,"Müşteriye özel, kısa ve çözüm odaklı yaz.",–,
-9,8,İlk İş Teslimi,Zamanında ve kaliteli teslim et.,–,
-10,9,Geri Bildirim Al,"Müşteriden yorum iste, profiline koy.",–,
-11,10,Profil Güçlendirme,Daha fazla iş aldıkça portföy ve yorum sayın artacak.,–,
-12,11,Nişleşme,"En iyi yaptığın alana odaklan, fiyatı artır.",–,
-13,12,Sosyal Medya Kullan,"LinkedIn, Twitter, Instagram’da işlerini paylaş.",–,
-14,13,Networking,"Freelance topluluklarına katıl (Discord, Facebook grupları).",–,
-15,14,Ekstra Gelir Kanalları,Kendi web siteni aç → portföy + teklif toplama.,–,"Wix, WordPress"
-16,15,Otomasyon Araçları,"Faturalandırma, zaman takibi, iş yönetimi.",–,"Toggl, Notion"
-17,16,Daha Büyük İşlere Başvur,Daha yüksek bütçeli müşterilere teklif ver.,–,Upwork
-18,17,Teklif Oranını İyileştir,"Kazanma oranını analiz et, strateji değiştir.",–,
-19,18,Geliri Çeşitlendir,"Eğitim, e-kitap, kurs çıkar → pasif gelir.",–,Gumroad
-20,19,Uzun Vadeli Müşteri İlişkisi,Tek seferlik iş yerine düzenli müşteri hedefle.,–,
+StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link,GörünürEğer
+1,0,Beceri Belirleme,"Hangi alanda hizmet vereceksin? (tasarım, yazılım, çeviri, içerik, sosyal medya).","[Tasarım, Yazılım, Çeviri, İçerik, Sosyal Medya]",,
+2,1,Portföy Hazırlık,Daha önce yaptığın işlerden örnek veya demo projeler hazırla.,–,"Canva, Behance",
+3,2,Profil Platformu Seç,Freelance iş bulacağın yeri seç.,"[Upwork, Fiverr, Bionluk, Freelancer.com]","Upwork, Fiverr",
+4,3,Profil Aç,"Profesyonel fotoğraf, başlık, açıklama ekle.",–,,
+5,4,Hizmet Paketleri Belirle,"Net hizmet tanımları yap (örn. 500 kelime blog yazısı, logo tasarımı).",–,,
+6,5,Fiyatlandırma,"Başlangıçta düşük fiyatla başla, sonra yükselt.",–,Fiverr örnekleri,
+7,6,İlk İş Başvurusu,Küçük projelere teklif ver.,–,Upwork,
+8,7,İyi Teklif Yazımı,"Müşteriye özel, kısa ve çözüm odaklı yaz.",–,,
+9,8,İlk İş Teslimi,Zamanında ve kaliteli teslim et.,–,,
+10,9,Geri Bildirim Al,"Müşteriden yorum iste, profiline koy.",–,,
+11,10,Profil Güçlendirme,Daha fazla iş aldıkça portföy ve yorum sayın artacak.,–,,
+12,11,Nişleşme,"En iyi yaptığın alana odaklan, fiyatı artır.",–,,
+13,12,Sosyal Medya Kullan,"LinkedIn, Twitter, Instagram’da işlerini paylaş.",–,,
+14,13,Networking,"Freelance topluluklarına katıl (Discord, Facebook grupları).",–,,
+15,14,Ekstra Gelir Kanalları,Kendi web siteni aç → portföy + teklif toplama.,–,"Wix, WordPress",
+16,15,Otomasyon Araçları,"Faturalandırma, zaman takibi, iş yönetimi.",–,"Toggl, Notion",
+17,16,Daha Büyük İşlere Başvur,Daha yüksek bütçeli müşterilere teklif ver.,–,Upwork,
+18,17,Teklif Oranını İyileştir,"Kazanma oranını analiz et, strateji değiştir.",–,,
+19,18,Geliri Çeşitlendir,"Eğitim, e-kitap, kurs çıkar → pasif gelir.",–,Gumroad,
+20,19,Uzun Vadeli Müşteri İlişkisi,Tek seferlik iş yerine düzenli müşteri hedefle.,–,,

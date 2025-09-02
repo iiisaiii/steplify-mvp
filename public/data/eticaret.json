@@ -35,7 +35,8 @@
       "links": [
         "Canva",
         "Namecheap"
-      ]
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
     },
     {
       "id": 4,

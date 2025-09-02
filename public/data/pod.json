@@ -92,7 +92,8 @@
       ],
       "links": [
         "Shopify"
-      ]
+      ],
+      "visibleIf": "step:1=Shopify"
     },
     {
       "id": 8,
@@ -126,7 +127,8 @@
       ],
       "links": [
         "Etsy"
-      ]
+      ],
+      "visibleIf": "step:1=Etsy"
     },
     {
       "id": 11,
@@ -150,7 +152,8 @@
       ],
       "links": [
         "Placeit"
-      ]
+      ],
+      "visibleIf": "step:1=Etsy"
     },
     {
       "id": 13,
