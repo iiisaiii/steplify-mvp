@@ -111,17 +111,22 @@ function showStep(step, index){
   const d = document.createElement('p'); d.textContent = step.description || 'Açıklama yok.';
   els.stepView.appendChild(h); els.stepView.appendChild(d);
 
-  if(step.options && step.options.length){
-    const wrap = document.createElement('div'); wrap.style.marginTop='8px';
-    const lbl = document.createElement('div'); lbl.textContent = 'Seçenekler:'; wrap.appendChild(lbl);
-    const btns = document.createElement('div'); btns.style.display='flex'; btns.style.gap='8px'; btns.style.flexWrap='wrap';
-    step.options.forEach(o=>{
-      const b = document.createElement('button'); b.className='btn small outline'; b.textContent=o;
-      b.addEventListener('click', ()=> alert(`Seçildi: ${o} (MVP)`));
-      btns.appendChild(b);
+  if (step.options && step.options.length) {
+    const optionsWrap = document.createElement('div');
+    optionsWrap.className = 'options';                   // sadece stil için
+  
+    step.options.forEach(o => {
+      const b = document.createElement('button');
+      b.className = 'btn option-btn';                    // büyük ve ortalı buton
+      b.textContent = o;
+      b.dataset.option = o;                              // bir sonraki adımda lazım olacak
+      // şimdilik sadece tıklanabilir; davranışı sonraki adımda ekleyeceğiz
+      optionsWrap.appendChild(b);
     });
-    wrap.appendChild(btns); els.stepView.appendChild(wrap);
+  
+    els.stepView.appendChild(optionsWrap);
   }
+
 
   els.linksList.innerHTML = '';
   (step.links||[]).forEach(u=>{
