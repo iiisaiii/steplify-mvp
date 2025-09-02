@@ -34,7 +34,47 @@ const els = {
   resetProgress: document.getElementById('resetProgress'),
   premiumBtn: document.getElementById('premiumBtn'),
   loadSample: document.getElementById('loadSample'),
+  modalMask: document.getElementById('modalMask'),
+  modalTitle: document.getElementById('modalTitle'),
+  modalBody: document.getElementById('modalBody'),
+  modalOk: document.getElementById('modalOk'),
+  modalCancel: document.getElementById('modalCancel'),
 };
+const OPTION_TIPS = {
+  "İş Modeli Seç": {
+    "Dijital Ürünler": "Dijital ürünler (kurs, yazılım, e-kitap) stok gerektirmez; komisyonlar genelde daha yüksektir.",
+    "Fiziksel Ürünler": "Fiziksel ürünlerde komisyon düşük ama talep yüksek; lojistik ve kargo takibi gerekir."
+  }
+};
+
+function openModal(title, body){
+  return new Promise(resolve=>{
+    els.modalTitle.textContent = title;
+    els.modalBody.textContent = body;
+    els.modalMask.classList.remove('hidden');
+
+    const onOk = ()=>{ cleanup(); resolve(true); };
+    const onCancel = ()=>{ cleanup(); resolve(false); };
+
+    function cleanup(){
+      els.modalMask.classList.add('hidden');
+      els.modalOk.removeEventListener('click', onOk);
+      els.modalCancel.removeEventListener('click', onCancel);
+    }
+
+    els.modalOk.addEventListener('click', onOk);
+    els.modalCancel.addEventListener('click', onCancel);
+  });
+}
+
+function getOrderedSteps(){ return computeOrder(models[currentModel] || []); }
+
+function goToNextStep(currentStep){
+  const order = getOrderedSteps();
+  const i = order.findIndex(s => s.id === currentStep.id);
+  const next = order[i+1];
+  if(next){ showStep(next, i+1); }
+}
 
 function lsKey(model){ return `steplify_progress::${model}`; }
 function getProgress(m){ try{ return JSON.parse(localStorage.getItem(lsKey(m))||'{}'); }catch(_){ return {}; } }
@@ -106,42 +146,84 @@ function renderSteps(){
 }
 
 function showStep(step, index){
+  // İçeriği sıfırla
   els.stepView.innerHTML = '';
-  const h = document.createElement('h2'); h.textContent = `${step.id}. ${step.title}`;
-  const d = document.createElement('p'); d.textContent = step.description || 'Açıklama yok.';
-  els.stepView.appendChild(h); els.stepView.appendChild(d);
 
+  // Başlık + açıklama
+  const h = document.createElement('h2');
+  h.textContent = `${step.id}. ${step.title}`;
+  const d = document.createElement('p');
+  d.textContent = step.description || 'Açıklama yok.';
+  els.stepView.appendChild(h);
+  els.stepView.appendChild(d);
+
+  // Bu adım kilitli mi? (freemium)
+  const locked = (index >= FREE_LIMIT) && !isPremium();
+
+  // Seçenek butonları
   if (step.options && step.options.length) {
     const optionsWrap = document.createElement('div');
-    optionsWrap.className = 'options';                   // sadece stil için
-  
+    optionsWrap.className = 'options'; // butonları ortalamak için
+
     step.options.forEach(o => {
       const b = document.createElement('button');
-      b.className = 'btn option-btn';                    // büyük ve ortalı buton
+      b.className = 'btn option-btn';  // görsel stil
       b.textContent = o;
-      b.dataset.option = o;                              // bir sonraki adımda lazım olacak
-      // şimdilik sadece tıklanabilir; davranışı sonraki adımda ekleyeceğiz
+      b.dataset.option = o;
+
+      // kilitliyse butonu pasif yap
+      if (locked) {
+        b.disabled = true;
+      }
+
+      b.addEventListener('click', async () => {
+        if (locked) return; // güvenlik
+
+        // kısa açıklama (yoksa varsayılan)
+        const tip =
+          (OPTION_TIPS[step.title] && OPTION_TIPS[step.title][o]) ||
+          `${o} ile devam edilsin mi?`;
+
+        // modal aç
+        const ok = await openModal(o, tip);
+        if (!ok) return;
+
+        // bu adımı tamamlandı işaretle
+        const p = getProgress(currentModel);
+        p[step.id] = true;
+        setProgress(currentModel, p);
+
+        // sol listedeki ilerlemeyi tazele
+        renderSteps();
+
+        // otomatik bir sonraki adıma geç
+        goToNextStep(step);
+      });
+
       optionsWrap.appendChild(b);
     });
-  
+
     els.stepView.appendChild(optionsWrap);
   }
 
-
+  // Sağdaki "Kaynaklar" listesi
   els.linksList.innerHTML = '';
-  (step.links||[]).forEach(u=>{
+  (step.links || []).forEach(u => {
     const li = document.createElement('li');
-    const a = document.createElement('a'); a.href=u; a.target='_blank'; a.rel='noopener'; a.textContent=u;
-    li.appendChild(a); els.linksList.appendChild(li);
+    const a = document.createElement('a');
+    a.href = u; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = u;
+    li.appendChild(a);
+    els.linksList.appendChild(li);
   });
 
-  // 🔑 Premium kontrolü ekliyoruz
-  if(index >= FREE_LIMIT && !isPremium()){
-    const lock = document.createElement('div'); 
-    lock.className='card'; 
-    lock.style.marginTop='12px'; 
-    lock.style.background='#fff7ed'; 
-    lock.style.borderColor='#fdba74';
+  // Kilit kartı (freemium uyarısı)
+  if (locked) {
+    const lock = document.createElement('div');
+    lock.className = 'card';
+    lock.style.marginTop = '12px';
+    lock.style.background = '#fff7ed';
+    lock.style.borderColor = '#fdba74';
     lock.innerHTML = `
       <b>Premium Kilit</b><br/>
       Bu adımı görmek için Premium'a geç.
@@ -152,6 +234,7 @@ function showStep(step, index){
     els.stepView.appendChild(lock);
   }
 }
+
 
 
 async function loadDataFiles(){
