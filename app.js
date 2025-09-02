@@ -62,11 +62,32 @@ function ensureModal() {
       position:relative; background:#fff; border-radius:12px; padding:16px 18px;
       width:min(520px, 92vw); box-shadow:0 20px 60px rgba(0,0,0,.25);
     ">
+      <h3 id="modalTitle" style="margin:0 0 6px; font-size:18px;"></h3>
       <p id="modalText" style="margin:0 0 14px; color:#475569;"></p>
-      <div style="display:flex; gap:8px; justify-content:flex-end;">
+  
+      <div class="modal-actions" style="display:flex; gap:8px; justify-content:flex-end;">
+        <button id="modalCancel" class="btn small outline" type="button">Vazgeç</button>
+        <button id="modalOk" class="btn small primary" type="button">Devam Et</button>
       </div>
     </div>
   `;
+  const okBtn = m.querySelector('#modalOk');
+  const cancelBtn = m.querySelector('#modalCancel');
+  
+  Object.assign(okBtn.style, {
+    background: '#2563eb',
+    color: '#fff',
+    border: '1px solid #1e40af',
+    padding: '8px 12px',
+    borderRadius: '8px'
+  });
+  Object.assign(cancelBtn.style, {
+    background: '#fff',
+    color: '#111',
+    border: '1px solid #cbd5e1',
+    padding: '8px 12px',
+    borderRadius: '8px'
+  });
   document.body.appendChild(m);
 
   // Kapatma/Onay bağlantıları
