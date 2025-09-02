@@ -299,6 +299,7 @@ async function loadDataFiles(){
   }
 }
 
+document.addEventListener('DOMContentLoaded', loadDataFiles);
 
 els.modelSelect.addEventListener('change', e=>{ currentModel = e.target.value; renderSteps(); });
 els.resetProgress.addEventListener('click', ()=>{ if(!currentModel) return; localStorage.removeItem(lsKey(currentModel)); renderSteps(); });
