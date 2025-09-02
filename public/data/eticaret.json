@@ -5,7 +5,7 @@
       "id": 1,
       "parentId": 0,
       "title": "Model Seç",
-      "description": "İş modelini belirle.",
+      "description": "İş modelini belirle (dallar buna göre açılır).",
       "options": [
         "D2C (Kendi Marka)",
         "Arbitraj",
@@ -17,9 +17,112 @@
     },
     {
       "id": 2,
+      "parentId": 0,
+      "title": "Hedef Pazar",
+      "description": "Operasyon ve ödeme/kargo pazarına göre değişir.",
+      "options": [
+        "Global",
+        "Türkiye"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 3,
+      "parentId": 0,
+      "title": "Marka Adı & Domain",
+      "description": "İsim düşün, domain kontrol et.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Namecheap",
+        "Google Domains"
+      ]
+    },
+    {
+      "id": 4,
+      "parentId": 0,
+      "title": "Şirket & Hukuk (Öneri)",
+      "description": "Şirket, KVKK/Privacy, iade/mesafeli satış; şablonları doldur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Ticaret Bakanlığı Rehberleri"
+      ]
+    },
+    {
+      "id": 5,
+      "parentId": 0,
+      "title": "Çalışma Alanı & Klasör",
+      "description": "Drive klasörleri + Notion görev tahtası.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Drive",
+        "Notion"
+      ]
+    },
+    {
+      "id": 6,
+      "parentId": 0,
+      "title": "İzleme Aracı Seç",
+      "description": "Piksel/analitik tercihini seç.",
+      "options": [
+        "TikTok Pixel",
+        "Meta Pixel",
+        "Google Tag (GA4)",
+        "Sadece UTM"
+      ],
+      "links": [
+        "TikTok Pixel Helper",
+        "Tag Assistant"
+      ]
+    },
+    {
+      "id": 7,
+      "parentId": 0,
+      "title": "UTM Standardı",
+      "description": "utm_source/medium/campaign/content adlandırma.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "UTM Builder"
+      ]
+    },
+    {
+      "id": 8,
+      "parentId": 0,
+      "title": "Takip Sheet",
+      "description": "Ürün, trafik, maliyet, satış, marj tablosu.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Sheets"
+      ]
+    },
+    {
+      "id": 9,
+      "parentId": 0,
+      "title": "Disclosure",
+      "description": "İade/teslimat ve reklam/affiliate açıklamaları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "FTC/AB Yönergeleri"
+      ]
+    },
+    {
+      "id": 10,
       "parentId": 1,
-      "title": "Platform Seç (D2C)",
-      "description": "Kendi site altyapısı.",
+      "title": "D2C: Platform Seç",
+      "description": "Kendi siteni hangi altyapıyla kuracaksın?",
       "options": [
         "Shopify",
         "WooCommerce"
@@ -30,10 +133,528 @@
       "visibleIf": "step:1=D2C (Kendi Marka)"
     },
     {
-      "id": 3,
+      "id": 11,
+      "parentId": 10,
+      "title": "Shopify – Hesap Aç",
+      "description": "Shopify hesabı oluştur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Shopify Help"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 12,
+      "parentId": 11,
+      "title": "Shopify – Mağaza Ayarları",
+      "description": "Para birimi, bölge, saat dilimi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Shopify Admin"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 13,
+      "parentId": 11,
+      "title": "Shopify – Tema",
+      "description": "Dawn (ücretsiz) ile başla; logo/renk/font.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Shopify Themes"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 14,
+      "parentId": 11,
+      "title": "Shopify – Domain",
+      "description": "Alan adını bağla; SSL aktif.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Shopify Domains"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 15,
+      "parentId": 11,
+      "title": "Shopify – Ödeme Sağlayıcı",
+      "description": "Ülkeye göre sağlayıcıyı bağla.",
+      "options": [
+        "iyzico",
+        "PayTR",
+        "Stripe"
+      ],
+      "links": [
+        "iyzico",
+        "PayTR",
+        "Stripe"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 16,
+      "parentId": 11,
+      "title": "Shopify – Vergi/KDV",
+      "description": "Ayarları pazarına göre yap.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Shopify Taxes"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 17,
+      "parentId": 11,
+      "title": "Shopify – Kargo Profilleri",
+      "description": "Zon/ülke bazlı ücret profilleri.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Shopify Shipping"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 18,
+      "parentId": 11,
+      "title": "Shopify – Zorunlu Sayfalar",
+      "description": "İade/teslimat/gizlilik; Hakkımızda/İletişim.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Shopify Policies"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 19,
+      "parentId": 11,
+      "title": "Shopify – Uygulamalar",
+      "description": "Sayfa/yorum/e-posta/davranış analizi.",
+      "options": [
+        "PageFly",
+        "Judge.me",
+        "Klaviyo",
+        "Lucky Orange"
+      ],
+      "links": [
+        "PageFly",
+        "Judge.me",
+        "Klaviyo"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 20,
+      "parentId": 11,
+      "title": "Shopify – Pixel/GA4",
+      "description": "Kodu tema/gtm ile kur, test et.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Tag Manager"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify"
+    },
+    {
+      "id": 21,
+      "parentId": 10,
+      "title": "Woo – Barındırma & Domain",
+      "description": "Hosting, domain, SSL.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Cloudways",
+        "Hostinger"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce"
+    },
+    {
+      "id": 22,
+      "parentId": 21,
+      "title": "Woo – Kurulum & Tema",
+      "description": "Astra/Blocksy; hafif builder.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "WordPress.org"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce"
+    },
+    {
+      "id": 23,
+      "parentId": 21,
+      "title": "Woo – Ödeme",
+      "description": "Eklentiler: iyzico/PayTR/Stripe/PayPal.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "iyzico Woo",
+        "PayTR Woo"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce"
+    },
+    {
+      "id": 24,
+      "parentId": 21,
+      "title": "Woo – Kargo",
+      "description": "Zone/weight rate; kargo plug-in.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Woo Shipping"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce"
+    },
+    {
+      "id": 25,
+      "parentId": 21,
+      "title": "Woo – Vergi/KDV",
+      "description": "KDV oranları ve fatura bilgileri.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Woo Taxes"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce"
+    },
+    {
+      "id": 26,
+      "parentId": 21,
+      "title": "Woo – Sayfa & Menü",
+      "description": "İade/gizlilik/SSS; ana menü-navigasyon.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce"
+    },
+    {
+      "id": 27,
+      "parentId": 21,
+      "title": "Woo – Eklenti Paketi",
+      "description": "SEO (RankMath), hız (WP Rocket), form (Fluent).",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "RankMath",
+        "WP Rocket"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce"
+    },
+    {
+      "id": 28,
+      "parentId": 21,
+      "title": "Woo – Pixel/GA4",
+      "description": "GA4/Pixel, Tag Manager ile kur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Tag Manager"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce"
+    },
+    {
+      "id": 30,
       "parentId": 1,
-      "title": "Pazaryeri Seç (TR)",
-      "description": "Hangi pazaryerleri?",
+      "title": "D2C: Tedarik Modeli",
+      "description": "Ürünü nasıl temin edeceksin?",
+      "options": [
+        "Kendi Üretim",
+        "Toptan (Wholesale)",
+        "Özel Etiket (Private Label)"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 31,
+      "parentId": 30,
+      "title": "Kendi Üretim – Hazırlık",
+      "description": "Üretici, hammadde, kalite standartları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "ISO/CE Rehberleri"
+      ],
+      "visibleIf": "step:30=Kendi Üretim"
+    },
+    {
+      "id": 32,
+      "parentId": 30,
+      "title": "Toptan – Tedarikçi Bul",
+      "description": "Distribütör/wholesaler; fiyat/MOQ sözleşmesi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:30=Toptan (Wholesale)"
+    },
+    {
+      "id": 33,
+      "parentId": 30,
+      "title": "Private Label – Araştırma",
+      "description": "Alibaba/1688; marka tescil, kalıp/numune.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Alibaba",
+        "Trademarkia"
+      ],
+      "visibleIf": "step:30=Özel Etiket (Private Label)"
+    },
+    {
+      "id": 34,
+      "parentId": 30,
+      "title": "Paketleme & Barkod",
+      "description": "EAN/UPC; ambalaj & etiket yönetmeliği.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "GS1"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 35,
+      "parentId": 30,
+      "title": "Fiyatlandırma Modeli",
+      "description": "Maliyet + kargo + vergi + hedef marj.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Sheets"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 36,
+      "parentId": 1,
+      "title": "D2C: Ürün Foto & İçerik",
+      "description": "Stüdyo çekimi, boyut/renk; açıklama/FAQ.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 37,
+      "parentId": 1,
+      "title": "D2C: Ürün Sayfası Şablonu",
+      "description": "USP, fayda bullet’ları, sosyal kanıt, güven rozetleri.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "PageFly/Elementor"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 38,
+      "parentId": 1,
+      "title": "D2C: Stok & SKU",
+      "description": "Yapı: Kategori-AltKategori-Ürün-Varyant; SKU kuralı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 39,
+      "parentId": 1,
+      "title": "D2C: Kargo & İade Metinleri",
+      "description": "Net kargo süresi, iade koşulları; müşteri güveni.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 40,
+      "parentId": 1,
+      "title": "Arbitraj Tür Seç",
+      "description": "Arbitraj yöntemini seç.",
+      "options": [
+        "Retail Arbitraj",
+        "Online Arbitraj",
+        "Wholesale (B2B)"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 41,
+      "parentId": 40,
+      "title": "Pazar Seç (Arbitraj)",
+      "description": "Hangi pazar?",
+      "options": [
+        "Amazon TR",
+        "Trendyol",
+        "Hepsiburada",
+        "n11"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 42,
+      "parentId": 41,
+      "title": "Hesap Aç & Doğrulama",
+      "description": "Gerekli evraklar, IBAN, vergi, fatura.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Platform Yardım"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 43,
+      "parentId": 40,
+      "title": "Ürün Taraması – Araçlar",
+      "description": "Barkod tarama/kârlılık hesap.",
+      "options": [
+        "SellerAmp",
+        "Keepa",
+        "BuyBotPro",
+        "Yok"
+      ],
+      "links": [
+        "SellerAmp",
+        "Keepa"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 44,
+      "parentId": 40,
+      "title": "Kısıtlama/Listing Kuralları",
+      "description": "Gated category, marka izinleri; paralel ithalat/garanti.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Platform Policies"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 45,
+      "parentId": 40,
+      "title": "Kâr & Ücret Hesabı",
+      "description": "Komisyon, kargo, iade, vergi dahil net kâr.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Sheets Şablonu"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 46,
+      "parentId": 40,
+      "title": "Paketleme & Barkod",
+      "description": "FNSKU/mağaza barkodu, kargo etiketi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "GS1/Amazon"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 47,
+      "parentId": 41,
+      "title": "Listing Aç/Join",
+      "description": "Eğer kendi listing değilse “join listing”; değilse yeni aç.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Platform Docs"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 48,
+      "parentId": 41,
+      "title": "Kargo Süreçleri (FBM/FBA)",
+      "description": "Pazara göre FBM/FBA benzeri akış.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 49,
+      "parentId": 41,
+      "title": "Müşteri Destek SOP",
+      "description": "Sık sorular ve iade politikası.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Zendesk/Gorgias"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 50,
+      "parentId": 1,
+      "title": "Pazaryeri Seç",
+      "description": "TR pazaryeri kurulum dalı.",
       "options": [
         "Trendyol",
         "Hepsiburada",
@@ -46,49 +667,10 @@
       "visibleIf": "step:1=Pazaryeri"
     },
     {
-      "id": 4,
-      "parentId": 1,
-      "title": "Arbitraj Kaynakları",
-      "description": "Perakende/online arbitraj.",
-      "options": [
-        "-"
-      ],
-      "links": [
-        "-"
-      ],
-      "visibleIf": "step:1=Arbitraj"
-    },
-    {
-      "id": 5,
-      "parentId": 2,
-      "title": "Shopify Kurulum",
-      "description": "Tema, ödeme, kargo, vergi.",
-      "options": [
-        "-"
-      ],
-      "links": [
-        "Shopify Docs"
-      ],
-      "visibleIf": "step:2=Shopify"
-    },
-    {
-      "id": 6,
-      "parentId": 2,
-      "title": "WooCommerce Kurulum",
-      "description": "Hosting, eklenti, ödeme.",
-      "options": [
-        "-"
-      ],
-      "links": [
-        "Woo Docs"
-      ],
-      "visibleIf": "step:2=WooCommerce"
-    },
-    {
-      "id": 7,
-      "parentId": 3,
-      "title": "Pazaryeri Hesap Aç",
-      "description": "Komisyon/kargo anlaşmaları.",
+      "id": 51,
+      "parentId": 50,
+      "title": "Hesap Aç & Onay",
+      "description": "Sözleşme/evrak/yetkili doğrulamaları.",
       "options": [
         "-"
       ],
@@ -98,10 +680,162 @@
       "visibleIf": "step:1=Pazaryeri"
     },
     {
-      "id": 8,
+      "id": 52,
+      "parentId": 50,
+      "title": "Entegrasyon Yazılımı",
+      "description": "Ürün/stok/sipariş senkronu.",
+      "options": [
+        "Entegra",
+        "Dopigo",
+        "StockMount",
+        "İdeasoft"
+      ],
+      "links": [
+        "Entegratörler"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 53,
+      "parentId": 50,
+      "title": "Kargo Anlaşması",
+      "description": "Firmalarla gönderi anlaşması.",
+      "options": [
+        "Yurtiçi",
+        "Aras",
+        "MNG",
+        "Sürat",
+        "PTS"
+      ],
+      "links": [
+        "Kargo Firmaları"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 54,
+      "parentId": 50,
+      "title": "E-Fatura/E-İrsaliye",
+      "description": "Özel entegratör veya GİB portal.",
+      "options": [
+        "Paraşüt",
+        "Logo",
+        "KolayBi’"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 55,
+      "parentId": 50,
+      "title": "Mağaza Ayarları",
+      "description": "Komisyon, iade, kargo şablonları, mağaza vitrini.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 56,
+      "parentId": 50,
+      "title": "Kategori Kuralları",
+      "description": "Zorunlu alanlar, görsel boyutu, başlık formatı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Platform Docs"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 57,
+      "parentId": 50,
+      "title": "Ürün Aktarım",
+      "description": "Entegrasyon yazılımı ile toplu ürün yükle.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Entegratörler"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 58,
+      "parentId": 50,
+      "title": "Kampanya/Kupon Araçları",
+      "description": "Platform içi kampanya/indirim araçları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 59,
+      "parentId": 50,
+      "title": "Müşteri Soruları & Puan",
+      "description": "Yanıt süresi ve CSAT puanı hedefi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 60,
       "parentId": 0,
-      "title": "Ürün Araştırma",
-      "description": "Talep ve rekabet.",
+      "title": "Ürün Araştırma – Genel",
+      "description": "Talep, rekabet, kârlılık; 10 aday çıkar.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "TikTok Creative Center",
+        "Amazon Movers"
+      ]
+    },
+    {
+      "id": 61,
+      "parentId": 0,
+      "title": "Puanlama Matrisi",
+      "description": "Kriter puanlama: Talep × Marj × Rekabet × Tedarik Riski.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Sheets Şablonu"
+      ]
+    },
+    {
+      "id": 62,
+      "parentId": 0,
+      "title": "Top 3 Ürün Seç",
+      "description": "3 ürünü shortlist yap.",
+      "options": [
+        "Aday 1",
+        "Aday 2",
+        "Aday 3"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 63,
+      "parentId": 0,
+      "title": "Tedarik Onayı",
+      "description": "Numune/kalite kontrol/sertifika (gerekirse).",
       "options": [
         "-"
       ],
@@ -110,10 +844,10 @@
       ]
     },
     {
-      "id": 9,
+      "id": 64,
       "parentId": 0,
-      "title": "Tedarik/Toptancı",
-      "description": "Anlaşmalar ve MOQ.",
+      "title": "Fiyatlandırma Stratejisi",
+      "description": "EDLP/High-Low/Bundle/Volume; ilk fiyatı belirle.",
       "options": [
         "-"
       ],
@@ -122,10 +856,10 @@
       ]
     },
     {
-      "id": 10,
+      "id": 70,
       "parentId": 0,
-      "title": "Fotoğraf & İçerik",
-      "description": "Ürün foto, açıklama, FAQ.",
+      "title": "İçerik & Fotoğraf",
+      "description": "Stüdyo/flatlay; lifestyle 3 görsel; video (ops.).",
       "options": [
         "-"
       ],
@@ -134,10 +868,22 @@
       ]
     },
     {
-      "id": 11,
+      "id": 71,
       "parentId": 0,
-      "title": "Fiyatlandırma",
-      "description": "Maliyet, komisyon, kargo.",
+      "title": "SEO Alanları",
+      "description": "Meta başlık/açıklama; schema/ürün özellikleri.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "RankMath/Yoast/Shopify"
+      ]
+    },
+    {
+      "id": 72,
+      "parentId": 0,
+      "title": "Ürün Sayfası CTA",
+      "description": "Güven rozetleri, stok az uyarısı, “kargo ücretsiz” eşiği.",
       "options": [
         "-"
       ],
@@ -146,78 +892,478 @@
       ]
     },
     {
-      "id": 12,
+      "id": 73,
       "parentId": 0,
-      "title": "Pazarlama Kanalı",
-      "description": "Trafik kaynağı seç.",
+      "title": "Kategori & Filtreler",
+      "description": "Kategori ağaçları ve facet filtreler.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 74,
+      "parentId": 0,
+      "title": "Ödeme Akışı",
+      "description": "Kargo/ödeme adımları; “misafir ödeme” açık.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 75,
+      "parentId": 0,
+      "title": "Abandoned Cart",
+      "description": "E-posta serisi ve kupon.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Klaviyo/Shopify Email"
+      ]
+    },
+    {
+      "id": 76,
+      "parentId": 0,
+      "title": "Yorum/UGC",
+      "description": "Aktif yorum toplama; e-posta tetikleyici.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Judge.me/Yotpo"
+      ]
+    },
+    {
+      "id": 77,
+      "parentId": 0,
+      "title": "Canlı Destek/FAQ",
+      "description": "Temel sorulara hızlı cevap.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Tidio/Gorgias"
+      ]
+    },
+    {
+      "id": 80,
+      "parentId": 0,
+      "title": "Pazarlama Kanalı Seç",
+      "description": "İlk trafik kaynağını seç.",
       "options": [
         "TikTok",
         "Instagram",
         "Google Ads",
         "Influencer",
-        "Email"
+        "Email",
+        "SEO"
       ],
       "links": [
         "-"
       ]
     },
     {
-      "id": 13,
-      "parentId": 12,
-      "title": "Google Ads",
-      "description": "Search/Shopping kampanyaları.",
+      "id": 81,
+      "parentId": 80,
+      "title": "TikTok – Hesap & Bio",
+      "description": "İşletme profili, bio link, anahtar kelimeler.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "TikTok Business"
+      ],
+      "visibleIf": "step:80=TikTok"
+    },
+    {
+      "id": 82,
+      "parentId": 80,
+      "title": "TikTok – 30 Gün Plan",
+      "description": "Günlük içerik takvimi; 3 sütun.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Sheet Şablon"
+      ],
+      "visibleIf": "step:80=TikTok"
+    },
+    {
+      "id": 83,
+      "parentId": 80,
+      "title": "TikTok – Çekim & Edit",
+      "description": "Altyazı, pattern interrupt, kapak.",
+      "options": [
+        "CapCut Mobil",
+        "CapCut Masaüstü"
+      ],
+      "links": [
+        "CapCut"
+      ],
+      "visibleIf": "step:80=TikTok"
+    },
+    {
+      "id": 84,
+      "parentId": 80,
+      "title": "Instagram – Kurulum",
+      "description": "Profesyonel hesap, bio, highlight.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Meta Business"
+      ],
+      "visibleIf": "step:80=Instagram"
+    },
+    {
+      "id": 85,
+      "parentId": 80,
+      "title": "Instagram – İçerik Sütunları",
+      "description": "Reels/Carousel/Hikaye yayın standardı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:80=Instagram"
+    },
+    {
+      "id": 86,
+      "parentId": 80,
+      "title": "Google Ads – Altyapı",
+      "description": "GMC + feed + pixel/consent.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Merchant Center"
+      ],
+      "visibleIf": "step:80=Google Ads"
+    },
+    {
+      "id": 87,
+      "parentId": 80,
+      "title": "Google Ads – Kampanya",
+      "description": "Shopping/Performance Max test.",
       "options": [
         "-"
       ],
       "links": [
         "Google Ads"
       ],
-      "visibleIf": "step:12=Google Ads"
+      "visibleIf": "step:80=Google Ads"
     },
     {
-      "id": 14,
-      "parentId": 12,
-      "title": "UGC TikTok/IG",
-      "description": "Organik kısa video planı.",
+      "id": 88,
+      "parentId": 80,
+      "title": "Influencer – Ara",
+      "description": "Brief, liste, fiyat/erişim.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Modash/Incense"
+      ],
+      "visibleIf": "step:80=Influencer"
+    },
+    {
+      "id": 89,
+      "parentId": 80,
+      "title": "Influencer – Sözleşme",
+      "description": "Kullanım izni, teslim tarihi, revizyon.",
       "options": [
         "-"
       ],
       "links": [
         "-"
       ],
-      "visibleIf": "step:12=TikTok|Instagram"
+      "visibleIf": "step:80=Influencer"
     },
     {
-      "id": 15,
-      "parentId": 12,
-      "title": "Influencer",
-      "description": "UGC/satış ortaklığı anlaşmaları.",
+      "id": 90,
+      "parentId": 80,
+      "title": "Email – Altyapı",
+      "description": "Klaviyo/Shopify Email; pop-up ve segmentler.",
       "options": [
-        "-"
-      ],
-      "links": [
-        "-"
-      ],
-      "visibleIf": "step:12=Influencer"
-    },
-    {
-      "id": 16,
-      "parentId": 12,
-      "title": "Email Otomasyon",
-      "description": "Hoş geldin, sepet terk serileri.",
-      "options": [
-        "-"
+        "Klaviyo",
+        "Shopify Email"
       ],
       "links": [
         "Klaviyo"
       ],
-      "visibleIf": "step:12=Email"
+      "visibleIf": "step:80=Email"
     },
     {
-      "id": 17,
+      "id": 91,
+      "parentId": 80,
+      "title": "Email – Otomasyon",
+      "description": "Hoş geldin, sepet terk, win-back akışları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Klaviyo Flows"
+      ],
+      "visibleIf": "step:80=Email"
+    },
+    {
+      "id": 92,
+      "parentId": 80,
+      "title": "SEO – Plan",
+      "description": "20 anahtar kelime, içerik takvimi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Ahrefs/Semrush"
+      ],
+      "visibleIf": "step:80=SEO"
+    },
+    {
+      "id": 93,
+      "parentId": 80,
+      "title": "SEO – Blog/Hub",
+      "description": "Kategoriye uygun hub yazıları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:80=SEO"
+    },
+    {
+      "id": 100,
+      "parentId": 6,
+      "title": "Pixel/GA4 Kurulum",
+      "description": "Seçilen aracı siteye entegre et, test event’leri.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Tag Assistant"
+      ],
+      "visibleIf": "step:6=Tiktok Pixel|Meta Pixel|Google Tag (GA4)"
+    },
+    {
+      "id": 101,
+      "parentId": 6,
+      "title": "Yalnızca UTM Akışı",
+      "description": "UTM + kısa link; tıklama kaydı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Bitly/Short.io"
+      ],
+      "visibleIf": "step:6=Sadece UTM"
+    },
+    {
+      "id": 102,
       "parentId": 0,
-      "title": "Operasyon",
-      "description": "Sipariş, paketleme, iade.",
+      "title": "Consent/Çerez Barı",
+      "description": "GDPR/KVKK uyumlu çerez onayı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Termly/CookieYes"
+      ]
+    },
+    {
+      "id": 103,
+      "parentId": 0,
+      "title": "Arama Konsolu & Site Haritası",
+      "description": "Search Console + sitemap.xml/robots.txt.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Search Console"
+      ]
+    },
+    {
+      "id": 104,
+      "parentId": 0,
+      "title": "Hız & Core Web Vitals",
+      "description": "İmaj sıkıştırma, lazyload, CDN.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "PageSpeed Insights"
+      ]
+    },
+    {
+      "id": 110,
+      "parentId": 1,
+      "title": "D2C: Ürün Ekleme",
+      "description": "Ürün → varyant → fiyat → kargo profili.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Platform Docs"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 111,
+      "parentId": 1,
+      "title": "D2C: Koleksiyon & Menü",
+      "description": "Koleksiyonlar ve navigasyon.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 112,
+      "parentId": 1,
+      "title": "D2C: Kampanya & Kupon",
+      "description": "Kupon/promo; minimum sepet tutarı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 113,
+      "parentId": 1,
+      "title": "D2C: Blog & İçerik",
+      "description": "Haftada 2 yazı; kategoriye iç link.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=D2C (Kendi Marka)"
+    },
+    {
+      "id": 120,
+      "parentId": 1,
+      "title": "Arbitraj: Fiyat Rekabeti",
+      "description": "BuyBox/Lowest price; minimum marj kuralı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 121,
+      "parentId": 1,
+      "title": "Arbitraj: Repricer (ops)",
+      "description": "Otomatik fiyatlandırma aracı.",
+      "options": [
+        "RepricerExpress",
+        "Seller Snap",
+        "Yok"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 122,
+      "parentId": 1,
+      "title": "Arbitraj: Stok Döngüsü",
+      "description": "Hızlı stok yenileme ve geri sipariş.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Arbitraj"
+    },
+    {
+      "id": 130,
+      "parentId": 1,
+      "title": "Pazaryeri: Ürün Açılışı",
+      "description": "Zorunlu alanlar; varyant/renk/beden.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Satıcı Merkezi"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 131,
+      "parentId": 1,
+      "title": "Pazaryeri: Medya Kuralları",
+      "description": "Görsel boyutları, sıralama, video (ops.).",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Platform Docs"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 132,
+      "parentId": 1,
+      "title": "Pazaryeri: SEO Başlık & Açıklama",
+      "description": "Kelime sırası, nitelikler, etiketler.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 133,
+      "parentId": 1,
+      "title": "Pazaryeri: Kategori Özgü Alanlar",
+      "description": "Giyim/elektronik vb. zorunlu alanlar.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 140,
+      "parentId": 0,
+      "title": "Müşteri Desteği",
+      "description": "Kanal/e-posta/telefon şablonları; SLA.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Zendesk",
+        "Gorgias"
+      ]
+    },
+    {
+      "id": 141,
+      "parentId": 0,
+      "title": "İade/Değişim Akışı",
+      "description": "Form, adres, kargo etiketi; şartlar.",
       "options": [
         "-"
       ],
@@ -226,10 +1372,94 @@
       ]
     },
     {
-      "id": 18,
+      "id": 142,
       "parentId": 0,
-      "title": "Analitik & Ölçek",
-      "description": "ROAS/LTV odaklı büyüme.",
+      "title": "Faturalandırma",
+      "description": "E-fatura senaryoları; iade/iptal.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 143,
+      "parentId": 0,
+      "title": "Kargo SLA",
+      "description": "Tahmini teslimat, gecikme mesaj şablonları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 144,
+      "parentId": 0,
+      "title": "Depo/Operasyon",
+      "description": "İç süreç: kabul, stok, paketleme kontrol listesi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 150,
+      "parentId": 0,
+      "title": "Yayın Öncesi Kontrol",
+      "description": "Ürün, fiyat, kargo, ödeme, piksel, hız, çerez onayı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Checklist"
+      ]
+    },
+    {
+      "id": 151,
+      "parentId": 0,
+      "title": "Yayın & İlk 7 Gün",
+      "description": "Yoğun trafik/izleme; günlük rapor.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 152,
+      "parentId": 0,
+      "title": "Analitik Paneli",
+      "description": "GA4, reklam panelleri; ROAS/LTV.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Analytics"
+      ]
+    },
+    {
+      "id": 153,
+      "parentId": 0,
+      "title": "İyileştirme Döngüsü",
+      "description": "Koleksiyon, kategori, en iyi 20% ürün; zayıfı kaldır/güncelle.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 154,
+      "parentId": 0,
+      "title": "Ölçekleme",
+      "description": "Bütçe/kanal arttırma, yeni pazar, yeni kategori.",
       "options": [
         "-"
       ],

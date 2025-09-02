@@ -24,7 +24,8 @@
       "options": [
         "AliExpress",
         "Türkiye Tedarikçi",
-        "Print on Demand"
+        "Print on Demand",
+        "Private Label"
       ],
       "links": [
         "-"
@@ -32,12 +33,115 @@
     },
     {
       "id": 3,
-      "parentId": 1,
-      "title": "Shopify Kurulum",
-      "description": "Tema, ödeme, teslimat ayarları.",
+      "parentId": 0,
+      "title": "Hedef Pazar",
+      "description": "Öncelikli pazar.",
       "options": [
-        "Dawn Theme",
-        "Premium Theme"
+        "Global",
+        "Türkiye"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 4,
+      "parentId": 0,
+      "title": "Marka Adı & Domain",
+      "description": "Marka ismi bul; domain uygunluğunu kontrol et.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Namecheap",
+        "Google Domains"
+      ]
+    },
+    {
+      "id": 5,
+      "parentId": 0,
+      "title": "Çalışma Alanı Kur",
+      "description": "Drive klasörleri + Notion çalışma sayfası + görev takibi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Drive",
+        "Notion"
+      ]
+    },
+    {
+      "id": 6,
+      "parentId": 0,
+      "title": "Politikalar/Yasaklı Ürünler",
+      "description": "Seçilen platformun ve ülkenin yasaklı ürünlerini kontrol et.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Platform Policies"
+      ]
+    },
+    {
+      "id": 7,
+      "parentId": 0,
+      "title": "İzleme & Analitik Seç",
+      "description": "Piksel/analitik aracını seç.",
+      "options": [
+        "TikTok Pixel",
+        "Meta Pixel",
+        "Google Tag (GA4)",
+        "Sadece UTM"
+      ],
+      "links": [
+        "TikTok Pixel Helper",
+        "Tag Assistant"
+      ]
+    },
+    {
+      "id": 8,
+      "parentId": 0,
+      "title": "UTM İsimlendirme",
+      "description": "utm_source/medium/campaign/content standardı oluştur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "UTM Builder"
+      ]
+    },
+    {
+      "id": 9,
+      "parentId": 0,
+      "title": "Takip Sheet",
+      "description": "Ürün/teklif – link – trafik – satış sheet’i kopyala.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Sheets"
+      ]
+    },
+    {
+      "id": 10,
+      "parentId": 0,
+      "title": "İşletme E-postası",
+      "description": "Domain e-postası oluştur (info@...).",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Workspace",
+        "Zoho Mail"
+      ]
+    },
+    {
+      "id": 20,
+      "parentId": 0,
+      "title": "Shopify – Hesap Aç",
+      "description": "Shopify hesabı oluştur.",
+      "options": [
+        "-"
       ],
       "links": [
         "Shopify Help"
@@ -45,89 +149,152 @@
       "visibleIf": "step:1=Shopify"
     },
     {
-      "id": 4,
-      "parentId": 1,
-      "title": "Etsy Mağaza Kurulum",
-      "description": "Mağaza açılışı ve temel ayarlar.",
+      "id": 21,
+      "parentId": 20,
+      "title": "Shopify – Mağaza Ayarları",
+      "description": "Para birimi, bölge, saat dilimi.",
       "options": [
         "-"
       ],
       "links": [
-        "Etsy Seller Handbook"
+        "Shopify Admin"
       ],
-      "visibleIf": "step:1=Etsy"
+      "visibleIf": "step:1=Shopify"
     },
     {
-      "id": 5,
-      "parentId": 1,
-      "title": "Amazon Storefront",
-      "description": "Satıcı hesabı, kategori onayı.",
+      "id": 22,
+      "parentId": 20,
+      "title": "Shopify – Tema",
+      "description": "“Dawn” (ücretsiz) ile başla; logo/renk ayarla.",
       "options": [
         "-"
       ],
       "links": [
-        "Amazon Seller Central"
+        "Shopify Themes"
       ],
-      "visibleIf": "step:1=Amazon"
+      "visibleIf": "step:1=Shopify"
     },
     {
-      "id": 6,
-      "parentId": 1,
-      "title": "Pazaryeri (TR) Kurulum",
-      "description": "Trendyol/Hepsiburada/n11 açılışı.",
+      "id": 23,
+      "parentId": 20,
+      "title": "Shopify – Alan Adı",
+      "description": "Domaini bağla; SSL aktif.",
       "options": [
         "-"
       ],
       "links": [
-        "Satıcı Merkezi"
+        "Shopify Domains"
       ],
-      "visibleIf": "step:1=Pazaryeri (TR)"
+      "visibleIf": "step:1=Shopify"
     },
     {
-      "id": 7,
-      "parentId": 0,
-      "title": "Ürün Araştırma",
-      "description": "Talep ve rekabet analizi.",
+      "id": 24,
+      "parentId": 20,
+      "title": "Shopify – Ödemeler",
+      "description": "Ödeme sağlayıcı: TR’de iyzico/PayTR.",
       "options": [
-        "TikTok Trend",
-        "Amazon Movers",
-        "Etsy Top Sellers"
+        "iyzico",
+        "PayTR",
+        "Stripe"
       ],
       "links": [
-        "TikTok Creative Center"
-      ]
+        "iyzico",
+        "PayTR"
+      ],
+      "visibleIf": "step:1=Shopify"
     },
     {
-      "id": 8,
-      "parentId": 2,
-      "title": "AliExpress Tedarik",
-      "description": "Tedarikçi güvenilirliği, SLA.",
-      "options": [
-        "-"
-      ],
-      "links": [
-        "AliExpress Dropship"
-      ],
-      "visibleIf": "step:2=AliExpress"
-    },
-    {
-      "id": 9,
-      "parentId": 2,
-      "title": "Türkiye Tedarikçi",
-      "description": "Toptancılar, MOQ, iade politikaları.",
+      "id": 25,
+      "parentId": 20,
+      "title": "Shopify – Kargo/Tax",
+      "description": "Kargo bölgeleri ve ücretleri; KDV/Tax ayarı.",
       "options": [
         "-"
       ],
       "links": [
-        "-"
+        "Shopify Shipping",
+        "Taxes"
       ],
-      "visibleIf": "step:2=Türkiye Tedarikçi"
+      "visibleIf": "step:1=Shopify"
     },
     {
-      "id": 10,
-      "parentId": 2,
-      "title": "POD Tedarik",
-      "description": "POD entegrasyonu.",
+      "id": 26,
+      "parentId": 20,
+      "title": "Shopify – Politika Sayfaları",
+      "description": "İade/teslimat/gizlilik sayfalarını oluştur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Shopify Policies"
+      ],
+      "visibleIf": "step:1=Shopify"
+    },
+    {
+      "id": 27,
+      "parentId": 20,
+      "title": "Shopify – Zorunlu Sayfalar",
+      "description": "Hakkımızda, İletişim, SSS; menü/navigasyon.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Shopify"
+    },
+    {
+      "id": 28,
+      "parentId": 20,
+      "title": "Shopify – Gerekli Uygulamalar",
+      "description": "Sayfa/yorum/e-posta/popup uygulamaları seç.",
+      "options": [
+        "PageFly",
+        "Judge.me",
+        "Klaviyo",
+        "Lucky Orange"
+      ],
+      "links": [
+        "PageFly",
+        "Judge.me",
+        "Klaviyo"
+      ],
+      "visibleIf": "step:1=Shopify"
+    },
+    {
+      "id": 29,
+      "parentId": 20,
+      "title": "Shopify – DSers Kur (AliExpress)",
+      "description": "AliExpress entegrasyonu.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "DSers"
+      ],
+      "visibleIf": "step:1=Shopify; step:2=AliExpress"
+    },
+    {
+      "id": 30,
+      "parentId": 20,
+      "title": "Shopify – Entegrasyon (TR Tedarikçi)",
+      "description": "E-fatura/kargo/ERP entegrasyonu.",
+      "options": [
+        "Entegra",
+        "Dopigo",
+        "StockMount"
+      ],
+      "links": [
+        "Entegra",
+        "Dopigo"
+      ],
+      "visibleIf": "step:1=Shopify; step:2=Türkiye Tedarikçi"
+    },
+    {
+      "id": 31,
+      "parentId": 20,
+      "title": "Shopify – POD Entegrasyon",
+      "description": "POD sağlayıcını bağla.",
       "options": [
         "Printify",
         "Printful",
@@ -137,26 +304,524 @@
         "Printify",
         "Printful"
       ],
-      "visibleIf": "step:2=Print on Demand"
+      "visibleIf": "step:1=Shopify; step:2=Print on Demand"
     },
     {
-      "id": 11,
-      "parentId": 7,
-      "title": "Shopify Listeleme",
-      "description": "SEO başlık, varyant, görseller.",
+      "id": 32,
+      "parentId": 20,
+      "title": "Shopify – Piksel Kur",
+      "description": "Piksel kodunu theme/gtm ile kur; test et.",
       "options": [
         "-"
       ],
       "links": [
-        "Shopify SEO"
+        "Tag Manager"
       ],
       "visibleIf": "step:1=Shopify"
     },
     {
-      "id": 12,
+      "id": 40,
+      "parentId": 0,
+      "title": "Etsy – Mağaza Aç",
+      "description": "Etsy shop oluştur, kimlik/banka bilgileri.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Etsy Seller Handbook"
+      ],
+      "visibleIf": "step:1=Etsy"
+    },
+    {
+      "id": 41,
+      "parentId": 40,
+      "title": "Etsy – Mağaza Ayarları",
+      "description": "Dil, para birimi, lokasyon, shop banner.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Etsy"
+    },
+    {
+      "id": 42,
+      "parentId": 40,
+      "title": "Etsy – Politika & Kargo",
+      "description": "Mağaza politikaları ve kargo profilleri.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Etsy"
+    },
+    {
+      "id": 43,
+      "parentId": 40,
+      "title": "Etsy – POD Entegrasyon",
+      "description": "Printify/Printful’ı bağla.",
+      "options": [
+        "Printify",
+        "Printful",
+        "Gelato"
+      ],
+      "links": [
+        "Printify",
+        "Printful"
+      ],
+      "visibleIf": "step:1=Etsy; step:2=Print on Demand"
+    },
+    {
+      "id": 44,
+      "parentId": 40,
+      "title": "Etsy – Piksel/Analytics",
+      "description": "Etsy native analytics + UTM kullan.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Etsy"
+    },
+    {
+      "id": 50,
+      "parentId": 0,
+      "title": "Amazon – Satıcı Hesabı",
+      "description": "Individual/Professional seç; doğrulama.",
+      "options": [
+        "Individual",
+        "Professional"
+      ],
+      "links": [
+        "Amazon Seller Central"
+      ],
+      "visibleIf": "step:1=Amazon"
+    },
+    {
+      "id": 51,
+      "parentId": 50,
+      "title": "Amazon – FBA/FBM Seçimi",
+      "description": "Fulfillment modelini seç.",
+      "options": [
+        "FBA",
+        "FBM"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Amazon"
+    },
+    {
+      "id": 52,
+      "parentId": 50,
+      "title": "Amazon – Kategori Onay",
+      "description": "İlgili kategoriler için onay.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Amazon"
+    },
+    {
+      "id": 53,
+      "parentId": 50,
+      "title": "Amazon – Marka/GTIN",
+      "description": "Brand Registry (ops.) ve barkod/GTIN.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Amazon"
+    },
+    {
+      "id": 54,
+      "parentId": 50,
+      "title": "Amazon – Kargo Şablonu (FBM)",
+      "description": "Kargo şablonunu oluştur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Amazon; step:51=FBM"
+    },
+    {
+      "id": 55,
+      "parentId": 50,
+      "title": "Amazon – FBA Gönderi (FBA)",
+      "description": "FBA inbound plan + paketleme.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Amazon; step:51=FBA"
+    },
+    {
+      "id": 56,
+      "parentId": 50,
+      "title": "Amazon – Piksel/UTM",
+      "description": "Amazon dış trafik için UTM + Attribution.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Amazon Attribution"
+      ],
+      "visibleIf": "step:1=Amazon"
+    },
+    {
+      "id": 60,
+      "parentId": 0,
+      "title": "Pazaryeri (TR) – Hesaplar",
+      "description": "Trendyol/Hepsiburada/n11 satıcı hesaplarını aç.",
+      "options": [
+        "Trendyol",
+        "Hepsiburada",
+        "n11"
+      ],
+      "links": [
+        "Satıcı Merkezi"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
+    },
+    {
+      "id": 61,
+      "parentId": 60,
+      "title": "Pazaryeri – Belgeler",
+      "description": "Sözleşmeler, vergi/banka, entegrasyon başvuruları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
+    },
+    {
+      "id": 62,
+      "parentId": 60,
+      "title": "Pazaryeri – Entegrasyon",
+      "description": "Entegrasyon yazılımını bağla.",
+      "options": [
+        "Entegra",
+        "Dopigo",
+        "StockMount",
+        "İdeasoft"
+      ],
+      "links": [
+        "Entegratörler"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
+    },
+    {
+      "id": 63,
+      "parentId": 60,
+      "title": "Pazaryeri – Kargo Anlaşması",
+      "description": "Yurtiçi/Aras/PTS anlaşmaları.",
+      "options": [
+        "Yurtiçi",
+        "Aras",
+        "MNG",
+        "Sürat"
+      ],
+      "links": [
+        "Kargo Firmaları"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
+    },
+    {
+      "id": 64,
+      "parentId": 60,
+      "title": "Pazaryeri – Mağaza Ayarları",
+      "description": "Komisyon, iade, kargo şablonları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
+    },
+    {
+      "id": 70,
+      "parentId": 0,
+      "title": "Ürün Araştırma – Genel",
+      "description": "Fikir kaynakları ve kriterler (talep, kâr, teslimat).",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "TikTok Creative Center",
+        "Amazon Movers"
+      ]
+    },
+    {
+      "id": 71,
+      "parentId": 2,
+      "title": "AliExpress Araştırma",
+      "description": "Değerlendirme: yıldız≥4.6, sipariş≥300, lojistik süresi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "AliExpress"
+      ],
+      "visibleIf": "step:2=AliExpress"
+    },
+    {
+      "id": 72,
+      "parentId": 2,
+      "title": "TR Tedarikçi Bulma",
+      "description": "Toptancı listesi, MOQ, iade politikası.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "İhracat/İthalat Rehberi"
+      ],
+      "visibleIf": "step:2=Türkiye Tedarikçi"
+    },
+    {
+      "id": 73,
+      "parentId": 2,
+      "title": "POD Ürün Seçimi",
+      "description": "T-shirt, kupa, sweatshirt vb. başlat.",
+      "options": [
+        "T-Shirt",
+        "Kupa",
+        "Sweatshirt",
+        "Poster"
+      ],
+      "links": [
+        "Printify",
+        "Printful"
+      ],
+      "visibleIf": "step:2=Print on Demand"
+    },
+    {
+      "id": 74,
+      "parentId": 2,
+      "title": "Private Label Araştırma",
+      "description": "Alibaba/1688, MOQ, marka tescil kontrolü.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Alibaba",
+        "Trademarkia"
+      ],
+      "visibleIf": "step:2=Private Label"
+    },
+    {
+      "id": 75,
+      "parentId": 0,
+      "title": "Puanlama Matrisi",
+      "description": "Kriter puanlama sheet’ini doldur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Sheets"
+      ]
+    },
+    {
+      "id": 76,
+      "parentId": 0,
+      "title": "Ürün Karar",
+      "description": "Top 3 ürünü belirle.",
+      "options": [
+        "Aday 1",
+        "Aday 2",
+        "Aday 3"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 80,
+      "parentId": 0,
+      "title": "Mağaza Görsel Kimlik",
+      "description": "Logotype, renk paleti, icon set.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Canva",
+        "Coolors"
+      ]
+    },
+    {
+      "id": 81,
+      "parentId": 0,
+      "title": "Hukuki Metinler",
+      "description": "Gizlilik/kvkk/iade/teslimat – şablonları doldur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 82,
+      "parentId": 0,
+      "title": "İade & Müşteri Desteği",
+      "description": "SLA, yanıt şablonları, iade adresi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Zendesk",
+        "Gorgias"
+      ]
+    },
+    {
+      "id": 83,
       "parentId": 7,
-      "title": "Etsy Listeleme",
-      "description": "Başlık/etiket/Mockup optimizasyonu.",
+      "title": "Piksel Kur & Test",
+      "description": "Seçtiğin pikseli kur, test olayları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Tag Assistant"
+      ],
+      "visibleIf": "step:7=Tiktok Pixel|Meta Pixel|Google Tag (GA4)"
+    },
+    {
+      "id": 90,
+      "parentId": 1,
+      "title": "Shopify – Ürün Ekleme",
+      "description": "Gerekli alanlar: başlık, açıklama, varyant, görsel.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Shopify Docs"
+      ],
+      "visibleIf": "step:1=Shopify"
+    },
+    {
+      "id": 91,
+      "parentId": 1,
+      "title": "Shopify – Koleksiyon/SEO",
+      "description": "Koleksiyonlar + SEO başlık/açıklama.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Shopify"
+    },
+    {
+      "id": 92,
+      "parentId": 1,
+      "title": "Shopify – DSers Mapping",
+      "description": "Ürünü tedarikçi ile eşle; alternatif satıcı ekle.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "DSers"
+      ],
+      "visibleIf": "step:1=Shopify; step:2=AliExpress"
+    },
+    {
+      "id": 93,
+      "parentId": 1,
+      "title": "Shopify – TR Tedarikçi Akışı",
+      "description": "CSV/ERP üzerinden stok/sku eşle.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Entegra/Dopigo"
+      ],
+      "visibleIf": "step:1=Shopify; step:2=Türkiye Tedarikçi"
+    },
+    {
+      "id": 94,
+      "parentId": 1,
+      "title": "Shopify – POD Akışı",
+      "description": "Mockup + varyant + fiyat + shipping profili.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Printify/Printful"
+      ],
+      "visibleIf": "step:1=Shopify; step:2=Print on Demand"
+    },
+    {
+      "id": 95,
+      "parentId": 1,
+      "title": "Shopify – Ürün Sayfası Şablonu",
+      "description": "USP, faydalar, sosyal kanıt, FAQ blokları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "PageFly"
+      ],
+      "visibleIf": "step:1=Shopify"
+    },
+    {
+      "id": 96,
+      "parentId": 1,
+      "title": "Shopify – Yorumlar",
+      "description": "Judge.me kur; 5 örnek review ekle (kural uygunluğu).",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Judge.me"
+      ],
+      "visibleIf": "step:1=Shopify"
+    },
+    {
+      "id": 97,
+      "parentId": 1,
+      "title": "Shopify – Checkout Ayarları",
+      "description": "Abandoned cart email, teslimat notu.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Shopify"
+    },
+    {
+      "id": 100,
+      "parentId": 1,
+      "title": "Etsy – Listing Oluştur",
+      "description": "Başlık, etiket, kategori, görsel/mokap.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Etsy Listing"
+      ],
+      "visibleIf": "step:1=Etsy"
+    },
+    {
+      "id": 101,
+      "parentId": 1,
+      "title": "Etsy – SEO Etiketleri",
+      "description": "Erank/Marmalead ile 13 etiket.",
       "options": [
         "-"
       ],
@@ -167,10 +832,36 @@
       "visibleIf": "step:1=Etsy"
     },
     {
-      "id": 13,
-      "parentId": 7,
-      "title": "Amazon Listeleme",
-      "description": "A+ Content, inceleme politikaları.",
+      "id": 102,
+      "parentId": 1,
+      "title": "Etsy – POD Route",
+      "description": "Ürünü Printify/Printful üzerinden bağla, üretici seç.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Printify/Printful"
+      ],
+      "visibleIf": "step:1=Etsy; step:2=Print on Demand"
+    },
+    {
+      "id": 103,
+      "parentId": 1,
+      "title": "Etsy – Kargo Profili",
+      "description": "Standart/expedited profilleri oluştur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Etsy"
+    },
+    {
+      "id": 110,
+      "parentId": 1,
+      "title": "Amazon – Listing",
+      "description": "Title, bullets, A+ Content, görsel.",
       "options": [
         "-"
       ],
@@ -180,38 +871,171 @@
       "visibleIf": "step:1=Amazon"
     },
     {
-      "id": 14,
-      "parentId": 7,
-      "title": "Pazaryeri (TR) Listeleme",
-      "description": "Kategori kuralları, kargo/iadeler.",
+      "id": 111,
+      "parentId": 1,
+      "title": "Amazon – FBA Paketleme",
+      "description": "FNSKU etiket, koli planı, inbound.",
       "options": [
         "-"
       ],
       "links": [
-        "Rehberler"
+        "-"
+      ],
+      "visibleIf": "step:1=Amazon; step:51=FBA"
+    },
+    {
+      "id": 112,
+      "parentId": 1,
+      "title": "Amazon – FBM Kargo",
+      "description": "Şablonlar ve SLA.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Amazon; step:51=FBM"
+    },
+    {
+      "id": 120,
+      "parentId": 1,
+      "title": "Pazaryeri (TR) – Ürün Açma",
+      "description": "Trendyol/HB/n11’de ürün aç, zorunlu alanlar.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Satıcı Merkezi"
       ],
       "visibleIf": "step:1=Pazaryeri (TR)"
     },
     {
-      "id": 15,
+      "id": 121,
+      "parentId": 1,
+      "title": "Pazaryeri – Kargo/İade",
+      "description": "Şablonları kuralına göre doldur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
+    },
+    {
+      "id": 122,
+      "parentId": 1,
+      "title": "Pazaryeri – Entegrasyon Ürün Aktarımı",
+      "description": "Entegrasyon yazılımı ile toplu ürün.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Entegra",
+        "Dopigo"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
+    },
+    {
+      "id": 130,
       "parentId": 0,
-      "title": "Pazarlama Kanalı Seç",
-      "description": "Trafik kaynağını belirle.",
+      "title": "Trafik Kanalı Seç",
+      "description": "İlk trafik kaynağını seç.",
       "options": [
         "TikTok",
         "Instagram",
         "Influencer",
-        "Ads"
+        "Ads",
+        "SEO"
       ],
       "links": [
         "-"
       ]
     },
     {
-      "id": 16,
-      "parentId": 15,
-      "title": "Influencer Marketing",
-      "description": "UGC ve mikro-influencer işbirliği.",
+      "id": 131,
+      "parentId": 130,
+      "title": "TikTok – Hesap & Bio",
+      "description": "İşletme hesabı, bio, link, anahtar kelimeler.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "TikTok Business"
+      ],
+      "visibleIf": "step:130=TikTok"
+    },
+    {
+      "id": 132,
+      "parentId": 130,
+      "title": "TikTok – 30 Gün Planı",
+      "description": "Gün/gün konu takvimi ve CTA.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Sheet Şablon"
+      ],
+      "visibleIf": "step:130=TikTok"
+    },
+    {
+      "id": 133,
+      "parentId": 130,
+      "title": "TikTok – Çekim & Edit",
+      "description": "CapCut ile altyazı, pattern interrupt.",
+      "options": [
+        "CapCut Mobil",
+        "CapCut Masaüstü"
+      ],
+      "links": [
+        "CapCut"
+      ],
+      "visibleIf": "step:130=TikTok"
+    },
+    {
+      "id": 134,
+      "parentId": 130,
+      "title": "TikTok – Yayın SOP",
+      "description": "Saatler, açıklama formatı, hashtag, sabit yorum.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:130=TikTok"
+    },
+    {
+      "id": 135,
+      "parentId": 130,
+      "title": "Instagram – Kurulum",
+      "description": "Profesyonel hesap, bio, link, highlight.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Meta Business"
+      ],
+      "visibleIf": "step:130=Instagram"
+    },
+    {
+      "id": 136,
+      "parentId": 130,
+      "title": "Instagram – İçerik Sütunları",
+      "description": "Reels/Carousel/Hikaye dağılımı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:130=Instagram"
+    },
+    {
+      "id": 137,
+      "parentId": 130,
+      "title": "Influencer – Arama",
+      "description": "Fiyat/uyum/erişim; liste çıkar.",
       "options": [
         "-"
       ],
@@ -219,26 +1043,26 @@
         "Modash",
         "Incense"
       ],
-      "visibleIf": "step:15=Influencer"
+      "visibleIf": "step:130=Influencer"
     },
     {
-      "id": 17,
-      "parentId": 15,
-      "title": "Organik TikTok/IG",
-      "description": "30 günlük içerik takvimi.",
+      "id": 138,
+      "parentId": 130,
+      "title": "Influencer – Brief & Sözleşme",
+      "description": "UGC video brief’i ve kullanım izinleri.",
       "options": [
         "-"
       ],
       "links": [
         "-"
       ],
-      "visibleIf": "step:15=TikTok|Instagram"
+      "visibleIf": "step:130=Influencer"
     },
     {
-      "id": 18,
-      "parentId": 15,
-      "title": "Ads Başlangıç",
-      "description": "Küçük bütçe test kampanyaları.",
+      "id": 139,
+      "parentId": 130,
+      "title": "Ads – Platform",
+      "description": "İlk test için platform seç.",
       "options": [
         "TikTok Ads",
         "Meta Ads",
@@ -249,31 +1073,187 @@
         "Meta Ads",
         "Google Ads"
       ],
-      "visibleIf": "step:15=Ads"
+      "visibleIf": "step:130=Ads"
     },
     {
-      "id": 19,
+      "id": 140,
+      "parentId": 139,
+      "title": "Piksel & Olaylar",
+      "description": "Link Click/ATC/Lead olaylarını kur.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Tag Manager"
+      ],
+      "visibleIf": "step:130=Ads"
+    },
+    {
+      "id": 141,
+      "parentId": 139,
+      "title": "Test Kampanya Kur",
+      "description": "3 kreatif × 2 başlık, geniş ilgi; 48 saat sonra değerlendir.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:130=Ads"
+    },
+    {
+      "id": 142,
+      "parentId": 130,
+      "title": "SEO – Blog/Yazı",
+      "description": "Kategori sayfasına blog/rehber ekle (Shopify/WordPress).",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "RankMath",
+        "Yoast"
+      ],
+      "visibleIf": "step:130=SEO"
+    },
+    {
+      "id": 150,
       "parentId": 0,
-      "title": "Sipariş & Operasyon",
-      "description": "SLA, müşteri desteği, iade.",
+      "title": "Müşteri Hizmetleri",
+      "description": "Sık sorular şablonları; iade ve gecikme yanıtları.",
       "options": [
         "-"
       ],
       "links": [
-        "Gorgias",
-        "Zendesk"
+        "Zendesk",
+        "Gorgias"
       ]
     },
     {
-      "id": 20,
+      "id": 151,
       "parentId": 0,
-      "title": "Optimize & Ölçek",
-      "description": "Ölç, kazananı büyüt.",
+      "title": "Sipariş Akışı – Shopify+AliExpress",
+      "description": "DSers ile otomatik sipariş; tracking eşle.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "DSers"
+      ],
+      "visibleIf": "step:1=Shopify; step:2=AliExpress"
+    },
+    {
+      "id": 152,
+      "parentId": 0,
+      "title": "Sipariş Akışı – Shopify+TR Tedarikçi",
+      "description": "Entegratör üzerinden sipariş ilet; XML/CSV.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Entegra/Dopigo"
+      ],
+      "visibleIf": "step:1=Shopify; step:2=Türkiye Tedarikçi"
+    },
+    {
+      "id": 153,
+      "parentId": 0,
+      "title": "Sipariş Akışı – Shopify+POD",
+      "description": "Printify/Printful otomatik üretim; müşteri maili.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Printify/Printful"
+      ],
+      "visibleIf": "step:1=Shopify; step:2=Print on Demand"
+    },
+    {
+      "id": 154,
+      "parentId": 0,
+      "title": "Sipariş Akışı – Etsy+POD",
+      "description": "OTO üretim ve kargo numarası aktarımı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Printify/Printful"
+      ],
+      "visibleIf": "step:1=Etsy; step:2=Print on Demand"
+    },
+    {
+      "id": 155,
+      "parentId": 0,
+      "title": "Sipariş Akışı – Amazon FBA",
+      "description": "FBA otomatik gönderim; stok yenileme takvimi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Amazon"
+      ],
+      "visibleIf": "step:1=Amazon; step:51=FBA"
+    },
+    {
+      "id": 156,
+      "parentId": 0,
+      "title": "Sipariş Akışı – Amazon FBM",
+      "description": "FBM sipariş + kargo şablonu.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Amazon; step:51=FBM"
+    },
+    {
+      "id": 157,
+      "parentId": 0,
+      "title": "Sipariş Akışı – Pazaryeri TR",
+      "description": "Entegratör/kargo entegrasyonu ile faturalandırma.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Entegra",
+        "E-Fatura"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
+    },
+    {
+      "id": 160,
+      "parentId": 0,
+      "title": "İyileştirme Döngüsü",
+      "description": "Günlük: içerik → sipariş → destek → analiz.",
       "options": [
         "-"
       ],
       "links": [
         "Analytics"
+      ]
+    },
+    {
+      "id": 161,
+      "parentId": 0,
+      "title": "Analitik – Tabloyu Doldur",
+      "description": "UTM ve satış kaynaklarını gir; kazanan ürün/kanalı işaretle.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Google Sheets"
+      ]
+    },
+    {
+      "id": 162,
+      "parentId": 0,
+      "title": "Ölçekleme Öncesi Kontrol",
+      "description": "Marj, iade oranı, kargo süresi, stok riski.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
       ]
     }
   ]
