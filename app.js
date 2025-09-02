@@ -130,8 +130,13 @@ function showStep(step, index){
     li.appendChild(a); els.linksList.appendChild(li);
   });
 
-  if(index >= FREE_LIMIT){
-    const lock = document.createElement('div'); lock.className='card'; lock.style.marginTop='12px'; lock.style.background='#fff7ed'; lock.style.borderColor='#fdba74';
+  // 🔑 Premium kontrolü ekliyoruz
+  if(index >= FREE_LIMIT && !isPremium()){
+    const lock = document.createElement('div'); 
+    lock.className='card'; 
+    lock.style.marginTop='12px'; 
+    lock.style.background='#fff7ed'; 
+    lock.style.borderColor='#fdba74';
     lock.innerHTML = `
       <b>Premium Kilit</b><br/>
       Bu adımı görmek için Premium'a geç.
@@ -142,6 +147,7 @@ function showStep(step, index){
     els.stepView.appendChild(lock);
   }
 }
+
 
 async function loadDataFiles(){
   for(const f of DATA_FILES){
