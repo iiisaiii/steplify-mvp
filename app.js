@@ -88,7 +88,16 @@ function ensureModal() {
     padding: '8px 12px',
     borderRadius: '8px'
   });
-  document.body.appendChild(m);
+  document.body.appendChild(m);  
+  // Kapatma/Onay bağlantıları
+  const backdrop   = m.querySelector('.modal-backdrop');
+  const btnCancel  = m.querySelector('#modalCancel');
+  const btnOk      = m.querySelector('#modalOk');
+  
+  backdrop.addEventListener('click', () => closeModal(false));
+  btnCancel.addEventListener('click', () => closeModal(false));
+  btnOk.addEventListener('click', () => closeModal(true));
+
 
   // Kapatma/Onay bağlantıları
   m.querySelector('.modal-backdrop').addEventListener('click', () => closeModal(false));
@@ -97,15 +106,16 @@ function ensureModal() {
 }
 
 function openModal(title, text) {
-  // Boş parametre gelirse hiç açma (beklenmedik çağrıyı yutar)
   if (!title && !text) return Promise.resolve(false);
 
   const m = ensureModal();
-  m.style.display = 'flex'; // görünür yap
-  m.querySelector('#modalText').textContent = text || '';
+  m.style.display = 'flex';
+  m.querySelector('#modalTitle').textContent = title || '';  // <-- eklendi
+  m.querySelector('#modalText').textContent  = text  || '';
 
   return new Promise((resolve) => { _modalResolver = resolve; });
 }
+
 
 function closeModal(ok) {
   const m = document.getElementById('steplifyModal');
