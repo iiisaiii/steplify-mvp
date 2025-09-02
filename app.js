@@ -137,6 +137,13 @@ function goToNextStep(currentStep){
 }
 
 function lsKey(model){ return `steplify_progress::${model}`; }
+function getSelections(m){
+  try { return JSON.parse(localStorage.getItem(selKey(m)) || '{}'); }
+  catch(_) { return {}; }
+}
+function setSelections(m, obj){
+  localStorage.setItem(selKey(m), JSON.stringify(obj || {}));
+}
 function getProgress(m){ try{ return JSON.parse(localStorage.getItem(lsKey(m))||'{}'); }catch(_){ return {}; } }
 function setProgress(m, obj){ localStorage.setItem(lsKey(m), JSON.stringify(obj||{})); }
 
@@ -158,6 +165,7 @@ function renderModels(){
 function computeOrder(steps){ return steps.slice().sort((a,b)=>a.id-b.id); }
 
 function renderSteps(){
+  const sels = getSelections(currentModel);
   const steps = (models[currentModel]||[]);
   els.sidebarTitle.textContent = `Adımlar — ${currentModel}`;
   els.stepsList.innerHTML = '';
@@ -188,6 +196,10 @@ function renderSteps(){
     title.className = 'title'; title.textContent = `${s.id}. ${s.title}`;
     const meta = document.createElement('div');
     meta.className = 'meta'; meta.textContent = s.parentId ? `Üst adım: ${s.parentId}` : 'Kök adım';
+    const chosen = sels[s.id];
+    if (chosen) {
+      meta.textContent += ` • Seçim: ${chosen}`;
+    }
 
     const row = document.createElement('div');
     row.style.display='flex'; row.style.flexDirection='column';
@@ -201,14 +213,12 @@ function renderSteps(){
   const pct = steps.length ? Math.round(doneCount/steps.length*100) : 0;
   els.progressBar.style.width = `${pct}%`;
   els.progressBar.title = `${pct}% tamamlandı`;
-
-  if(order.length){ showStep(order[0], 0); }
 }
 
 function showStep(step, index){
   // İçeriği sıfırla
   els.stepView.innerHTML = '';
-
+  
   // Başlık + açıklama
   const h = document.createElement('h2');
   h.textContent = `${step.id}. ${step.title}`;
@@ -216,7 +226,15 @@ function showStep(step, index){
   d.textContent = step.description || 'Açıklama yok.';
   els.stepView.appendChild(h);
   els.stepView.appendChild(d);
-
+  const sels = getSelections(currentModel);
+  if (sels[step.id]) {
+    const info = document.createElement('div');
+    info.className = 'muted';
+    info.style.marginTop = '4px';
+    info.textContent = `Seçimin: ${sels[step.id]}`;
+    els.stepView.appendChild(info);
+  }
+  if (sels[step.id] === o) b.classList.add('selected');
   // Bu adım kilitli mi? (freemium)
   const locked = (index >= FREE_LIMIT) && !isPremium();
 
@@ -247,7 +265,12 @@ function showStep(step, index){
         // modal aç
         const ok = await openModal(o, tip);
         if (!ok) return;
-
+        
+        // kullanıcının seçimini kaydet
+        const sels = getSelections(currentModel);
+        sels[step.id] = o;
+        setSelections(currentModel, sels);
+        
         // bu adımı tamamlandı işaretle
         const p = getProgress(currentModel);
         p[step.id] = true;
@@ -313,6 +336,9 @@ async function loadDataFiles(){
   console.log("Premium aktif! UI güncelleniyor...");
   renderSteps();
   }
+  // İlk açılışta bir kere Step 1 göster
+  const first = computeOrder(models[currentModel] || [])[0];
+  if (first) showStep(first, 0);
 }
 
 document.addEventListener('DOMContentLoaded', loadDataFiles);
