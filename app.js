@@ -46,26 +46,70 @@ const OPTION_TIPS = {
     "Fiziksel Ürünler": "Fiziksel ürünlerde komisyon düşük ama talep yüksek; lojistik ve kargo takibi gerekir."
   }
 };
+// --------- Güvenli Modal (tek kopya) ----------
+let _modalResolver = null;
 
-function openModal(title, body){
-  return new Promise(resolve=>{
-    els.modalTitle.textContent = title;
-    els.modalBody.textContent = body;
-    els.modalMask.classList.remove('hidden');
+function ensureModal() {
+  let m = document.getElementById('steplifyModal');
+  if (m) return m;
 
-    const onOk = ()=>{ cleanup(); resolve(true); };
-    const onCancel = ()=>{ cleanup(); resolve(false); };
+  m = document.createElement('div');
+  m.id = 'steplifyModal';
+  m.style.cssText = `
+    position:fixed; inset:0; display:none; z-index:9999;
+    align-items:center; justify-content:center;
+  `;
+  m.innerHTML = `
+    <div class="modal-backdrop" style="
+      position:absolute; inset:0; background:rgba(0,0,0,.45);
+    "></div>
+    <div class="modal-sheet" style="
+      position:relative; background:#fff; border-radius:12px; padding:16px 18px;
+      width:min(520px, 92vw); box-shadow:0 20px 60px rgba(0,0,0,.25);
+    ">
+      <h3 id="modalTitle" style="margin:0 0 6px; font-size:18px;"></h3>
+      <p id="modalText" style="margin:0 0 14px; color:#475569;"></p>
+      <div style="display:flex; gap:8px; justify-content:flex-end;">
+        <button id="modalCancel" class="btn small outline">Vazgeç</button>
+        <button id="modalOk" class="btn small primary">Devam Et</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(m);
 
-    function cleanup(){
-      els.modalMask.classList.add('hidden');
-      els.modalOk.removeEventListener('click', onOk);
-      els.modalCancel.removeEventListener('click', onCancel);
-    }
+  // Kapatma/Onay bağlantıları
+  m.querySelector('.modal-backdrop').addEventListener('click', () => closeModal(false));
+  m.querySelector('#modalCancel').addEventListener('click', () => closeModal(false));
+  m.querySelector('#modalOk').addEventListener('click', () => closeModal(true));
 
-    els.modalOk.addEventListener('click', onOk);
-    els.modalCancel.addEventListener('click', onCancel);
-  });
+  return m;
 }
+
+function openModal(title, text) {
+  // Boş parametre gelirse hiç açma (beklenmedik çağrıyı yutar)
+  if (!title && !text) return Promise.resolve(false);
+
+  const m = ensureModal();
+  m.style.display = 'flex'; // görünür yap
+  m.querySelector('#modalTitle').textContent = title || '';
+  m.querySelector('#modalText').textContent = text || '';
+
+  return new Promise((resolve) => { _modalResolver = resolve; });
+}
+
+function closeModal(ok) {
+  const m = document.getElementById('steplifyModal');
+  if (!m) return;
+  m.style.display = 'none';
+  if (_modalResolver) { _modalResolver(!!ok); _modalResolver = null; }
+}
+
+// Sayfa açıldığında modalı sağlam kur ve kapalı başlat
+document.addEventListener('DOMContentLoaded', () => {
+  ensureModal();
+  closeModal(false);
+});
+
 
 function getOrderedSteps(){ return computeOrder(models[currentModel] || []); }
 
