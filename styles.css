@@ -114,3 +114,7 @@
 
 /* Option butonunun rengi sadece option’lara uygulansın */
 .btn.option-btn { color:#111; }
+.btn.option-btn.selected{
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
