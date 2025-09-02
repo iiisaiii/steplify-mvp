@@ -34,11 +34,6 @@ const els = {
   resetProgress: document.getElementById('resetProgress'),
   premiumBtn: document.getElementById('premiumBtn'),
   loadSample: document.getElementById('loadSample'),
-  modalMask: document.getElementById('modalMask'),
-  modalTitle: document.getElementById('modalTitle'),
-  modalBody: document.getElementById('modalBody'),
-  modalOk: document.getElementById('modalOk'),
-  modalCancel: document.getElementById('modalCancel'),
 };
 const OPTION_TIPS = {
   "İş Modeli Seç": {
@@ -67,11 +62,8 @@ function ensureModal() {
       position:relative; background:#fff; border-radius:12px; padding:16px 18px;
       width:min(520px, 92vw); box-shadow:0 20px 60px rgba(0,0,0,.25);
     ">
-      <h3 id="modalTitle" style="margin:0 0 6px; font-size:18px;"></h3>
       <p id="modalText" style="margin:0 0 14px; color:#475569;"></p>
       <div style="display:flex; gap:8px; justify-content:flex-end;">
-        <button id="modalCancel" class="btn small outline">Vazgeç</button>
-        <button id="modalOk" class="btn small primary">Devam Et</button>
       </div>
     </div>
   `;
@@ -79,8 +71,6 @@ function ensureModal() {
 
   // Kapatma/Onay bağlantıları
   m.querySelector('.modal-backdrop').addEventListener('click', () => closeModal(false));
-  m.querySelector('#modalCancel').addEventListener('click', () => closeModal(false));
-  m.querySelector('#modalOk').addEventListener('click', () => closeModal(true));
 
   return m;
 }
@@ -91,7 +81,6 @@ function openModal(title, text) {
 
   const m = ensureModal();
   m.style.display = 'flex'; // görünür yap
-  m.querySelector('#modalTitle').textContent = title || '';
   m.querySelector('#modalText').textContent = text || '';
 
   return new Promise((resolve) => { _modalResolver = resolve; });
