@@ -13,7 +13,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 2,
@@ -29,7 +30,8 @@
         "Figma",
         "Photoshop",
         "Midjourney"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 3,
@@ -45,7 +47,8 @@
         "Printify",
         "Printful",
         "Gelato"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 4,
@@ -58,7 +61,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 5,
@@ -71,7 +75,8 @@
       "links": [
         "Canva",
         "Coolors"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 6,
@@ -84,7 +89,8 @@
       "links": [
         "Google Drive",
         "Notion"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 7,
@@ -96,7 +102,8 @@
       ],
       "links": [
         "Platform Policies"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 8,
@@ -108,7 +115,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 9,
@@ -123,7 +131,8 @@
       "links": [
         "Bitly",
         "Short.io"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 10,
@@ -140,7 +149,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 20,
@@ -504,7 +514,8 @@
       ],
       "links": [
         "Google Trends"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 51,
@@ -517,7 +528,8 @@
       "links": [
         "Everbee",
         "Erank"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 52,
@@ -529,7 +541,8 @@
       ],
       "links": [
         "Ürün Şablonları"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 53,
@@ -541,7 +554,8 @@
       ],
       "links": [
         "Google Sheets"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 54,
@@ -554,7 +568,8 @@
       "links": [
         "Trademarkia",
         "TMview"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 55,
@@ -566,7 +581,8 @@
       ],
       "links": [
         "Notion Dosyası"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 60,
@@ -701,7 +717,8 @@
       ],
       "links": [
         "QC Checklist"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 70,
@@ -713,7 +730,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 80,
@@ -843,7 +861,8 @@
       "links": [
         "Placeit",
         "Canva"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 91,
@@ -855,7 +874,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 92,
@@ -867,7 +887,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 93,
@@ -879,7 +900,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 94,
@@ -891,7 +913,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 100,
@@ -1014,7 +1037,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 111,
@@ -1184,7 +1208,8 @@
       "links": [
         "Zendesk",
         "Gorgias"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 131,
@@ -1196,7 +1221,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 132,
@@ -1247,7 +1273,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 140,
@@ -1259,7 +1286,8 @@
       ],
       "links": [
         "Analytics"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 141,
@@ -1271,7 +1299,8 @@
       ],
       "links": [
         "Google Sheets"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 142,
@@ -1283,7 +1312,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 143,
@@ -1295,7 +1325,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 150,
@@ -1307,7 +1338,8 @@
       ],
       "links": [
         "Checklist"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 151,
@@ -1319,7 +1351,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 152,
@@ -1331,7 +1364,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 153,
@@ -1343,7 +1377,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     }
   ]
 }

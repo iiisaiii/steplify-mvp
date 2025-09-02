@@ -15,7 +15,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 2,
@@ -30,7 +31,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 3,
@@ -43,7 +45,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 4,
@@ -56,7 +59,8 @@
       "links": [
         "Namecheap",
         "Google Workspace"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 5,
@@ -69,7 +73,8 @@
       "links": [
         "Google Drive",
         "Notion"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 6,
@@ -82,7 +87,8 @@
       "links": [
         "Dropbox Sign",
         "PandaDoc"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 7,
@@ -100,7 +106,8 @@
         "Wise",
         "Payoneer",
         "Stripe"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 8,
@@ -115,7 +122,8 @@
       "links": [
         "Calendly",
         "Google Calendar"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 9,
@@ -131,7 +139,8 @@
         "Notion",
         "Trello",
         "HubSpot"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 10,
@@ -146,7 +155,8 @@
       "links": [
         "Clockify",
         "Paraşüt"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 11,
@@ -160,7 +170,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 12,
@@ -172,7 +183,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 13,
@@ -184,7 +196,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 14,
@@ -196,7 +209,8 @@
       ],
       "links": [
         "SOW Template"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 15,
@@ -208,7 +222,8 @@
       ],
       "links": [
         "Google Docs"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 16,
@@ -220,7 +235,8 @@
       ],
       "links": [
         "Notion/Behance"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 17,
@@ -233,7 +249,8 @@
       "links": [
         "Loom",
         "Web Demos"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 18,
@@ -245,7 +262,8 @@
       ],
       "links": [
         "Notion Snippets"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 19,
@@ -257,7 +275,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 20,
@@ -763,7 +782,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 71,
@@ -777,7 +797,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 72,
@@ -789,7 +810,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 73,
@@ -802,7 +824,8 @@
       "links": [
         "Typeform",
         "Tally"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 74,
@@ -815,7 +838,8 @@
       "links": [
         "Typeform",
         "Tally"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 75,
@@ -827,7 +851,8 @@
       ],
       "links": [
         "Dropbox Sign"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 80,
@@ -1250,7 +1275,8 @@
       ],
       "links": [
         "Canva/Notion"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 121,
@@ -1262,7 +1288,8 @@
       ],
       "links": [
         "Loom"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 122,
@@ -1274,7 +1301,8 @@
       ],
       "links": [
         "Google Drive"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 130,
@@ -1286,7 +1314,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 131,
@@ -1298,7 +1327,8 @@
       ],
       "links": [
         "Google Docs"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 132,
@@ -1310,7 +1340,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 133,
@@ -1322,7 +1353,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 134,
@@ -1334,7 +1366,8 @@
       ],
       "links": [
         "Google Docs/PandaDoc"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 135,
@@ -1346,7 +1379,8 @@
       ],
       "links": [
         "Stripe/Wise"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 136,
@@ -1358,7 +1392,8 @@
       ],
       "links": [
         "Dropbox Sign"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 137,
@@ -1371,7 +1406,8 @@
       "links": [
         "Paraşüt",
         "Stripe"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 138,
@@ -1383,7 +1419,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 139,
@@ -1396,7 +1433,8 @@
       "links": [
         "Loom",
         "Google Meet"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 140,
@@ -1630,7 +1668,8 @@
       ],
       "links": [
         "QC Checklist"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 191,
@@ -1642,7 +1681,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 192,
@@ -1654,7 +1694,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 193,
@@ -1666,7 +1707,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 194,
@@ -1678,7 +1720,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 195,
@@ -1690,7 +1733,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 196,
@@ -1702,7 +1746,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 200,
@@ -1714,7 +1759,8 @@
       ],
       "links": [
         "Google Calendar"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 201,
@@ -1726,7 +1772,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 202,
@@ -1738,7 +1785,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 203,
@@ -1750,7 +1798,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 204,
@@ -1762,7 +1811,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 205,
@@ -1774,7 +1824,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 206,
@@ -1787,7 +1838,8 @@
       "links": [
         "Paraşüt",
         "Gelir İdaresi"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 207,
@@ -1799,7 +1851,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 208,
@@ -1811,7 +1864,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 209,
@@ -1823,7 +1877,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     }
   ]
 }

@@ -13,7 +13,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 2,
@@ -26,7 +27,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 3,
@@ -39,7 +41,8 @@
       "links": [
         "Namecheap",
         "Google Domains"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 4,
@@ -51,7 +54,8 @@
       ],
       "links": [
         "Ticaret Bakanlığı Rehberleri"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 5,
@@ -64,7 +68,8 @@
       "links": [
         "Google Drive",
         "Notion"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 6,
@@ -80,7 +85,8 @@
       "links": [
         "TikTok Pixel Helper",
         "Tag Assistant"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 7,
@@ -92,7 +98,8 @@
       ],
       "links": [
         "UTM Builder"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 8,
@@ -104,7 +111,8 @@
       ],
       "links": [
         "Google Sheets"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 9,
@@ -116,7 +124,8 @@
       ],
       "links": [
         "FTC/AB Yönergeleri"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 10,
@@ -803,7 +812,8 @@
       "links": [
         "TikTok Creative Center",
         "Amazon Movers"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 61,
@@ -815,7 +825,8 @@
       ],
       "links": [
         "Sheets Şablonu"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 62,
@@ -829,7 +840,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 63,
@@ -841,7 +853,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 64,
@@ -853,7 +866,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 70,
@@ -865,7 +879,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 71,
@@ -877,7 +892,8 @@
       ],
       "links": [
         "RankMath/Yoast/Shopify"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 72,
@@ -889,7 +905,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 73,
@@ -901,7 +918,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 74,
@@ -913,7 +931,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 75,
@@ -925,7 +944,8 @@
       ],
       "links": [
         "Klaviyo/Shopify Email"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 76,
@@ -937,7 +957,8 @@
       ],
       "links": [
         "Judge.me/Yotpo"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 77,
@@ -949,7 +970,8 @@
       ],
       "links": [
         "Tidio/Gorgias"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 80,
@@ -966,7 +988,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 81,
@@ -1175,7 +1198,8 @@
       ],
       "links": [
         "Termly/CookieYes"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 103,
@@ -1187,7 +1211,8 @@
       ],
       "links": [
         "Google Search Console"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 104,
@@ -1199,7 +1224,8 @@
       ],
       "links": [
         "PageSpeed Insights"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 110,
@@ -1357,7 +1383,8 @@
       "links": [
         "Zendesk",
         "Gorgias"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 141,
@@ -1369,7 +1396,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 142,
@@ -1381,7 +1409,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 143,
@@ -1393,7 +1422,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 144,
@@ -1405,7 +1435,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 150,
@@ -1417,7 +1448,8 @@
       ],
       "links": [
         "Checklist"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 151,
@@ -1429,7 +1461,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 152,
@@ -1441,7 +1474,8 @@
       ],
       "links": [
         "Analytics"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 153,
@@ -1453,7 +1487,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     },
     {
       "id": 154,
@@ -1465,7 +1500,8 @@
       ],
       "links": [
         "-"
-      ]
+      ],
+      "visibleIf": ""
     }
   ]
 }
