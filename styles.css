@@ -81,3 +81,22 @@
 .modal-actions{
   display:flex; gap:8px; justify-content:flex-end; margin-top:16px;
 }
+/* ----- Modal butonlarını garanti altına al ----- */
+#steplifyModal #modalOk {
+  background: #2563eb !important;
+  color: #fff !important;
+  border: 1px solid #1e40af !important;
+}
+#steplifyModal #modalCancel {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+/* Modal maskesi her şeyin üzerinde olsun (ihtiyaten yükseltelim) */
+.modal-mask { z-index: 9999 !important; }
+
+/* Option butonunun rengi sadece ona uygulansın */
+.btn.option-btn { color:#111; }
+
+/* İstersen .option-btn tek başına olan kuralı silebilirsin */
