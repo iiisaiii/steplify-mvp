@@ -459,6 +459,7 @@ function sanitizePlan(obj){
   if (!obj || typeof obj!=='object') return null;
   if (typeof obj.model!=='string' || obj.model.length>60) return null;
   if (!Array.isArray(obj.steps) || obj.steps.length>500) return null;
+
   const steps = obj.steps.map(s=>({
     id: Number(s.id),
     title: String(s.title||'').slice(0,200),
@@ -467,9 +468,12 @@ function sanitizePlan(obj){
     options: Array.isArray(s.options) ? s.options.map(o=>String(o).slice(0,120)).slice(0,10) : [],
     links: Array.isArray(s.links) ? s.links.map(u=>String(u).slice(0,300)).slice(0,10) : [],
     // görünürlük kuralı (TR/EN anahtarları kabul)
-    visibleIf: typeof s.visibleIf==='string' ? s.visibleIf.slice(0,500)
-             : (typeof s['GörünürEğer']==='string' ? s['GörünürEğer'].slice(0,500) : undefined),
+    visibleIf:
+      (typeof s.visibleIf === 'string') ? s.visibleIf.slice(0,500)
+    : (typeof s['GörünürEğer'] === 'string') ? s['GörünürEğer'].slice(0,500)
+    : ""
   })).filter(s=>Number.isFinite(s.id));
+
   return { model: obj.model, steps };
 }
 
