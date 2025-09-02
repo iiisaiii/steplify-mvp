@@ -100,3 +100,17 @@
 .btn.option-btn { color:#111; }
 
 /* İstersen .option-btn tek başına olan kuralı silebilirsin */
+/* Modal mask en üstte kalsın */
+.modal-mask,
+#steplifyModal { z-index: 9999 !important; }
+
+/* Modal içindeki butonları görünür kıl */
+#steplifyModal #modalOk,
+#steplifyModal #modalCancel {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Option butonunun rengi sadece option’lara uygulansın */
+.btn.option-btn { color:#111; }
