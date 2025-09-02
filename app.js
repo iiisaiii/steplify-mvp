@@ -1,5 +1,5 @@
 /* Steplify MVP — JSON'ları /data/ klasöründen otomatik yükler + freemium kilit */
-console.log('Steplify app v3');
+console.log('Steplify app v3-branching');
 const FREE_LIMIT = 5;
 const PREMIUM_KEY = "steplify_premium";   // localStorage anahtarı
 
@@ -160,9 +160,40 @@ function getHash(){
   return {model, id: Number.isFinite(id) ? id : null};
 }
 
+// ---- Branching: VisibleIf / GörünürEğer ----
+// Sözdizimi (CSV/JSON içinde): "step:<ID>=Değer1|Değer2; step:<ID>=Başka"
+// ';' = AND, '|' = OR
+function parseVisibleIf(v){
+  if (!v || typeof v!=='string') return [];
+  return v.split(';').map(part => {
+    const p = part.trim();
+    const m = p.match(/^step:(\d+)\s*=\s*(.+)$/i);
+    if (!m) return null;
+    const stepId = Number(m[1]);
+    const values = m[2].split('|').map(s=>s.trim()).filter(Boolean);
+    return { stepId, values };
+  }).filter(Boolean);
+}
+function isStepVisible(step, selections){
+  const vi = step.visibleIf || step['GörünürEğer'] || step['gorunurEger'];
+  const rules = parseVisibleIf(vi);
+  if (!rules.length) return true; // kural yoksa görünür
+  for (const r of rules){
+    const chosen = selections[r.stepId];
+    if (!r.values.includes(String(chosen||''))) return false; // AND
+  }
+  return true;
+}
+
 // ---- Render yardımcıları ----
 function computeOrder(steps){ return steps.slice().sort((a,b)=>a.id-b.id); }
-function getOrderedSteps(){ return computeOrder(models[currentModel] || []); }
+function computeFilteredOrder(modelName){
+  const steps = models[modelName] || [];
+  const order = computeOrder(steps);
+  const sels  = getSelections(modelName);
+  return order.filter(s => isStepVisible(s, sels));
+}
+function getOrderedSteps(){ return computeFilteredOrder(currentModel); }
 
 function reflectPremiumUI(){
   const on = isPremium();
@@ -171,7 +202,7 @@ function reflectPremiumUI(){
 
 function markActive(stepId){
   [...els.stepsList.querySelectorAll('.step')].forEach(li => li.classList.remove('active'));
-  const order = computeOrder(models[currentModel]||[]);
+  const order = computeFilteredOrder(models[currentModel] ? currentModel : null);
   const idx   = order.findIndex(s=>s.id===stepId);
   const items = [...els.stepsList.querySelectorAll('.step')];
   if (idx>=0 && items[idx]) items[idx].classList.add('active');
@@ -193,9 +224,9 @@ function renderModels(){
     els.modelSelect.value = currentModel;
     renderSteps();
 
-    const first = computeOrder(models[currentModel] || [])[0];
+    const first = computeFilteredOrder(currentModel)[0];
     if (id){
-      const order = computeOrder(models[currentModel] || []);
+      const order = computeFilteredOrder(currentModel);
       const idx = order.findIndex(s=>s.id===id);
       if (idx>=0) showStep(order[idx], idx);
       else if (first) showStep(first, 0);
@@ -219,8 +250,7 @@ function renderSteps(){
   }
 
   const sels = getSelections(currentModel);
-  const steps = models[currentModel] || [];
-  const order = computeOrder(steps);
+  const order = computeFilteredOrder(currentModel); // *** sadece görünen adımlar ***
   const progress = getProgress(currentModel);
 
   els.sidebarTitle.textContent = `Adımlar — ${currentModel}`;
@@ -277,7 +307,9 @@ function renderSteps(){
     els.stepsList.appendChild(li);
   });
 
-  const pct = steps.length ? Math.round((doneCount / steps.length) * 100) : 0;
+  // Progress: sadece görünen adımlar üzerinden
+  const denom = order.length || 1;
+  const pct = Math.round((doneCount / denom) * 100);
   els.progressBar.style.width = `${pct}%`;
   els.progressBar.title = `${pct}% tamamlandı`;
 }
@@ -336,12 +368,6 @@ function showStep(step, index){
         const ok = await openModal(o, tip);
         if (!ok) return;
 
-        // --- 1) Bir SONRAKİ adımı ÖNCE hesapla (renderSteps'ten önce) ---
-        const order  = computeOrder(models[currentModel] || []);
-        const curIdx = order.findIndex(s => s.id === step.id);
-        const next   = order[curIdx + 1];  // yoksa undefined, sorun değil
-        const nextIdx = curIdx + 1;
-
         // --- 2) Seçimi ve ilerlemeyi kaydet ---
         const _sels = getSelections(currentModel);
         _sels[step.id] = o;
@@ -351,11 +377,14 @@ function showStep(step, index){
         p[step.id] = true;
         setProgress(currentModel, p);
 
-        // --- 3) Listeyi yenile ---
+        // --- 3) Listeyi yenile (visibility değişebilir!) ---
         renderSteps();
 
-        // --- 4) Hesaplanan NEXT'e direkt git ---
-        if (next) showStep(next, nextIdx);
+        // --- 4) Görünür SIRADAKİ adıma git ---
+        const order  = computeFilteredOrder(currentModel);
+        const curIdx = order.findIndex(s => s.id === step.id);
+        const next   = order[curIdx + 1];
+        if (next) showStep(next, curIdx + 1);
       });
 
       optionsWrap.appendChild(b);
@@ -398,7 +427,7 @@ function showStep(step, index){
 }
 
 function goToNextStep(currentStep){
-  const order = getOrderedSteps();
+  const order = getOrderedSteps(); // *** filtered ***
   const i = order.findIndex(s => s.id === currentStep.id);
   const next = order[i+1];
   if(next){ showStep(next, i+1); }
@@ -437,6 +466,9 @@ function sanitizePlan(obj){
     parentId: s.parentId!=null ? Number(s.parentId) : null,
     options: Array.isArray(s.options) ? s.options.map(o=>String(o).slice(0,120)).slice(0,10) : [],
     links: Array.isArray(s.links) ? s.links.map(u=>String(u).slice(0,300)).slice(0,10) : [],
+    // görünürlük kuralı (TR/EN anahtarları kabul)
+    visibleIf: typeof s.visibleIf==='string' ? s.visibleIf.slice(0,500)
+             : (typeof s['GörünürEğer']==='string' ? s['GörünürEğer'].slice(0,500) : undefined),
   })).filter(s=>Number.isFinite(s.id));
   return { model: obj.model, steps };
 }
@@ -456,7 +488,7 @@ document.addEventListener('DOMContentLoaded', () => {
       currentModel = names[0];
       els.modelSelect.value = currentModel;
       renderSteps();
-      const first = computeOrder(models[currentModel] || [])[0];
+      const first = computeFilteredOrder(currentModel)[0];
       if (first) showStep(first, 0);
     });
   }
@@ -468,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentModel = model;
     if (els.modelSelect) els.modelSelect.value = model;
     renderSteps();
-    const order = computeOrder(models[model] || []);
+    const order = computeFilteredOrder(model);
     const idx = order.findIndex(s=>s.id===id);
     if (idx>=0) showStep(order[idx], idx);
   });
@@ -478,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
 els.modelSelect.addEventListener('change', e=>{
   currentModel = e.target.value;
   renderSteps();
-  const first = computeOrder(models[currentModel] || [])[0];
+  const first = computeFilteredOrder(currentModel)[0];
   if (first) showStep(first, 0);
 });
 
