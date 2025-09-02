@@ -1,5 +1,5 @@
 /* Steplify MVP — JSON'ları /data/ klasöründen otomatik yükler + freemium kilit */
-console.log('Steplify app v2');
+console.log('Steplify app v3');
 const FREE_LIMIT = 5;
 const PREMIUM_KEY = "steplify_premium";   // localStorage anahtarı
 
@@ -8,6 +8,7 @@ function isPremium() {
 }
 function setPremium(v) {
   localStorage.setItem(PREMIUM_KEY, v ? "1" : "0");
+  reflectPremiumUI();
 }
 
 let models = {};    // { modelName: steps[] }
@@ -22,7 +23,7 @@ const DATA_FILES = [
   {name:"Freelance",         path:"/public/data/freelance.json"},
 ];
 
-
+// DOM elemanları
 const els = {
   jsonInput: document.getElementById('jsonInput'),
   modelSelect: document.getElementById('modelSelect'),
@@ -35,12 +36,15 @@ const els = {
   premiumBtn: document.getElementById('premiumBtn'),
   loadSample: document.getElementById('loadSample'),
 };
+
+// Açıklama kısa metinleri (isteğe göre genişlet)
 const OPTION_TIPS = {
   "İş Modeli Seç": {
     "Dijital Ürünler": "Dijital ürünler (kurs, yazılım, e-kitap) stok gerektirmez; komisyonlar genelde daha yüksektir.",
     "Fiziksel Ürünler": "Fiziksel ürünlerde komisyon düşük ama talep yüksek; lojistik ve kargo takibi gerekir."
   }
 };
+
 // --------- Güvenli Modal (tek kopya) ----------
 let _modalResolver = null;
 
@@ -64,7 +68,6 @@ function ensureModal() {
     ">
       <h3 id="modalTitle" style="margin:0 0 6px; font-size:18px;"></h3>
       <p id="modalText" style="margin:0 0 14px; color:#475569;"></p>
-  
       <div class="modal-actions" style="display:flex; gap:8px; justify-content:flex-end;">
         <button id="modalCancel" class="btn small outline" type="button">Vazgeç</button>
         <button id="modalOk" class="btn small primary" type="button">Devam Et</button>
@@ -73,7 +76,6 @@ function ensureModal() {
   `;
   const okBtn = m.querySelector('#modalOk');
   const cancelBtn = m.querySelector('#modalCancel');
-  
   Object.assign(okBtn.style, {
     background: '#2563eb',
     color: '#fff',
@@ -88,15 +90,24 @@ function ensureModal() {
     padding: '8px 12px',
     borderRadius: '8px'
   });
-  document.body.appendChild(m);  
+
+  document.body.appendChild(m);
+
   // Kapatma/Onay bağlantıları
   const backdrop   = m.querySelector('.modal-backdrop');
   const btnCancel  = m.querySelector('#modalCancel');
   const btnOk      = m.querySelector('#modalOk');
-  
+
   backdrop.addEventListener('click', () => closeModal(false));
   btnCancel.addEventListener('click', () => closeModal(false));
   btnOk.addEventListener('click', () => closeModal(true));
+
+  // Klavye kısayolları
+  document.addEventListener('keydown', (ev)=>{
+    if (m.style.display === 'none') return;
+    if (ev.key === 'Escape') closeModal(false);
+    if (ev.key === 'Enter')  closeModal(true);
+  });
 
   return m;
 }
@@ -106,12 +117,11 @@ function openModal(title, text) {
 
   const m = ensureModal();
   m.style.display = 'flex';
-  m.querySelector('#modalTitle').textContent = title || '';  // <-- eklendi
+  m.querySelector('#modalTitle').textContent = title || '';
   m.querySelector('#modalText').textContent  = text  || '';
 
   return new Promise((resolve) => { _modalResolver = resolve; });
 }
-
 
 function closeModal(ok) {
   const m = document.getElementById('steplifyModal');
@@ -120,23 +130,15 @@ function closeModal(ok) {
   if (_modalResolver) { _modalResolver(!!ok); _modalResolver = null; }
 }
 
-// Sayfa açıldığında modalı sağlam kur ve kapalı başlat
-document.addEventListener('DOMContentLoaded', () => {
-  ensureModal();
-  closeModal(false);
-});
-
-
-function getOrderedSteps(){ return computeOrder(models[currentModel] || []); }
-
-function goToNextStep(currentStep){
-  const order = getOrderedSteps();
-  const i = order.findIndex(s => s.id === currentStep.id);
-  const next = order[i+1];
-  if(next){ showStep(next, i+1); }
-}
-
+// ---- LocalStorage yardımcıları ----
 function lsKey(model){ return `steplify_progress::${model}`; }
+function selKey(model){ return `steplify_selection::${model}`; }
+
+function getProgress(m){
+  try{ return JSON.parse(localStorage.getItem(lsKey(m))||'{}'); }catch(_){ return {}; }
+}
+function setProgress(m, obj){ localStorage.setItem(lsKey(m), JSON.stringify(obj||{})); }
+
 function getSelections(m){
   try { return JSON.parse(localStorage.getItem(selKey(m)) || '{}'); }
   catch(_) { return {}; }
@@ -144,8 +146,36 @@ function getSelections(m){
 function setSelections(m, obj){
   localStorage.setItem(selKey(m), JSON.stringify(obj || {}));
 }
-function getProgress(m){ try{ return JSON.parse(localStorage.getItem(lsKey(m))||'{}'); }catch(_){ return {}; } }
-function setProgress(m, obj){ localStorage.setItem(lsKey(m), JSON.stringify(obj||{})); }
+
+// ---- URL hash (derin link) ----
+function setHash(model, stepId){
+  try { location.hash = `${encodeURIComponent(model)}:${stepId}`; } catch(_) {}
+}
+function getHash(){
+  const h = (location.hash||'').replace(/^#/, '');
+  if (!h) return {model:null, id:null};
+  const [m, idStr] = h.split(':');
+  const model = decodeURIComponent(m||'');
+  const id = Number(idStr);
+  return {model, id: Number.isFinite(id) ? id : null};
+}
+
+// ---- Render yardımcıları ----
+function computeOrder(steps){ return steps.slice().sort((a,b)=>a.id-b.id); }
+function getOrderedSteps(){ return computeOrder(models[currentModel] || []); }
+
+function reflectPremiumUI(){
+  const on = isPremium();
+  if (els.premiumBtn) els.premiumBtn.style.display = on ? 'none' : '';
+}
+
+function markActive(stepId){
+  [...els.stepsList.querySelectorAll('.step')].forEach(li => li.classList.remove('active'));
+  const order = computeOrder(models[currentModel]||[]);
+  const idx   = order.findIndex(s=>s.id===stepId);
+  const items = [...els.stepsList.querySelectorAll('.step')];
+  if (idx>=0 && items[idx]) items[idx].classList.add('active');
+}
 
 function renderModels(){
   els.modelSelect.innerHTML = '';
@@ -155,14 +185,27 @@ function renderModels(){
     opt.value = n; opt.textContent = n;
     els.modelSelect.appendChild(opt);
   });
-  if(names.length){
-    currentModel = names[0];
+
+  if (names.length){
+    // Hash'te model varsa onu kullan, yoksa ilkini seç
+    const {model, id} = getHash();
+    currentModel = (model && models[model]) ? model : names[0];
     els.modelSelect.value = currentModel;
     renderSteps();
+
+    const first = computeOrder(models[currentModel] || [])[0];
+    if (id){
+      const order = computeOrder(models[currentModel] || []);
+      const idx = order.findIndex(s=>s.id===id);
+      if (idx>=0) showStep(order[idx], idx);
+      else if (first) showStep(first, 0);
+    } else if (first) {
+      showStep(first, 0);
+    }
+  } else {
+    currentModel = null;
   }
 }
-
-function computeOrder(steps){ return steps.slice().sort((a,b)=>a.id-b.id); }
 
 function renderSteps(){
   // Güvenlik: model yoksa veya adım yoksa UI'yı temizle
@@ -239,7 +282,6 @@ function renderSteps(){
   els.progressBar.title = `${pct}% tamamlandı`;
 }
 
-
 function showStep(step, index){
   // İçeriği sıfırla
   els.stepView.innerHTML = '';
@@ -277,9 +319,7 @@ function showStep(step, index){
       b.dataset.option = o;
 
       // Eğer bu adım için daha önce seçim yapılmışsa, butonu vurgula
-      if (sels[step.id] === o) {
-        b.classList.add('selected');
-      }
+      if (sels[step.id] === o) b.classList.add('selected');
 
       // kilitliyse pasif
       if (locked) b.disabled = true;
@@ -315,9 +355,7 @@ function showStep(step, index){
         renderSteps();
 
         // --- 4) Hesaplanan NEXT'e direkt git ---
-        if (next) {
-          showStep(next, nextIdx);
-        }
+        if (next) showStep(next, nextIdx);
       });
 
       optionsWrap.appendChild(b);
@@ -353,12 +391,20 @@ function showStep(step, index){
     `;
     els.stepView.appendChild(lock);
   }
+
+  // Aktif adımı işaretle ve hash'i güncelle
+  markActive(step.id);
+  setHash(currentModel, step.id);
 }
 
+function goToNextStep(currentStep){
+  const order = getOrderedSteps();
+  const i = order.findIndex(s => s.id === currentStep.id);
+  const next = order[i+1];
+  if(next){ showStep(next, i+1); }
+}
 
-
-
-
+// ---- Veri yükleme ----
 async function loadDataFiles(){
   for(const f of DATA_FILES){
     try{
@@ -371,34 +417,103 @@ async function loadDataFiles(){
     }catch(e){/* geç */}
   }
   renderModels();
-  if (isPremium()) {
-  console.log("Premium aktif! UI güncelleniyor...");
-  renderSteps();
+  reflectPremiumUI();
+
+  if (isPremium()){
+    console.log("Premium aktif! UI güncelleniyor...");
+    renderSteps();
   }
-  // İlk açılışta bir kere Step 1 göster
-  const first = computeOrder(models[currentModel] || [])[0];
-  if (first) showStep(first, 0);
 }
 
-document.addEventListener('DOMContentLoaded', loadDataFiles);
+// ---- JSON güvenliği (sanitize) ----
+function sanitizePlan(obj){
+  if (!obj || typeof obj!=='object') return null;
+  if (typeof obj.model!=='string' || obj.model.length>60) return null;
+  if (!Array.isArray(obj.steps) || obj.steps.length>500) return null;
+  const steps = obj.steps.map(s=>({
+    id: Number(s.id),
+    title: String(s.title||'').slice(0,200),
+    description: String(s.description||'').slice(0,2000),
+    parentId: s.parentId!=null ? Number(s.parentId) : null,
+    options: Array.isArray(s.options) ? s.options.map(o=>String(o).slice(0,120)).slice(0,10) : [],
+    links: Array.isArray(s.links) ? s.links.map(u=>String(u).slice(0,300)).slice(0,10) : [],
+  })).filter(s=>Number.isFinite(s.id));
+  return { model: obj.model, steps };
+}
 
-els.modelSelect.addEventListener('change', e=>{ currentModel = e.target.value; renderSteps(); });
-els.resetProgress.addEventListener('click', ()=>{ if(!currentModel) return; localStorage.removeItem(lsKey(currentModel)); renderSteps(); });
+// ---- Eventler ----
+document.addEventListener('DOMContentLoaded', () => {
+  ensureModal();
+  closeModal(false);
+  reflectPremiumUI();
+  loadDataFiles();
+
+  // Örnekleri Yükle
+  if (els.loadSample) {
+    els.loadSample.addEventListener('click', () => {
+      const names = Object.keys(models);
+      if (!names.length) return alert('Örnekler yüklenemedi. JSON dosyaları bulunamadı.');
+      currentModel = names[0];
+      els.modelSelect.value = currentModel;
+      renderSteps();
+      const first = computeOrder(models[currentModel] || [])[0];
+      if (first) showStep(first, 0);
+    });
+  }
+
+  // Hash değişince aynı adıma git
+  window.addEventListener('hashchange', ()=>{
+    const {model, id} = getHash();
+    if (!model || !models[model] || !Number.isFinite(id)) return;
+    currentModel = model;
+    if (els.modelSelect) els.modelSelect.value = model;
+    renderSteps();
+    const order = computeOrder(models[model] || []);
+    const idx = order.findIndex(s=>s.id===id);
+    if (idx>=0) showStep(order[idx], idx);
+  });
+});
+
+// Model değişimi
+els.modelSelect.addEventListener('change', e=>{
+  currentModel = e.target.value;
+  renderSteps();
+  const first = computeOrder(models[currentModel] || [])[0];
+  if (first) showStep(first, 0);
+});
+
+// İlerlemeyi sıfırla
+els.resetProgress.addEventListener('click', ()=>{
+  if(!currentModel) return;
+  localStorage.removeItem(lsKey(currentModel));
+  renderSteps();
+});
+
+// JSON yükleme
 els.jsonInput.addEventListener('change', (e)=>{
   const file = e.target.files[0]; if(!file) return;
   const reader = new FileReader();
   reader.onload = ()=>{
     try{
-      const obj = JSON.parse(reader.result);
-      if(obj.model && Array.isArray(obj.steps)){ models[obj.model]=obj.steps; renderModels(); }
-      else alert('Geçersiz JSON.');
+      const raw = JSON.parse(reader.result);
+      const obj = sanitizePlan(raw);
+      if(obj){
+        models[obj.model]=obj.steps;
+        renderModels();
+      } else {
+        alert('Geçersiz/çok büyük JSON.');
+      }
     }catch(err){ alert('JSON okunamadı: '+err.message); }
   };
   reader.readAsText(file, 'utf-8');
 });
 
-// sayfanın en altına, DOMContentLoaded'dan hemen sonra
+// Premium state dışarıdan değişirse UI'yı yansıt
+window.addEventListener('storage', (e)=>{
+  if(e.key===PREMIUM_KEY) reflectPremiumUI();
+});
+
+// URL ile premium açma (debug)
 if (new URLSearchParams(location.search).get("unlock") === "1") {
   setPremium(true);
 }
-
