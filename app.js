@@ -218,7 +218,7 @@ function renderSteps(){
 function showStep(step, index){
   // İçeriği sıfırla
   els.stepView.innerHTML = '';
-  
+
   // Başlık + açıklama
   const h = document.createElement('h2');
   h.textContent = `${step.id}. ${step.title}`;
@@ -226,6 +226,8 @@ function showStep(step, index){
   d.textContent = step.description || 'Açıklama yok.';
   els.stepView.appendChild(h);
   els.stepView.appendChild(d);
+
+  // Seçimler (kullanıcının daha önce seçtikleri)
   const sels = getSelections(currentModel);
   if (sels[step.id]) {
     const info = document.createElement('div');
@@ -234,52 +236,55 @@ function showStep(step, index){
     info.textContent = `Seçimin: ${sels[step.id]}`;
     els.stepView.appendChild(info);
   }
-  if (sels[step.id] === o) b.classList.add('selected');
+
   // Bu adım kilitli mi? (freemium)
   const locked = (index >= FREE_LIMIT) && !isPremium();
 
   // Seçenek butonları
   if (step.options && step.options.length) {
     const optionsWrap = document.createElement('div');
-    optionsWrap.className = 'options'; // butonları ortalamak için
+    optionsWrap.className = 'options'; // ortalı, büyük
 
     step.options.forEach(o => {
       const b = document.createElement('button');
-      b.className = 'btn option-btn';  // görsel stil
+      b.className = 'btn option-btn';
       b.textContent = o;
       b.dataset.option = o;
 
-      // kilitliyse butonu pasif yap
-      if (locked) {
-        b.disabled = true;
+      // Eğer bu adım için daha önce seçim yapılmışsa, butonu vurgula
+      if (sels[step.id] === o) {
+        b.classList.add('selected');
       }
 
-      b.addEventListener('click', async () => {
-        if (locked) return; // güvenlik
+      // kilitliyse pasif
+      if (locked) b.disabled = true;
 
-        // kısa açıklama (yoksa varsayılan)
+      b.addEventListener('click', async () => {
+        if (locked) return;
+
+        // kısa açıklama
         const tip =
           (OPTION_TIPS[step.title] && OPTION_TIPS[step.title][o]) ||
           `${o} ile devam edilsin mi?`;
 
-        // modal aç
+        // modal
         const ok = await openModal(o, tip);
         if (!ok) return;
-        
-        // kullanıcının seçimini kaydet
-        const sels = getSelections(currentModel);
-        sels[step.id] = o;
-        setSelections(currentModel, sels);
-        
-        // bu adımı tamamlandı işaretle
+
+        // seçimi kaydet
+        const _sels = getSelections(currentModel);
+        _sels[step.id] = o;
+        setSelections(currentModel, _sels);
+
+        // adımı tamamlandı işaretle
         const p = getProgress(currentModel);
         p[step.id] = true;
         setProgress(currentModel, p);
 
-        // sol listedeki ilerlemeyi tazele
+        // UI tazele
         renderSteps();
 
-        // otomatik bir sonraki adıma geç
+        // sonraki adıma geç
         goToNextStep(step);
       });
 
@@ -289,7 +294,7 @@ function showStep(step, index){
     els.stepView.appendChild(optionsWrap);
   }
 
-  // Sağdaki "Kaynaklar" listesi
+  // Sağdaki "Kaynaklar"
   els.linksList.innerHTML = '';
   (step.links || []).forEach(u => {
     const li = document.createElement('li');
@@ -300,7 +305,7 @@ function showStep(step, index){
     els.linksList.appendChild(li);
   });
 
-  // Kilit kartı (freemium uyarısı)
+  // Kilit kartı
   if (locked) {
     const lock = document.createElement('div');
     lock.className = 'card';
@@ -317,6 +322,7 @@ function showStep(step, index){
     els.stepView.appendChild(lock);
   }
 }
+
 
 
 
