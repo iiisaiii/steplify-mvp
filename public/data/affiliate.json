@@ -5,33 +5,39 @@
       "id": 1,
       "parentId": 0,
       "title": "İş Modeli Seç",
-      "description": "Affiliate marketing ile gelir elde etmeye başlamak istiyorsun. Önce ürün türünü seçelim.",
+      "description": "Affiliate ile gelir elde etmek için ürün tipini seç.",
       "options": [
         "Dijital Ürünler",
         "Fiziksel Ürünler"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 2,
       "parentId": 1,
-      "title": "Dijital mi Fiziksel mi?",
-      "description": "Dijital ürünler (kurs, yazılım, e-kitap) genelde yüksek komisyon (%30–60). Fiziksel ürünler (Amazon, Trendyol, Hepsiburada) daha düşük (%5–15) ama çok talep var.",
+      "title": "Dijital vs Fiziksel (Bilgi)",
+      "description": "Dijital: yüksek komisyon. Fiziksel: daha fazla talep.",
       "options": [
         "Dijital",
         "Fiziksel"
       ],
-      "links": [],
-      "visibleIf": "step:1=Dijital Ürünler"
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 3,
-      "parentId": 2,
+      "parentId": 1,
       "title": "Dijital → Platform Seç",
-      "description": "Dijital için en popüler platformlar: ClickBank, Digistore24, JVZoo, Udemy Affiliate, AppSumo.",
+      "description": "Dijital için popüler ağlar.",
       "options": [
-        "Free",
-        "Paid Tools"
+        "ClickBank",
+        "Digistore24",
+        "JVZoo",
+        "Udemy Affiliate",
+        "AppSumo"
       ],
       "links": [
         "ClickBank",
@@ -41,77 +47,81 @@
     },
     {
       "id": 4,
-      "parentId": 2,
+      "parentId": 1,
       "title": "Fiziksel → Platform Seç",
-      "description": "Fiziksel için en popüler: Amazon Associates, Trendyol Partner, Hepsiburada Affiliate, AliExpress Affiliate.",
+      "description": "Fiziksel için popüler ağlar.",
       "options": [
-        "Free",
-        "Paid Tools"
+        "Amazon Associates",
+        "Trendyol Partner",
+        "Hepsiburada Affiliate",
+        "AliExpress Affiliate"
       ],
       "links": [
         "Amazon Associates",
         "Trendyol Partner"
-      ]
+      ],
+      "visibleIf": "step:1=Fiziksel Ürünler"
     },
     {
       "id": 5,
       "parentId": 3,
-      "title": "Ürün Araştırma",
-      "description": "Hangi ürün satacak? Araştırma yap.",
+      "title": "Ürün Araştırma (Dijital)",
+      "description": "Dijital tarafta trend ve niş tespiti.",
       "options": [
-        "Free: TikTok trendleri",
-        "YouTube",
-        "Reddit] [Paid: Semrush",
-        "Ahrefs",
-        "AdSpy"
+        "Free",
+        "Paid"
       ],
       "links": [
         "TikTok Creative Center"
-      ]
+      ],
+      "visibleIf": "step:1=Dijital Ürünler"
     },
     {
       "id": 6,
       "parentId": 4,
-      "title": "Ürün Araştırma",
-      "description": "Fiziksel ürünlerde Trendyol çok satanlar, Amazon Best Sellers, TikTok #viral ürün listeleri.",
+      "title": "Ürün Araştırma (Fiziksel)",
+      "description": "Fiziksel tarafta talep/rekabet.",
       "options": [
         "Free",
         "Paid"
       ],
       "links": [
         "Amazon Best Sellers"
-      ]
+      ],
+      "visibleIf": "step:1=Fiziksel Ürünler"
     },
     {
       "id": 7,
-      "parentId": 5,
-      "title": "Rakip Analizi",
-      "description": "Seçilen ürün için rakiplerin nasıl tanıtım yaptığını incele.",
+      "parentId": 3,
+      "title": "Rakip Analizi (Dijital)",
+      "description": "Rakip içerik ve açılış sayfaları.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "Similarweb",
-        "TikTok search"
-      ]
+        "Reddit"
+      ],
+      "visibleIf": "step:1=Dijital Ürünler"
     },
     {
       "id": 8,
-      "parentId": 6,
-      "title": "Rakip Analizi",
-      "description": "Fiziksel ürünlerde pazar rekabeti, kargo süresi, komisyon oranlarını kontrol et.",
+      "parentId": 4,
+      "title": "Rakip Analizi (Fiziksel)",
+      "description": "Ürün yorumları, gönderim, iade.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Amazon reviews"
-      ]
+        "Amazon Reviews"
+      ],
+      "visibleIf": "step:1=Fiziksel Ürünler"
     },
     {
       "id": 9,
-      "parentId": 7,
+      "parentId": 0,
       "title": "Promosyon Kanalı Seç",
-      "description": "Ürünü nerede tanıtacaksın?",
+      "description": "Trafik kaynağını belirle.",
       "options": [
         "TikTok",
         "Instagram",
@@ -119,142 +129,157 @@
         "Blog",
         "Email"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 10,
       "parentId": 9,
       "title": "TikTok Stratejisi",
-      "description": "Kısa videolar üret, trend sesleri kullan. 3–5 video/gün hedefle.",
+      "description": "Kısa video planı ve yayın temposu.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "TikTok Creative Center"
-      ]
+      ],
+      "visibleIf": "step:9=TikTok"
     },
     {
       "id": 11,
       "parentId": 9,
       "title": "Instagram Stratejisi",
-      "description": "Reels + Carousel paylaşımları, hashtag araştırması.",
+      "description": "Reels + Carousel + hashtag planı.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "Meta Ads Lib"
-      ]
+      ],
+      "visibleIf": "step:9=Instagram"
     },
     {
       "id": 12,
       "parentId": 9,
       "title": "YouTube Stratejisi",
-      "description": "Review videoları, Top 5 içerikleri, SEO odaklı başlıklar.",
+      "description": "Review, Top 5, SEO başlık.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "TubeBuddy"
-      ]
+      ],
+      "visibleIf": "step:9=YouTube"
     },
     {
       "id": 13,
       "parentId": 9,
       "title": "Blog Stratejisi",
-      "description": "WordPress aç, SEO ile organik trafik çek.",
+      "description": "WordPress + SEO içerik.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "WordPress"
-      ]
+      ],
+      "visibleIf": "step:9=Blog"
     },
     {
       "id": 14,
       "parentId": 9,
       "title": "Email Stratejisi",
-      "description": "Email listesi kur (lead magnet → free e-book).",
+      "description": "Lead magnet → nurture serisi.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "Mailchimp",
         "Systeme.io"
-      ]
+      ],
+      "visibleIf": "step:9=Email"
     },
     {
       "id": 15,
-      "parentId": 10,
+      "parentId": 9,
       "title": "Paid Ads (Opsiyonel)",
-      "description": "TikTok Ads veya Meta Ads ile ürününe trafik çek.",
+      "description": "Küçük bütçe ile hızlı test.",
       "options": [
-        "Low Budget",
-        "High Budget"
+        "TikTok Ads",
+        "Meta Ads",
+        "Google Ads"
       ],
       "links": [
-        "TikTok Ads"
-      ]
+        "TikTok Ads",
+        "Meta Ads Manager"
+      ],
+      "visibleIf": "step:9=TikTok|Instagram|YouTube"
     },
     {
       "id": 16,
       "parentId": 11,
-      "title": "Paid Ads (Opsiyonel)",
-      "description": "Instagram reklamları ile trafik çek.",
+      "title": "IG Ads Odak",
+      "description": "IG reklam setleri, kreatif test.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "Meta Ads Manager"
-      ]
+      ],
+      "visibleIf": "step:9=Instagram"
     },
     {
       "id": 17,
       "parentId": 12,
-      "title": "Paid Ads (Opsiyonel)",
-      "description": "YouTube Ads (skippable in-stream).",
+      "title": "YouTube Ads Odak",
+      "description": "In-stream kampanyalar.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "Google Ads"
-      ]
+      ],
+      "visibleIf": "step:9=YouTube"
     },
     {
       "id": 18,
       "parentId": 13,
-      "title": "SEO Araçları Kullan",
-      "description": "Blog için Ahrefs, Semrush, Ubersuggest gibi araçlarla anahtar kelime seç.",
+      "title": "SEO Araçları",
+      "description": "Kelime araştırması ve brief.",
       "options": [
-        "Free: Ubersuggest] [Paid: Ahrefs",
+        "Ubersuggest",
+        "Ahrefs",
         "Semrush"
       ],
       "links": [
         "Ahrefs"
-      ]
+      ],
+      "visibleIf": "step:9=Blog"
     },
     {
       "id": 19,
       "parentId": 14,
-      "title": "Email Funnel Kur",
-      "description": "5–7 adımlı otomatik email serisi: Hoş geldin → Değer → Satış.",
+      "title": "Email Funnel",
+      "description": "5–7 adımlı otomasyon.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "Mailchimp Automation"
-      ]
+      ],
+      "visibleIf": "step:9=Email"
     },
     {
       "id": 20,
-      "parentId": 15,
-      "title": "İlk Satış ve Optimize",
-      "description": "İlk satış geldiğinde hangi kanaldan geldiğini analiz et. Başarılı kanala daha çok yatırım yap.",
+      "parentId": 0,
+      "title": "İlk Satış & Optimize",
+      "description": "En iyi kanala yoğunlaş, ölçekle.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Google Analytics",
-        "TikTok Pixel"
+        "Analytics",
+        "Pixel"
       ]
     }
   ]

@@ -1,21 +1,19 @@
 StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link,GörünürEğer
-1,0,Beceri Belirleme,"Hangi alanda hizmet vereceksin? (tasarım, yazılım, çeviri, içerik, sosyal medya).","[Tasarım, Yazılım, Çeviri, İçerik, Sosyal Medya]",,
-2,1,Portföy Hazırlık,Daha önce yaptığın işlerden örnek veya demo projeler hazırla.,–,"Canva, Behance",
-3,2,Profil Platformu Seç,Freelance iş bulacağın yeri seç.,"[Upwork, Fiverr, Bionluk, Freelancer.com]","Upwork, Fiverr",
-4,3,Profil Aç,"Profesyonel fotoğraf, başlık, açıklama ekle.",–,,
-5,4,Hizmet Paketleri Belirle,"Net hizmet tanımları yap (örn. 500 kelime blog yazısı, logo tasarımı).",–,,
-6,5,Fiyatlandırma,"Başlangıçta düşük fiyatla başla, sonra yükselt.",–,Fiverr örnekleri,
-7,6,İlk İş Başvurusu,Küçük projelere teklif ver.,–,Upwork,
-8,7,İyi Teklif Yazımı,"Müşteriye özel, kısa ve çözüm odaklı yaz.",–,,
-9,8,İlk İş Teslimi,Zamanında ve kaliteli teslim et.,–,,
-10,9,Geri Bildirim Al,"Müşteriden yorum iste, profiline koy.",–,,
-11,10,Profil Güçlendirme,Daha fazla iş aldıkça portföy ve yorum sayın artacak.,–,,
-12,11,Nişleşme,"En iyi yaptığın alana odaklan, fiyatı artır.",–,,
-13,12,Sosyal Medya Kullan,"LinkedIn, Twitter, Instagram’da işlerini paylaş.",–,,
-14,13,Networking,"Freelance topluluklarına katıl (Discord, Facebook grupları).",–,,
-15,14,Ekstra Gelir Kanalları,Kendi web siteni aç → portföy + teklif toplama.,–,"Wix, WordPress",
-16,15,Otomasyon Araçları,"Faturalandırma, zaman takibi, iş yönetimi.",–,"Toggl, Notion",
-17,16,Daha Büyük İşlere Başvur,Daha yüksek bütçeli müşterilere teklif ver.,–,Upwork,
-18,17,Teklif Oranını İyileştir,"Kazanma oranını analiz et, strateji değiştir.",–,,
-19,18,Geliri Çeşitlendir,"Eğitim, e-kitap, kurs çıkar → pasif gelir.",–,Gumroad,
-20,19,Uzun Vadeli Müşteri İlişkisi,Tek seferlik iş yerine düzenli müşteri hedefle.,–,,
+1,0,Alan Seç,Hangi alanda hizmet vereceksin?,"[Yazılım, Tasarım, İçerik-SEO, NoCode]",-,
+2,0,Platform Seç,Müşteriyi nereden bulacaksın?,"[Upwork, Fiverr, LinkedIn, Soğuk E-posta]",-,
+3,1,Teklif Paketleri (Yazılım),"SaaS MVP, entegrasyon, bakım.",-,-,step:1=Yazılım
+4,1,Teklif Paketleri (Tasarım),"Landing, dashboard, marka seti.",-,-,step:1=Tasarım
+5,1,Teklif Paketleri (İçerik-SEO),"Blog paketi, teknik SEO, strateji.",-,-,step:1=İçerik-SEO
+6,1,Teklif Paketleri (NoCode),"Webflow, Bubble MVP, otomasyon.",-,-,step:1=NoCode
+7,0,Portfolyo,Hikayeleştirme: problem→çözüm→sonuç.,-,-,
+8,0,Profil Optimizasyonu,"Açıklama, anahtar kelime, niş.",-,-,
+9,2,Upwork Stratejisi,"Job feed filtre, hızlı teklif.",-,-,step:2=Upwork
+10,2,Fiverr Stratejisi,"Gig başlık/etiket, paketler.",-,-,step:2=Fiverr
+11,2,LinkedIn Stratejisi,"İçerik, DM akışı.",-,-,step:2=LinkedIn
+12,2,Soğuk E-posta Stratejisi,"Liste çıkarma, kişiselleştirme, takip.",-,-,step:2=Soğuk E-posta
+13,0,Araçlar,"Takvim, fatura, CRM, sözleşme.",-,-,
+14,0,Fiyatlandırma,"Saatlik vs proje bazlı, değer odaklı.",-,-,
+15,0,Görüşme & Kapanış,"Discovery call, itiraz karşılama.",-,-,
+16,0,Teslimat Süreci,"Kickoff, milestone, raporlama.",-,-,
+17,0,Geri Bildirim & Referans,"Testimonial, portfolyoya ekleme.",-,-,
+18,0,Ölçekleme,"Niş derinleştirme, ekip, ürünleştirme.",-,-,

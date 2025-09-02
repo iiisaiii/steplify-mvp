@@ -1,21 +1,18 @@
 StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link,GörünürEğer
-1,0,Platform Seç,"Print on Demand yapacağın yeri seç: Shopify + POD app veya hazır pazar yerleri (Etsy, Redbubble, Teespring).","[Shopify+App, Etsy, Redbubble, Teespring]","Printful, Printify",
-2,1,Niş Belirle,"Hedef kitleni seç (hayvansever, fitness, motivasyon, gamer).",–,"Pinterest, TikTok",
-3,2,Ürün Türü Seç,"Tişört, kupa, çanta, telefon kılıfı.",–,Printful,
-4,3,Tasarım Araştır,"Trend tasarımları bul, ilham al.","[Free: Pinterest, TikTok] [Paid: Creative Market, Envato]","Pinterest, Envato",
-5,4,Tasarım Üret,"Canva, Photoshop veya AI ile tasarım yap.",–,"Canva, MidJourney",
-6,5,Telif Kontrolü,Tasarımların telif hakkı olmadığından emin ol.,–,TMSearch,
-7,6,Mağaza Kur (Shopify),"Tema yükle, POD app bağla (Printful/Printify).",–,Shopify,step:1=Shopify
-8,7,Ürün Yükle,Tasarımlarını mağazana ekle.,–,Printify,
-9,8,Fiyatlandırma,Maliyet + kâr marjı (genelde %30–50).,–,,
-10,9,Pazar Yeri Kur (Etsy),"Etsy hesabı aç, mağazanı tasarla.",–,Etsy,step:1=Etsy
-11,10,Ürün Optimize,SEO uyumlu başlık ve açıklamalar yaz.,–,Marmalead,
-12,11,Fotoğraf Mockup,Ürün görselleri için mockup hazırla.,–,Placeit,step:1=Etsy
-13,12,İlk Lansman,5–10 ürünle mağazanı aç.,–,,
-14,13,Pazarlama Kanalı Seç,"TikTok, Instagram, Pinterest.","[TikTok, Instagram, Pinterest]",,
-15,14,TikTok Stratejisi,"Tasarım sürecini paylaş, trend ses kullan.",–,TikTok Creative Center,
-16,14,Instagram Stratejisi,"Reel + carousel, hedef kitle hashtagleri.",–,,
-17,14,Pinterest Stratejisi,"Ürün görsellerini pinle, backlink oluştur.",–,Pinterest,
-18,15,Paid Ads (Opsiyonel),TikTok Ads / Meta Ads ile mağazaya trafik çek.,–,TikTok Ads,
-19,17,Influencer İşbirliği,"Mikro influencer’lara ürün gönder, komisyonla sat.",–,Upfluence,
-20,18,Ölçekle,"En çok satan ürünlere bütçe artır, yeni niş dene.",–,,
+1,0,Platform Seç,Nerede satış yapacaksın?,"[Etsy, Amazon Merch, Shopify]",-,
+2,0,Tasarım Yöntemi,Tasarımı nasıl üreteceksin?,"[Kendim Tasarlarım, Freelancer, AI]","Figma, Midjourney",
+3,1,Etsy Kurulum,Mağaza açılışı ve ilk listing.,-,Etsy Seller Handbook,step:1=Etsy
+4,1,Amazon Merch Başvuru,Tier sistemi ve başvuru.,-,Amazon Merch,step:1=Amazon Merch
+5,1,Shopify Kurulum,"Tema, ödeme, domain, app.",-,Shopify Docs,step:1=Shopify
+6,0,Fulfillment Seç,POD sağlayıcısı seç.,"[Printful, Printify, Gelato]","Printful, Printify, Gelato",step:1=Etsy|Shopify
+7,0,Araştırma & Trend,"Trend tasarımlar, sezon planı.",-,"Everbee, Erank, Merch Informer",
+8,0,Tasarım Rehberi,"Boyut, mockup, telif kuralları.",-,Merch Policy,
+9,3,Etsy SEO,Başlık/etiket/açıklama.,-,"Erank, Marmalead",step:1=Etsy
+10,5,Shopify Listeleme,"Varyant, fiyat, koleksiyon.",-,Shopify Help,step:1=Shopify
+11,4,Merch Listing,"Trademark kontrol, 10x tasarım.",-,Trademarkia,step:1=Amazon Merch
+12,0,Kanal Seç,Trafik kaynağı.,"[TikTok, Instagram, Pinterest, Ads]",-,
+13,12,Pinterest SEO,Board/Pin stratejisi.,-,Pinterest Trends,step:12=Pinterest
+14,12,UGC TikTok/IG,Organik kısa video.,-,-,step:12=TikTok|Instagram
+15,12,Ads Başlangıç,Meta/Google küçük bütçe test.,-,"Meta Ads, Google Ads",step:12=Ads
+16,0,Müşteri Destek & İade,"Şablon yanıtlar, politikalar.",-,-,
+17,0,Analitik & Optimize,Kazanan tasarımları ölçekle.,-,-,

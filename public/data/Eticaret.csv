@@ -1,21 +1,19 @@
 StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link,GörünürEğer
-1,0,Ürün Seçimi,Kendi üretebildiğin veya stokladığın ürünü seç.,–,,
-2,1,Pazar Araştırması,Ürününe talep var mı? Trend ve rekabet analizi.,–,"Trendyol, Amazon",
-3,2,Marka Oluştur,"Marka adı, logo, domain.",–,"Canva, Namecheap",step:1=D2C (Kendi Marka)
-4,3,Şirketleşme,Vergi için şirket kur (şahıs şirketi yeterli).,–,Gelir İdaresi Başkanlığı,
-5,4,E-ticaret Platformu Seç,"Shopify, WooCommerce, Trendyol, Hepsiburada.","[Shopify, WooCommerce, Pazar Yeri]",,
-6,5,Shopify/WooCommerce Kurulumu,"Tema yükle, ürün kategorilerini oluştur.",–,Shopify,
-7,6,Ödeme Entegrasyonu,"iyzico, PayTR, Shopier.",–,iyzico,
-8,7,Kargo & Depo,"Yurtiçi Kargo, Aras Kargo, depolama çözümü.",–,,
-9,8,Ürün Fotoğraf & Açıklama,Profesyonel fotoğraf + SEO uyumlu açıklama.,–,,
-10,9,Fiyatlandırma Stratejisi,Maliyet + %30–70 kâr marjı.,–,,
-11,10,Lansman Öncesi Hazırlık,"Sosyal medya hesaplarını aç (IG, TikTok).",–,,
-12,11,İlk Lansman,5–10 ürünle başla.,–,,
-13,12,Pazarlama Kanalı Seç,"TikTok, Instagram, Google Ads, Influencer.","[TikTok, Instagram, Google Ads, Influencer]",,
-14,13,TikTok Stratejisi,Ürün kullanımını gösteren videolar.,–,,
-15,13,Instagram Stratejisi,Reels + story reklamları.,–,,
-16,13,Google Ads,Anahtar kelimeye yönelik reklam.,–,Google Ads,
-17,13,Influencer Marketing,Hedef kitleye uygun mikro influencer’lar.,–,,
-18,14,İlk Satış Takibi,Pixel/Analytics kur → hangi kanal satış getiriyor gör.,–,GA4,
-19,18,Optimize & Scale,"Çalışan kanala bütçe artır, yeni ürün ekle.",–,,
-20,19,Büyüme,"Distribütör anlaşmaları, yurtdışı satış.",–,,
+1,0,Model Seç,İş modelini belirle.,"[D2C (Kendi Marka), Arbitraj, Pazaryeri]",-,
+2,1,Platform Seç (D2C),Kendi site altyapısı.,"[Shopify, WooCommerce]",-,step:1=D2C (Kendi Marka)
+3,1,Pazaryeri Seç (TR),Hangi pazaryerleri?,"[Trendyol, Hepsiburada, n11, Amazon TR]",-,step:1=Pazaryeri
+4,1,Arbitraj Kaynakları,Perakende/online arbitraj.,-,-,step:1=Arbitraj
+5,2,Shopify Kurulum,"Tema, ödeme, kargo, vergi.",-,Shopify Docs,step:2=Shopify
+6,2,WooCommerce Kurulum,"Hosting, eklenti, ödeme.",-,Woo Docs,step:2=WooCommerce
+7,3,Pazaryeri Hesap Aç,Komisyon/kargo anlaşmaları.,-,Satıcı Merkezi,step:1=Pazaryeri
+8,0,Ürün Araştırma,Talep ve rekabet.,-,-,
+9,0,Tedarik/Toptancı,Anlaşmalar ve MOQ.,-,-,
+10,0,Fotoğraf & İçerik,"Ürün foto, açıklama, FAQ.",-,-,
+11,0,Fiyatlandırma,"Maliyet, komisyon, kargo.",-,-,
+12,0,Pazarlama Kanalı,Trafik kaynağı seç.,"[TikTok, Instagram, Google Ads, Influencer, Email]",-,
+13,12,Google Ads,Search/Shopping kampanyaları.,-,Google Ads,step:12=Google Ads
+14,12,UGC TikTok/IG,Organik kısa video planı.,-,-,step:12=TikTok|Instagram
+15,12,Influencer,UGC/satış ortaklığı anlaşmaları.,-,-,step:12=Influencer
+16,12,Email Otomasyon,"Hoş geldin, sepet terk serileri.",-,Klaviyo,step:12=Email
+17,0,Operasyon,"Sipariş, paketleme, iade.",-,-,
+18,0,Analitik & Ölçek,ROAS/LTV odaklı büyüme.,-,-,

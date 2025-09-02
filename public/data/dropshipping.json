@@ -4,255 +4,277 @@
     {
       "id": 1,
       "parentId": 0,
-      "title": "İş Modeli Seç",
-      "description": "Dropshipping ile başlayacaksın. Önce mağaza altyapını belirle.",
+      "title": "Platform Seç",
+      "description": "Hangi platformda mağaza açılacak?",
       "options": [
         "Shopify",
-        "WordPress/WooCommerce",
-        "Diğer"
+        "Etsy",
+        "Amazon",
+        "Pazaryeri (TR)"
       ],
       "links": [
-        "Shopify",
-        "WooCommerce"
+        "-"
       ]
     },
     {
       "id": 2,
-      "parentId": 1,
-      "title": "Shopify mı WooCommerce mi?",
-      "description": "Shopify hızlı kurulum, WooCommerce daha ucuz ama teknik.",
+      "parentId": 0,
+      "title": "Tedarikçi Modeli Seç",
+      "description": "Ürün tedarik yöntemi.",
       "options": [
-        "Shopify",
-        "WooCommerce"
+        "AliExpress",
+        "Türkiye Tedarikçi",
+        "Print on Demand"
       ],
-      "links": [],
-      "visibleIf": "step:1=Shopify"
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 3,
-      "parentId": 2,
-      "title": "Niş Seçimi",
-      "description": "Belirli bir ürün kategorisine odaklan: ev ürünleri, aksesuar, pet, elektronik.",
+      "parentId": 1,
+      "title": "Shopify Kurulum",
+      "description": "Tema, ödeme, teslimat ayarları.",
       "options": [
-        "–"
+        "Dawn Theme",
+        "Premium Theme"
       ],
       "links": [
-        "TrendHunter",
+        "Shopify Help"
+      ],
+      "visibleIf": "step:1=Shopify"
+    },
+    {
+      "id": 4,
+      "parentId": 1,
+      "title": "Etsy Mağaza Kurulum",
+      "description": "Mağaza açılışı ve temel ayarlar.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Etsy Seller Handbook"
+      ],
+      "visibleIf": "step:1=Etsy"
+    },
+    {
+      "id": 5,
+      "parentId": 1,
+      "title": "Amazon Storefront",
+      "description": "Satıcı hesabı, kategori onayı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Amazon Seller Central"
+      ],
+      "visibleIf": "step:1=Amazon"
+    },
+    {
+      "id": 6,
+      "parentId": 1,
+      "title": "Pazaryeri (TR) Kurulum",
+      "description": "Trendyol/Hepsiburada/n11 açılışı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Satıcı Merkezi"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
+    },
+    {
+      "id": 7,
+      "parentId": 0,
+      "title": "Ürün Araştırma",
+      "description": "Talep ve rekabet analizi.",
+      "options": [
+        "TikTok Trend",
+        "Amazon Movers",
+        "Etsy Top Sellers"
+      ],
+      "links": [
         "TikTok Creative Center"
       ]
     },
     {
-      "id": 4,
-      "parentId": 3,
-      "title": "Ürün Araştırma",
-      "description": "Satacak ürünleri bul.",
-      "options": [
-        "Free: TikTok",
-        "Amazon",
-        "Trendyol] [Paid: Ecomhunt",
-        "Minea",
-        "AdSpy"
-      ],
-      "links": [
-        "Amazon Best Sellers",
-        "Ecomhunt"
-      ]
-    },
-    {
-      "id": 5,
-      "parentId": 4,
-      "title": "Rakip Analizi",
-      "description": "Rakip mağazaların ürünlerini, fiyatlarını ve reklamlarını incele.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "Similarweb",
-        "Meta Ads Library"
-      ]
-    },
-    {
-      "id": 6,
-      "parentId": 5,
-      "title": "Tedarikçi Platformu Seç",
-      "description": "Ürünü nereden göndereceksin?",
-      "options": [
-        "AliExpress",
-        "CJdropshipping",
-        "Spocket",
-        "Türkiye Tedarikçileri"
-      ],
-      "links": [
-        "CJdropshipping",
-        "Spocket"
-      ]
-    },
-    {
-      "id": 7,
-      "parentId": 6,
-      "title": "Tedarikçi Güvenilirlik Kontrolü",
-      "description": "Teslimat süresi, iade politikası, yorumlar.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "AliExpress reviews"
-      ]
-    },
-    {
       "id": 8,
-      "parentId": 7,
-      "title": "Mağaza Kurulumu",
-      "description": "Shopify/WooCommerce mağazanda tema seç, menü ve koleksiyonları oluştur.",
+      "parentId": 2,
+      "title": "AliExpress Tedarik",
+      "description": "Tedarikçi güvenilirliği, SLA.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Shopify Themes"
-      ]
+        "AliExpress Dropship"
+      ],
+      "visibleIf": "step:2=AliExpress"
     },
     {
       "id": 9,
-      "parentId": 8,
-      "title": "Mağaza Tasarımı",
-      "description": "Anasayfa → güven veren tasarım, ürün sayfası → açıklama + görseller.",
+      "parentId": 2,
+      "title": "Türkiye Tedarikçi",
+      "description": "Toptancılar, MOQ, iade politikaları.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Canva",
-        "Pagefly"
-      ]
+        "-"
+      ],
+      "visibleIf": "step:2=Türkiye Tedarikçi"
     },
     {
       "id": 10,
-      "parentId": 9,
-      "title": "Ödeme Yöntemleri",
-      "description": "Kredi kartı, PayPal, Shopier veya iyzico entegrasyonu.",
+      "parentId": 2,
+      "title": "POD Tedarik",
+      "description": "POD entegrasyonu.",
       "options": [
-        "–"
+        "Printify",
+        "Printful",
+        "Gelato"
       ],
       "links": [
-        "iyzico",
-        "PayPal"
-      ]
+        "Printify",
+        "Printful"
+      ],
+      "visibleIf": "step:2=Print on Demand"
     },
     {
       "id": 11,
-      "parentId": 10,
-      "title": "Kargo & İade Politikası",
-      "description": "Kullanıcıya net kargo süresi ve iade koşulları belirt.",
+      "parentId": 7,
+      "title": "Shopify Listeleme",
+      "description": "SEO başlık, varyant, görseller.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "Shopify SEO"
+      ],
+      "visibleIf": "step:1=Shopify"
     },
     {
       "id": 12,
-      "parentId": 8,
-      "title": "Ürün Ekleme",
-      "description": "Seçilen ürünleri mağazaya yükle, açıklamalar optimize et.",
+      "parentId": 7,
+      "title": "Etsy Listeleme",
+      "description": "Başlık/etiket/Mockup optimizasyonu.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Oberlo (Shopify)",
-        "CJ App"
-      ]
+        "Erank",
+        "Marmalead"
+      ],
+      "visibleIf": "step:1=Etsy"
     },
     {
       "id": 13,
-      "parentId": 12,
-      "title": "Fiyatlandırma Stratejisi",
-      "description": "Ürün fiyatı = Tedarikçi fiyatı + kargo + %30–50 kâr marjı.",
+      "parentId": 7,
+      "title": "Amazon Listeleme",
+      "description": "A+ Content, inceleme politikaları.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "Helium10"
+      ],
+      "visibleIf": "step:1=Amazon"
     },
     {
       "id": 14,
-      "parentId": 13,
-      "title": "Pazarlama Kanalı Seç",
-      "description": "Hangi platformda tanıtım yapacaksın?",
+      "parentId": 7,
+      "title": "Pazaryeri (TR) Listeleme",
+      "description": "Kategori kuralları, kargo/iadeler.",
       "options": [
-        "TikTok",
-        "Instagram",
-        "Facebook",
-        "Google Ads"
+        "-"
       ],
-      "links": []
+      "links": [
+        "Rehberler"
+      ],
+      "visibleIf": "step:1=Pazaryeri (TR)"
     },
     {
       "id": 15,
-      "parentId": 14,
-      "title": "TikTok Ads",
-      "description": "Viral video reklamları ile düşük maliyetli satış denemeleri.",
+      "parentId": 0,
+      "title": "Pazarlama Kanalı Seç",
+      "description": "Trafik kaynağını belirle.",
       "options": [
-        "–"
+        "TikTok",
+        "Instagram",
+        "Influencer",
+        "Ads"
       ],
       "links": [
-        "TikTok Ads Manager"
+        "-"
       ]
     },
     {
       "id": 16,
-      "parentId": 14,
-      "title": "Instagram/Facebook Ads",
-      "description": "Carousel + Reels reklamları ile trafik çek.",
+      "parentId": 15,
+      "title": "Influencer Marketing",
+      "description": "UGC ve mikro-influencer işbirliği.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Meta Ads Manager"
-      ]
+        "Modash",
+        "Incense"
+      ],
+      "visibleIf": "step:15=Influencer"
     },
     {
       "id": 17,
-      "parentId": 14,
-      "title": "Google Ads",
-      "description": "Arama reklamları (yüksek niyetli trafik).",
+      "parentId": 15,
+      "title": "Organik TikTok/IG",
+      "description": "30 günlük içerik takvimi.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Google Ads"
-      ]
+        "-"
+      ],
+      "visibleIf": "step:15=TikTok|Instagram"
     },
     {
       "id": 18,
-      "parentId": 14,
-      "title": "Influencer Marketing",
-      "description": "Mikro influencer’lara ücretsiz ürün gönder, affiliate anlaşması yap.",
+      "parentId": 15,
+      "title": "Ads Başlangıç",
+      "description": "Küçük bütçe test kampanyaları.",
       "options": [
-        "–"
+        "TikTok Ads",
+        "Meta Ads",
+        "Google Ads"
       ],
       "links": [
-        "Upfluence"
-      ]
+        "TikTok Ads",
+        "Meta Ads",
+        "Google Ads"
+      ],
+      "visibleIf": "step:15=Ads"
     },
     {
       "id": 19,
-      "parentId": 15,
-      "title": "İlk Satış Takibi",
-      "description": "Pixel/Analytics kur → hangi reklam çalışıyor gör.",
+      "parentId": 0,
+      "title": "Sipariş & Operasyon",
+      "description": "SLA, müşteri desteği, iade.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "TikTok Pixel",
-        "GA4"
+        "Gorgias",
+        "Zendesk"
       ]
     },
     {
       "id": 20,
-      "parentId": 19,
-      "title": "Optimize & Scale",
-      "description": "Çalışan ürünü ölçeklendir, bütçeyi artır, ikinci ürün ekle.",
+      "parentId": 0,
+      "title": "Optimize & Ölçek",
+      "description": "Ölç, kazananı büyüt.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "Analytics"
+      ]
     }
   ]
 }

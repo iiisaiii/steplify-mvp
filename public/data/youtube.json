@@ -4,154 +4,120 @@
     {
       "id": 1,
       "parentId": 0,
-      "title": "Niş Belirleme",
-      "description": "Kanalın konusu ne olacak? (Eğlence, Eğitim, Finans, Oyun, Pet, Vlog).",
+      "title": "Kanal Tipi Seç",
+      "description": "Yüzlü mü, yüzsüz mü?",
       "options": [
-        "Eğlence",
-        "Eğitim",
-        "Oyun",
-        "Finans",
-        "Pet",
-        "Vlog"
+        "Yüzlü",
+        "Yüzsüz"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 2,
-      "parentId": 1,
-      "title": "Hedef Kitleyi Tanımla",
-      "description": "Kim izleyecek? Yaş, ilgi alanı, dil.",
+      "parentId": 0,
+      "title": "Niş Seç",
+      "description": "Uzun vadede üretebileceğin niş.",
       "options": [
-        "–"
+        "Eğitim",
+        "Eğlence",
+        "Finans",
+        "Teknoloji",
+        "Sağlık"
       ],
-      "links": []
+      "links": [
+        "Google Trends"
+      ]
     },
     {
       "id": 3,
-      "parentId": 2,
-      "title": "Kanal Adı ve Marka",
-      "description": "Akılda kalıcı, nişe uygun isim seç. Logo/baner tasarla.",
+      "parentId": 1,
+      "title": "Ekipman (Yüzlü)",
+      "description": "Kamera, mikrofon, ışık.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Canva",
-        "Looka"
-      ]
-    },
-    {
-      "id": 4,
-      "parentId": 3,
-      "title": "Ekipman Seçimi",
-      "description": "Telefon, mikrofon, ışık → temel ekipmanla başla.",
-      "options": [
-        "–"
-      ],
-      "links": []
-    },
-    {
-      "id": 5,
-      "parentId": 4,
-      "title": "İçerik Türü Seç",
-      "description": "Nasıl içerik üreteceksin?",
-      "options": [
-        "Shorts",
-        "Uzun Video",
-        "Canlı Yayın"
-      ],
-      "links": []
-    },
-    {
-      "id": 6,
-      "parentId": 5,
-      "title": "Shorts Stratejisi",
-      "description": "15–60 saniyelik kısa videolar, trend sesler.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "TikTok Creative Center"
-      ]
-    },
-    {
-      "id": 7,
-      "parentId": 5,
-      "title": "Uzun Video Stratejisi",
-      "description": "5–15 dakikalık videolar; bilgi, eğlence, tutorial.",
-      "options": [
-        "–"
-      ],
-      "links": []
-    },
-    {
-      "id": 8,
-      "parentId": 5,
-      "title": "Canlı Yayın",
-      "description": "Haftada 1–2 canlı yayın ile etkileşim.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "StreamYard"
-      ]
-    },
-    {
-      "id": 9,
-      "parentId": 6,
-      "title": "İçerik Takvimi",
-      "description": "Haftada en az 3 Shorts + 1 uzun video hedefle.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "Google Calendar"
-      ]
-    },
-    {
-      "id": 10,
-      "parentId": 9,
-      "title": "Script & Hazırlık",
-      "description": "Videolar için kısa senaryolar çıkar.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "ChatGPT"
-      ],
-      "visibleIf": "step:1=Yüzsüz"
-    },
-    {
-      "id": 11,
-      "parentId": 10,
-      "title": "Çekim & Montaj",
-      "description": "CapCut, Premiere, Final Cut kullan.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "CapCut"
+        "YouTube Creator Tips"
       ],
       "visibleIf": "step:1=Yüzlü"
     },
     {
-      "id": 12,
-      "parentId": 11,
-      "title": "Thumbnail Tasarımı",
-      "description": "Canva ile ilgi çekici görseller.",
+      "id": 4,
+      "parentId": 1,
+      "title": "Yazılım (Yüzsüz)",
+      "description": "AI ses, metin→video araçları.",
       "options": [
-        "–"
+        "CapCut",
+        "Descript",
+        "Pictory",
+        "HeyGen"
       ],
       "links": [
-        "Canva"
+        "-"
+      ],
+      "visibleIf": "step:1=Yüzsüz"
+    },
+    {
+      "id": 5,
+      "parentId": 0,
+      "title": "Format Seç",
+      "description": "Shorts mı Long-form mu?",
+      "options": [
+        "Shorts",
+        "Long-form",
+        "İkisi"
+      ],
+      "links": [
+        "-"
       ]
     },
     {
-      "id": 13,
-      "parentId": 11,
-      "title": "SEO Optimizasyonu",
-      "description": "Başlık, açıklama, etiketlerde anahtar kelimeler.",
+      "id": 6,
+      "parentId": 5,
+      "title": "Shorts Pipeline",
+      "description": "Hook → değer → CTA (9–15 sn).",
       "options": [
-        "–"
+        "-"
+      ],
+      "links": [
+        "Shorts Guide"
+      ],
+      "visibleIf": "step:5=Shorts|İkisi"
+    },
+    {
+      "id": 7,
+      "parentId": 5,
+      "title": "Long-form Pipeline",
+      "description": "Outline → çekim → montaj.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:5=Long-form|İkisi"
+    },
+    {
+      "id": 8,
+      "parentId": 0,
+      "title": "İçerik Takvimi",
+      "description": "Haftalık yayın planı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Notion/Sheet"
+      ]
+    },
+    {
+      "id": 9,
+      "parentId": 0,
+      "title": "Araştırma & SEO",
+      "description": "Başlık/etiket/niş analizi.",
+      "options": [
+        "-"
       ],
       "links": [
         "TubeBuddy",
@@ -159,82 +125,143 @@
       ]
     },
     {
-      "id": 14,
-      "parentId": 13,
-      "title": "Yayın Planı",
-      "description": "Belirli gün ve saatlerde video yükle.",
+      "id": 10,
+      "parentId": 0,
+      "title": "Thumbnail Stratejisi",
+      "description": "Kontrast + 3 kelime kuralı.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "YouTube Studio"
+        "Canva",
+        "Photoshop"
       ]
     },
     {
-      "id": 15,
-      "parentId": 14,
-      "title": "İlk Yorum & Etkileşim",
-      "description": "Videona ilk yorumu kendin yaz, CTA ekle.",
+      "id": 11,
+      "parentId": 0,
+      "title": "Script & Hook",
+      "description": "İlk 3 saniyede merak uyandır.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 12,
+      "parentId": 0,
+      "title": "Yayın & Optimize",
+      "description": "A/B test, CTR, izlenme süresi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 13,
+      "parentId": 0,
+      "title": "Monetizasyon Seç",
+      "description": "Gelir modelini belirle.",
+      "options": [
+        "YouTube Partner",
+        "Affiliate",
+        "Sponsorluk",
+        "Ürün"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 14,
+      "parentId": 13,
+      "title": "Affiliate Entegrasyonu",
+      "description": "Açıklama + sabit yorum.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:13=Affiliate"
+    },
+    {
+      "id": 15,
+      "parentId": 13,
+      "title": "Sponsorluk Paketle",
+      "description": "Medya kiti, fiyat, outreach.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:13=Sponsorluk"
     },
     {
       "id": 16,
-      "parentId": 14,
-      "title": "Topluluk Kullanımı",
-      "description": "Topluluk sekmesinden anket, görsel paylaş.",
+      "parentId": 13,
+      "title": "Ürün Satışı",
+      "description": "Merch, kurs, dijital ürün.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:13=Ürün"
     },
     {
       "id": 17,
-      "parentId": 15,
-      "title": "Analiz & Ölçüm",
-      "description": "İzlenme süresi, CTR, retention ölç.",
+      "parentId": 0,
+      "title": "Dağıtım",
+      "description": "Kırp ve IG/TikTok’a paylaş.",
       "options": [
-        "–"
+        "-"
+      ],
+      "links": [
+        "-"
+      ]
+    },
+    {
+      "id": 18,
+      "parentId": 0,
+      "title": "Topluluk & Email",
+      "description": "Topluluk sekmesi + e-posta listesi.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Beehiiv",
+        "ConvertKit"
+      ]
+    },
+    {
+      "id": 19,
+      "parentId": 0,
+      "title": "Analitik",
+      "description": "CTR/AVD/Retention analizi.",
+      "options": [
+        "-"
       ],
       "links": [
         "YouTube Analytics"
       ]
     },
     {
-      "id": 18,
-      "parentId": 17,
-      "title": "Optimize",
-      "description": "En çok izlenen içerikleri analiz et, benzerlerini çek.",
-      "options": [
-        "–"
-      ],
-      "links": []
-    },
-    {
-      "id": 19,
-      "parentId": 18,
-      "title": "Monetization (1000 sub + 4000 saat)",
-      "description": "YouTube Partner Program’a başvur.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "YouTube Studio"
-      ]
-    },
-    {
       "id": 20,
-      "parentId": 19,
-      "title": "Geliri Çeşitlendir",
-      "description": "Sponsorluk, affiliate link, ürün satışı.",
+      "parentId": 0,
+      "title": "Ölçekleme",
+      "description": "Batch üretim, editör/freelancer.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Amazon Affiliate",
-        "Patreon"
+        "-"
       ]
     }
   ]

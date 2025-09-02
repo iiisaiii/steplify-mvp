@@ -5,245 +5,231 @@
       "id": 1,
       "parentId": 0,
       "title": "Platform Seç",
-      "description": "Print on Demand yapacağın yeri seç: Shopify + POD app veya hazır pazar yerleri (Etsy, Redbubble, Teespring).",
+      "description": "Nerede satış yapacaksın?",
       "options": [
-        "Shopify+App",
         "Etsy",
-        "Redbubble",
-        "Teespring"
+        "Amazon Merch",
+        "Shopify"
       ],
       "links": [
-        "Printful",
-        "Printify"
+        "-"
       ]
     },
     {
       "id": 2,
-      "parentId": 1,
-      "title": "Niş Belirle",
-      "description": "Hedef kitleni seç (hayvansever, fitness, motivasyon, gamer).",
+      "parentId": 0,
+      "title": "Tasarım Yöntemi",
+      "description": "Tasarımı nasıl üreteceksin?",
       "options": [
-        "–"
+        "Kendim Tasarlarım",
+        "Freelancer",
+        "AI"
       ],
       "links": [
-        "Pinterest",
-        "TikTok"
+        "Figma",
+        "Midjourney"
       ]
     },
     {
       "id": 3,
-      "parentId": 2,
-      "title": "Ürün Türü Seç",
-      "description": "Tişört, kupa, çanta, telefon kılıfı.",
+      "parentId": 1,
+      "title": "Etsy Kurulum",
+      "description": "Mağaza açılışı ve ilk listing.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Printful"
-      ]
+        "Etsy Seller Handbook"
+      ],
+      "visibleIf": "step:1=Etsy"
     },
     {
       "id": 4,
-      "parentId": 3,
-      "title": "Tasarım Araştır",
-      "description": "Trend tasarımları bul, ilham al.",
+      "parentId": 1,
+      "title": "Amazon Merch Başvuru",
+      "description": "Tier sistemi ve başvuru.",
       "options": [
-        "Free: Pinterest",
-        "TikTok] [Paid: Creative Market",
-        "Envato"
+        "-"
       ],
       "links": [
-        "Pinterest",
-        "Envato"
-      ]
+        "Amazon Merch"
+      ],
+      "visibleIf": "step:1=Amazon Merch"
     },
     {
       "id": 5,
-      "parentId": 4,
-      "title": "Tasarım Üret",
-      "description": "Canva, Photoshop veya AI ile tasarım yap.",
+      "parentId": 1,
+      "title": "Shopify Kurulum",
+      "description": "Tema, ödeme, domain, app.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Canva",
-        "MidJourney"
-      ]
-    },
-    {
-      "id": 6,
-      "parentId": 5,
-      "title": "Telif Kontrolü",
-      "description": "Tasarımların telif hakkı olmadığından emin ol.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "TMSearch"
-      ]
-    },
-    {
-      "id": 7,
-      "parentId": 6,
-      "title": "Mağaza Kur (Shopify)",
-      "description": "Tema yükle, POD app bağla (Printful/Printify).",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "Shopify"
+        "Shopify Docs"
       ],
       "visibleIf": "step:1=Shopify"
     },
     {
-      "id": 8,
-      "parentId": 7,
-      "title": "Ürün Yükle",
-      "description": "Tasarımlarını mağazana ekle.",
+      "id": 6,
+      "parentId": 0,
+      "title": "Fulfillment Seç",
+      "description": "POD sağlayıcısı seç.",
       "options": [
-        "–"
+        "Printful",
+        "Printify",
+        "Gelato"
       ],
       "links": [
-        "Printify"
+        "Printful",
+        "Printify",
+        "Gelato"
+      ],
+      "visibleIf": "step:1=Etsy|Shopify"
+    },
+    {
+      "id": 7,
+      "parentId": 0,
+      "title": "Araştırma & Trend",
+      "description": "Trend tasarımlar, sezon planı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Everbee",
+        "Erank",
+        "Merch Informer"
+      ]
+    },
+    {
+      "id": 8,
+      "parentId": 0,
+      "title": "Tasarım Rehberi",
+      "description": "Boyut, mockup, telif kuralları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Merch Policy"
       ]
     },
     {
       "id": 9,
-      "parentId": 8,
-      "title": "Fiyatlandırma",
-      "description": "Maliyet + kâr marjı (genelde %30–50).",
+      "parentId": 3,
+      "title": "Etsy SEO",
+      "description": "Başlık/etiket/açıklama.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "Erank",
+        "Marmalead"
+      ],
+      "visibleIf": "step:1=Etsy"
     },
     {
       "id": 10,
-      "parentId": 9,
-      "title": "Pazar Yeri Kur (Etsy)",
-      "description": "Etsy hesabı aç, mağazanı tasarla.",
+      "parentId": 5,
+      "title": "Shopify Listeleme",
+      "description": "Varyant, fiyat, koleksiyon.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Etsy"
+        "Shopify Help"
       ],
-      "visibleIf": "step:1=Etsy"
+      "visibleIf": "step:1=Shopify"
     },
     {
       "id": 11,
-      "parentId": 10,
-      "title": "Ürün Optimize",
-      "description": "SEO uyumlu başlık ve açıklamalar yaz.",
+      "parentId": 4,
+      "title": "Merch Listing",
+      "description": "Trademark kontrol, 10x tasarım.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Marmalead"
-      ]
+        "Trademarkia"
+      ],
+      "visibleIf": "step:1=Amazon Merch"
     },
     {
       "id": 12,
-      "parentId": 11,
-      "title": "Fotoğraf Mockup",
-      "description": "Ürün görselleri için mockup hazırla.",
+      "parentId": 0,
+      "title": "Kanal Seç",
+      "description": "Trafik kaynağı.",
       "options": [
-        "–"
+        "TikTok",
+        "Instagram",
+        "Pinterest",
+        "Ads"
       ],
       "links": [
-        "Placeit"
-      ],
-      "visibleIf": "step:1=Etsy"
+        "-"
+      ]
     },
     {
       "id": 13,
       "parentId": 12,
-      "title": "İlk Lansman",
-      "description": "5–10 ürünle mağazanı aç.",
+      "title": "Pinterest SEO",
+      "description": "Board/Pin stratejisi.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "Pinterest Trends"
+      ],
+      "visibleIf": "step:12=Pinterest"
     },
     {
       "id": 14,
-      "parentId": 13,
-      "title": "Pazarlama Kanalı Seç",
-      "description": "TikTok, Instagram, Pinterest.",
+      "parentId": 12,
+      "title": "UGC TikTok/IG",
+      "description": "Organik kısa video.",
       "options": [
-        "TikTok",
-        "Instagram",
-        "Pinterest"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:12=TikTok|Instagram"
     },
     {
       "id": 15,
-      "parentId": 14,
-      "title": "TikTok Stratejisi",
-      "description": "Tasarım sürecini paylaş, trend ses kullan.",
+      "parentId": 12,
+      "title": "Ads Başlangıç",
+      "description": "Meta/Google küçük bütçe test.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "TikTok Creative Center"
-      ]
+        "Meta Ads",
+        "Google Ads"
+      ],
+      "visibleIf": "step:12=Ads"
     },
     {
       "id": 16,
-      "parentId": 14,
-      "title": "Instagram Stratejisi",
-      "description": "Reel + carousel, hedef kitle hashtagleri.",
+      "parentId": 0,
+      "title": "Müşteri Destek & İade",
+      "description": "Şablon yanıtlar, politikalar.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 17,
-      "parentId": 14,
-      "title": "Pinterest Stratejisi",
-      "description": "Ürün görsellerini pinle, backlink oluştur.",
+      "parentId": 0,
+      "title": "Analitik & Optimize",
+      "description": "Kazanan tasarımları ölçekle.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Pinterest"
+        "-"
       ]
-    },
-    {
-      "id": 18,
-      "parentId": 15,
-      "title": "Paid Ads (Opsiyonel)",
-      "description": "TikTok Ads / Meta Ads ile mağazaya trafik çek.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "TikTok Ads"
-      ]
-    },
-    {
-      "id": 19,
-      "parentId": 17,
-      "title": "Influencer İşbirliği",
-      "description": "Mikro influencer’lara ürün gönder, komisyonla sat.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "Upfluence"
-      ]
-    },
-    {
-      "id": 20,
-      "parentId": 18,
-      "title": "Ölçekle",
-      "description": "En çok satan ürünlere bütçe artır, yeni niş dene.",
-      "options": [
-        "–"
-      ],
-      "links": []
     }
   ]
 }

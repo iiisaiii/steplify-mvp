@@ -4,224 +4,238 @@
     {
       "id": 1,
       "parentId": 0,
-      "title": "Ürün Seçimi",
-      "description": "Kendi üretebildiğin veya stokladığın ürünü seç.",
+      "title": "Model Seç",
+      "description": "İş modelini belirle.",
       "options": [
-        "–"
+        "D2C (Kendi Marka)",
+        "Arbitraj",
+        "Pazaryeri"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 2,
       "parentId": 1,
-      "title": "Pazar Araştırması",
-      "description": "Ürününe talep var mı? Trend ve rekabet analizi.",
+      "title": "Platform Seç (D2C)",
+      "description": "Kendi site altyapısı.",
       "options": [
-        "–"
+        "Shopify",
+        "WooCommerce"
       ],
       "links": [
-        "Trendyol",
-        "Amazon"
-      ]
-    },
-    {
-      "id": 3,
-      "parentId": 2,
-      "title": "Marka Oluştur",
-      "description": "Marka adı, logo, domain.",
-      "options": [
-        "–"
-      ],
-      "links": [
-        "Canva",
-        "Namecheap"
+        "-"
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)"
     },
     {
-      "id": 4,
-      "parentId": 3,
-      "title": "Şirketleşme",
-      "description": "Vergi için şirket kur (şahıs şirketi yeterli).",
+      "id": 3,
+      "parentId": 1,
+      "title": "Pazaryeri Seç (TR)",
+      "description": "Hangi pazaryerleri?",
       "options": [
-        "–"
+        "Trendyol",
+        "Hepsiburada",
+        "n11",
+        "Amazon TR"
       ],
       "links": [
-        "Gelir İdaresi Başkanlığı"
-      ]
+        "-"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
+    },
+    {
+      "id": 4,
+      "parentId": 1,
+      "title": "Arbitraj Kaynakları",
+      "description": "Perakende/online arbitraj.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Arbitraj"
     },
     {
       "id": 5,
-      "parentId": 4,
-      "title": "E-ticaret Platformu Seç",
-      "description": "Shopify, WooCommerce, Trendyol, Hepsiburada.",
+      "parentId": 2,
+      "title": "Shopify Kurulum",
+      "description": "Tema, ödeme, kargo, vergi.",
       "options": [
-        "Shopify",
-        "WooCommerce",
-        "Pazar Yeri"
+        "-"
       ],
-      "links": []
+      "links": [
+        "Shopify Docs"
+      ],
+      "visibleIf": "step:2=Shopify"
     },
     {
       "id": 6,
-      "parentId": 5,
-      "title": "Shopify/WooCommerce Kurulumu",
-      "description": "Tema yükle, ürün kategorilerini oluştur.",
+      "parentId": 2,
+      "title": "WooCommerce Kurulum",
+      "description": "Hosting, eklenti, ödeme.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Shopify"
-      ]
+        "Woo Docs"
+      ],
+      "visibleIf": "step:2=WooCommerce"
     },
     {
       "id": 7,
-      "parentId": 6,
-      "title": "Ödeme Entegrasyonu",
-      "description": "iyzico, PayTR, Shopier.",
+      "parentId": 3,
+      "title": "Pazaryeri Hesap Aç",
+      "description": "Komisyon/kargo anlaşmaları.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "iyzico"
-      ]
+        "Satıcı Merkezi"
+      ],
+      "visibleIf": "step:1=Pazaryeri"
     },
     {
       "id": 8,
-      "parentId": 7,
-      "title": "Kargo & Depo",
-      "description": "Yurtiçi Kargo, Aras Kargo, depolama çözümü.",
+      "parentId": 0,
+      "title": "Ürün Araştırma",
+      "description": "Talep ve rekabet.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 9,
-      "parentId": 8,
-      "title": "Ürün Fotoğraf & Açıklama",
-      "description": "Profesyonel fotoğraf + SEO uyumlu açıklama.",
+      "parentId": 0,
+      "title": "Tedarik/Toptancı",
+      "description": "Anlaşmalar ve MOQ.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 10,
-      "parentId": 9,
-      "title": "Fiyatlandırma Stratejisi",
-      "description": "Maliyet + %30–70 kâr marjı.",
+      "parentId": 0,
+      "title": "Fotoğraf & İçerik",
+      "description": "Ürün foto, açıklama, FAQ.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 11,
-      "parentId": 10,
-      "title": "Lansman Öncesi Hazırlık",
-      "description": "Sosyal medya hesaplarını aç (IG, TikTok).",
+      "parentId": 0,
+      "title": "Fiyatlandırma",
+      "description": "Maliyet, komisyon, kargo.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 12,
-      "parentId": 11,
-      "title": "İlk Lansman",
-      "description": "5–10 ürünle başla.",
-      "options": [
-        "–"
-      ],
-      "links": []
-    },
-    {
-      "id": 13,
-      "parentId": 12,
-      "title": "Pazarlama Kanalı Seç",
-      "description": "TikTok, Instagram, Google Ads, Influencer.",
+      "parentId": 0,
+      "title": "Pazarlama Kanalı",
+      "description": "Trafik kaynağı seç.",
       "options": [
         "TikTok",
         "Instagram",
         "Google Ads",
-        "Influencer"
+        "Influencer",
+        "Email"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
-      "id": 14,
-      "parentId": 13,
-      "title": "TikTok Stratejisi",
-      "description": "Ürün kullanımını gösteren videolar.",
-      "options": [
-        "–"
-      ],
-      "links": []
-    },
-    {
-      "id": 15,
-      "parentId": 13,
-      "title": "Instagram Stratejisi",
-      "description": "Reels + story reklamları.",
-      "options": [
-        "–"
-      ],
-      "links": []
-    },
-    {
-      "id": 16,
-      "parentId": 13,
+      "id": 13,
+      "parentId": 12,
       "title": "Google Ads",
-      "description": "Anahtar kelimeye yönelik reklam.",
+      "description": "Search/Shopping kampanyaları.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
         "Google Ads"
-      ]
+      ],
+      "visibleIf": "step:12=Google Ads"
+    },
+    {
+      "id": 14,
+      "parentId": 12,
+      "title": "UGC TikTok/IG",
+      "description": "Organik kısa video planı.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:12=TikTok|Instagram"
+    },
+    {
+      "id": 15,
+      "parentId": 12,
+      "title": "Influencer",
+      "description": "UGC/satış ortaklığı anlaşmaları.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:12=Influencer"
+    },
+    {
+      "id": 16,
+      "parentId": 12,
+      "title": "Email Otomasyon",
+      "description": "Hoş geldin, sepet terk serileri.",
+      "options": [
+        "-"
+      ],
+      "links": [
+        "Klaviyo"
+      ],
+      "visibleIf": "step:12=Email"
     },
     {
       "id": 17,
-      "parentId": 13,
-      "title": "Influencer Marketing",
-      "description": "Hedef kitleye uygun mikro influencer’lar.",
+      "parentId": 0,
+      "title": "Operasyon",
+      "description": "Sipariş, paketleme, iade.",
       "options": [
-        "–"
-      ],
-      "links": []
-    },
-    {
-      "id": 18,
-      "parentId": 14,
-      "title": "İlk Satış Takibi",
-      "description": "Pixel/Analytics kur → hangi kanal satış getiriyor gör.",
-      "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "GA4"
+        "-"
       ]
     },
     {
-      "id": 19,
-      "parentId": 18,
-      "title": "Optimize & Scale",
-      "description": "Çalışan kanala bütçe artır, yeni ürün ekle.",
+      "id": 18,
+      "parentId": 0,
+      "title": "Analitik & Ölçek",
+      "description": "ROAS/LTV odaklı büyüme.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
-    },
-    {
-      "id": 20,
-      "parentId": 19,
-      "title": "Büyüme",
-      "description": "Distribütör anlaşmaları, yurtdışı satış.",
-      "options": [
-        "–"
-      ],
-      "links": []
+      "links": [
+        "-"
+      ]
     }
   ]
 }

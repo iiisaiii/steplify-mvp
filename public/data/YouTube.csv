@@ -1,21 +1,21 @@
 StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link,GörünürEğer
-1,0,Niş Belirleme,"Kanalın konusu ne olacak? (Eğlence, Eğitim, Finans, Oyun, Pet, Vlog).","[Eğlence, Eğitim, Oyun, Finans, Pet, Vlog]",,
-2,1,Hedef Kitleyi Tanımla,"Kim izleyecek? Yaş, ilgi alanı, dil.",–,,
-3,2,Kanal Adı ve Marka,"Akılda kalıcı, nişe uygun isim seç. Logo/baner tasarla.",–,"Canva, Looka",
-4,3,Ekipman Seçimi,"Telefon, mikrofon, ışık → temel ekipmanla başla.",–,,
-5,4,İçerik Türü Seç,Nasıl içerik üreteceksin?,"[Shorts, Uzun Video, Canlı Yayın]",,
-6,5,Shorts Stratejisi,"15–60 saniyelik kısa videolar, trend sesler.",–,TikTok Creative Center,
-7,5,Uzun Video Stratejisi,"5–15 dakikalık videolar; bilgi, eğlence, tutorial.",–,,
-8,5,Canlı Yayın,Haftada 1–2 canlı yayın ile etkileşim.,–,StreamYard,
-9,6,İçerik Takvimi,Haftada en az 3 Shorts + 1 uzun video hedefle.,–,Google Calendar,
-10,9,Script & Hazırlık,Videolar için kısa senaryolar çıkar.,–,ChatGPT,step:1=Yüzsüz
-11,10,Çekim & Montaj,"CapCut, Premiere, Final Cut kullan.",–,CapCut,step:1=Yüzlü
-12,11,Thumbnail Tasarımı,Canva ile ilgi çekici görseller.,–,Canva,
-13,11,SEO Optimizasyonu,"Başlık, açıklama, etiketlerde anahtar kelimeler.",–,"TubeBuddy, VidIQ",
-14,13,Yayın Planı,Belirli gün ve saatlerde video yükle.,–,YouTube Studio,
-15,14,İlk Yorum & Etkileşim,"Videona ilk yorumu kendin yaz, CTA ekle.",–,,
-16,14,Topluluk Kullanımı,"Topluluk sekmesinden anket, görsel paylaş.",–,,
-17,15,Analiz & Ölçüm,"İzlenme süresi, CTR, retention ölç.",–,YouTube Analytics,
-18,17,Optimize,"En çok izlenen içerikleri analiz et, benzerlerini çek.",–,,
-19,18,Monetization (1000 sub + 4000 saat),YouTube Partner Program’a başvur.,–,YouTube Studio,
-20,19,Geliri Çeşitlendir,"Sponsorluk, affiliate link, ürün satışı.",–,"Amazon Affiliate, Patreon",
+1,0,Kanal Tipi Seç,"Yüzlü mü, yüzsüz mü?","[Yüzlü, Yüzsüz]",-,
+2,0,Niş Seç,Uzun vadede üretebileceğin niş.,"[Eğitim, Eğlence, Finans, Teknoloji, Sağlık]",Google Trends,
+3,1,Ekipman (Yüzlü),"Kamera, mikrofon, ışık.",-,YouTube Creator Tips,step:1=Yüzlü
+4,1,Yazılım (Yüzsüz),"AI ses, metin→video araçları.","[CapCut, Descript, Pictory, HeyGen]",-,step:1=Yüzsüz
+5,0,Format Seç,Shorts mı Long-form mu?,"[Shorts, Long-form, İkisi]",-,
+6,5,Shorts Pipeline,Hook → değer → CTA (9–15 sn).,-,Shorts Guide,step:5=Shorts|İkisi
+7,5,Long-form Pipeline,Outline → çekim → montaj.,-,-,step:5=Long-form|İkisi
+8,0,İçerik Takvimi,Haftalık yayın planı.,-,Notion/Sheet,
+9,0,Araştırma & SEO,Başlık/etiket/niş analizi.,-,"TubeBuddy, VidIQ",
+10,0,Thumbnail Stratejisi,Kontrast + 3 kelime kuralı.,-,"Canva, Photoshop",
+11,0,Script & Hook,İlk 3 saniyede merak uyandır.,-,-,
+12,0,Yayın & Optimize,"A/B test, CTR, izlenme süresi.",-,-,
+13,0,Monetizasyon Seç,Gelir modelini belirle.,"[YouTube Partner, Affiliate, Sponsorluk, Ürün]",-,
+14,13,Affiliate Entegrasyonu,Açıklama + sabit yorum.,-,-,step:13=Affiliate
+15,13,Sponsorluk Paketle,"Medya kiti, fiyat, outreach.",-,-,step:13=Sponsorluk
+16,13,Ürün Satışı,"Merch, kurs, dijital ürün.",-,-,step:13=Ürün
+17,0,Dağıtım,Kırp ve IG/TikTok’a paylaş.,-,-,
+18,0,Topluluk & Email,Topluluk sekmesi + e-posta listesi.,-,"Beehiiv, ConvertKit",
+19,0,Analitik,CTR/AVD/Retention analizi.,-,YouTube Analytics,
+20,0,Ölçekleme,"Batch üretim, editör/freelancer.",-,-,

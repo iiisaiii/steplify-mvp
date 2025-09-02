@@ -4,229 +4,232 @@
     {
       "id": 1,
       "parentId": 0,
-      "title": "Beceri Belirleme",
-      "description": "Hangi alanda hizmet vereceksin? (tasarım, yazılım, çeviri, içerik, sosyal medya).",
+      "title": "Alan Seç",
+      "description": "Hangi alanda hizmet vereceksin?",
       "options": [
-        "Tasarım",
         "Yazılım",
-        "Çeviri",
-        "İçerik",
-        "Sosyal Medya"
+        "Tasarım",
+        "İçerik-SEO",
+        "NoCode"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 2,
-      "parentId": 1,
-      "title": "Portföy Hazırlık",
-      "description": "Daha önce yaptığın işlerden örnek veya demo projeler hazırla.",
+      "parentId": 0,
+      "title": "Platform Seç",
+      "description": "Müşteriyi nereden bulacaksın?",
       "options": [
-        "–"
+        "Upwork",
+        "Fiverr",
+        "LinkedIn",
+        "Soğuk E-posta"
       ],
       "links": [
-        "Canva",
-        "Behance"
+        "-"
       ]
     },
     {
       "id": 3,
-      "parentId": 2,
-      "title": "Profil Platformu Seç",
-      "description": "Freelance iş bulacağın yeri seç.",
+      "parentId": 1,
+      "title": "Teklif Paketleri (Yazılım)",
+      "description": "SaaS MVP, entegrasyon, bakım.",
       "options": [
-        "Upwork",
-        "Fiverr",
-        "Bionluk",
-        "Freelancer.com"
+        "-"
       ],
       "links": [
-        "Upwork",
-        "Fiverr"
-      ]
+        "-"
+      ],
+      "visibleIf": "step:1=Yazılım"
     },
     {
       "id": 4,
-      "parentId": 3,
-      "title": "Profil Aç",
-      "description": "Profesyonel fotoğraf, başlık, açıklama ekle.",
+      "parentId": 1,
+      "title": "Teklif Paketleri (Tasarım)",
+      "description": "Landing, dashboard, marka seti.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=Tasarım"
     },
     {
       "id": 5,
-      "parentId": 4,
-      "title": "Hizmet Paketleri Belirle",
-      "description": "Net hizmet tanımları yap (örn. 500 kelime blog yazısı, logo tasarımı).",
+      "parentId": 1,
+      "title": "Teklif Paketleri (İçerik-SEO)",
+      "description": "Blog paketi, teknik SEO, strateji.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:1=İçerik-SEO"
     },
     {
       "id": 6,
-      "parentId": 5,
-      "title": "Fiyatlandırma",
-      "description": "Başlangıçta düşük fiyatla başla, sonra yükselt.",
+      "parentId": 1,
+      "title": "Teklif Paketleri (NoCode)",
+      "description": "Webflow, Bubble MVP, otomasyon.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Fiverr örnekleri"
-      ]
+        "-"
+      ],
+      "visibleIf": "step:1=NoCode"
     },
     {
       "id": 7,
-      "parentId": 6,
-      "title": "İlk İş Başvurusu",
-      "description": "Küçük projelere teklif ver.",
+      "parentId": 0,
+      "title": "Portfolyo",
+      "description": "Hikayeleştirme: problem→çözüm→sonuç.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Upwork"
+        "-"
       ]
     },
     {
       "id": 8,
-      "parentId": 7,
-      "title": "İyi Teklif Yazımı",
-      "description": "Müşteriye özel, kısa ve çözüm odaklı yaz.",
+      "parentId": 0,
+      "title": "Profil Optimizasyonu",
+      "description": "Açıklama, anahtar kelime, niş.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 9,
-      "parentId": 8,
-      "title": "İlk İş Teslimi",
-      "description": "Zamanında ve kaliteli teslim et.",
+      "parentId": 2,
+      "title": "Upwork Stratejisi",
+      "description": "Job feed filtre, hızlı teklif.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:2=Upwork"
     },
     {
       "id": 10,
-      "parentId": 9,
-      "title": "Geri Bildirim Al",
-      "description": "Müşteriden yorum iste, profiline koy.",
+      "parentId": 2,
+      "title": "Fiverr Stratejisi",
+      "description": "Gig başlık/etiket, paketler.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:2=Fiverr"
     },
     {
       "id": 11,
-      "parentId": 10,
-      "title": "Profil Güçlendirme",
-      "description": "Daha fazla iş aldıkça portföy ve yorum sayın artacak.",
+      "parentId": 2,
+      "title": "LinkedIn Stratejisi",
+      "description": "İçerik, DM akışı.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:2=LinkedIn"
     },
     {
       "id": 12,
-      "parentId": 11,
-      "title": "Nişleşme",
-      "description": "En iyi yaptığın alana odaklan, fiyatı artır.",
+      "parentId": 2,
+      "title": "Soğuk E-posta Stratejisi",
+      "description": "Liste çıkarma, kişiselleştirme, takip.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ],
+      "visibleIf": "step:2=Soğuk E-posta"
     },
     {
       "id": 13,
-      "parentId": 12,
-      "title": "Sosyal Medya Kullan",
-      "description": "LinkedIn, Twitter, Instagram’da işlerini paylaş.",
+      "parentId": 0,
+      "title": "Araçlar",
+      "description": "Takvim, fatura, CRM, sözleşme.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 14,
-      "parentId": 13,
-      "title": "Networking",
-      "description": "Freelance topluluklarına katıl (Discord, Facebook grupları).",
+      "parentId": 0,
+      "title": "Fiyatlandırma",
+      "description": "Saatlik vs proje bazlı, değer odaklı.",
       "options": [
-        "–"
+        "-"
       ],
-      "links": []
+      "links": [
+        "-"
+      ]
     },
     {
       "id": 15,
-      "parentId": 14,
-      "title": "Ekstra Gelir Kanalları",
-      "description": "Kendi web siteni aç → portföy + teklif toplama.",
+      "parentId": 0,
+      "title": "Görüşme & Kapanış",
+      "description": "Discovery call, itiraz karşılama.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Wix",
-        "WordPress"
+        "-"
       ]
     },
     {
       "id": 16,
-      "parentId": 15,
-      "title": "Otomasyon Araçları",
-      "description": "Faturalandırma, zaman takibi, iş yönetimi.",
+      "parentId": 0,
+      "title": "Teslimat Süreci",
+      "description": "Kickoff, milestone, raporlama.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Toggl",
-        "Notion"
+        "-"
       ]
     },
     {
       "id": 17,
-      "parentId": 16,
-      "title": "Daha Büyük İşlere Başvur",
-      "description": "Daha yüksek bütçeli müşterilere teklif ver.",
+      "parentId": 0,
+      "title": "Geri Bildirim & Referans",
+      "description": "Testimonial, portfolyoya ekleme.",
       "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Upwork"
+        "-"
       ]
     },
     {
       "id": 18,
-      "parentId": 17,
-      "title": "Teklif Oranını İyileştir",
-      "description": "Kazanma oranını analiz et, strateji değiştir.",
+      "parentId": 0,
+      "title": "Ölçekleme",
+      "description": "Niş derinleştirme, ekip, ürünleştirme.",
       "options": [
-        "–"
-      ],
-      "links": []
-    },
-    {
-      "id": 19,
-      "parentId": 18,
-      "title": "Geliri Çeşitlendir",
-      "description": "Eğitim, e-kitap, kurs çıkar → pasif gelir.",
-      "options": [
-        "–"
+        "-"
       ],
       "links": [
-        "Gumroad"
+        "-"
       ]
-    },
-    {
-      "id": 20,
-      "parentId": 19,
-      "title": "Uzun Vadeli Müşteri İlişkisi",
-      "description": "Tek seferlik iş yerine düzenli müşteri hedefle.",
-      "options": [
-        "–"
-      ],
-      "links": []
     }
   ]
 }
