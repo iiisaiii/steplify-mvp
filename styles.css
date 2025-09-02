@@ -38,7 +38,7 @@
   flex-wrap:wrap;
   margin:24px 0 8px;
 }
-
+.option-btn { color:#111; }
 /* Büyük, kart gibi buton */
 .btn.option-btn{
   font-size:18px;
