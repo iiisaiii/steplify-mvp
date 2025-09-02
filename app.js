@@ -271,21 +271,28 @@ function showStep(step, index){
         const ok = await openModal(o, tip);
         if (!ok) return;
 
-        // seçimi kaydet
+        // --- 1) Bir SONRAKİ adımı ÖNCE hesapla (renderSteps'ten önce) ---
+        const order  = computeOrder(models[currentModel] || []);
+        const curIdx = order.findIndex(s => s.id === step.id);
+        const next   = order[curIdx + 1];  // yoksa undefined, sorun değil
+        const nextIdx = curIdx + 1;
+
+        // --- 2) Seçimi ve ilerlemeyi kaydet ---
         const _sels = getSelections(currentModel);
         _sels[step.id] = o;
         setSelections(currentModel, _sels);
 
-        // adımı tamamlandı işaretle
         const p = getProgress(currentModel);
         p[step.id] = true;
         setProgress(currentModel, p);
 
-        // UI tazele
+        // --- 3) Listeyi yenile ---
         renderSteps();
 
-        // sonraki adıma geç
-        goToNextStep(step);
+        // --- 4) Hesaplanan NEXT'e direkt git ---
+        if (next) {
+          showStep(next, nextIdx);
+        }
       });
 
       optionsWrap.appendChild(b);
@@ -322,6 +329,7 @@ function showStep(step, index){
     els.stepView.appendChild(lock);
   }
 }
+
 
 
 
