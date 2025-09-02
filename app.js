@@ -98,10 +98,6 @@ function ensureModal() {
   btnCancel.addEventListener('click', () => closeModal(false));
   btnOk.addEventListener('click', () => closeModal(true));
 
-
-  // Kapatma/Onay bağlantıları
-  m.querySelector('.modal-backdrop').addEventListener('click', () => closeModal(false));
-
   return m;
 }
 
