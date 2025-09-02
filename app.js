@@ -155,8 +155,15 @@ async function loadDataFiles(){
     }catch(e){/* geç */}
   }
   renderModels();
+  if (isPremium()) {
+  console.log("Premium aktif! UI güncelleniyor...");
+  renderSteps();
+  }
 }
+
+
 document.addEventListener('DOMContentLoaded', loadDataFiles);
+
 
 els.modelSelect.addEventListener('change', e=>{ currentModel = e.target.value; renderSteps(); });
 els.resetProgress.addEventListener('click', ()=>{ if(!currentModel) return; localStorage.removeItem(lsKey(currentModel)); renderSteps(); });
