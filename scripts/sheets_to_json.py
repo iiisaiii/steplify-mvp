@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 Google Sheets (CSV) -> Playbook JSON dönüştürücü
-Kullanım:
-  python scripts/sheets_to_json.py --in "public/data/Affiliate.csv" --model "Affiliate" --out "public/data/affiliate.json"
+
 CSV Kolonları (case-insensitive):
-StepID, ParentID, Başlık, Açıklama, Seçenekler, Kaynak/Link
+- StepID
+- ParentID
+- Başlık / Title
+- Açıklama / Desc
+- Seçenekler / Options      → virgülle ayrılmış
+- Kaynak/Link               → virgülle ayrılmış
+- GörünürEğer / VisibleIf   → Örn: "step:1=Dijital Ürünler|Fiziksel Ürünler; step:3=Amazon"
 """
 import argparse, csv, json, sys
 
@@ -40,6 +45,7 @@ def main():
             elif "açıklama" in low or "aciklama" in low or "desc" in low: cmap["Açıklama"] = k
             elif "seçenek" in low or "secenek" in low or "options" in low: cmap["Seçenekler"] = k
             elif "kaynak" in low or "link" in low: cmap["Kaynak/Link"] = k
+            elif "görünür" in low or "gorunur" in low or "visibleif" in low: cmap["GörünürEğer"] = k
 
         needed = ["StepID","ParentID","Başlık","Açıklama","Seçenekler","Kaynak/Link"]
         for n in needed:
@@ -53,14 +59,19 @@ def main():
             except:
                 continue
             pid = int(str(r[cmap["ParentID"]]).strip() or 0)
-            steps.append({
+            step = {
                 "id": sid,
                 "parentId": pid,
                 "title": norm(r[cmap["Başlık"]]),
                 "description": norm(r[cmap["Açıklama"]]),
                 "options": parse_options(r[cmap["Seçenekler"]]),
-                "links": parse_links(r[cmap["Kaynak/Link"]])
-            })
+                "links": parse_links(r[cmap["Kaynak/Link"]]),
+            }
+            if "GörünürEğer" in cmap:
+                vi = norm(r.get(cmap["GörünürEğer"], ""))
+                if vi:
+                    step["visibleIf"] = vi  # app.js hem TR hem EN anahtarını okuyor
+            steps.append(step)
 
     steps.sort(key=lambda x: x["id"])
     data = {"model": args.model_name, "steps": steps}
