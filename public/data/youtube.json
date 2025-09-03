@@ -7,1211 +7,1179 @@
       "title": "Kanal Tipi Seç",
       "description": "Yüzünü göstererek mi yoksa yüzsüz (voiceover/AI) mi içerik üreteceksin?",
       "options": [
-        "Yüzlü",
-        "Yüzsüz"
+        "Yüzlü=info: Kamerada yüzün görünür; pros: Güven/bağ kurma yüksek; Kişisel marka büyür; cons: Çekim/ışık/özgüven gerektirir\n|| Yüzsüz=info: Voiceover/ekran kaydı/AI avatar ile üretim; pros: Çekim/ışık derdi yok; Hızlı batch üretim; cons: Güven/bağ kurmak daha zor; Avatar/TTS fazla olursa soğuk gelebilir"
       ],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {
+        "TTS": "Metinden konuşma; B-roll: Ara görüntüler; LUFS: Ses yüksekliği standardı"
+      }
     },
     {
       "id": 2,
       "parentId": 0,
       "title": "Niş Seç",
       "description": "Uzun vadede sürdürebileceğin nişi seç.",
-      "options": [
-        "Eğitim",
-        "Eğlence",
-        "Finans",
-        "Teknoloji",
-        "Sağlık",
-        "Fitness",
-        "Kişisel Gelişim"
-      ],
+      "options": [],
       "links": [
         "Google Trends",
         "AnswerThePublic"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 3,
       "parentId": 0,
       "title": "Dil & Pazar",
       "description": "İçerik dili ve hedef pazar.",
-      "options": [
-        "TR",
-        "EN (Global)"
-      ],
+      "options": [],
       "links": [
         "YouTube Demographics"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 4,
       "parentId": 0,
       "title": "Persona Netleştir",
       "description": "Hedef kitlenin yaş, seviye, amaç ve itirazlarını yaz.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Notion Persona Template"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 5,
       "parentId": 0,
       "title": "Format Seç",
       "description": "İçerik formatı.",
-      "options": [
-        "Shorts",
-        "Long-form",
-        "İkisi"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 6,
       "parentId": 0,
       "title": "İsim/Handle",
       "description": "Marka adı ve @handle belirle (kısa, akılda kalıcı).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Namecheckr"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 7,
       "parentId": 0,
       "title": "Görsel Kimlik",
       "description": "Logo, renk paleti, tipografi (kolay okunur).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Canva",
         "Coolors"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 8,
       "parentId": 0,
       "title": "YouTube Kanal Kur",
       "description": "Kanal oluştur, ülke/saat dilimi/doğrulama (telefon).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "YouTube Studio"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 9,
       "parentId": 0,
       "title": "Güvenlik & Erişim",
       "description": "2FA aç; kurtarma e-postası ekle; marka hesabı sahibini sabitle.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Account"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 10,
       "parentId": 1,
       "title": "Yüzlü: Donanım Seç",
       "description": "Bütçe ve akışa uygun donanım yolu.",
-      "options": [
-        "Telefon",
-        "Kamera"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzlü"
+      "visibleIf": "step:1=Yüzlü",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 11,
       "parentId": 10,
       "title": "Yüzlü: Telefon Akışı",
       "description": "1080p/60; arka kamera; tripod; uzaktan mikrofon.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Movo/BOYA Mic"
       ],
-      "visibleIf": "step:1=Yüzlü; step:10=Telefon"
+      "visibleIf": "step:1=Yüzlü; step:10=Telefon",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 12,
       "parentId": 10,
       "title": "Yüzlü: Kamera Akışı",
       "description": "Mirrorless/DSLR; lens 24-35mm; tripod; capture kartı (gerekirse).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Sony/ZV-E10",
         "Elgato"
       ],
-      "visibleIf": "step:1=Yüzlü; step:10=Kamera"
+      "visibleIf": "step:1=Yüzlü; step:10=Kamera",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 13,
       "parentId": 1,
       "title": "Yüzlü: Işıklandırma",
       "description": "Softbox/LED panel; ışık 45°; arka plan ayrımı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzlü"
+      "visibleIf": "step:1=Yüzlü",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 14,
       "parentId": 1,
       "title": "Yüzlü: Ses",
       "description": "Kablosuz yaka mikrofonu veya shotgun; yankı azaltma.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Rode",
         "Deity"
       ],
-      "visibleIf": "step:1=Yüzlü"
+      "visibleIf": "step:1=Yüzlü",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 15,
       "parentId": 1,
       "title": "Yüzlü: Arka Plan",
       "description": "Karmaşayı kaldır; marka objesi; sessiz arka plan müziği yok.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzlü"
+      "visibleIf": "step:1=Yüzlü",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 16,
       "parentId": 1,
       "title": "Yüzlü: Çekim Metodu",
       "description": "Okuma tarzı seçimi.",
-      "options": [
-        "Teleprompter",
-        "Serbest Konuşma"
-      ],
+      "options": [],
       "links": [
         "PromptSmart",
         "BigVu"
       ],
-      "visibleIf": "step:1=Yüzlü"
+      "visibleIf": "step:1=Yüzlü",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 20,
       "parentId": 1,
       "title": "Yüzsüz: Üretim Yığını",
       "description": "Temel yazılım/yöntem seç.",
-      "options": [
-        "CapCut Masaüstü",
-        "Descript",
-        "Pictory",
-        "HeyGen"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzsüz"
+      "visibleIf": "step:1=Yüzsüz",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 21,
       "parentId": 1,
       "title": "Yüzsüz: Ses Seçimi",
       "description": "Voiceover yöntemi.",
-      "options": [
-        "Kendi Sesim",
-        "TTS"
-      ],
+      "options": [],
       "links": [
         "ElevenLabs",
         "Descript"
       ],
-      "visibleIf": "step:1=Yüzsüz"
+      "visibleIf": "step:1=Yüzsüz",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 22,
       "parentId": 1,
       "title": "Yüzsüz: Avatar",
       "description": "Kamera yerine AI avatar kullanımı.",
-      "options": [
-        "Yok",
-        "AI Avatar"
-      ],
+      "options": [],
       "links": [
         "HeyGen",
         "D-ID"
       ],
-      "visibleIf": "step:1=Yüzsüz"
+      "visibleIf": "step:1=Yüzsüz",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 23,
       "parentId": 1,
       "title": "Yüzsüz: Asset Kütüphanesi",
       "description": "Stok video/müzik/b-roll klasörü oluştur.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Pexels",
         "Storyblocks",
         "Pixabay"
       ],
-      "visibleIf": "step:1=Yüzsüz"
+      "visibleIf": "step:1=Yüzsüz",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 24,
       "parentId": 1,
       "title": "Yüzsüz: Senkron SOP",
       "description": "TTS/VO → b-roll → altyazı akışını dokümante et.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzsüz"
+      "visibleIf": "step:1=Yüzsüz",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 30,
       "parentId": 0,
       "title": "Konu Havuzu",
       "description": "50 video fikrini başlık taslağıyla yaz (niş×persona kesişimi).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Notion Ideas"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 31,
       "parentId": 0,
       "title": "Hook Bank (20 Adet)",
       "description": "“Kimse söylemiyor ki…”, “X yapmadan önce…” gibi 20 güçlü açılış yaz.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 32,
       "parentId": 0,
       "title": "CTA Bank (10 Adet)",
       "description": "“Link açıklamada”, “Yorumlardaki ilk linke tıkla” vb.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 33,
       "parentId": 0,
       "title": "İçerik Takvimi",
       "description": "30 günlük üretim takvimi: batch günleri ve yayın günleri.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Sheets/Notion"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 34,
       "parentId": 0,
       "title": "Dosya Yapısı",
       "description": "/Raw /Project /Exports /Assets klasörlerini oluştur.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 35,
       "parentId": 5,
       "title": "Shorts: Sütunlar",
       "description": "3 içerik sütunu belirle (mit kırma/öncesi-sonrası/ipucu).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:5=Shorts|İkisi"
+      "visibleIf": "step:5=Shorts|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 36,
       "parentId": 5,
       "title": "Shorts: Script Şablonu",
       "description": "60 sn: Hook → 3 Bullet → CTA (alttaki şablonu kopyala).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Template Doc"
       ],
-      "visibleIf": "step:5=Shorts|İkisi"
+      "visibleIf": "step:5=Shorts|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 37,
       "parentId": 5,
       "title": "Shorts: Çekim/Üretim",
       "description": "Batch 10 video; dikey 9:16; altyazı zorunlu.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "CapCut"
       ],
-      "visibleIf": "step:5=Shorts|İkisi"
+      "visibleIf": "step:5=Shorts|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 38,
       "parentId": 5,
       "title": "Shorts: Edit Pipeline",
       "description": "Altyazı → Pattern interrupt → SFX → Logo/CTA.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "CapCut"
       ],
-      "visibleIf": "step:5=Shorts|İkisi"
+      "visibleIf": "step:5=Shorts|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 39,
       "parentId": 5,
       "title": "Shorts: Yayın SOP",
       "description": "Başlık ≤ 60; #1-2 etiket; sabit yorum + link.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:5=Shorts|İkisi"
+      "visibleIf": "step:5=Shorts|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 40,
       "parentId": 5,
       "title": "Long-form: Format",
       "description": "Ders/Case/Reaction/Interview’dan 1-2 format seç.",
-      "options": [
-        "Ders",
-        "Case Study",
-        "Reaction",
-        "Röportaj"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:5=Long-form|İkisi"
+      "visibleIf": "step:5=Long-form|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 41,
       "parentId": 5,
       "title": "Long-form: Outline Şablonu",
       "description": "Intro (hook) → gündem → bölümler → özet → CTA.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:5=Long-form|İkisi"
+      "visibleIf": "step:5=Long-form|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 42,
       "parentId": 5,
       "title": "Long-form: Çekim SOP",
       "description": "Kamera/telefon ayarı, ses senkronu, slate; dosya isim standardı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:5=Long-form|İkisi"
+      "visibleIf": "step:5=Long-form|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 43,
       "parentId": 5,
       "title": "Long-form: Edit SOP",
       "description": "Kesim hızı, b-roll, callouts, müzik seviyesi −18 LUFS.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:5=Long-form|İkisi"
+      "visibleIf": "step:5=Long-form|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 44,
       "parentId": 5,
       "title": "Long-form: Kapak (Thumbnail)",
       "description": "3 varyant kuralı: yakın yüz + 3 kelime + kontrast.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Canva",
         "Photoshop"
       ],
-      "visibleIf": "step:5=Long-form|İkisi"
+      "visibleIf": "step:5=Long-form|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 50,
       "parentId": 0,
       "title": "SEO Araştırması",
       "description": "Rakip kanallar/anahtar kelime; 20 hedef kelime listesi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "TubeBuddy",
         "VidIQ"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 51,
       "parentId": 0,
       "title": "Başlık Formülleri",
       "description": "“Nasıl/En İyi/Şu Hata/Şablon” başlık formülleri oluştur.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 52,
       "parentId": 0,
       "title": "Açıklama Şablonu",
       "description": "İlk 2 satırda değer + CTA + link; altına timestamp/bağlantılar.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 53,
       "parentId": 0,
       "title": "Ek Açıklama Blokları",
       "description": "Disclosure, affiliate notu, ekipman listesi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 54,
       "parentId": 0,
       "title": "Ekran Sonu & Kartlar",
       "description": "2 video öner, 1 playlist; ilgili dakikaya kart ekle.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 55,
       "parentId": 0,
       "title": "Altyazı/Çeviri",
       "description": "Otomatik altyazıyı düzelt; İngilizce ise TR ek çeviri (ops.).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "YT Studio"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 56,
       "parentId": 0,
       "title": "Müzik & Telif",
       "description": "YouTube Audio Library / lisans kontrol.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "YouTube Audio Library"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 60,
       "parentId": 0,
       "title": "Link Altyapısı",
       "description": "Bio/landing/affiliate linkleri için yöntem seç.",
-      "options": [
-        "Linktree/Beacons",
-        "Kendi Alan + Carrd",
-        "Sadece Video Açıklama"
-      ],
+      "options": [],
       "links": [
         "Beacons",
         "Carrd"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 61,
       "parentId": 60,
       "title": "UTM & Kısaltıcı",
       "description": "Kısa link + UTM standardı oluştur.",
-      "options": [
-        "Bitly",
-        "Short.io",
-        "Kendi Alan"
-      ],
+      "options": [],
       "links": [
         "Bitly",
         "Short.io"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 62,
       "parentId": 0,
       "title": "Pixel/Analytics",
       "description": "Google Tag (GA4) veya sadece UTM ile takip.",
-      "options": [
-        "GA4",
-        "Yalnızca UTM"
-      ],
+      "options": [],
       "links": [
         "GA4",
         "Tag Manager"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 63,
       "parentId": 0,
       "title": "Disclosure",
       "description": "Yasal uyarı metnini sabit şablonlara ekle.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "FTC Guides"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 70,
       "parentId": 0,
       "title": "Yayın Öncesi Kontrol",
       "description": "List: ses, renk, altyazı, başlık, açıklama, thumb, kartlar, linkler.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Checklist"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 71,
       "parentId": 0,
       "title": "Yayınlama",
       "description": "Zamanlama: hedef pazar saatine göre; ilk 2 saatte aktif ol.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 72,
       "parentId": 0,
       "title": "Yorum/Topluluk",
       "description": "Sabit yorum + link; ilk yorumları cevapla; haftalık topluluk postu.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 73,
       "parentId": 0,
       "title": "Dağıtım Seç",
       "description": "Çapraz paylaşım yapacak mısın?",
-      "options": [
-        "Reels",
-        "TikTok",
-        "LinkedIn",
-        "Yok"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 74,
       "parentId": 73,
       "title": "Reels Dağıtım",
       "description": "Reels için kapak/başlık; link profilde.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Meta Business"
       ],
-      "visibleIf": "step:73=Reels"
+      "visibleIf": "step:73=Reels",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 75,
       "parentId": 73,
       "title": "TikTok Dağıtım",
       "description": "Sabit yorum + link; 3-5 hashtag.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "TikTok"
       ],
-      "visibleIf": "step:73=TikTok"
+      "visibleIf": "step:73=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 76,
       "parentId": 73,
       "title": "LinkedIn Dağıtım",
       "description": "Metin özeti + video; sabit yorumda link.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "LinkedIn"
       ],
-      "visibleIf": "step:73=LinkedIn"
+      "visibleIf": "step:73=LinkedIn",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 80,
       "parentId": 0,
       "title": "Monetizasyon Modeli",
       "description": "Gelir kaynağını seç.",
-      "options": [
-        "YouTube Partner",
-        "Affiliate",
-        "Sponsorluk",
-        "Ürün"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 81,
       "parentId": 80,
       "title": "Partner: Uygunluk",
       "description": "Kurallar + saat/gösterim şartlarını kontrol et.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "YouTube Partner"
       ],
-      "visibleIf": "step:80=YouTube Partner"
+      "visibleIf": "step:80=YouTube Partner",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 82,
       "parentId": 80,
       "title": "Partner: AdSense",
       "description": "Bağlantı ve vergi/ödeme ayarları.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "AdSense"
       ],
-      "visibleIf": "step:80=YouTube Partner"
+      "visibleIf": "step:80=YouTube Partner",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 83,
       "parentId": 80,
       "title": "Affiliate: Program Seç",
       "description": "Alanına uygun programı seç.",
-      "options": [
-        "Amazon Associates",
-        "ClickBank",
-        "Digistore24",
-        "SaaS Partner"
-      ],
+      "options": [],
       "links": [
         "Amazon",
         "ClickBank"
       ],
-      "visibleIf": "step:80=Affiliate"
+      "visibleIf": "step:80=Affiliate",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 84,
       "parentId": 80,
       "title": "Affiliate: Link Yerleşimi",
       "description": "Açıklama üstü, sabit yorum, kart/son ekran stratejisi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:80=Affiliate"
+      "visibleIf": "step:80=Affiliate",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 85,
       "parentId": 80,
       "title": "Affiliate: Bonus/Lead Magnet",
       "description": "Video konusuna özel PDF/checklist üret; e-posta topla.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Beehiiv",
         "ConvertKit"
       ],
-      "visibleIf": "step:80=Affiliate"
+      "visibleIf": "step:80=Affiliate",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 86,
       "parentId": 80,
       "title": "Sponsorluk: Medya Kiti",
       "description": "Kanal verileri + örnek videolar; PDF.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Canva"
       ],
-      "visibleIf": "step:80=Sponsorluk"
+      "visibleIf": "step:80=Sponsorluk",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 87,
       "parentId": 80,
       "title": "Sponsorluk: Paket & Fiyat",
       "description": "Pre-roll/Mid-roll/Entegre; paket fiyatları.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:80=Sponsorluk"
+      "visibleIf": "step:80=Sponsorluk",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 88,
       "parentId": 80,
       "title": "Sponsorluk: Outreach",
       "description": "Listeler + e-posta şablonları; 20 şirket.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Hunter.io"
       ],
-      "visibleIf": "step:80=Sponsorluk"
+      "visibleIf": "step:80=Sponsorluk",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 89,
       "parentId": 80,
       "title": "Ürün: Karar",
       "description": "Merch/kurs/dijital ürün seç.",
-      "options": [
-        "Merch",
-        "Kurs",
-        "Dijital Ürün"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:80=Ürün"
+      "visibleIf": "step:80=Ürün",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 90,
       "parentId": 89,
       "title": "Ürün: Altyapı",
       "description": "Merch (Spreadshirt/Teespring), Kurs (Gumroad/Teachable).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Gumroad",
         "Teachable"
       ],
-      "visibleIf": "step:80=Ürün"
+      "visibleIf": "step:80=Ürün",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 95,
       "parentId": 0,
       "title": "Performans Paneli",
       "description": "CTR, AVD, İlk 30 sn düşüş grafiği için şablon paneli.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "YouTube Analytics"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 96,
       "parentId": 0,
       "title": "VidIQ/TubeBuddy",
       "description": "Kelime & rakip takibi; upload checklist.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "TubeBuddy",
         "VidIQ"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 97,
       "parentId": 0,
       "title": "Thumb A/B (opsiyon)",
       "description": "Tubebuddy A/B test ile kapak denemesi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "TubeBuddy (Legend)"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 98,
       "parentId": 0,
       "title": "Haftalık Geri Bakış",
       "description": "En iyi 3 konu → ikiye katla; zayıf formatı bırak.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 99,
       "parentId": 0,
       "title": "Aylık Sistem Kontrol",
       "description": "Süreç darboğazı (fikir, çekim, edit, yayın) analizi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 100,
       "parentId": 1,
       "title": "Yüzlü: Işık Preseti",
       "description": "Softbox konumları fotoğraflayıp preset olarak kaydet.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzlü"
+      "visibleIf": "step:1=Yüzlü",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 101,
       "parentId": 1,
       "title": "Yüzlü: Kamera Preseti",
       "description": "Shutter/ISO/White Balance değerlerini presetle.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzlü"
+      "visibleIf": "step:1=Yüzlü",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 102,
       "parentId": 1,
       "title": "Yüzlü: Ses Preseti",
       "description": "EQ/Compression/Noise profile preset.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzlü"
+      "visibleIf": "step:1=Yüzlü",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 103,
       "parentId": 1,
       "title": "Yüzlü: B-roll Planı",
       "description": "Her videoda 5 plan b-roll listesi (eller/ekran/grafik).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzlü"
+      "visibleIf": "step:1=Yüzlü",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 110,
       "parentId": 1,
       "title": "Yüzsüz: Ses Pipeline",
       "description": "TTS/Kendi Sesim → gürültü temizle → normalize -16 LUFS.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzsüz"
+      "visibleIf": "step:1=Yüzsüz",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 111,
       "parentId": 1,
       "title": "Yüzsüz: B-roll Kütüphanesi",
       "description": "Kategori klasörleri (ekran kayıtları/stok videolar).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Pexels",
         "Storyblocks"
       ],
-      "visibleIf": "step:1=Yüzsüz"
+      "visibleIf": "step:1=Yüzsüz",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 112,
       "parentId": 1,
       "title": "Yüzsüz: Altyazı Otomasyon",
       "description": "CapCut/Descript auto-caption → manuel düzelt.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzsüz"
+      "visibleIf": "step:1=Yüzsüz",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 113,
       "parentId": 1,
       "title": "Yüzsüz: Avatar Kuralları",
       "description": "Avatar kullanım sıklığı ≤ %30; maksimum 30 sn bloklar.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yüzsüz"
+      "visibleIf": "step:1=Yüzsüz",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 120,
       "parentId": 5,
       "title": "Shorts: Şablon Dosyası",
       "description": "Intro/Lower-third/CTA animasyon şablonunu .prproj/.cptemplate olarak kaydet.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:5=Shorts|İkisi"
+      "visibleIf": "step:5=Shorts|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 121,
       "parentId": 5,
       "title": "Long-form: Proje Şablonu",
       "description": "Intro sting, lower-third, SFX klasörü hazır proje.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:5=Long-form|İkisi"
+      "visibleIf": "step:5=Long-form|İkisi",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 130,
       "parentId": 0,
       "title": "Topluluk Sekmesi",
       "description": "Haftada 2 post (anket/görsel/soru).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 131,
       "parentId": 0,
       "title": "Playlist Stratejisi",
       "description": "Serileri playlist’e bağla; her videoda playlist kartı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 132,
       "parentId": 0,
       "title": "Kanal Ana Sayfa Düzeni",
       "description": "Featured video, playlist sırası, “Yeni başlayanlar için” rafı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 133,
       "parentId": 0,
       "title": "Hakkında Sayfası",
       "description": "1 paragraf değer önerisi + bağlantılar + e-posta.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 134,
       "parentId": 0,
       "title": "İş Birliği E-postası",
       "description": "“business@...” alanı; otomatik yanıt şablonu.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 140,
       "parentId": 0,
       "title": "Günlük Rutin",
       "description": "30 dk üretim, 15 dk etkileşim, 10 dk analiz; takvim hatırlatması.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 141,
       "parentId": 0,
       "title": "Sağlam Yedekleme",
       "description": "RAW/Projeler harici diske; 3-2-1 kuralı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 142,
       "parentId": 0,
       "title": "Hızlandırmalar",
       "description": "Klavyede kesme/marker kısayollarını ezberle; makro ataması (ops.).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 143,
       "parentId": 0,
       "title": "Hukuki Notlar",
       "description": "FTC/ürün yerleştirme/affiliate açıklamalarını güncel tut.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "FTC Guides"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     }
   ]
 }

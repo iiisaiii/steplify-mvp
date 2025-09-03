@@ -6,17 +6,13 @@
       "parentId": 0,
       "title": "Alan Seç",
       "description": "Hangi alanda hizmet vereceksin?",
-      "options": [
-        "Yazılım",
-        "Tasarım",
-        "İçerik-SEO",
-        "NoCode",
-        "Veri/AI"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 2,
@@ -24,1861 +20,1825 @@
       "title": "Platform Seç",
       "description": "Müşteriyi nereden bulacaksın?",
       "options": [
-        "Upwork",
-        "Fiverr",
-        "LinkedIn",
-        "Soğuk E-posta"
+        "Upwork=info: Proje bazlı iş ilanları; pros: Büyük bütçeli işler; Güvenli escrow; cons: Rekabet ve komisyon; Teklif yazımı kritik\n|| Fiverr=info: Paketlenmiş hizmet ilanları; pros: Hızlı başlama; Paket sistemi netlik sağlar; cons: Fiyat rekabeti yüksek; Komisyon\n|| LinkedIn=info: İçerik + DM ile inbound/outbound; pros: Otorite ve network; cons: Süreklilik/kişisel marka gerekir\n|| Soğuk E-posta=info: Hedefli listeye ulaşma; pros: Ölçeklenebilir; cons: Alan uyumu/warmup/engelleme riskleri"
       ],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 3,
       "parentId": 0,
       "title": "Pazar",
       "description": "Öncelikli çalışacağın pazar.",
-      "options": [
-        "Global",
-        "Türkiye"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 4,
       "parentId": 0,
       "title": "Marka Adı & İletişim",
       "description": "Marka ismi; profesyonel domain e-posta (ad@...).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Namecheap",
         "Google Workspace"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 5,
       "parentId": 0,
       "title": "Çalışma Alanı",
       "description": "Klasör yapısı ve Notion görev tahtası.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Drive",
         "Notion"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 6,
       "parentId": 0,
       "title": "Hukuki Şablonlar",
       "description": "NDA, Sözleşme (SOW), bakım anlaşması şablonlarını hazırla.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Dropbox Sign",
         "PandaDoc"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 7,
       "parentId": 0,
       "title": "Ödeme Altyapısı",
       "description": "Global/TR’ye göre ödeme yöntemi.",
-      "options": [
-        "Wise",
-        "Payoneer",
-        "Stripe",
-        "PayPal",
-        "Havale"
-      ],
+      "options": [],
       "links": [
         "Wise",
         "Payoneer",
         "Stripe"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 8,
       "parentId": 0,
       "title": "Takvim/Randevu",
       "description": "Toplantılar için takvim ve rezervasyon linki.",
-      "options": [
-        "Calendly",
-        "SavvyCal",
-        "Google Calendar"
-      ],
+      "options": [],
       "links": [
         "Calendly",
         "Google Calendar"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 9,
       "parentId": 0,
       "title": "CRM & Pipeline",
       "description": "Aday müşteri → teklif → kazan/kaybet kanbanı.",
-      "options": [
-        "Notion",
-        "Trello",
-        "HubSpot"
-      ],
+      "options": [],
       "links": [
         "Notion",
         "Trello",
         "HubSpot"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 10,
       "parentId": 0,
       "title": "Zaman Takibi & Faturalama",
       "description": "Takip ve fatura/irsaliye araçları.",
-      "options": [
-        "Clockify",
-        "Toggl",
-        "Paraşüt"
-      ],
+      "options": [],
       "links": [
         "Clockify",
         "Paraşüt"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 11,
       "parentId": 0,
       "title": "Paketleme Modeli",
       "description": "Hizmeti nasıl paketleyeceksin?",
-      "options": [
-        "Proje Bazlı",
-        "Saatlik",
-        "Ürünleştirilmiş Paket"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 12,
       "parentId": 0,
       "title": "Fiyatlandırma Mantığı",
       "description": "Maliyet+değer temelli fiyat; depozito %30–50.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 13,
       "parentId": 0,
       "title": "USP & Konumlandırma",
       "description": "Bir cümlede değer önerisi ve niş/ICP tanımı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 14,
       "parentId": 0,
       "title": "İş Kapsamı (SOW)",
       "description": "Sınırlar, teslimler, revizyon, takvim, sorumluluklar.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "SOW Template"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 15,
       "parentId": 0,
       "title": "Keşif Çağrısı (Discovery)",
       "description": "Standart soru listesi ve tutanak şablonu.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Docs"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 16,
       "parentId": 0,
       "title": "Portfolyo Stratejisi",
       "description": "1 sayfa “case study” formatı (sorun→çözüm→sonuç).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Notion/Behance"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 17,
       "parentId": 0,
       "title": "Demo/Örnek Seti",
       "description": "Alanına göre 2–3 örnek demo hazırla.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Loom",
         "Web Demos"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 18,
       "parentId": 0,
       "title": "İletişim Şablonları",
       "description": "Outreach, takip, teklif, kapanış e-posta şablonları.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Notion Snippets"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 19,
       "parentId": 0,
       "title": "Referans & Testimonial",
       "description": "Son teslimde referans talebi için metin.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 20,
       "parentId": 1,
       "title": "Yazılım: Alt Alan",
       "description": "Odak alanını seç.",
-      "options": [
-        "Web App (JS/TS)",
-        "Backend (Python/Node)",
-        "WordPress/Woo",
-        "Otomasyon/Bot"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 21,
       "parentId": 20,
       "title": "Yazılım: Stack & Repo",
       "description": "GitHub org, repo şablonları, CI/CD.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "GitHub",
         "Vercel",
         "Railway"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 22,
       "parentId": 20,
       "title": "Yazılım: Demo 1",
       "description": "Landing + form + webhook (lead alımı).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Vercel"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 23,
       "parentId": 20,
       "title": "Yazılım: Demo 2",
       "description": "SaaS MVP (auth + ödeme + basit CRUD).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Stripe",
         "Supabase"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 24,
       "parentId": 20,
       "title": "Yazılım: Demo 3",
       "description": "Automation bot (cron + 3. parti API).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Make/Zapier",
         "AWS Lambda"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 25,
       "parentId": 20,
       "title": "Yazılım: SOW Örneği",
       "description": "Teknik kapsam ve teslim planı şablonu.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 26,
       "parentId": 20,
       "title": "Yazılım: QA & Handover",
       "description": "Test dosyası, env, dokümantasyon, dev→handover.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 27,
       "parentId": 20,
       "title": "Yazılım: Bakım Modeli",
       "description": "Aylık SLA ve kapsam dahil/harici maddeler.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 30,
       "parentId": 1,
       "title": "Tasarım: Alt Alan",
       "description": "Odak alanını seç.",
-      "options": [
-        "UI/UX",
-        "Web Tasarım",
-        "Marka/Logo",
-        "Dashboard/Design System"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 31,
       "parentId": 30,
       "title": "Tasarım: Araçlar",
       "description": "Figma + component library, ikon/ilustrasyon seti.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Figma",
         "Icon8"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 32,
       "parentId": 30,
       "title": "Tasarım: Demo 1",
       "description": "Landing sayfa UI (3 bölüm + CTA).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Figma"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 33,
       "parentId": 30,
       "title": "Tasarım: Demo 2",
       "description": "Dashboard ekranı (tablo + filtre).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Figma"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 34,
       "parentId": 30,
       "title": "Tasarım: Demo 3",
       "description": "Logo/mini marka seti (renk, tipografi).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Figma"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 35,
       "parentId": 30,
       "title": "Tasarım: Prototipleme",
       "description": "Figma prototip + paylaşım.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Figma"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 36,
       "parentId": 30,
       "title": "Tasarım: Handoff",
       "description": "Inspect ölçüleri, export kuralları, style guide.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Figma"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 37,
       "parentId": 30,
       "title": "Tasarım: Revizyon Politikası",
       "description": "2 tur revizyon; kapsam dışı değişiklik tarifesi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 40,
       "parentId": 1,
       "title": "İçerik-SEO: Hizmet Tipi",
       "description": "Odak servisi seç.",
-      "options": [
-        "Blog Paketi",
-        "Teknik SEO",
-        "İçerik Stratejisi",
-        "Site İçi Optimizasyon"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 41,
       "parentId": 40,
       "title": "Keyword Araştırma",
       "description": "Anahtar kelime listesi ve zorluk analizi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Ahrefs",
         "Semrush"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 42,
       "parentId": 40,
       "title": "Brief & Outline",
       "description": "SEO brief + H2/H3 ve iç link hedefleri.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 43,
       "parentId": 40,
       "title": "Yazım & Edit",
       "description": "Grammarly/Tr + okunabilirlik, görsel ekleri.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Grammarly",
         "Hemingway"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 44,
       "parentId": 40,
       "title": "Yayınlama SOP",
       "description": "WordPress/Shopify blog yükleme, şema.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Yoast/RankMath"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 45,
       "parentId": 40,
       "title": "Raporlama",
       "description": "Haftalık pozisyon ve trafik raporu.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Search Console"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 46,
       "parentId": 40,
       "title": "Paket Örnekleri",
       "description": "4/8/12 yazı, teknik audit, content hub.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 50,
       "parentId": 1,
       "title": "NoCode: Platform",
       "description": "Seç ve odaklan.",
-      "options": [
-        "Webflow",
-        "Bubble",
-        "Glide",
-        "Airtable + Automations"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=NoCode"
+      "visibleIf": "step:1=NoCode",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 51,
       "parentId": 50,
       "title": "NoCode: Demo 1",
       "description": "Webflow landing + form → Airtable.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Webflow",
         "Airtable"
       ],
-      "visibleIf": "step:1=NoCode"
+      "visibleIf": "step:1=NoCode",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 52,
       "parentId": 50,
       "title": "NoCode: Demo 2",
       "description": "Bubble üyelik + CRUD.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Bubble"
       ],
-      "visibleIf": "step:1=NoCode"
+      "visibleIf": "step:1=NoCode",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 53,
       "parentId": 50,
       "title": "NoCode: Otomasyon",
       "description": "Zapier/Make ile 3 adımlı otomasyon.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Zapier",
         "Make"
       ],
-      "visibleIf": "step:1=NoCode"
+      "visibleIf": "step:1=NoCode",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 54,
       "parentId": 50,
       "title": "NoCode: Handover",
       "description": "Customer docs + Loom walkthrough.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Loom"
       ],
-      "visibleIf": "step:1=NoCode"
+      "visibleIf": "step:1=NoCode",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 55,
       "parentId": 50,
       "title": "NoCode: Bakım Planı",
       "description": "Aylık bakım + değişiklik kredisi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=NoCode"
+      "visibleIf": "step:1=NoCode",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 60,
       "parentId": 1,
       "title": "Veri/AI: Hizmet Tipi",
       "description": "Odak servisi seç.",
-      "options": [
-        "Dashboard/BI",
-        "Veri Toplama (Scrape)",
-        "ETL/Automation",
-        "LLM/Chatbot POC"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 61,
       "parentId": 60,
       "title": "Stack & Env",
       "description": "Notebook, env, gizli anahtar yönetimi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Jupyter",
         "GitHub Secrets"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 62,
       "parentId": 60,
       "title": "Demo 1",
       "description": "Dashboard (Metabase/Looker Studio).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Looker Studio"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 63,
       "parentId": 60,
       "title": "Demo 2",
       "description": "Scraper + CSV + görselleştirme.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Requests/BS4"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 64,
       "parentId": 60,
       "title": "Demo 3",
       "description": "LLM POC (faq → chatbot).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "OpenAI",
         "LangChain"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 65,
       "parentId": 60,
       "title": "Veri Sözleşmesi",
       "description": "Gizlilik, IP, kullanım kısıtları.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 66,
       "parentId": 60,
       "title": "Bakım & Destek",
       "description": "SLA ve veri tazeleme takvimi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 70,
       "parentId": 0,
       "title": "ICP (Ideal Müşteri)",
       "description": "Sektör, şirket boyutu, karar verici unvanı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 71,
       "parentId": 0,
       "title": "Paket Tasarımı",
       "description": "Basic/Standard/Premium kapsam ve teslim süreleri.",
-      "options": [
-        "Basic",
-        "Standard",
-        "Premium"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 72,
       "parentId": 0,
       "title": "Örnek Sözleşme Doldur",
       "description": "SOW şablonunu kendi hizmetine uyarlayıp kaydet.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 73,
       "parentId": 0,
       "title": "Ön Yeterlilik Soruları",
       "description": "3–5 soru ile lead elemeyi yap.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Typeform",
         "Tally"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 74,
       "parentId": 0,
       "title": "Brief Formu",
       "description": "Brief toplama formu + otomatik e-posta.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Typeform",
         "Tally"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 75,
       "parentId": 0,
       "title": "Gizlilik & Disclosure",
       "description": "NDA talep edenler için hazır link.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Dropbox Sign"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 80,
       "parentId": 2,
       "title": "Upwork: Profil",
       "description": "Title, overview, hourly rate, skill etiketleri.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Upwork Help"
       ],
-      "visibleIf": "step:2=Upwork"
+      "visibleIf": "step:2=Upwork",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 81,
       "parentId": 2,
       "title": "Upwork: Portfolyo",
       "description": "3 case ekle; görseller + sonuç metrikleri.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Upwork Portfolio"
       ],
-      "visibleIf": "step:2=Upwork"
+      "visibleIf": "step:2=Upwork",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 82,
       "parentId": 2,
       "title": "Upwork: Project Catalog",
       "description": "Ürünleştirilmiş paket olarak ilan.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Upwork Catalog"
       ],
-      "visibleIf": "step:2=Upwork"
+      "visibleIf": "step:2=Upwork",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 83,
       "parentId": 2,
       "title": "Upwork: Job Feed Filtre",
       "description": "Ülke/bütçe/anahtar kelime filtrelerini kaydet.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Upwork"
+      "visibleIf": "step:2=Upwork",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 84,
       "parentId": 2,
       "title": "Upwork: Teklif Şablonu",
       "description": "Giriş → sorun → çözüm → 1 küçük fikir → CTA.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Upwork"
+      "visibleIf": "step:2=Upwork",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 85,
       "parentId": 2,
       "title": "Upwork: Connects Planı",
       "description": "Günlük teklif sayısı ve saatleri planla.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Upwork"
+      "visibleIf": "step:2=Upwork",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 86,
       "parentId": 2,
       "title": "Upwork: Mülakat SOP",
       "description": "Hızlı yanıt, örnek linkler, Calendly ile toplantı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Upwork"
+      "visibleIf": "step:2=Upwork",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 87,
       "parentId": 2,
       "title": "Upwork: Sözleşme & Milestone",
       "description": "Escrow + milestone tanımı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Upwork"
+      "visibleIf": "step:2=Upwork",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 88,
       "parentId": 2,
       "title": "Upwork: Teslim & Feedback",
       "description": "Teslim notu + feedback talebi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Upwork"
+      "visibleIf": "step:2=Upwork",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 90,
       "parentId": 2,
       "title": "Fiverr: Profil",
       "description": "Gig başlığı, arama etiketleri, açıklama.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Fiverr Help"
       ],
-      "visibleIf": "step:2=Fiverr"
+      "visibleIf": "step:2=Fiverr",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 91,
       "parentId": 2,
       "title": "Fiverr: Paketler",
       "description": "Basic/Standard/Premium net kapsam.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Fiverr"
+      "visibleIf": "step:2=Fiverr",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 92,
       "parentId": 2,
       "title": "Fiverr: Medya",
       "description": "Gig görselleri, kısa video, PDF.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Fiverr"
+      "visibleIf": "step:2=Fiverr",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 93,
       "parentId": 2,
       "title": "Fiverr: Anahtar Kelime",
       "description": "Gig SEO; rakip inceleme.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Fiverr"
+      "visibleIf": "step:2=Fiverr",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 94,
       "parentId": 2,
       "title": "Fiverr: Yanıt Süresi",
       "description": "Otomatik hoş geldin + hızlı cevap şablonları.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Fiverr"
+      "visibleIf": "step:2=Fiverr",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 95,
       "parentId": 2,
       "title": "Fiverr: Revizyon & Ekstralar",
       "description": "Revizyon sayısı, hızlı teslim, kaynak dosyası ekstra.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Fiverr"
+      "visibleIf": "step:2=Fiverr",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 96,
       "parentId": 2,
       "title": "Fiverr: Teslim & Değerlendirme",
       "description": "Teslim checklist + 5 yıldız teşviki.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Fiverr"
+      "visibleIf": "step:2=Fiverr",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 100,
       "parentId": 2,
       "title": "LinkedIn: Profil Optimize",
       "description": "Başlık → değer önerisi; öne çıkan linkler.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "LinkedIn Help"
       ],
-      "visibleIf": "step:2=LinkedIn"
+      "visibleIf": "step:2=LinkedIn",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 101,
       "parentId": 2,
       "title": "LinkedIn: Hizmet Sayfası",
       "description": "Hizmet ekle ve rezervasyon linki.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=LinkedIn"
+      "visibleIf": "step:2=LinkedIn",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 102,
       "parentId": 2,
       "title": "LinkedIn: İçerik Planı",
       "description": "Haftada 3 post: case clip, ipucu, mini rehber.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=LinkedIn"
+      "visibleIf": "step:2=LinkedIn",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 103,
       "parentId": 2,
       "title": "LinkedIn: Arama & Kayıt",
       "description": "Kriterlere uygun lead kaydetme.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Sales Navigator (ops)"
       ],
-      "visibleIf": "step:2=LinkedIn"
+      "visibleIf": "step:2=LinkedIn",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 104,
       "parentId": 2,
       "title": "LinkedIn: DM Script",
       "description": "1. selamlama → 2. değer → 3. soru → 4. çağrı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=LinkedIn"
+      "visibleIf": "step:2=LinkedIn",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 105,
       "parentId": 2,
       "title": "LinkedIn: Etkileşim Rutini",
       "description": "Günde 15 dk: yorum/DM/bağlantı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=LinkedIn"
+      "visibleIf": "step:2=LinkedIn",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 106,
       "parentId": 2,
       "title": "LinkedIn: Topluluklara Katıl",
       "description": "Niş gruplar ve etkinlikler.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=LinkedIn"
+      "visibleIf": "step:2=LinkedIn",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 110,
       "parentId": 2,
       "title": "Soğuk E-posta: Domain",
       "description": "Warmup domain, DKIM/SPF/DMARC, imza.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Postmark",
         "Google Admin"
       ],
-      "visibleIf": "step:2=Soğuk E-posta"
+      "visibleIf": "step:2=Soğuk E-posta",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 111,
       "parentId": 2,
       "title": "Soğuk E-posta: Liste",
       "description": "ICP’ye göre liste çıkar.",
-      "options": [
-        "Hunter",
-        "Apollo",
-        "Clay",
-        "Manual"
-      ],
+      "options": [],
       "links": [
         "Hunter",
         "Apollo"
       ],
-      "visibleIf": "step:2=Soğuk E-posta"
+      "visibleIf": "step:2=Soğuk E-posta",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 112,
       "parentId": 2,
       "title": "Soğuk E-posta: Araç",
       "description": "Sequence/otomasyon aracı seç.",
-      "options": [
-        "Instantly",
-        "Lemlist",
-        "Mailshake"
-      ],
+      "options": [],
       "links": [
         "Instantly",
         "Lemlist"
       ],
-      "visibleIf": "step:2=Soğuk E-posta"
+      "visibleIf": "step:2=Soğuk E-posta",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 113,
       "parentId": 2,
       "title": "Soğuk E-posta: Şablonlar",
       "description": "İlk e-posta + 3 takip; 50–125 kelime; tek CTA.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Soğuk E-posta"
+      "visibleIf": "step:2=Soğuk E-posta",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 114,
       "parentId": 2,
       "title": "Soğuk E-posta: Kişiselleştirme",
       "description": "1 cümle kişisel açılış; pattern → çözüm.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Soğuk E-posta"
+      "visibleIf": "step:2=Soğuk E-posta",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 115,
       "parentId": 2,
       "title": "Soğuk E-posta: Günlük Limit",
       "description": "Gmail/SMTP limitlerine uygun gönderim.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Soğuk E-posta"
+      "visibleIf": "step:2=Soğuk E-posta",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 116,
       "parentId": 2,
       "title": "Soğuk E-posta: Takvim Entegrasyon",
       "description": "Yanıtlayanlara otomatik takvim linki.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Calendly"
       ],
-      "visibleIf": "step:2=Soğuk E-posta"
+      "visibleIf": "step:2=Soğuk E-posta",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 117,
       "parentId": 2,
       "title": "Soğuk E-posta: Spam Kontrol",
       "description": "Bounce/spam/yanıt oranı izleme.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:2=Soğuk E-posta"
+      "visibleIf": "step:2=Soğuk E-posta",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 120,
       "parentId": 0,
       "title": "Pitch Dosyası (1 Sayfa)",
       "description": "“Biz kimiz, değer önerisi, 3 örnek, süreç, CTA”.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Canva/Notion"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 121,
       "parentId": 0,
       "title": "Loom Tanıtım Videosu",
       "description": "60–90 sn, kim → sorun → çözüm → örnek → CTA.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Loom"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 122,
       "parentId": 0,
       "title": "Şablon Kütüphanesi",
       "description": "Tüm e-posta/teklif/SOW/rapor şablonlarını bir klasörde tut.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Drive"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 130,
       "parentId": 0,
       "title": "Discovery Çağrısı – Akış",
       "description": "Gündem: hedefler, kısıtlar, bütçe, takvim, karar verici.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 131,
       "parentId": 0,
       "title": "Discovery – Notlar",
       "description": "Not şablonunu doldur ve özet maili gönder.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Docs"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 132,
       "parentId": 0,
       "title": "Ön Analiz (Mini Audit)",
       "description": "İlk 30–60 dk’lık ücretsiz mini analiz (opsiyonel).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 133,
       "parentId": 0,
       "title": "Çözüm Taslağı",
       "description": "3 maddede çözüm + 3 teslim + tahmini süre.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 134,
       "parentId": 0,
       "title": "Teklif Belgesi",
       "description": "Özet, kapsam, teslim planı, fiyat, ödeme, geçerlilik.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Docs/PandaDoc"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 135,
       "parentId": 0,
       "title": "Ödeme Planı",
       "description": "%30–50 peşin, milestone bazlı bakiye.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Stripe/Wise"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 136,
       "parentId": 0,
       "title": "Sözleşme & NDA",
       "description": "IP, gizlilik, kapsam; e-imza.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Dropbox Sign"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 137,
       "parentId": 0,
       "title": "Fatura",
       "description": "Ülkeye göre e-fatura/normal fatura.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Paraşüt",
         "Stripe"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 138,
       "parentId": 0,
       "title": "Proje Kickoff",
       "description": "Yetkiler, erişimler, riskler, iletişim kanalları.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 139,
       "parentId": 0,
       "title": "İletişim Ritmi",
       "description": "Haftalık durum çağrısı veya asenkron Loom raporu.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Loom",
         "Google Meet"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 140,
       "parentId": 1,
       "title": "Yazılım: Proje Planı",
       "description": "Milestone’lar, issue board, sürümleme.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "GitHub Projects"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 141,
       "parentId": 1,
       "title": "Yazılım: Geliştirme Akışı",
       "description": "Git flow, code review, staging.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 142,
       "parentId": 1,
       "title": "Yazılım: Test & QA",
       "description": "Unit/e2e; kabul kriterleri.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 143,
       "parentId": 1,
       "title": "Yazılım: Dağıtım",
       "description": "Vercel/Railway/AWS dağıtımı ve rollback.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Vercel/AWS"
       ],
-      "visibleIf": "step:1=Yazılım"
+      "visibleIf": "step:1=Yazılım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 150,
       "parentId": 1,
       "title": "Tasarım: Araştırma",
       "description": "Persona, benchmark, rakip UI analizi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 151,
       "parentId": 1,
       "title": "Tasarım: Wireframe",
       "description": "Düşük/orta seviye wireframe.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Figma"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 152,
       "parentId": 1,
       "title": "Tasarım: UI Kit",
       "description": "Bileşen kütüphanesi ve otomatik layout.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Figma"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 153,
       "parentId": 1,
       "title": "Tasarım: Kullanılabilirlik Testi",
       "description": "5 kullanıcı ile hızlı test (ops.).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Tasarım"
+      "visibleIf": "step:1=Tasarım",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 160,
       "parentId": 1,
       "title": "İçerik-SEO: Audit",
       "description": "Site tekniği, içerik boşlukları, rakipler.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Ahrefs",
         "GSC"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 161,
       "parentId": 1,
       "title": "İçerik-SEO: Üretim",
       "description": "Takvim; briefe göre yazılar; yayın ve iç link.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Notion/WordPress"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 162,
       "parentId": 1,
       "title": "İçerik-SEO: Raporlama",
       "description": "Position/organik trafik/lead raporu.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Looker Studio"
       ],
-      "visibleIf": "step:1=İçerik-SEO"
+      "visibleIf": "step:1=İçerik-SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 170,
       "parentId": 1,
       "title": "NoCode: Bilgi Mimarisi",
       "description": "Tablolar, veri akışı, yetkiler.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=NoCode"
+      "visibleIf": "step:1=NoCode",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 171,
       "parentId": 1,
       "title": "NoCode: Uygulama",
       "description": "Yapılandırma, entegrasyon, test.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Webflow/Bubble"
       ],
-      "visibleIf": "step:1=NoCode"
+      "visibleIf": "step:1=NoCode",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 172,
       "parentId": 1,
       "title": "NoCode: Eğitim/Handover",
       "description": "Kısa eğitim ve dokümantasyon.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Loom"
       ],
-      "visibleIf": "step:1=NoCode"
+      "visibleIf": "step:1=NoCode",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 180,
       "parentId": 1,
       "title": "Veri/AI: Veri Toplama",
       "description": "Kaynak → temizleme → saklama.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 181,
       "parentId": 1,
       "title": "Veri/AI: Model/POC",
       "description": "Küçük veri seti ile POC.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 182,
       "parentId": 1,
       "title": "Veri/AI: Sunum & Handover",
       "description": "Bulgu/öneri raporu, kod ve dashboard.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Looker Studio"
       ],
-      "visibleIf": "step:1=Veri/AI"
+      "visibleIf": "step:1=Veri/AI",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 190,
       "parentId": 0,
       "title": "Kalite Güvencesi",
       "description": "Checklist: kapsam, deadline, iletişim, teslim dosyaları.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "QC Checklist"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 191,
       "parentId": 0,
       "title": "Revizyon Süreci",
       "description": "Revizyon turları ve talep biçimi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 192,
       "parentId": 0,
       "title": "Değişiklik Talebi (Scope)",
       "description": "Kapsam dışı işler için teklif eki ve onay akışı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 193,
       "parentId": 0,
       "title": "Teslim Paketi",
       "description": "Kaynak dosyalar, dokümantasyon, eğitim linkleri.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 194,
       "parentId": 0,
       "title": "Kapanış Çağrısı",
       "description": "Özet, başarılar, sonrası bakım/retainer teklifi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 195,
       "parentId": 0,
       "title": "Testimonial & Case",
       "description": "Geri bildirim formu; case study’ye çevir.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 196,
       "parentId": 0,
       "title": "Referans Programı",
       "description": "Yeni müşteri getirenlere %10–15 komisyon.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 200,
       "parentId": 0,
       "title": "Günlük Rutin",
       "description": "30 dk pipeline, 30 dk üretim, 15 dk sosyal; takvime yaz.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Calendar"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 201,
       "parentId": 0,
       "title": "Haftalık Pipeline İncelemesi",
       "description": "Kazan/kaybet analizi; mesaj şablonlarını güncelle.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 202,
       "parentId": 0,
       "title": "Portfolyo Güncelleme",
       "description": "Ayda 1 yeni case, 1 demo.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 203,
       "parentId": 0,
       "title": "Fiyat Güncelleme",
       "description": "3–6 ayda bir yeni fiyat skalası.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 204,
       "parentId": 0,
       "title": "Ürünleştirme",
       "description": "En çok satan hizmeti paketle ve templatize et.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 205,
       "parentId": 0,
       "title": "Alt Yüklenici Ağı",
       "description": "Alanına göre 2–3 freelancer ile işbirliği ağı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 206,
       "parentId": 0,
       "title": "Muhasebe & Vergi",
       "description": "Takvim, gider/fatura kaydı, beyan.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Paraşüt",
         "Gelir İdaresi"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 207,
       "parentId": 0,
       "title": "Risk & Sözleşme Güncelleme",
       "description": "Şablonları 6 ayda bir gözden geçir.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 208,
       "parentId": 0,
       "title": "Workshop/Webinar (ops)",
       "description": "Aylık ücretsiz mini eğitim ile inbound lead.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 209,
       "parentId": 0,
       "title": "Yıllık Hedefler",
       "description": "% gelir hedefi, niş derinliği, ürünleşme planı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     }
   ]
 }

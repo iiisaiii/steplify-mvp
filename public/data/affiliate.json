@@ -7,1140 +7,1098 @@
       "title": "İş Modeli Seç",
       "description": "Önce ürün tipini seçerek dalları belirleyelim.",
       "options": [
-        "Dijital Ürünler",
-        "Fiziksel Ürünler"
+        "Dijital Ürünler=info: Kurs",
+        "yazılım",
+        "e-kitap gibi stok gerektirmeyen ürünler; pros: Komisyon oranları genelde daha yüksek; Teslimat/kargo yok; cons: Rekabet güçlü nişlerde yüksek; İade politikaları programa göre değişir\n|| Fiziksel Ürünler=info: Amazon/Trendyol gibi pazarlardan fiziksel ürünler; pros: Talep geniş; Sezon/niş fırsatları; cons: Komisyonlar düşük olabilir; Lojistik/iade bilgilendirmesi şart"
       ],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 2,
       "parentId": 1,
       "title": "Hızlı Bilgi: Dijital vs Fiziksel",
       "description": "Dijital: yüksek komisyon, teslimatsız. Fiziksel: daha çok talep, lojistik.",
-      "options": [
-        "Dijital",
-        "Fiziksel"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 3,
       "parentId": 0,
       "title": "Çalışma Alanı Kur",
       "description": "Google hesabı/Drive klasörü/Notion sayfası aç, şablonları kopyala.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Notion Template",
         "Google Drive"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 4,
       "parentId": 0,
       "title": "Uyumluluk (Disclosure)",
       "description": "“Bağlantılardan komisyon kazanabilirim” uyarısı; bio/landing sayfasına ekle.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "FTC Disclosure",
         "Amazon Associates Policies"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 5,
       "parentId": 0,
       "title": "İzleme & Standartlar",
       "description": "UTM şablonu, kampanya isim standardı, Sheets takip tablosu oluştur.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "UTM Builder",
         "Google Sheets"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 6,
       "parentId": 1,
       "title": "Dijital Ağ Seç",
       "description": "Dijital tarafta çalışacağın ağı seç.",
-      "options": [
-        "ClickBank",
-        "Digistore24",
-        "JVZoo",
-        "AppSumo",
-        "Udemy Affiliate",
-        "SaaS Partner"
-      ],
+      "options": [],
       "links": [
         "ClickBank",
         "Digistore24"
       ],
-      "visibleIf": "step:1=Dijital Ürünler"
+      "visibleIf": "step:1=Dijital Ürünler",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 7,
       "parentId": 1,
       "title": "Fiziksel Ağ/Program Seç",
       "description": "Fiziksel tarafta program veya ağ seç.",
-      "options": [
-        "Amazon Associates",
-        "Trendyol Partner",
-        "Hepsiburada Affiliate",
-        "AliExpress",
-        "Awin",
-        "CJ Affiliate",
-        "Impact"
-      ],
+      "options": [],
       "links": [
         "Amazon Associates",
         "Awin"
       ],
-      "visibleIf": "step:1=Fiziksel Ürünler"
+      "visibleIf": "step:1=Fiziksel Ürünler",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 8,
       "parentId": 6,
       "title": "Dijital Ağ Kaydı",
       "description": "Seçtiğin dijital ağda hesap aç, vergi/ödeme ayarla.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Program Docs"
       ],
-      "visibleIf": "step:6=ClickBank|Digistore24|JVZoo|AppSumo|Udemy Affiliate|SaaS Partner"
+      "visibleIf": "step:6=ClickBank|Digistore24|JVZoo|AppSumo|Udemy Affiliate|SaaS Partner",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 9,
       "parentId": 7,
       "title": "Fiziksel Ağ Kaydı",
       "description": "Seçtiğin fiziksel programda hesap aç, site/bio URL’lerini tanımla.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Program Docs"
       ],
-      "visibleIf": "step:7=Amazon Associates|Trendyol Partner|Hepsiburada Affiliate|AliExpress|Awin|CJ Affiliate|Impact"
+      "visibleIf": "step:7=Amazon Associates|Trendyol Partner|Hepsiburada Affiliate|AliExpress|Awin|CJ Affiliate|Impact",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 10,
       "parentId": 0,
       "title": "Niş Seçimi (Alan)",
       "description": "Uzun vadede içerik üretebileceğin alanı seç.",
-      "options": [
-        "Fitness",
-        "Kilo Verme",
-        "Kişisel Finans",
-        "Yazılım/SaaS",
-        "Güzellik/Bakım",
-        "Ev-Yaşam"
-      ],
+      "options": [],
       "links": [
         "Google Trends"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 11,
       "parentId": 10,
       "title": "Persona Netleştir",
       "description": "Persona adı/yaşı/amaç/acı noktaları/itirazları dokümante et.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Notion Persona Template"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 12,
       "parentId": 1,
       "title": "Ürün Araştırma – Dijital",
       "description": "Dijital ağdaki en çok satan/iyi EPC’li ürünleri filtrele, 10 aday çıkar.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "ClickBank Marketplace",
         "Digistore24"
       ],
-      "visibleIf": "step:1=Dijital Ürünler"
+      "visibleIf": "step:1=Dijital Ürünler",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 13,
       "parentId": 1,
       "title": "Ürün Araştırma – Fiziksel",
       "description": "Amazon/Trendyol çok satanlar, yorumlar, iade oranları; 10 aday çıkar.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Amazon Best Sellers",
         "Trendyol"
       ],
-      "visibleIf": "step:1=Fiziksel Ürünler"
+      "visibleIf": "step:1=Fiziksel Ürünler",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 14,
       "parentId": 0,
       "title": "Sosyal Kanıt & Trend",
       "description": "TikTok/YouTube/Reddit’te trend ve incelemeleri tara (ürün/ad claim kontrolü).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "TikTok Creative Center",
         "Reddit"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 15,
       "parentId": 0,
       "title": "Puanlama Matrisi",
       "description": "Kriter: Talep(1–5) × Komisyon/EPC × İade × Uygunluk × Rekabet. Sheet’de puanla.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Sheets"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 16,
       "parentId": 0,
       "title": "Top 3 Teklif Seç",
       "description": "Puanlamaya göre 3 ürün/teklif belirle.",
-      "options": [
-        "Aday 1",
-        "Aday 2",
-        "Aday 3"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 17,
       "parentId": 0,
       "title": "Değer Önerisi (USP)",
       "description": "Her teklif için net vaad + farklılaştırıcı + itiraz cevabı yaz.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Positioning Canvas"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 18,
       "parentId": 0,
       "title": "Mikro Hedef Belirle",
       "description": "Örn. “Yeni başlayan evde spor yapan anneler” gibi dar odak.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 19,
       "parentId": 0,
       "title": "İçerik Hedefi",
       "description": "İlk 30 gün için günlük 1 kısa video veya 1 yazı/2 gün hedefi koy.",
-      "options": [
-        "Shorts/Reels",
-        "Blog",
-        "Karışık"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 20,
       "parentId": 0,
       "title": "Alan Adı/Link Seçimi",
       "description": "Bio-link için yöntem seç.",
-      "options": [
-        "Özel Alan (önerilir)",
-        "Shortener"
-      ],
+      "options": [],
       "links": [
         "Namecheap",
         "Cloudflare"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 21,
       "parentId": 20,
       "title": "Bio-Link/Bridge Tipi",
       "description": "Program politikasına uygun köprü sayfa tipi seç.",
-      "options": [
-        "Review",
-        "Karşılaştırma",
-        "Lead Magnet",
-        "Direkt Link"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 22,
       "parentId": 21,
       "title": "Sayfa Aracı",
       "description": "Bridge sayfayı hangi araçla kuracaksın?",
-      "options": [
-        "Carrd",
-        "Notion",
-        "WordPress"
-      ],
+      "options": [],
       "links": [
         "Carrd",
         "Notion"
       ],
-      "visibleIf": "step:21=Review|Karşılaştırma|Lead Magnet"
+      "visibleIf": "step:21=Review|Karşılaştırma|Lead Magnet",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 23,
       "parentId": 22,
       "title": "Sayfa Şablonunu Kur",
       "description": "Hazır şablonu kopyala, başlık/yarar/CTA/Disclosure ekle.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Template Kit"
       ],
-      "visibleIf": "step:21=Review|Karşılaştırma|Lead Magnet"
+      "visibleIf": "step:21=Review|Karşılaştırma|Lead Magnet",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 24,
       "parentId": 0,
       "title": "Pixel/Analitik Seç",
       "description": "Piksel ve analitikleri seç ve ekle.",
-      "options": [
-        "TikTok Pixel",
-        "Meta Pixel",
-        "Google Tag",
-        "Yalnızca UTM"
-      ],
+      "options": [],
       "links": [
         "TikTok Pixel Helper"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 25,
       "parentId": 24,
       "title": "Pixel Kurulumu",
       "description": "Seçtiğin pikseli bridge sayfaya ekle; event=ViewContent/Click ayarla.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Tag Assistant"
       ],
-      "visibleIf": "step:24=Tiktok Pixel|Meta Pixel|Google Tag"
+      "visibleIf": "step:24=Tiktok Pixel|Meta Pixel|Google Tag",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 26,
       "parentId": 0,
       "title": "Link Kısaltma/Cloak",
       "description": "Yöntem seç ve kampanya bazlı kısa link üret.",
-      "options": [
-        "Bitly",
-        "Short.io",
-        "Kendi Alan"
-      ],
+      "options": [],
       "links": [
         "Bitly",
         "Short.io"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 27,
       "parentId": 0,
       "title": "UTM Şablonu",
       "description": "utm_source, utm_medium, utm_campaign, utm_content standardı oturt.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "UTM Builder"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 28,
       "parentId": 0,
       "title": "Takip Tablosu",
       "description": "Hangi içerik → hangi kısa link → satış/klik; günlük doldur.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Google Sheets"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 29,
       "parentId": 0,
       "title": "Disclosure Kontrol",
       "description": "Bio/sayfa/YouTube açıklamasında disclosure metni var mı kontrol et.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "FTC Guide"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 30,
       "parentId": 0,
       "title": "İlk Kanalı Seç",
       "description": "Önce bir ana dağıtım kanalı seç.",
-      "options": [
-        "TikTok",
-        "Instagram",
-        "YouTube Shorts",
-        "Blog SEO",
-        "Email"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 31,
       "parentId": 30,
       "title": "TikTok – Hesap Kur",
       "description": "İşletme hesabı, kullanıcı adı, bio, link, anahtar kelimeler.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "TikTok Business Center"
       ],
-      "visibleIf": "step:30=TikTok"
+      "visibleIf": "step:30=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 32,
       "parentId": 31,
       "title": "TikTok – İçerik Sütunları",
       "description": "3 sütun belirle (örn. “Hızlı ipucu”, “Öncesi/sonrası”, “Karşılaştırma”).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=TikTok"
+      "visibleIf": "step:30=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 33,
       "parentId": 31,
       "title": "TikTok – Hook Bank",
       "description": "20 hazır başlangıç cümlesi yaz (“Kimse söylemiyor ki…”, “X yapmadan önce…”).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=TikTok"
+      "visibleIf": "step:30=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 34,
       "parentId": 31,
       "title": "TikTok – 30 Gün Takvim",
       "description": "Gün/gün konu & CTA planı.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Sheet Şablon"
       ],
-      "visibleIf": "step:30=TikTok"
+      "visibleIf": "step:30=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 35,
       "parentId": 31,
       "title": "TikTok – Çekim Checklist",
       "description": "Işık/kompozisyon/teleprompter; 3-5 klip batch çekim.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=TikTok"
+      "visibleIf": "step:30=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 36,
       "parentId": 31,
       "title": "TikTok – Edit Akışı",
       "description": "CapCut/FinalCut; altyazı, pattern interrupt, logo/CTA.",
-      "options": [
-        "CapCut Mobil",
-        "CapCut Masaüstü"
-      ],
+      "options": [],
       "links": [
         "CapCut"
       ],
-      "visibleIf": "step:30=TikTok"
+      "visibleIf": "step:30=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 37,
       "parentId": 31,
       "title": "TikTok – Yayın SOP",
       "description": "Saatler, açıklama formatı, hashtag, sabit yorumda link/CTA.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=TikTok"
+      "visibleIf": "step:30=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 38,
       "parentId": 31,
       "title": "TikTok – Yorum/DM SOP",
       "description": "Sık sorulara kopya yanıtlar, itiraz karşılama.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=TikTok"
+      "visibleIf": "step:30=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 39,
       "parentId": 31,
       "title": "TikTok – Analiz",
       "description": "İzlenme/izleme süresi/CTR; en iyi 3 konuya çift paylaşımla yüklen.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "TikTok Analytics"
       ],
-      "visibleIf": "step:30=TikTok"
+      "visibleIf": "step:30=TikTok",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 40,
       "parentId": 30,
       "title": "Instagram – Kurulum",
       "description": "Profesyonel hesap, bio, link, hikaye kapakları.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Meta Business"
       ],
-      "visibleIf": "step:30=Instagram"
+      "visibleIf": "step:30=Instagram",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 41,
       "parentId": 40,
       "title": "IG – İçerik Sütunları",
       "description": "3 sütun: Reels eğitim, Karusel, Hikaye.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=Instagram"
+      "visibleIf": "step:30=Instagram",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 42,
       "parentId": 40,
       "title": "IG – 30 Gün Takvim",
       "description": "Reels 4x/hafta, karusel 2x/hafta, hikaye günlük.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=Instagram"
+      "visibleIf": "step:30=Instagram",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 43,
       "parentId": 40,
       "title": "IG – Reels Edit",
       "description": "Altyazı, hız değişimi, kapak görseli.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "CapCut/After Effects"
       ],
-      "visibleIf": "step:30=Instagram"
+      "visibleIf": "step:30=Instagram",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 44,
       "parentId": 40,
       "title": "IG – Bio-Link Akışı",
       "description": "Link→bridge→teklif; sabit hikaye “Başla”",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=Instagram"
+      "visibleIf": "step:30=Instagram",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 45,
       "parentId": 40,
       "title": "IG – DM Otomasyon (ops)",
       "description": "“Satın alma rehberi” anahtar kelimesine auto-reply.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "ManyChat"
       ],
-      "visibleIf": "step:30=Instagram"
+      "visibleIf": "step:30=Instagram",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 46,
       "parentId": 40,
       "title": "IG – Community Yönetimi",
       "description": "Yorum/DM şablonları, günde 2× 15dk etkileşim.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=Instagram"
+      "visibleIf": "step:30=Instagram",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 47,
       "parentId": 40,
       "title": "IG – Analiz",
       "description": "Kayıtlar/Kaydırmalar/Link tıklamaları takibi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "IG Insights"
       ],
-      "visibleIf": "step:30=Instagram"
+      "visibleIf": "step:30=Instagram",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 50,
       "parentId": 30,
       "title": "YouTube Shorts – Kurulum",
       "description": "Kanal ayarları, açıklama şablonları, bio link.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "YouTube Studio"
       ],
-      "visibleIf": "step:30=YouTube Shorts"
+      "visibleIf": "step:30=YouTube Shorts",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 51,
       "parentId": 50,
       "title": "Shorts – Konu Havuzu",
       "description": "20 konu: mit kırma, mini review, “X için 3 araç”.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=YouTube Shorts"
+      "visibleIf": "step:30=YouTube Shorts",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 52,
       "parentId": 50,
       "title": "Shorts – Hook & Script",
       "description": "60 sn senaryo şablonu (hook→değer→CTA).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=YouTube Shorts"
+      "visibleIf": "step:30=YouTube Shorts",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 53,
       "parentId": 50,
       "title": "Shorts – Prodüksiyon",
       "description": "Checklist: kadraj/ışık/ses; 10’lu batch.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=YouTube Shorts"
+      "visibleIf": "step:30=YouTube Shorts",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 54,
       "parentId": 50,
       "title": "Shorts – Edit",
       "description": "Altyazı, B-roll, pattern interrupt.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "CapCut/Final Cut"
       ],
-      "visibleIf": "step:30=YouTube Shorts"
+      "visibleIf": "step:30=YouTube Shorts",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 55,
       "parentId": 50,
       "title": "Shorts – Yükleme Şablonu",
       "description": "Başlık, #etiket, açıklama, link, sabit yorum.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=YouTube Shorts"
+      "visibleIf": "step:30=YouTube Shorts",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 56,
       "parentId": 50,
       "title": "Shorts – Thumbnail Basit",
       "description": "3 kelime, yüksek kontrast.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Canva"
       ],
-      "visibleIf": "step:30=YouTube Shorts"
+      "visibleIf": "step:30=YouTube Shorts",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 57,
       "parentId": 50,
       "title": "Shorts – Yayın Takvimi",
       "description": "Haftada 5×; ilk 2 saat etkileşim.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=YouTube Shorts"
+      "visibleIf": "step:30=YouTube Shorts",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 58,
       "parentId": 50,
       "title": "Shorts – Analiz",
       "description": "CTR/AVD; kazanan konuları sıklaştır.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "YT Analytics"
       ],
-      "visibleIf": "step:30=YouTube Shorts"
+      "visibleIf": "step:30=YouTube Shorts",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 60,
       "parentId": 30,
       "title": "Blog SEO – Kurulum",
       "description": "WordPress kur, hafif tema, SEO eklentisi.",
-      "options": [
-        "WordPress.com",
-        "Kendi Hosting"
-      ],
+      "options": [],
       "links": [
         "WordPress"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 61,
       "parentId": 60,
       "title": "Keyword Araştırma",
       "description": "Ahrefs/Semrush/Ücretsiz: 20 düşük rekabet keyword.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Ahrefs",
         "Semrush"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 62,
       "parentId": 60,
       "title": "İçerik Şablonu",
       "description": "Review/karşılaştırma/“en iyi X” şablonları.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Notion Doc"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 63,
       "parentId": 60,
       "title": "İçerik Üretimi",
       "description": "Haftada 3 yazı (1500–2000 kelime), dahili linkleme.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 64,
       "parentId": 60,
       "title": "CTA & Link Yerleşimi",
       "description": "Üst/orta/alt CTA blokları, buton + disclosure.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 65,
       "parentId": 60,
       "title": "Hız/SEO Teknikleri",
       "description": "Web vitals, şema, görsel sıkıştırma.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Pagespeed",
         "RankMath"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 66,
       "parentId": 60,
       "title": "İçerik Dağıtımı",
       "description": "Pinterest/Reddit/Quora’da paylaşım SOP.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Pinterest",
         "Reddit"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 67,
       "parentId": 60,
       "title": "Arşiv & Kategori",
       "description": "Yapı: /kategori/niş; breadcumb.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 68,
       "parentId": 60,
       "title": "Arşiv/Tag Noindex",
       "description": "Thin sayfaları noindex; site haritası.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Search Console"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 69,
       "parentId": 60,
       "title": "Blog Analitik",
       "description": "GA4 + Search Console kur.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "GA4",
         "GSC"
       ],
-      "visibleIf": "step:30=Blog SEO"
+      "visibleIf": "step:30=Blog SEO",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 70,
       "parentId": 0,
       "title": "Lead Magnet Seç (ops)",
       "description": "Hemen e-posta toplamak istersen içerik ver.",
-      "options": [
-        "Check-list",
-        "Mini e-kitap",
-        "E-posta kursu"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 71,
       "parentId": 70,
       "title": "Form Aracı Seç",
       "description": "Form/otomasyon aracı.",
-      "options": [
-        "Mailchimp",
-        "Beehiiv",
-        "ConvertKit"
-      ],
+      "options": [],
       "links": [
         "Mailchimp"
       ],
-      "visibleIf": "step:70=Check-list|Mini e-kitap|E-posta kursu"
+      "visibleIf": "step:70=Check-list|Mini e-kitap|E-posta kursu",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 72,
       "parentId": 71,
       "title": "Form & Otomasyon",
       "description": "Embed form; Welcome + 3 email nurture.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Mailchimp Automation"
       ],
-      "visibleIf": "step:71=Mailchimp|Beehiiv|ConvertKit"
+      "visibleIf": "step:71=Mailchimp|Beehiiv|ConvertKit",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 73,
       "parentId": 71,
       "title": "Lead Magnet Üretimi",
       "description": "Canva şablon; PDF olarak indir.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Canva"
       ],
-      "visibleIf": "step:70=Check-list|Mini e-kitap|E-posta kursu"
+      "visibleIf": "step:70=Check-list|Mini e-kitap|E-posta kursu",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 74,
       "parentId": 0,
       "title": "Link Ağaç/Bio Optimize",
       "description": "En üstte “Başla” butonu; ikinci satır “İndirim/Bonus”, disclosure.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Link-in-bio SOP"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 75,
       "parentId": 0,
       "title": "Yorum Şablonları",
       "description": "Sık sorulara hazır yanıtlar (fiyat, iade, güven).",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Notion Snippets"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 76,
       "parentId": 0,
       "title": "İtiraz Karşılama",
       "description": "“Pahalı/Çalışır mı/Süre?” itirazlarına kısa cevaplar.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 77,
       "parentId": 0,
       "title": "Topluluk Politikası",
       "description": "Toksik yorum politikası ve engelleme SOP.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 78,
       "parentId": 0,
       "title": "Günlük Rutini",
       "description": "“30 dk üretim, 15 dk etkileşim, 10 dk analiz” takvimi.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 80,
       "parentId": 0,
       "title": "Reklam Başlat? (Opsiyonel)",
       "description": "Erken hız için küçük bütçe test etmek ister misin?",
-      "options": [
-        "Hayır (Organik)",
-        "Evet (Test)"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 81,
       "parentId": 80,
       "title": "Reklam Platformu Seç",
       "description": "İlk test için platform seç.",
-      "options": [
-        "TikTok Ads",
-        "Meta Ads",
-        "Google Ads"
-      ],
+      "options": [],
       "links": [
         "TikTok Ads",
         "Meta Ads"
       ],
-      "visibleIf": "step:80=Evet (Test)"
+      "visibleIf": "step:80=Evet (Test)",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 82,
       "parentId": 81,
       "title": "Piksel & Dönüşüm",
       "description": "Olay: Link Click/Lead; UTM ile hizala.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Tag Manager"
       ],
-      "visibleIf": "step:80=Evet (Test)"
+      "visibleIf": "step:80=Evet (Test)",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 83,
       "parentId": 81,
       "title": "Test Kampanya SOP",
       "description": "3 kreatif × 2 başlık, düşük bütçe, 48 saat değerlendirme.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": "step:80=Evet (Test)"
+      "visibleIf": "step:80=Evet (Test)",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 84,
       "parentId": 81,
       "title": "Reklam Politika Kontrol",
       "description": "Program TOS + platform reklam politikaları uyumu.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Ads Policy"
       ],
-      "visibleIf": "step:80=Evet (Test)"
+      "visibleIf": "step:80=Evet (Test)",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 90,
       "parentId": 0,
       "title": "Yayın Öncesi Kontrol",
       "description": "Listedeki onay listesi: disclosure, link, UTM, piksel, sayfa hız.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "Checklist"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 91,
       "parentId": 0,
       "title": "Yayın",
       "description": "İlk 7 gün yoğun paylaşım; günlük rapor.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     },
     {
       "id": 92,
       "parentId": 0,
       "title": "İyileştirme Döngüsü",
       "description": "En iyi 3 içerik formatını ikiye katla; zayıfı bırak.",
-      "options": [
-        "-"
-      ],
+      "options": [],
       "links": [
         "-"
       ],
-      "visibleIf": ""
+      "visibleIf": "",
+      "optionDetails": {},
+      "glossary": {}
     }
   ]
 }

@@ -1,160 +1,163 @@
-StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link,GörünürEğer
-1,0,Alan Seç,Hangi alanda hizmet vereceksin?,"[Yazılım, Tasarım, İçerik-SEO, NoCode, Veri/AI]",-,
-2,0,Platform Seç,Müşteriyi nereden bulacaksın?,"[Upwork, Fiverr, LinkedIn, Soğuk E-posta]",-,
-3,0,Pazar,Öncelikli çalışacağın pazar.,"[Global, Türkiye]",-,
-4,0,Marka Adı & İletişim,Marka ismi; profesyonel domain e-posta (ad@...).,[-],"Namecheap, Google Workspace",
-5,0,Çalışma Alanı,Klasör yapısı ve Notion görev tahtası.,[-],"Google Drive, Notion",
-6,0,Hukuki Şablonlar,"NDA, Sözleşme (SOW), bakım anlaşması şablonlarını hazırla.",[-],"Dropbox Sign, PandaDoc",
-7,0,Ödeme Altyapısı,Global/TR’ye göre ödeme yöntemi.,"[Wise, Payoneer, Stripe, PayPal, Havale]","Wise, Payoneer, Stripe",
-8,0,Takvim/Randevu,Toplantılar için takvim ve rezervasyon linki.,"[Calendly, SavvyCal, Google Calendar]","Calendly, Google Calendar",
-9,0,CRM & Pipeline,Aday müşteri → teklif → kazan/kaybet kanbanı.,"[Notion, Trello, HubSpot]","Notion, Trello, HubSpot",
-10,0,Zaman Takibi & Faturalama,Takip ve fatura/irsaliye araçları.,"[Clockify, Toggl, Paraşüt]","Clockify, Paraşüt",
-,,,,,,
-11,0,Paketleme Modeli,Hizmeti nasıl paketleyeceksin?,"[Proje Bazlı, Saatlik, Ürünleştirilmiş Paket]",-,
-12,0,Fiyatlandırma Mantığı,Maliyet+değer temelli fiyat; depozito %30–50.,[-],-,
-13,0,USP & Konumlandırma,Bir cümlede değer önerisi ve niş/ICP tanımı.,[-],-,
-14,0,İş Kapsamı (SOW),"Sınırlar, teslimler, revizyon, takvim, sorumluluklar.",[-],SOW Template,
-15,0,Keşif Çağrısı (Discovery),Standart soru listesi ve tutanak şablonu.,[-],Google Docs,
-16,0,Portfolyo Stratejisi,1 sayfa “case study” formatı (sorun→çözüm→sonuç).,[-],Notion/Behance,
-17,0,Demo/Örnek Seti,Alanına göre 2–3 örnek demo hazırla.,[-],"Loom, Web Demos",
-18,0,İletişim Şablonları,"Outreach, takip, teklif, kapanış e-posta şablonları.",[-],Notion Snippets,
-19,0,Referans & Testimonial,Son teslimde referans talebi için metin.,[-],-,
-,,,,,,
-20,1,Yazılım: Alt Alan,Odak alanını seç.,"[Web App (JS/TS), Backend (Python/Node), WordPress/Woo, Otomasyon/Bot]",-,step:1=Yazılım
-21,20,Yazılım: Stack & Repo,"GitHub org, repo şablonları, CI/CD.",[-],"GitHub, Vercel, Railway",step:1=Yazılım
-22,20,Yazılım: Demo 1,Landing + form + webhook (lead alımı).,[-],Vercel,step:1=Yazılım
-23,20,Yazılım: Demo 2,SaaS MVP (auth + ödeme + basit CRUD).,[-],"Stripe, Supabase",step:1=Yazılım
-24,20,Yazılım: Demo 3,Automation bot (cron + 3. parti API).,[-],"Make/Zapier, AWS Lambda",step:1=Yazılım
-25,20,Yazılım: SOW Örneği,Teknik kapsam ve teslim planı şablonu.,[-],-,step:1=Yazılım
-26,20,Yazılım: QA & Handover,"Test dosyası, env, dokümantasyon, dev→handover.",[-],-,step:1=Yazılım
-27,20,Yazılım: Bakım Modeli,Aylık SLA ve kapsam dahil/harici maddeler.,[-],-,step:1=Yazılım
-,,,,,,
-30,1,Tasarım: Alt Alan,Odak alanını seç.,"[UI/UX, Web Tasarım, Marka/Logo, Dashboard/Design System]",-,step:1=Tasarım
-31,30,Tasarım: Araçlar,"Figma + component library, ikon/ilustrasyon seti.",[-],"Figma, Icon8",step:1=Tasarım
-32,30,Tasarım: Demo 1,Landing sayfa UI (3 bölüm + CTA).,[-],Figma,step:1=Tasarım
-33,30,Tasarım: Demo 2,Dashboard ekranı (tablo + filtre).,[-],Figma,step:1=Tasarım
-34,30,Tasarım: Demo 3,"Logo/mini marka seti (renk, tipografi).",[-],Figma,step:1=Tasarım
-35,30,Tasarım: Prototipleme,Figma prototip + paylaşım.,[-],Figma,step:1=Tasarım
-36,30,Tasarım: Handoff,"Inspect ölçüleri, export kuralları, style guide.",[-],Figma,step:1=Tasarım
-37,30,Tasarım: Revizyon Politikası,2 tur revizyon; kapsam dışı değişiklik tarifesi.,[-],-,step:1=Tasarım
-,,,,,,
-40,1,İçerik-SEO: Hizmet Tipi,Odak servisi seç.,"[Blog Paketi, Teknik SEO, İçerik Stratejisi, Site İçi Optimizasyon]",-,step:1=İçerik-SEO
-41,40,Keyword Araştırma,Anahtar kelime listesi ve zorluk analizi.,[-],"Ahrefs, Semrush",step:1=İçerik-SEO
-42,40,Brief & Outline,SEO brief + H2/H3 ve iç link hedefleri.,[-],-,step:1=İçerik-SEO
-43,40,Yazım & Edit,"Grammarly/Tr + okunabilirlik, görsel ekleri.",[-],"Grammarly, Hemingway",step:1=İçerik-SEO
-44,40,Yayınlama SOP,"WordPress/Shopify blog yükleme, şema.",[-],Yoast/RankMath,step:1=İçerik-SEO
-45,40,Raporlama,Haftalık pozisyon ve trafik raporu.,[-],Search Console,step:1=İçerik-SEO
-46,40,Paket Örnekleri,"4/8/12 yazı, teknik audit, content hub.",[-],-,step:1=İçerik-SEO
-,,,,,,
-50,1,NoCode: Platform,Seç ve odaklan.,"[Webflow, Bubble, Glide, Airtable + Automations]",-,step:1=NoCode
-51,50,NoCode: Demo 1,Webflow landing + form → Airtable.,[-],"Webflow, Airtable",step:1=NoCode
-52,50,NoCode: Demo 2,Bubble üyelik + CRUD.,[-],Bubble,step:1=NoCode
-53,50,NoCode: Otomasyon,Zapier/Make ile 3 adımlı otomasyon.,[-],"Zapier, Make",step:1=NoCode
-54,50,NoCode: Handover,Customer docs + Loom walkthrough.,[-],Loom,step:1=NoCode
-55,50,NoCode: Bakım Planı,Aylık bakım + değişiklik kredisi.,[-],-,step:1=NoCode
-,,,,,,
-60,1,Veri/AI: Hizmet Tipi,Odak servisi seç.,"[Dashboard/BI, Veri Toplama (Scrape), ETL/Automation, LLM/Chatbot POC]",-,step:1=Veri/AI
-61,60,Stack & Env,"Notebook, env, gizli anahtar yönetimi.",[-],"Jupyter, GitHub Secrets",step:1=Veri/AI
-62,60,Demo 1,Dashboard (Metabase/Looker Studio).,[-],Looker Studio,step:1=Veri/AI
-63,60,Demo 2,Scraper + CSV + görselleştirme.,[-],Requests/BS4,step:1=Veri/AI
-64,60,Demo 3,LLM POC (faq → chatbot).,[-],"OpenAI, LangChain",step:1=Veri/AI
-65,60,Veri Sözleşmesi,"Gizlilik, IP, kullanım kısıtları.",[-],-,step:1=Veri/AI
-66,60,Bakım & Destek,SLA ve veri tazeleme takvimi.,[-],-,step:1=Veri/AI
-,,,,,,
-70,0,ICP (Ideal Müşteri),"Sektör, şirket boyutu, karar verici unvanı.",[-],-,
-71,0,Paket Tasarımı,Basic/Standard/Premium kapsam ve teslim süreleri.,"[Basic, Standard, Premium]",-,
-72,0,Örnek Sözleşme Doldur,SOW şablonunu kendi hizmetine uyarlayıp kaydet.,[-],-,
-73,0,Ön Yeterlilik Soruları,3–5 soru ile lead elemeyi yap.,[-],"Typeform, Tally",
-74,0,Brief Formu,Brief toplama formu + otomatik e-posta.,[-],"Typeform, Tally",
-75,0,Gizlilik & Disclosure,NDA talep edenler için hazır link.,[-],Dropbox Sign,
-,,,,,,
-80,2,Upwork: Profil,"Title, overview, hourly rate, skill etiketleri.",[-],Upwork Help,step:2=Upwork
-81,2,Upwork: Portfolyo,3 case ekle; görseller + sonuç metrikleri.,[-],Upwork Portfolio,step:2=Upwork
-82,2,Upwork: Project Catalog,Ürünleştirilmiş paket olarak ilan.,[-],Upwork Catalog,step:2=Upwork
-83,2,Upwork: Job Feed Filtre,Ülke/bütçe/anahtar kelime filtrelerini kaydet.,[-],-,step:2=Upwork
-84,2,Upwork: Teklif Şablonu,Giriş → sorun → çözüm → 1 küçük fikir → CTA.,[-],-,step:2=Upwork
-85,2,Upwork: Connects Planı,Günlük teklif sayısı ve saatleri planla.,[-],-,step:2=Upwork
-86,2,Upwork: Mülakat SOP,"Hızlı yanıt, örnek linkler, Calendly ile toplantı.",[-],-,step:2=Upwork
-87,2,Upwork: Sözleşme & Milestone,Escrow + milestone tanımı.,[-],-,step:2=Upwork
-88,2,Upwork: Teslim & Feedback,Teslim notu + feedback talebi.,[-],-,step:2=Upwork
-,,,,,,
-90,2,Fiverr: Profil,"Gig başlığı, arama etiketleri, açıklama.",[-],Fiverr Help,step:2=Fiverr
-91,2,Fiverr: Paketler,Basic/Standard/Premium net kapsam.,[-],-,step:2=Fiverr
-92,2,Fiverr: Medya,"Gig görselleri, kısa video, PDF.",[-],-,step:2=Fiverr
-93,2,Fiverr: Anahtar Kelime,Gig SEO; rakip inceleme.,[-],-,step:2=Fiverr
-94,2,Fiverr: Yanıt Süresi,Otomatik hoş geldin + hızlı cevap şablonları.,[-],-,step:2=Fiverr
-95,2,Fiverr: Revizyon & Ekstralar,"Revizyon sayısı, hızlı teslim, kaynak dosyası ekstra.",[-],-,step:2=Fiverr
-96,2,Fiverr: Teslim & Değerlendirme,Teslim checklist + 5 yıldız teşviki.,[-],-,step:2=Fiverr
-,,,,,,
-100,2,LinkedIn: Profil Optimize,Başlık → değer önerisi; öne çıkan linkler.,[-],LinkedIn Help,step:2=LinkedIn
-101,2,LinkedIn: Hizmet Sayfası,Hizmet ekle ve rezervasyon linki.,[-],-,step:2=LinkedIn
-102,2,LinkedIn: İçerik Planı,"Haftada 3 post: case clip, ipucu, mini rehber.",[-],-,step:2=LinkedIn
-103,2,LinkedIn: Arama & Kayıt,Kriterlere uygun lead kaydetme.,[-],Sales Navigator (ops),step:2=LinkedIn
-104,2,LinkedIn: DM Script,1. selamlama → 2. değer → 3. soru → 4. çağrı.,[-],-,step:2=LinkedIn
-105,2,LinkedIn: Etkileşim Rutini,Günde 15 dk: yorum/DM/bağlantı.,[-],-,step:2=LinkedIn
-106,2,LinkedIn: Topluluklara Katıl,Niş gruplar ve etkinlikler.,[-],-,step:2=LinkedIn
-,,,,,,
-110,2,Soğuk E-posta: Domain,"Warmup domain, DKIM/SPF/DMARC, imza.",[-],"Postmark, Google Admin",step:2=Soğuk E-posta
-111,2,Soğuk E-posta: Liste,ICP’ye göre liste çıkar.,"[Hunter, Apollo, Clay, Manual]","Hunter, Apollo",step:2=Soğuk E-posta
-112,2,Soğuk E-posta: Araç,Sequence/otomasyon aracı seç.,"[Instantly, Lemlist, Mailshake]","Instantly, Lemlist",step:2=Soğuk E-posta
-113,2,Soğuk E-posta: Şablonlar,İlk e-posta + 3 takip; 50–125 kelime; tek CTA.,[-],-,step:2=Soğuk E-posta
-114,2,Soğuk E-posta: Kişiselleştirme,1 cümle kişisel açılış; pattern → çözüm.,[-],-,step:2=Soğuk E-posta
-115,2,Soğuk E-posta: Günlük Limit,Gmail/SMTP limitlerine uygun gönderim.,[-],-,step:2=Soğuk E-posta
-116,2,Soğuk E-posta: Takvim Entegrasyon,Yanıtlayanlara otomatik takvim linki.,[-],Calendly,step:2=Soğuk E-posta
-117,2,Soğuk E-posta: Spam Kontrol,Bounce/spam/yanıt oranı izleme.,[-],-,step:2=Soğuk E-posta
-,,,,,,
-120,0,Pitch Dosyası (1 Sayfa),"“Biz kimiz, değer önerisi, 3 örnek, süreç, CTA”.",[-],Canva/Notion,
-121,0,Loom Tanıtım Videosu,"60–90 sn, kim → sorun → çözüm → örnek → CTA.",[-],Loom,
-122,0,Şablon Kütüphanesi,Tüm e-posta/teklif/SOW/rapor şablonlarını bir klasörde tut.,[-],Google Drive,
-,,,,,,
-130,0,Discovery Çağrısı – Akış,"Gündem: hedefler, kısıtlar, bütçe, takvim, karar verici.",[-],-,
-131,0,Discovery – Notlar,Not şablonunu doldur ve özet maili gönder.,[-],Google Docs,
-132,0,Ön Analiz (Mini Audit),İlk 30–60 dk’lık ücretsiz mini analiz (opsiyonel).,[-],-,
-133,0,Çözüm Taslağı,3 maddede çözüm + 3 teslim + tahmini süre.,[-],-,
-134,0,Teklif Belgesi,"Özet, kapsam, teslim planı, fiyat, ödeme, geçerlilik.",[-],Google Docs/PandaDoc,
-135,0,Ödeme Planı,"%30–50 peşin, milestone bazlı bakiye.",[-],Stripe/Wise,
-136,0,Sözleşme & NDA,"IP, gizlilik, kapsam; e-imza.",[-],Dropbox Sign,
-137,0,Fatura,Ülkeye göre e-fatura/normal fatura.,[-],"Paraşüt, Stripe",
-138,0,Proje Kickoff,"Yetkiler, erişimler, riskler, iletişim kanalları.",[-],-,
-139,0,İletişim Ritmi,Haftalık durum çağrısı veya asenkron Loom raporu.,[-],"Loom, Google Meet",
-,,,,,,
-140,1,Yazılım: Proje Planı,"Milestone’lar, issue board, sürümleme.",[-],GitHub Projects,step:1=Yazılım
-141,1,Yazılım: Geliştirme Akışı,"Git flow, code review, staging.",[-],-,step:1=Yazılım
-142,1,Yazılım: Test & QA,Unit/e2e; kabul kriterleri.,[-],-,step:1=Yazılım
-143,1,Yazılım: Dağıtım,Vercel/Railway/AWS dağıtımı ve rollback.,[-],Vercel/AWS,step:1=Yazılım
-,,,,,,
-150,1,Tasarım: Araştırma,"Persona, benchmark, rakip UI analizi.",[-],-,step:1=Tasarım
-151,1,Tasarım: Wireframe,Düşük/orta seviye wireframe.,[-],Figma,step:1=Tasarım
-152,1,Tasarım: UI Kit,Bileşen kütüphanesi ve otomatik layout.,[-],Figma,step:1=Tasarım
-153,1,Tasarım: Kullanılabilirlik Testi,5 kullanıcı ile hızlı test (ops.).,[-],-,step:1=Tasarım
-,,,,,,
-160,1,İçerik-SEO: Audit,"Site tekniği, içerik boşlukları, rakipler.",[-],"Ahrefs, GSC",step:1=İçerik-SEO
-161,1,İçerik-SEO: Üretim,Takvim; briefe göre yazılar; yayın ve iç link.,[-],Notion/WordPress,step:1=İçerik-SEO
-162,1,İçerik-SEO: Raporlama,Position/organik trafik/lead raporu.,[-],Looker Studio,step:1=İçerik-SEO
-,,,,,,
-170,1,NoCode: Bilgi Mimarisi,"Tablolar, veri akışı, yetkiler.",[-],-,step:1=NoCode
-171,1,NoCode: Uygulama,"Yapılandırma, entegrasyon, test.",[-],Webflow/Bubble,step:1=NoCode
-172,1,NoCode: Eğitim/Handover,Kısa eğitim ve dokümantasyon.,[-],Loom,step:1=NoCode
-,,,,,,
-180,1,Veri/AI: Veri Toplama,Kaynak → temizleme → saklama.,[-],-,step:1=Veri/AI
-181,1,Veri/AI: Model/POC,Küçük veri seti ile POC.,[-],-,step:1=Veri/AI
-182,1,Veri/AI: Sunum & Handover,"Bulgu/öneri raporu, kod ve dashboard.",[-],Looker Studio,step:1=Veri/AI
-,,,,,,
-190,0,Kalite Güvencesi,"Checklist: kapsam, deadline, iletişim, teslim dosyaları.",[-],QC Checklist,
-191,0,Revizyon Süreci,Revizyon turları ve talep biçimi.,[-],-,
-192,0,Değişiklik Talebi (Scope),Kapsam dışı işler için teklif eki ve onay akışı.,[-],-,
-193,0,Teslim Paketi,"Kaynak dosyalar, dokümantasyon, eğitim linkleri.",[-],-,
-194,0,Kapanış Çağrısı,"Özet, başarılar, sonrası bakım/retainer teklifi.",[-],-,
-195,0,Testimonial & Case,Geri bildirim formu; case study’ye çevir.,[-],-,
-196,0,Referans Programı,Yeni müşteri getirenlere %10–15 komisyon.,[-],-,
-,,,,,,
-200,0,Günlük Rutin,"30 dk pipeline, 30 dk üretim, 15 dk sosyal; takvime yaz.",[-],Google Calendar,
-201,0,Haftalık Pipeline İncelemesi,Kazan/kaybet analizi; mesaj şablonlarını güncelle.,[-],-,
-202,0,Portfolyo Güncelleme,"Ayda 1 yeni case, 1 demo.",[-],-,
-203,0,Fiyat Güncelleme,3–6 ayda bir yeni fiyat skalası.,[-],-,
-204,0,Ürünleştirme,En çok satan hizmeti paketle ve templatize et.,[-],-,
-205,0,Alt Yüklenici Ağı,Alanına göre 2–3 freelancer ile işbirliği ağı.,[-],-,
-206,0,Muhasebe & Vergi,"Takvim, gider/fatura kaydı, beyan.",[-],"Paraşüt, Gelir İdaresi",
-207,0,Risk & Sözleşme Güncelleme,Şablonları 6 ayda bir gözden geçir.,[-],-,
-208,0,Workshop/Webinar (ops),Aylık ücretsiz mini eğitim ile inbound lead.,[-],-,
-209,0,Yıllık Hedefler,"% gelir hedefi, niş derinliği, ürünleşme planı.",[-],-,
+StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link,GörünürEğer,SeçenekDetay,Terimler
+1,0,Alan Seç,Hangi alanda hizmet vereceksin?,"[Yazılım, Tasarım, İçerik-SEO, NoCode, Veri/AI]",-,,,
+2,0,Platform Seç,Müşteriyi nereden bulacaksın?,"[Upwork, Fiverr, LinkedIn, Soğuk E-posta]",-,,"Upwork=info: Proje bazlı iş ilanları; pros: Büyük bütçeli işler; Güvenli escrow; cons: Rekabet ve komisyon; Teklif yazımı kritik
+|| Fiverr=info: Paketlenmiş hizmet ilanları; pros: Hızlı başlama; Paket sistemi netlik sağlar; cons: Fiyat rekabeti yüksek; Komisyon
+|| LinkedIn=info: İçerik + DM ile inbound/outbound; pros: Otorite ve network; cons: Süreklilik/kişisel marka gerekir
+|| Soğuk E-posta=info: Hedefli listeye ulaşma; pros: Ölçeklenebilir; cons: Alan uyumu/warmup/engelleme riskleri",
+3,0,Pazar,Öncelikli çalışacağın pazar.,"[Global, Türkiye]",-,,,
+4,0,Marka Adı & İletişim,Marka ismi; profesyonel domain e-posta (ad@...).,[-],"Namecheap, Google Workspace",,,
+5,0,Çalışma Alanı,Klasör yapısı ve Notion görev tahtası.,[-],"Google Drive, Notion",,,
+6,0,Hukuki Şablonlar,"NDA, Sözleşme (SOW), bakım anlaşması şablonlarını hazırla.",[-],"Dropbox Sign, PandaDoc",,,
+7,0,Ödeme Altyapısı,Global/TR’ye göre ödeme yöntemi.,"[Wise, Payoneer, Stripe, PayPal, Havale]","Wise, Payoneer, Stripe",,,
+8,0,Takvim/Randevu,Toplantılar için takvim ve rezervasyon linki.,"[Calendly, SavvyCal, Google Calendar]","Calendly, Google Calendar",,,
+9,0,CRM & Pipeline,Aday müşteri → teklif → kazan/kaybet kanbanı.,"[Notion, Trello, HubSpot]","Notion, Trello, HubSpot",,,
+10,0,Zaman Takibi & Faturalama,Takip ve fatura/irsaliye araçları.,"[Clockify, Toggl, Paraşüt]","Clockify, Paraşüt",,,
+,,,,,,,,
+11,0,Paketleme Modeli,Hizmeti nasıl paketleyeceksin?,"[Proje Bazlı, Saatlik, Ürünleştirilmiş Paket]",-,,,
+12,0,Fiyatlandırma Mantığı,Maliyet+değer temelli fiyat; depozito %30–50.,[-],-,,,
+13,0,USP & Konumlandırma,Bir cümlede değer önerisi ve niş/ICP tanımı.,[-],-,,,
+14,0,İş Kapsamı (SOW),"Sınırlar, teslimler, revizyon, takvim, sorumluluklar.",[-],SOW Template,,,
+15,0,Keşif Çağrısı (Discovery),Standart soru listesi ve tutanak şablonu.,[-],Google Docs,,,
+16,0,Portfolyo Stratejisi,1 sayfa “case study” formatı (sorun→çözüm→sonuç).,[-],Notion/Behance,,,
+17,0,Demo/Örnek Seti,Alanına göre 2–3 örnek demo hazırla.,[-],"Loom, Web Demos",,,
+18,0,İletişim Şablonları,"Outreach, takip, teklif, kapanış e-posta şablonları.",[-],Notion Snippets,,,
+19,0,Referans & Testimonial,Son teslimde referans talebi için metin.,[-],-,,,
+,,,,,,,,
+20,1,Yazılım: Alt Alan,Odak alanını seç.,"[Web App (JS/TS), Backend (Python/Node), WordPress/Woo, Otomasyon/Bot]",-,step:1=Yazılım,,
+21,20,Yazılım: Stack & Repo,"GitHub org, repo şablonları, CI/CD.",[-],"GitHub, Vercel, Railway",step:1=Yazılım,,
+22,20,Yazılım: Demo 1,Landing + form + webhook (lead alımı).,[-],Vercel,step:1=Yazılım,,
+23,20,Yazılım: Demo 2,SaaS MVP (auth + ödeme + basit CRUD).,[-],"Stripe, Supabase",step:1=Yazılım,,
+24,20,Yazılım: Demo 3,Automation bot (cron + 3. parti API).,[-],"Make/Zapier, AWS Lambda",step:1=Yazılım,,
+25,20,Yazılım: SOW Örneği,Teknik kapsam ve teslim planı şablonu.,[-],-,step:1=Yazılım,,
+26,20,Yazılım: QA & Handover,"Test dosyası, env, dokümantasyon, dev→handover.",[-],-,step:1=Yazılım,,
+27,20,Yazılım: Bakım Modeli,Aylık SLA ve kapsam dahil/harici maddeler.,[-],-,step:1=Yazılım,,
+,,,,,,,,
+30,1,Tasarım: Alt Alan,Odak alanını seç.,"[UI/UX, Web Tasarım, Marka/Logo, Dashboard/Design System]",-,step:1=Tasarım,,
+31,30,Tasarım: Araçlar,"Figma + component library, ikon/ilustrasyon seti.",[-],"Figma, Icon8",step:1=Tasarım,,
+32,30,Tasarım: Demo 1,Landing sayfa UI (3 bölüm + CTA).,[-],Figma,step:1=Tasarım,,
+33,30,Tasarım: Demo 2,Dashboard ekranı (tablo + filtre).,[-],Figma,step:1=Tasarım,,
+34,30,Tasarım: Demo 3,"Logo/mini marka seti (renk, tipografi).",[-],Figma,step:1=Tasarım,,
+35,30,Tasarım: Prototipleme,Figma prototip + paylaşım.,[-],Figma,step:1=Tasarım,,
+36,30,Tasarım: Handoff,"Inspect ölçüleri, export kuralları, style guide.",[-],Figma,step:1=Tasarım,,
+37,30,Tasarım: Revizyon Politikası,2 tur revizyon; kapsam dışı değişiklik tarifesi.,[-],-,step:1=Tasarım,,
+,,,,,,,,
+40,1,İçerik-SEO: Hizmet Tipi,Odak servisi seç.,"[Blog Paketi, Teknik SEO, İçerik Stratejisi, Site İçi Optimizasyon]",-,step:1=İçerik-SEO,,
+41,40,Keyword Araştırma,Anahtar kelime listesi ve zorluk analizi.,[-],"Ahrefs, Semrush",step:1=İçerik-SEO,,
+42,40,Brief & Outline,SEO brief + H2/H3 ve iç link hedefleri.,[-],-,step:1=İçerik-SEO,,
+43,40,Yazım & Edit,"Grammarly/Tr + okunabilirlik, görsel ekleri.",[-],"Grammarly, Hemingway",step:1=İçerik-SEO,,
+44,40,Yayınlama SOP,"WordPress/Shopify blog yükleme, şema.",[-],Yoast/RankMath,step:1=İçerik-SEO,,
+45,40,Raporlama,Haftalık pozisyon ve trafik raporu.,[-],Search Console,step:1=İçerik-SEO,,
+46,40,Paket Örnekleri,"4/8/12 yazı, teknik audit, content hub.",[-],-,step:1=İçerik-SEO,,
+,,,,,,,,
+50,1,NoCode: Platform,Seç ve odaklan.,"[Webflow, Bubble, Glide, Airtable + Automations]",-,step:1=NoCode,,
+51,50,NoCode: Demo 1,Webflow landing + form → Airtable.,[-],"Webflow, Airtable",step:1=NoCode,,
+52,50,NoCode: Demo 2,Bubble üyelik + CRUD.,[-],Bubble,step:1=NoCode,,
+53,50,NoCode: Otomasyon,Zapier/Make ile 3 adımlı otomasyon.,[-],"Zapier, Make",step:1=NoCode,,
+54,50,NoCode: Handover,Customer docs + Loom walkthrough.,[-],Loom,step:1=NoCode,,
+55,50,NoCode: Bakım Planı,Aylık bakım + değişiklik kredisi.,[-],-,step:1=NoCode,,
+,,,,,,,,
+60,1,Veri/AI: Hizmet Tipi,Odak servisi seç.,"[Dashboard/BI, Veri Toplama (Scrape), ETL/Automation, LLM/Chatbot POC]",-,step:1=Veri/AI,,
+61,60,Stack & Env,"Notebook, env, gizli anahtar yönetimi.",[-],"Jupyter, GitHub Secrets",step:1=Veri/AI,,
+62,60,Demo 1,Dashboard (Metabase/Looker Studio).,[-],Looker Studio,step:1=Veri/AI,,
+63,60,Demo 2,Scraper + CSV + görselleştirme.,[-],Requests/BS4,step:1=Veri/AI,,
+64,60,Demo 3,LLM POC (faq → chatbot).,[-],"OpenAI, LangChain",step:1=Veri/AI,,
+65,60,Veri Sözleşmesi,"Gizlilik, IP, kullanım kısıtları.",[-],-,step:1=Veri/AI,,
+66,60,Bakım & Destek,SLA ve veri tazeleme takvimi.,[-],-,step:1=Veri/AI,,
+,,,,,,,,
+70,0,ICP (Ideal Müşteri),"Sektör, şirket boyutu, karar verici unvanı.",[-],-,,,
+71,0,Paket Tasarımı,Basic/Standard/Premium kapsam ve teslim süreleri.,"[Basic, Standard, Premium]",-,,,
+72,0,Örnek Sözleşme Doldur,SOW şablonunu kendi hizmetine uyarlayıp kaydet.,[-],-,,,
+73,0,Ön Yeterlilik Soruları,3–5 soru ile lead elemeyi yap.,[-],"Typeform, Tally",,,
+74,0,Brief Formu,Brief toplama formu + otomatik e-posta.,[-],"Typeform, Tally",,,
+75,0,Gizlilik & Disclosure,NDA talep edenler için hazır link.,[-],Dropbox Sign,,,
+,,,,,,,,
+80,2,Upwork: Profil,"Title, overview, hourly rate, skill etiketleri.",[-],Upwork Help,step:2=Upwork,,
+81,2,Upwork: Portfolyo,3 case ekle; görseller + sonuç metrikleri.,[-],Upwork Portfolio,step:2=Upwork,,
+82,2,Upwork: Project Catalog,Ürünleştirilmiş paket olarak ilan.,[-],Upwork Catalog,step:2=Upwork,,
+83,2,Upwork: Job Feed Filtre,Ülke/bütçe/anahtar kelime filtrelerini kaydet.,[-],-,step:2=Upwork,,
+84,2,Upwork: Teklif Şablonu,Giriş → sorun → çözüm → 1 küçük fikir → CTA.,[-],-,step:2=Upwork,,
+85,2,Upwork: Connects Planı,Günlük teklif sayısı ve saatleri planla.,[-],-,step:2=Upwork,,
+86,2,Upwork: Mülakat SOP,"Hızlı yanıt, örnek linkler, Calendly ile toplantı.",[-],-,step:2=Upwork,,
+87,2,Upwork: Sözleşme & Milestone,Escrow + milestone tanımı.,[-],-,step:2=Upwork,,
+88,2,Upwork: Teslim & Feedback,Teslim notu + feedback talebi.,[-],-,step:2=Upwork,,
+,,,,,,,,
+90,2,Fiverr: Profil,"Gig başlığı, arama etiketleri, açıklama.",[-],Fiverr Help,step:2=Fiverr,,
+91,2,Fiverr: Paketler,Basic/Standard/Premium net kapsam.,[-],-,step:2=Fiverr,,
+92,2,Fiverr: Medya,"Gig görselleri, kısa video, PDF.",[-],-,step:2=Fiverr,,
+93,2,Fiverr: Anahtar Kelime,Gig SEO; rakip inceleme.,[-],-,step:2=Fiverr,,
+94,2,Fiverr: Yanıt Süresi,Otomatik hoş geldin + hızlı cevap şablonları.,[-],-,step:2=Fiverr,,
+95,2,Fiverr: Revizyon & Ekstralar,"Revizyon sayısı, hızlı teslim, kaynak dosyası ekstra.",[-],-,step:2=Fiverr,,
+96,2,Fiverr: Teslim & Değerlendirme,Teslim checklist + 5 yıldız teşviki.,[-],-,step:2=Fiverr,,
+,,,,,,,,
+100,2,LinkedIn: Profil Optimize,Başlık → değer önerisi; öne çıkan linkler.,[-],LinkedIn Help,step:2=LinkedIn,,
+101,2,LinkedIn: Hizmet Sayfası,Hizmet ekle ve rezervasyon linki.,[-],-,step:2=LinkedIn,,
+102,2,LinkedIn: İçerik Planı,"Haftada 3 post: case clip, ipucu, mini rehber.",[-],-,step:2=LinkedIn,,
+103,2,LinkedIn: Arama & Kayıt,Kriterlere uygun lead kaydetme.,[-],Sales Navigator (ops),step:2=LinkedIn,,
+104,2,LinkedIn: DM Script,1. selamlama → 2. değer → 3. soru → 4. çağrı.,[-],-,step:2=LinkedIn,,
+105,2,LinkedIn: Etkileşim Rutini,Günde 15 dk: yorum/DM/bağlantı.,[-],-,step:2=LinkedIn,,
+106,2,LinkedIn: Topluluklara Katıl,Niş gruplar ve etkinlikler.,[-],-,step:2=LinkedIn,,
+,,,,,,,,
+110,2,Soğuk E-posta: Domain,"Warmup domain, DKIM/SPF/DMARC, imza.",[-],"Postmark, Google Admin",step:2=Soğuk E-posta,,
+111,2,Soğuk E-posta: Liste,ICP’ye göre liste çıkar.,"[Hunter, Apollo, Clay, Manual]","Hunter, Apollo",step:2=Soğuk E-posta,,
+112,2,Soğuk E-posta: Araç,Sequence/otomasyon aracı seç.,"[Instantly, Lemlist, Mailshake]","Instantly, Lemlist",step:2=Soğuk E-posta,,
+113,2,Soğuk E-posta: Şablonlar,İlk e-posta + 3 takip; 50–125 kelime; tek CTA.,[-],-,step:2=Soğuk E-posta,,
+114,2,Soğuk E-posta: Kişiselleştirme,1 cümle kişisel açılış; pattern → çözüm.,[-],-,step:2=Soğuk E-posta,,
+115,2,Soğuk E-posta: Günlük Limit,Gmail/SMTP limitlerine uygun gönderim.,[-],-,step:2=Soğuk E-posta,,
+116,2,Soğuk E-posta: Takvim Entegrasyon,Yanıtlayanlara otomatik takvim linki.,[-],Calendly,step:2=Soğuk E-posta,,
+117,2,Soğuk E-posta: Spam Kontrol,Bounce/spam/yanıt oranı izleme.,[-],-,step:2=Soğuk E-posta,,
+,,,,,,,,
+120,0,Pitch Dosyası (1 Sayfa),"“Biz kimiz, değer önerisi, 3 örnek, süreç, CTA”.",[-],Canva/Notion,,,
+121,0,Loom Tanıtım Videosu,"60–90 sn, kim → sorun → çözüm → örnek → CTA.",[-],Loom,,,
+122,0,Şablon Kütüphanesi,Tüm e-posta/teklif/SOW/rapor şablonlarını bir klasörde tut.,[-],Google Drive,,,
+,,,,,,,,
+130,0,Discovery Çağrısı – Akış,"Gündem: hedefler, kısıtlar, bütçe, takvim, karar verici.",[-],-,,,
+131,0,Discovery – Notlar,Not şablonunu doldur ve özet maili gönder.,[-],Google Docs,,,
+132,0,Ön Analiz (Mini Audit),İlk 30–60 dk’lık ücretsiz mini analiz (opsiyonel).,[-],-,,,
+133,0,Çözüm Taslağı,3 maddede çözüm + 3 teslim + tahmini süre.,[-],-,,,
+134,0,Teklif Belgesi,"Özet, kapsam, teslim planı, fiyat, ödeme, geçerlilik.",[-],Google Docs/PandaDoc,,,
+135,0,Ödeme Planı,"%30–50 peşin, milestone bazlı bakiye.",[-],Stripe/Wise,,,
+136,0,Sözleşme & NDA,"IP, gizlilik, kapsam; e-imza.",[-],Dropbox Sign,,,
+137,0,Fatura,Ülkeye göre e-fatura/normal fatura.,[-],"Paraşüt, Stripe",,,
+138,0,Proje Kickoff,"Yetkiler, erişimler, riskler, iletişim kanalları.",[-],-,,,
+139,0,İletişim Ritmi,Haftalık durum çağrısı veya asenkron Loom raporu.,[-],"Loom, Google Meet",,,
+,,,,,,,,
+140,1,Yazılım: Proje Planı,"Milestone’lar, issue board, sürümleme.",[-],GitHub Projects,step:1=Yazılım,,
+141,1,Yazılım: Geliştirme Akışı,"Git flow, code review, staging.",[-],-,step:1=Yazılım,,
+142,1,Yazılım: Test & QA,Unit/e2e; kabul kriterleri.,[-],-,step:1=Yazılım,,
+143,1,Yazılım: Dağıtım,Vercel/Railway/AWS dağıtımı ve rollback.,[-],Vercel/AWS,step:1=Yazılım,,
+,,,,,,,,
+150,1,Tasarım: Araştırma,"Persona, benchmark, rakip UI analizi.",[-],-,step:1=Tasarım,,
+151,1,Tasarım: Wireframe,Düşük/orta seviye wireframe.,[-],Figma,step:1=Tasarım,,
+152,1,Tasarım: UI Kit,Bileşen kütüphanesi ve otomatik layout.,[-],Figma,step:1=Tasarım,,
+153,1,Tasarım: Kullanılabilirlik Testi,5 kullanıcı ile hızlı test (ops.).,[-],-,step:1=Tasarım,,
+,,,,,,,,
+160,1,İçerik-SEO: Audit,"Site tekniği, içerik boşlukları, rakipler.",[-],"Ahrefs, GSC",step:1=İçerik-SEO,,
+161,1,İçerik-SEO: Üretim,Takvim; briefe göre yazılar; yayın ve iç link.,[-],Notion/WordPress,step:1=İçerik-SEO,,
+162,1,İçerik-SEO: Raporlama,Position/organik trafik/lead raporu.,[-],Looker Studio,step:1=İçerik-SEO,,
+,,,,,,,,
+170,1,NoCode: Bilgi Mimarisi,"Tablolar, veri akışı, yetkiler.",[-],-,step:1=NoCode,,
+171,1,NoCode: Uygulama,"Yapılandırma, entegrasyon, test.",[-],Webflow/Bubble,step:1=NoCode,,
+172,1,NoCode: Eğitim/Handover,Kısa eğitim ve dokümantasyon.,[-],Loom,step:1=NoCode,,
+,,,,,,,,
+180,1,Veri/AI: Veri Toplama,Kaynak → temizleme → saklama.,[-],-,step:1=Veri/AI,,
+181,1,Veri/AI: Model/POC,Küçük veri seti ile POC.,[-],-,step:1=Veri/AI,,
+182,1,Veri/AI: Sunum & Handover,"Bulgu/öneri raporu, kod ve dashboard.",[-],Looker Studio,step:1=Veri/AI,,
+,,,,,,,,
+190,0,Kalite Güvencesi,"Checklist: kapsam, deadline, iletişim, teslim dosyaları.",[-],QC Checklist,,,
+191,0,Revizyon Süreci,Revizyon turları ve talep biçimi.,[-],-,,,
+192,0,Değişiklik Talebi (Scope),Kapsam dışı işler için teklif eki ve onay akışı.,[-],-,,,
+193,0,Teslim Paketi,"Kaynak dosyalar, dokümantasyon, eğitim linkleri.",[-],-,,,
+194,0,Kapanış Çağrısı,"Özet, başarılar, sonrası bakım/retainer teklifi.",[-],-,,,
+195,0,Testimonial & Case,Geri bildirim formu; case study’ye çevir.,[-],-,,,
+196,0,Referans Programı,Yeni müşteri getirenlere %10–15 komisyon.,[-],-,,,
+,,,,,,,,
+200,0,Günlük Rutin,"30 dk pipeline, 30 dk üretim, 15 dk sosyal; takvime yaz.",[-],Google Calendar,,,
+201,0,Haftalık Pipeline İncelemesi,Kazan/kaybet analizi; mesaj şablonlarını güncelle.,[-],-,,,
+202,0,Portfolyo Güncelleme,"Ayda 1 yeni case, 1 demo.",[-],-,,,
+203,0,Fiyat Güncelleme,3–6 ayda bir yeni fiyat skalası.,[-],-,,,
+204,0,Ürünleştirme,En çok satan hizmeti paketle ve templatize et.,[-],-,,,
+205,0,Alt Yüklenici Ağı,Alanına göre 2–3 freelancer ile işbirliği ağı.,[-],-,,,
+206,0,Muhasebe & Vergi,"Takvim, gider/fatura kaydı, beyan.",[-],"Paraşüt, Gelir İdaresi",,,
+207,0,Risk & Sözleşme Güncelleme,Şablonları 6 ayda bir gözden geçir.,[-],-,,,
+208,0,Workshop/Webinar (ops),Aylık ücretsiz mini eğitim ile inbound lead.,[-],-,,,
+209,0,Yıllık Hedefler,"% gelir hedefi, niş derinliği, ürünleşme planı.",[-],-,,,
