@@ -411,16 +411,22 @@ function showStep(step, index, filteredList=null){
     els.stepView.appendChild(optionsWrap);
   }
 
-  // Sağdaki "Kaynaklar"
   els.linksList.innerHTML = '';
   (step.links || []).forEach(u => {
+    const val = String(u || '').trim();
+    if (!val || val === '-' || val === '—' || val === '–') return;
     const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = u; a.target = '_blank'; a.rel = 'noopener';
-    a.textContent = u;
-    li.appendChild(a);
+    if (/^https?:\/\//i.test(val)) {
+      const a = document.createElement('a');
+      a.href = val; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = val;
+      li.appendChild(a);
+    } else {
+      li.textContent = val; // düz metin
+    }
     els.linksList.appendChild(li);
   });
+
 
   if (locked) {
     const lock = document.createElement('div');
@@ -554,8 +560,8 @@ els.modelSelect.addEventListener('change', e=>{
 
 els.resetProgress.addEventListener('click', ()=>{
   if(!currentModel) return;
-  localStorage.removeItem(lsKey(currentModel));     // ilerleme
-  localStorage.removeItem(selKey(currentModel));    // <<< seçimler de silinsin
+  localStorage.removeItem(lsKey(currentModel));  // ilerleme
+  localStorage.removeItem(selKey(currentModel)); // seçimler
   renderSteps();
 });
 
