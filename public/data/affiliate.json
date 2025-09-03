@@ -7,9 +7,10 @@
       "title": "İş Modeli Seç",
       "description": "Önce ürün tipini seçerek dalları belirleyelim.",
       "options": [
-        "Dijital Ürünler=info: Kurs",
+        "Dijital Ürünler",
         "yazılım",
-        "e-kitap gibi stok gerektirmeyen ürünler; pros: Komisyon oranları genelde daha yüksek; Teslimat/kargo yok; cons: Rekabet güçlü nişlerde yüksek; İade politikaları programa göre değişir\n|| Fiziksel Ürünler=info: Amazon/Trendyol gibi pazarlardan fiziksel ürünler; pros: Talep geniş; Sezon/niş fırsatları; cons: Komisyonlar düşük olabilir; Lojistik/iade bilgilendirmesi şart"
+        "e-kitap gibi stok gerektirmeyen ürünler; pros: Komisyon oranları genelde daha yüksek; Teslimat/kargo yok; cons: Rekabet güçlü nişlerde yüksek; İade politikaları programa göre değişir",
+        "Fiziksel Ürünler"
       ],
       "links": [
         "-"

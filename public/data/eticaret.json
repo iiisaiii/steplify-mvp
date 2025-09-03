@@ -127,7 +127,8 @@
       "title": "D2C: Platform Seç",
       "description": "Kendi siteni hangi altyapıyla kuracaksın?",
       "options": [
-        "Shopify=info: Barındırılan e-ticaret altyapısı (barındırma/güvenlik/ödeme senin yerine yönetilir); pros: Kurulum çok hızlı; Geniş app ekosistemi; Güvenlik/uptime senin derdin değil; cons: Aylık ücret + app maliyetleri artabilir; Derin özelleştirme sınırlı\n|| WooCommerce=info: WordPress üzerinde çalışan açık kaynak mağaza eklentisi; pros: Tam teknik kontrol ve esneklik; Eklenti/tema özgürlüğü; Barındırma maliyeti düşük başlayabilir; cons: Teknik bakım/backup/güvenlik sorumluluğu sende; Kurulum/optimizasyon daha uzun"
+        "Shopify",
+        "WooCommerce"
       ],
       "links": [
         "-"

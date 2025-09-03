@@ -35,7 +35,9 @@
       "title": "Fulfillment Sağlayıcı",
       "description": "POD tedarikçisi seç.",
       "options": [
-        "Printify=info: Çoklu üretici ağıyla fiyat/kalite kıyas; pros: Uygun maliyet seçenekleri; Çok üretici/ülke alternatifi; cons: Kalite tutarlılığı üreticiye göre değişebilir\n|| Printful=info: Kendi üretim ağı; kalite ve lojistik üst seviye; pros: Yüksek kalite kontrol; Hızlı fulfillment; cons: Biraz daha pahalı olabilir\n|| Gelato=info: Dünya çapı yerel üretim; pros: Yerel baskı → hızlı teslim/az gümrük; cons: Ürün yelpazesi daha sınırlı olabilir"
+        "Printify",
+        "Printful",
+        "Gelato"
       ],
       "links": [
         "Printify",

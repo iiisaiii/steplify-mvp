@@ -20,7 +20,10 @@
       "title": "Platform Seç",
       "description": "Müşteriyi nereden bulacaksın?",
       "options": [
-        "Upwork=info: Proje bazlı iş ilanları; pros: Büyük bütçeli işler; Güvenli escrow; cons: Rekabet ve komisyon; Teklif yazımı kritik\n|| Fiverr=info: Paketlenmiş hizmet ilanları; pros: Hızlı başlama; Paket sistemi netlik sağlar; cons: Fiyat rekabeti yüksek; Komisyon\n|| LinkedIn=info: İçerik + DM ile inbound/outbound; pros: Otorite ve network; cons: Süreklilik/kişisel marka gerekir\n|| Soğuk E-posta=info: Hedefli listeye ulaşma; pros: Ölçeklenebilir; cons: Alan uyumu/warmup/engelleme riskleri"
+        "Upwork",
+        "Fiverr",
+        "LinkedIn",
+        "Soğuk E-posta"
       ],
       "links": [
         "-"

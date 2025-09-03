@@ -922,7 +922,10 @@
       "title": "Trafik Kanalı Seç",
       "description": "İlk trafik kaynağını seç.",
       "options": [
-        "TikTok=info: Kısa video ile hızlı test; pros: Düşük kreatif maliyeti; Viral potansiyel; cons: Tutarlılık gerek; Trend ömrü kısa\n|| Meta Ads=info: FB/IG reklamları; pros: Geniş hedefleme; Kreatif çeşitliliği; cons: CPM dalgalı; Öğrenme süresi gerek\n|| Google Ads=info: Alışveriş/aranan niyete dayalı; pros: Satın almaya yakın kitle; cons: Feed/SEO temizliği şart; Rekabet pahalı olabilir\n|| Organik SEO=info: İçerik ve ürün sayfası optimizasyonu; pros: Uzun vadeli ücretsiz trafik; cons: Etki görmek zaman alır"
+        "TikTok",
+        "Meta Ads",
+        "Google Ads",
+        "Organik SEO"
       ],
       "links": [
         "-"
