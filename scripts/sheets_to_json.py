@@ -27,7 +27,15 @@ def parse_list(cell):
         return []
     if cell.startswith('[') and cell.endswith(']'):
         cell = cell[1:-1]
-    return [p.strip() for p in cell.split(',') if p.strip()]
+    # virgül veya | ile ayır
+    parts = [p.strip() for p in re.split(r'[,\|]', cell) if p.strip()]
+    cleaned = []
+    for p in parts:
+        # yanlışlıkla eklenmiş "=info: ..." vb. kuyrukları at
+        p = re.split(r'\s*=\s*', p, 1)[0]
+        p = re.split(r'(?i)\s*info\s*:\s*', p, 1)[0]
+        cleaned.append(p.strip())
+    return cleaned
 
 def parse_links(cell):
     cell = (cell or "").strip()
@@ -43,38 +51,34 @@ def split_multi(s, seps):
     return [p.strip(" -•\t") for p in re.split(reg, s) if p and p.strip(" -•\t")]
 
 def parse_option_details(cell):
-    """
-    "A=info: ...; pros: p1; p2; cons: c1, c2 || B=info: ... | pros: ... | cons: ..."
-    => {"A": {"info":"...", "pros":[...], "cons":[...]}, "B": {...}}
-    """
     cell = norm(cell)
     if not cell:
         return {}
     out = {}
     for seg in [x.strip() for x in cell.split("||") if x.strip()]:
-        if "=" in seg:
-            label, body = seg.split("=", 1)
+        # "Label=..." veya "Label: ..." ikisini de yakala
+        m = re.match(r'^\s*([^=:|]+?)\s*(?:=|:)\s*(.*)$', seg)
+        if m:
+            label, body = norm(m.group(1)), norm(m.group(2))
         else:
-            label, body = seg, ""
-        label = norm(label)
-        info = ""
-        pros, cons = [], []
+            label, body = norm(seg), ""
+        info, pros, cons = "", [], []
         parts = [p.strip() for p in re.split(r"\|", body) if p.strip()] if body else []
         for p in parts:
             if ":" in p:
                 key, val = p.split(":", 1)
-                key = norm(key).lower()
-                val = norm(val)
+                key, val = norm(key).lower(), norm(val)
             else:
                 key, val = "info", norm(p)
             if key in ("info", "nedir"):
                 info = val
-            elif key in ("pros", "arti", "artı", "artilar", "artılar", "artilari", "artıları"):
-                pros = split_multi(val, [";", ",", "|"])
-            elif key in ("cons", "eksi", "eksiler", "eksileri"):
-                cons = split_multi(val, [";", ",", "|"])
+            elif key in ("pros","arti","artı","artilar","artılar","artilari","artıları"):
+                pros = [x for x in split_multi(val, [";", ",", "|"]) if x]
+            elif key in ("cons","eksi","eksiler","eksileri"):
+                cons = [x for x in split_multi(val, [";", ",", "|"]) if x]
         out[label] = {"info": info, "pros": pros, "cons": cons}
     return out
+
 
 def parse_glossary(cell):
     """
@@ -107,16 +111,19 @@ def main():
 
         cmap = {}
         for k in reader.fieldnames:
-            low = k.strip().lower()
-            if "stepid" in low:                                       cmap["StepID"] = k
-            elif "parentid" in low:                                   cmap["ParentID"] = k
-            elif ("başlık" in low) or ("baslik" in low) or ("title" in low):      cmap["Başlık"] = k
-            elif ("açıklama" in low) or ("aciklama" in low) or ("desc" in low):   cmap["Açıklama"] = k
-            elif ("seçenek" in low) or ("secenek" in low) or ("options" in low):  cmap["Seçenekler"] = k
-            elif ("kaynak" in low) or ("link" in low):                              cmap["Kaynak/Link"] = k
-            elif ("görünür" in low) or ("gorunur" in low) or ("visible" in low):   cmap["GörünürEğer"] = k
-            elif ("seçenekdetay" in low) or ("secenekdetay" in low) or ("optiondetail" in low): cmap["SeçenekDetay"] = k
-            elif ("terimler" in low) or ("sözlük" in low) or ("sozluk" in low) or ("glossary" in low): cmap["Terimler"] = k
+          low = k.strip().lower()
+          if "stepid" in low:                       cmap["StepID"] = k
+          elif "parentid" in low:                   cmap["ParentID"] = k
+          elif ("başlık" in low) or ("baslik" in low) or ("title" in low):           cmap["Başlık"] = k
+          elif ("açıklama" in low) or ("aciklama" in low) or ("desc" in low):        cmap["Açıklama"] = k
+          elif ("seçenek" in low) or ("secenek" in low) or ("options" in low):       cmap["Seçenekler"] = k
+          elif ("kaynak" in low) or ("link" in low):                                  cmap["Kaynak/Link"] = k
+          elif ("görünür eğer" in low) or ("gorunur eger" in low) or ("görünür" in low) or ("gorunur" in low) or ("visible" in low):
+              cmap["GörünürEğer"] = k
+          elif ("seçenek detay" in low) or ("secenek detay" in low) or ("seçenekdetay" in low) or ("secenekdetay" in low) or ("option detail" in low) or ("optiondetail" in low):
+              cmap["SeçenekDetay"] = k
+          elif ("terimler" in low) or ("sözlük" in low) or ("sozluk" in low) or ("glossary" in low):
+              cmap["Terimler"] = k
 
         needed = ["StepID","ParentID","Başlık","Açıklama","Seçenekler","Kaynak/Link"]
         for n in needed:
