@@ -8,15 +8,22 @@
       "description": "Önce ürün tipini seçerek dalları belirleyelim.",
       "options": [
         "Dijital Ürünler",
-        "yazılım",
-        "e-kitap gibi stok gerektirmeyen ürünler; pros: Komisyon oranları genelde daha yüksek; Teslimat/kargo yok; cons: Rekabet güçlü nişlerde yüksek; İade politikaları programa göre değişir",
         "Fiziksel Ürünler"
       ],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
-      "optionDetails": {},
+      "optionDetails": {
+        "Dijital Ürünler": {
+          "info": "Kurs, yazılım, e-kitap gibi stok gerektirmeyen ürünler; pros: Komisyon oranları genelde daha yüksek; Teslimat/kargo yok; cons: Rekabet güçlü nişlerde yüksek; İade politikaları programa göre değişir",
+          "pros": [],
+          "cons": []
+        },
+        "Fiziksel Ürünler": {
+          "info": "Amazon/Trendyol gibi pazarlardan fiziksel ürünler; pros: Talep geniş; Sezon/niş fırsatları; cons: Komisyonlar düşük olabilir; Lojistik/iade bilgilendirmesi şart",
+          "pros": [],
+          "cons": []
+        }
+      },
       "glossary": {}
     },
     {
@@ -24,10 +31,11 @@
       "parentId": 1,
       "title": "Hızlı Bilgi: Dijital vs Fiziksel",
       "description": "Dijital: yüksek komisyon, teslimatsız. Fiziksel: daha çok talep, lojistik.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Dijital",
+        "Fiziksel"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -79,7 +87,14 @@
       "parentId": 1,
       "title": "Dijital Ağ Seç",
       "description": "Dijital tarafta çalışacağın ağı seç.",
-      "options": [],
+      "options": [
+        "ClickBank",
+        "Digistore24",
+        "JVZoo",
+        "AppSumo",
+        "Udemy Affiliate",
+        "SaaS Partner"
+      ],
       "links": [
         "ClickBank",
         "Digistore24"
@@ -93,7 +108,15 @@
       "parentId": 1,
       "title": "Fiziksel Ağ/Program Seç",
       "description": "Fiziksel tarafta program veya ağ seç.",
-      "options": [],
+      "options": [
+        "Amazon Associates",
+        "Trendyol Partner",
+        "Hepsiburada Affiliate",
+        "AliExpress",
+        "Awin",
+        "CJ Affiliate",
+        "Impact"
+      ],
       "links": [
         "Amazon Associates",
         "Awin"
@@ -133,7 +156,14 @@
       "parentId": 0,
       "title": "Niş Seçimi (Alan)",
       "description": "Uzun vadede içerik üretebileceğin alanı seç.",
-      "options": [],
+      "options": [
+        "Fitness",
+        "Kilo Verme",
+        "Kişisel Finans",
+        "Yazılım/SaaS",
+        "Güzellik/Bakım",
+        "Ev-Yaşam"
+      ],
       "links": [
         "Google Trends"
       ],
@@ -214,10 +244,12 @@
       "parentId": 0,
       "title": "Top 3 Teklif Seç",
       "description": "Puanlamaya göre 3 ürün/teklif belirle.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Aday 1",
+        "Aday 2",
+        "Aday 3"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -241,9 +273,7 @@
       "title": "Mikro Hedef Belirle",
       "description": "Örn. “Yeni başlayan evde spor yapan anneler” gibi dar odak.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -253,10 +283,12 @@
       "parentId": 0,
       "title": "İçerik Hedefi",
       "description": "İlk 30 gün için günlük 1 kısa video veya 1 yazı/2 gün hedefi koy.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Shorts/Reels",
+        "Blog",
+        "Karışık"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -266,7 +298,10 @@
       "parentId": 0,
       "title": "Alan Adı/Link Seçimi",
       "description": "Bio-link için yöntem seç.",
-      "options": [],
+      "options": [
+        "Özel Alan (önerilir)",
+        "Shortener"
+      ],
       "links": [
         "Namecheap",
         "Cloudflare"
@@ -280,10 +315,13 @@
       "parentId": 20,
       "title": "Bio-Link/Bridge Tipi",
       "description": "Program politikasına uygun köprü sayfa tipi seç.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Review",
+        "Karşılaştırma",
+        "Lead Magnet",
+        "Direkt Link"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -293,7 +331,11 @@
       "parentId": 21,
       "title": "Sayfa Aracı",
       "description": "Bridge sayfayı hangi araçla kuracaksın?",
-      "options": [],
+      "options": [
+        "Carrd",
+        "Notion",
+        "WordPress"
+      ],
       "links": [
         "Carrd",
         "Notion"
@@ -320,7 +362,12 @@
       "parentId": 0,
       "title": "Pixel/Analitik Seç",
       "description": "Piksel ve analitikleri seç ve ekle.",
-      "options": [],
+      "options": [
+        "TikTok Pixel",
+        "Meta Pixel",
+        "Google Tag",
+        "Yalnızca UTM"
+      ],
       "links": [
         "TikTok Pixel Helper"
       ],
@@ -346,7 +393,11 @@
       "parentId": 0,
       "title": "Link Kısaltma/Cloak",
       "description": "Yöntem seç ve kampanya bazlı kısa link üret.",
-      "options": [],
+      "options": [
+        "Bitly",
+        "Short.io",
+        "Kendi Alan"
+      ],
       "links": [
         "Bitly",
         "Short.io"
@@ -399,10 +450,14 @@
       "parentId": 0,
       "title": "İlk Kanalı Seç",
       "description": "Önce bir ana dağıtım kanalı seç.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "TikTok",
+        "Instagram",
+        "YouTube Shorts",
+        "Blog SEO",
+        "Email"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -426,9 +481,7 @@
       "title": "TikTok – İçerik Sütunları",
       "description": "3 sütun belirle (örn. “Hızlı ipucu”, “Öncesi/sonrası”, “Karşılaştırma”).",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=TikTok",
       "optionDetails": {},
       "glossary": {}
@@ -439,9 +492,7 @@
       "title": "TikTok – Hook Bank",
       "description": "20 hazır başlangıç cümlesi yaz (“Kimse söylemiyor ki…”, “X yapmadan önce…”).",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=TikTok",
       "optionDetails": {},
       "glossary": {}
@@ -465,9 +516,7 @@
       "title": "TikTok – Çekim Checklist",
       "description": "Işık/kompozisyon/teleprompter; 3-5 klip batch çekim.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=TikTok",
       "optionDetails": {},
       "glossary": {}
@@ -477,7 +526,10 @@
       "parentId": 31,
       "title": "TikTok – Edit Akışı",
       "description": "CapCut/FinalCut; altyazı, pattern interrupt, logo/CTA.",
-      "options": [],
+      "options": [
+        "CapCut Mobil",
+        "CapCut Masaüstü"
+      ],
       "links": [
         "CapCut"
       ],
@@ -491,9 +543,7 @@
       "title": "TikTok – Yayın SOP",
       "description": "Saatler, açıklama formatı, hashtag, sabit yorumda link/CTA.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=TikTok",
       "optionDetails": {},
       "glossary": {}
@@ -504,9 +554,7 @@
       "title": "TikTok – Yorum/DM SOP",
       "description": "Sık sorulara kopya yanıtlar, itiraz karşılama.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=TikTok",
       "optionDetails": {},
       "glossary": {}
@@ -543,9 +591,7 @@
       "title": "IG – İçerik Sütunları",
       "description": "3 sütun: Reels eğitim, Karusel, Hikaye.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=Instagram",
       "optionDetails": {},
       "glossary": {}
@@ -556,9 +602,7 @@
       "title": "IG – 30 Gün Takvim",
       "description": "Reels 4x/hafta, karusel 2x/hafta, hikaye günlük.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=Instagram",
       "optionDetails": {},
       "glossary": {}
@@ -582,9 +626,7 @@
       "title": "IG – Bio-Link Akışı",
       "description": "Link→bridge→teklif; sabit hikaye “Başla”",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=Instagram",
       "optionDetails": {},
       "glossary": {}
@@ -608,9 +650,7 @@
       "title": "IG – Community Yönetimi",
       "description": "Yorum/DM şablonları, günde 2× 15dk etkileşim.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=Instagram",
       "optionDetails": {},
       "glossary": {}
@@ -647,9 +687,7 @@
       "title": "Shorts – Konu Havuzu",
       "description": "20 konu: mit kırma, mini review, “X için 3 araç”.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=YouTube Shorts",
       "optionDetails": {},
       "glossary": {}
@@ -660,9 +698,7 @@
       "title": "Shorts – Hook & Script",
       "description": "60 sn senaryo şablonu (hook→değer→CTA).",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=YouTube Shorts",
       "optionDetails": {},
       "glossary": {}
@@ -673,9 +709,7 @@
       "title": "Shorts – Prodüksiyon",
       "description": "Checklist: kadraj/ışık/ses; 10’lu batch.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=YouTube Shorts",
       "optionDetails": {},
       "glossary": {}
@@ -699,9 +733,7 @@
       "title": "Shorts – Yükleme Şablonu",
       "description": "Başlık, #etiket, açıklama, link, sabit yorum.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=YouTube Shorts",
       "optionDetails": {},
       "glossary": {}
@@ -725,9 +757,7 @@
       "title": "Shorts – Yayın Takvimi",
       "description": "Haftada 5×; ilk 2 saat etkileşim.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=YouTube Shorts",
       "optionDetails": {},
       "glossary": {}
@@ -750,7 +780,10 @@
       "parentId": 30,
       "title": "Blog SEO – Kurulum",
       "description": "WordPress kur, hafif tema, SEO eklentisi.",
-      "options": [],
+      "options": [
+        "WordPress.com",
+        "Kendi Hosting"
+      ],
       "links": [
         "WordPress"
       ],
@@ -791,9 +824,7 @@
       "title": "İçerik Üretimi",
       "description": "Haftada 3 yazı (1500–2000 kelime), dahili linkleme.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=Blog SEO",
       "optionDetails": {},
       "glossary": {}
@@ -804,9 +835,7 @@
       "title": "CTA & Link Yerleşimi",
       "description": "Üst/orta/alt CTA blokları, buton + disclosure.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=Blog SEO",
       "optionDetails": {},
       "glossary": {}
@@ -845,9 +874,7 @@
       "title": "Arşiv & Kategori",
       "description": "Yapı: /kategori/niş; breadcumb.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:30=Blog SEO",
       "optionDetails": {},
       "glossary": {}
@@ -884,10 +911,12 @@
       "parentId": 0,
       "title": "Lead Magnet Seç (ops)",
       "description": "Hemen e-posta toplamak istersen içerik ver.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Check-list",
+        "Mini e-kitap",
+        "E-posta kursu"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -897,7 +926,11 @@
       "parentId": 70,
       "title": "Form Aracı Seç",
       "description": "Form/otomasyon aracı.",
-      "options": [],
+      "options": [
+        "Mailchimp",
+        "Beehiiv",
+        "ConvertKit"
+      ],
       "links": [
         "Mailchimp"
       ],
@@ -963,9 +996,7 @@
       "title": "İtiraz Karşılama",
       "description": "“Pahalı/Çalışır mı/Süre?” itirazlarına kısa cevaplar.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -976,9 +1007,7 @@
       "title": "Topluluk Politikası",
       "description": "Toksik yorum politikası ve engelleme SOP.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -989,9 +1018,7 @@
       "title": "Günlük Rutini",
       "description": "“30 dk üretim, 15 dk etkileşim, 10 dk analiz” takvimi.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1001,10 +1028,11 @@
       "parentId": 0,
       "title": "Reklam Başlat? (Opsiyonel)",
       "description": "Erken hız için küçük bütçe test etmek ister misin?",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Hayır (Organik)",
+        "Evet (Test)"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1014,7 +1042,11 @@
       "parentId": 80,
       "title": "Reklam Platformu Seç",
       "description": "İlk test için platform seç.",
-      "options": [],
+      "options": [
+        "TikTok Ads",
+        "Meta Ads",
+        "Google Ads"
+      ],
       "links": [
         "TikTok Ads",
         "Meta Ads"
@@ -1042,9 +1074,7 @@
       "title": "Test Kampanya SOP",
       "description": "3 kreatif × 2 başlık, düşük bütçe, 48 saat değerlendirme.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:80=Evet (Test)",
       "optionDetails": {},
       "glossary": {}
@@ -1081,9 +1111,7 @@
       "title": "Yayın",
       "description": "İlk 7 gün yoğun paylaşım; günlük rapor.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1094,9 +1122,7 @@
       "title": "İyileştirme Döngüsü",
       "description": "En iyi 3 içerik formatını ikiye katla; zayıfı bırak.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}

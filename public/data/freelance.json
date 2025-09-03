@@ -6,10 +6,14 @@
       "parentId": 0,
       "title": "Alan Seç",
       "description": "Hangi alanda hizmet vereceksin?",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Yazılım",
+        "Tasarım",
+        "İçerik-SEO",
+        "NoCode",
+        "Veri/AI"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -25,11 +29,30 @@
         "LinkedIn",
         "Soğuk E-posta"
       ],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
-      "optionDetails": {},
+      "optionDetails": {
+        "Upwork": {
+          "info": "Proje bazlı iş ilanları; pros: Büyük bütçeli işler; Güvenli escrow; cons: Rekabet ve komisyon; Teklif yazımı kritik",
+          "pros": [],
+          "cons": []
+        },
+        "Fiverr": {
+          "info": "Paketlenmiş hizmet ilanları; pros: Hızlı başlama; Paket sistemi netlik sağlar; cons: Fiyat rekabeti yüksek; Komisyon",
+          "pros": [],
+          "cons": []
+        },
+        "LinkedIn": {
+          "info": "İçerik + DM ile inbound/outbound; pros: Otorite ve network; cons: Süreklilik/kişisel marka gerekir",
+          "pros": [],
+          "cons": []
+        },
+        "Soğuk E-posta": {
+          "info": "Hedefli listeye ulaşma; pros: Ölçeklenebilir; cons: Alan uyumu/warmup/engelleme riskleri",
+          "pros": [],
+          "cons": []
+        }
+      },
       "glossary": {}
     },
     {
@@ -37,10 +60,11 @@
       "parentId": 0,
       "title": "Pazar",
       "description": "Öncelikli çalışacağın pazar.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Global",
+        "Türkiye"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -92,7 +116,13 @@
       "parentId": 0,
       "title": "Ödeme Altyapısı",
       "description": "Global/TR’ye göre ödeme yöntemi.",
-      "options": [],
+      "options": [
+        "Wise",
+        "Payoneer",
+        "Stripe",
+        "PayPal",
+        "Havale"
+      ],
       "links": [
         "Wise",
         "Payoneer",
@@ -107,7 +137,11 @@
       "parentId": 0,
       "title": "Takvim/Randevu",
       "description": "Toplantılar için takvim ve rezervasyon linki.",
-      "options": [],
+      "options": [
+        "Calendly",
+        "SavvyCal",
+        "Google Calendar"
+      ],
       "links": [
         "Calendly",
         "Google Calendar"
@@ -121,7 +155,11 @@
       "parentId": 0,
       "title": "CRM & Pipeline",
       "description": "Aday müşteri → teklif → kazan/kaybet kanbanı.",
-      "options": [],
+      "options": [
+        "Notion",
+        "Trello",
+        "HubSpot"
+      ],
       "links": [
         "Notion",
         "Trello",
@@ -136,7 +174,11 @@
       "parentId": 0,
       "title": "Zaman Takibi & Faturalama",
       "description": "Takip ve fatura/irsaliye araçları.",
-      "options": [],
+      "options": [
+        "Clockify",
+        "Toggl",
+        "Paraşüt"
+      ],
       "links": [
         "Clockify",
         "Paraşüt"
@@ -150,10 +192,12 @@
       "parentId": 0,
       "title": "Paketleme Modeli",
       "description": "Hizmeti nasıl paketleyeceksin?",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Proje Bazlı",
+        "Saatlik",
+        "Ürünleştirilmiş Paket"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -164,9 +208,7 @@
       "title": "Fiyatlandırma Mantığı",
       "description": "Maliyet+değer temelli fiyat; depozito %30–50.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -177,9 +219,7 @@
       "title": "USP & Konumlandırma",
       "description": "Bir cümlede değer önerisi ve niş/ICP tanımı.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -256,9 +296,7 @@
       "title": "Referans & Testimonial",
       "description": "Son teslimde referans talebi için metin.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -268,10 +306,13 @@
       "parentId": 1,
       "title": "Yazılım: Alt Alan",
       "description": "Odak alanını seç.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Web App (JS/TS)",
+        "Backend (Python/Node)",
+        "WordPress/Woo",
+        "Otomasyon/Bot"
       ],
+      "links": [],
       "visibleIf": "step:1=Yazılım",
       "optionDetails": {},
       "glossary": {}
@@ -338,9 +379,7 @@
       "title": "Yazılım: SOW Örneği",
       "description": "Teknik kapsam ve teslim planı şablonu.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Yazılım",
       "optionDetails": {},
       "glossary": {}
@@ -351,9 +390,7 @@
       "title": "Yazılım: QA & Handover",
       "description": "Test dosyası, env, dokümantasyon, dev→handover.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Yazılım",
       "optionDetails": {},
       "glossary": {}
@@ -364,9 +401,7 @@
       "title": "Yazılım: Bakım Modeli",
       "description": "Aylık SLA ve kapsam dahil/harici maddeler.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Yazılım",
       "optionDetails": {},
       "glossary": {}
@@ -376,10 +411,13 @@
       "parentId": 1,
       "title": "Tasarım: Alt Alan",
       "description": "Odak alanını seç.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "UI/UX",
+        "Web Tasarım",
+        "Marka/Logo",
+        "Dashboard/Design System"
       ],
+      "links": [],
       "visibleIf": "step:1=Tasarım",
       "optionDetails": {},
       "glossary": {}
@@ -469,9 +507,7 @@
       "title": "Tasarım: Revizyon Politikası",
       "description": "2 tur revizyon; kapsam dışı değişiklik tarifesi.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Tasarım",
       "optionDetails": {},
       "glossary": {}
@@ -481,10 +517,13 @@
       "parentId": 1,
       "title": "İçerik-SEO: Hizmet Tipi",
       "description": "Odak servisi seç.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Blog Paketi",
+        "Teknik SEO",
+        "İçerik Stratejisi",
+        "Site İçi Optimizasyon"
       ],
+      "links": [],
       "visibleIf": "step:1=İçerik-SEO",
       "optionDetails": {},
       "glossary": {}
@@ -509,9 +548,7 @@
       "title": "Brief & Outline",
       "description": "SEO brief + H2/H3 ve iç link hedefleri.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=İçerik-SEO",
       "optionDetails": {},
       "glossary": {}
@@ -562,9 +599,7 @@
       "title": "Paket Örnekleri",
       "description": "4/8/12 yazı, teknik audit, content hub.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=İçerik-SEO",
       "optionDetails": {},
       "glossary": {}
@@ -574,10 +609,13 @@
       "parentId": 1,
       "title": "NoCode: Platform",
       "description": "Seç ve odaklan.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Webflow",
+        "Bubble",
+        "Glide",
+        "Airtable + Automations"
       ],
+      "links": [],
       "visibleIf": "step:1=NoCode",
       "optionDetails": {},
       "glossary": {}
@@ -642,9 +680,7 @@
       "title": "NoCode: Bakım Planı",
       "description": "Aylık bakım + değişiklik kredisi.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=NoCode",
       "optionDetails": {},
       "glossary": {}
@@ -654,10 +690,13 @@
       "parentId": 1,
       "title": "Veri/AI: Hizmet Tipi",
       "description": "Odak servisi seç.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Dashboard/BI",
+        "Veri Toplama (Scrape)",
+        "ETL/Automation",
+        "LLM/Chatbot POC"
       ],
+      "links": [],
       "visibleIf": "step:1=Veri/AI",
       "optionDetails": {},
       "glossary": {}
@@ -722,9 +761,7 @@
       "title": "Veri Sözleşmesi",
       "description": "Gizlilik, IP, kullanım kısıtları.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Veri/AI",
       "optionDetails": {},
       "glossary": {}
@@ -735,9 +772,7 @@
       "title": "Bakım & Destek",
       "description": "SLA ve veri tazeleme takvimi.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Veri/AI",
       "optionDetails": {},
       "glossary": {}
@@ -748,9 +783,7 @@
       "title": "ICP (Ideal Müşteri)",
       "description": "Sektör, şirket boyutu, karar verici unvanı.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -760,10 +793,12 @@
       "parentId": 0,
       "title": "Paket Tasarımı",
       "description": "Basic/Standard/Premium kapsam ve teslim süreleri.",
-      "options": [],
-      "links": [
-        "-"
+      "options": [
+        "Basic",
+        "Standard",
+        "Premium"
       ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -774,9 +809,7 @@
       "title": "Örnek Sözleşme Doldur",
       "description": "SOW şablonunu kendi hizmetine uyarlayıp kaydet.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -867,9 +900,7 @@
       "title": "Upwork: Job Feed Filtre",
       "description": "Ülke/bütçe/anahtar kelime filtrelerini kaydet.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Upwork",
       "optionDetails": {},
       "glossary": {}
@@ -880,9 +911,7 @@
       "title": "Upwork: Teklif Şablonu",
       "description": "Giriş → sorun → çözüm → 1 küçük fikir → CTA.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Upwork",
       "optionDetails": {},
       "glossary": {}
@@ -893,9 +922,7 @@
       "title": "Upwork: Connects Planı",
       "description": "Günlük teklif sayısı ve saatleri planla.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Upwork",
       "optionDetails": {},
       "glossary": {}
@@ -906,9 +933,7 @@
       "title": "Upwork: Mülakat SOP",
       "description": "Hızlı yanıt, örnek linkler, Calendly ile toplantı.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Upwork",
       "optionDetails": {},
       "glossary": {}
@@ -919,9 +944,7 @@
       "title": "Upwork: Sözleşme & Milestone",
       "description": "Escrow + milestone tanımı.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Upwork",
       "optionDetails": {},
       "glossary": {}
@@ -932,9 +955,7 @@
       "title": "Upwork: Teslim & Feedback",
       "description": "Teslim notu + feedback talebi.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Upwork",
       "optionDetails": {},
       "glossary": {}
@@ -958,9 +979,7 @@
       "title": "Fiverr: Paketler",
       "description": "Basic/Standard/Premium net kapsam.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Fiverr",
       "optionDetails": {},
       "glossary": {}
@@ -971,9 +990,7 @@
       "title": "Fiverr: Medya",
       "description": "Gig görselleri, kısa video, PDF.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Fiverr",
       "optionDetails": {},
       "glossary": {}
@@ -984,9 +1001,7 @@
       "title": "Fiverr: Anahtar Kelime",
       "description": "Gig SEO; rakip inceleme.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Fiverr",
       "optionDetails": {},
       "glossary": {}
@@ -997,9 +1012,7 @@
       "title": "Fiverr: Yanıt Süresi",
       "description": "Otomatik hoş geldin + hızlı cevap şablonları.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Fiverr",
       "optionDetails": {},
       "glossary": {}
@@ -1010,9 +1023,7 @@
       "title": "Fiverr: Revizyon & Ekstralar",
       "description": "Revizyon sayısı, hızlı teslim, kaynak dosyası ekstra.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Fiverr",
       "optionDetails": {},
       "glossary": {}
@@ -1023,9 +1034,7 @@
       "title": "Fiverr: Teslim & Değerlendirme",
       "description": "Teslim checklist + 5 yıldız teşviki.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Fiverr",
       "optionDetails": {},
       "glossary": {}
@@ -1049,9 +1058,7 @@
       "title": "LinkedIn: Hizmet Sayfası",
       "description": "Hizmet ekle ve rezervasyon linki.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=LinkedIn",
       "optionDetails": {},
       "glossary": {}
@@ -1062,9 +1069,7 @@
       "title": "LinkedIn: İçerik Planı",
       "description": "Haftada 3 post: case clip, ipucu, mini rehber.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=LinkedIn",
       "optionDetails": {},
       "glossary": {}
@@ -1088,9 +1093,7 @@
       "title": "LinkedIn: DM Script",
       "description": "1. selamlama → 2. değer → 3. soru → 4. çağrı.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=LinkedIn",
       "optionDetails": {},
       "glossary": {}
@@ -1101,9 +1104,7 @@
       "title": "LinkedIn: Etkileşim Rutini",
       "description": "Günde 15 dk: yorum/DM/bağlantı.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=LinkedIn",
       "optionDetails": {},
       "glossary": {}
@@ -1114,9 +1115,7 @@
       "title": "LinkedIn: Topluluklara Katıl",
       "description": "Niş gruplar ve etkinlikler.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=LinkedIn",
       "optionDetails": {},
       "glossary": {}
@@ -1140,7 +1139,12 @@
       "parentId": 2,
       "title": "Soğuk E-posta: Liste",
       "description": "ICP’ye göre liste çıkar.",
-      "options": [],
+      "options": [
+        "Hunter",
+        "Apollo",
+        "Clay",
+        "Manual"
+      ],
       "links": [
         "Hunter",
         "Apollo"
@@ -1154,7 +1158,11 @@
       "parentId": 2,
       "title": "Soğuk E-posta: Araç",
       "description": "Sequence/otomasyon aracı seç.",
-      "options": [],
+      "options": [
+        "Instantly",
+        "Lemlist",
+        "Mailshake"
+      ],
       "links": [
         "Instantly",
         "Lemlist"
@@ -1169,9 +1177,7 @@
       "title": "Soğuk E-posta: Şablonlar",
       "description": "İlk e-posta + 3 takip; 50–125 kelime; tek CTA.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Soğuk E-posta",
       "optionDetails": {},
       "glossary": {}
@@ -1182,9 +1188,7 @@
       "title": "Soğuk E-posta: Kişiselleştirme",
       "description": "1 cümle kişisel açılış; pattern → çözüm.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Soğuk E-posta",
       "optionDetails": {},
       "glossary": {}
@@ -1195,9 +1199,7 @@
       "title": "Soğuk E-posta: Günlük Limit",
       "description": "Gmail/SMTP limitlerine uygun gönderim.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Soğuk E-posta",
       "optionDetails": {},
       "glossary": {}
@@ -1221,9 +1223,7 @@
       "title": "Soğuk E-posta: Spam Kontrol",
       "description": "Bounce/spam/yanıt oranı izleme.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:2=Soğuk E-posta",
       "optionDetails": {},
       "glossary": {}
@@ -1273,9 +1273,7 @@
       "title": "Discovery Çağrısı – Akış",
       "description": "Gündem: hedefler, kısıtlar, bütçe, takvim, karar verici.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1299,9 +1297,7 @@
       "title": "Ön Analiz (Mini Audit)",
       "description": "İlk 30–60 dk’lık ücretsiz mini analiz (opsiyonel).",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1312,9 +1308,7 @@
       "title": "Çözüm Taslağı",
       "description": "3 maddede çözüm + 3 teslim + tahmini süre.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1378,9 +1372,7 @@
       "title": "Proje Kickoff",
       "description": "Yetkiler, erişimler, riskler, iletişim kanalları.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1418,9 +1410,7 @@
       "title": "Yazılım: Geliştirme Akışı",
       "description": "Git flow, code review, staging.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Yazılım",
       "optionDetails": {},
       "glossary": {}
@@ -1431,9 +1421,7 @@
       "title": "Yazılım: Test & QA",
       "description": "Unit/e2e; kabul kriterleri.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Yazılım",
       "optionDetails": {},
       "glossary": {}
@@ -1457,9 +1445,7 @@
       "title": "Tasarım: Araştırma",
       "description": "Persona, benchmark, rakip UI analizi.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Tasarım",
       "optionDetails": {},
       "glossary": {}
@@ -1496,9 +1482,7 @@
       "title": "Tasarım: Kullanılabilirlik Testi",
       "description": "5 kullanıcı ile hızlı test (ops.).",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Tasarım",
       "optionDetails": {},
       "glossary": {}
@@ -1549,9 +1533,7 @@
       "title": "NoCode: Bilgi Mimarisi",
       "description": "Tablolar, veri akışı, yetkiler.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=NoCode",
       "optionDetails": {},
       "glossary": {}
@@ -1588,9 +1570,7 @@
       "title": "Veri/AI: Veri Toplama",
       "description": "Kaynak → temizleme → saklama.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Veri/AI",
       "optionDetails": {},
       "glossary": {}
@@ -1601,9 +1581,7 @@
       "title": "Veri/AI: Model/POC",
       "description": "Küçük veri seti ile POC.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "step:1=Veri/AI",
       "optionDetails": {},
       "glossary": {}
@@ -1640,9 +1618,7 @@
       "title": "Revizyon Süreci",
       "description": "Revizyon turları ve talep biçimi.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1653,9 +1629,7 @@
       "title": "Değişiklik Talebi (Scope)",
       "description": "Kapsam dışı işler için teklif eki ve onay akışı.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1666,9 +1640,7 @@
       "title": "Teslim Paketi",
       "description": "Kaynak dosyalar, dokümantasyon, eğitim linkleri.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1679,9 +1651,7 @@
       "title": "Kapanış Çağrısı",
       "description": "Özet, başarılar, sonrası bakım/retainer teklifi.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1692,9 +1662,7 @@
       "title": "Testimonial & Case",
       "description": "Geri bildirim formu; case study’ye çevir.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1705,9 +1673,7 @@
       "title": "Referans Programı",
       "description": "Yeni müşteri getirenlere %10–15 komisyon.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1731,9 +1697,7 @@
       "title": "Haftalık Pipeline İncelemesi",
       "description": "Kazan/kaybet analizi; mesaj şablonlarını güncelle.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1744,9 +1708,7 @@
       "title": "Portfolyo Güncelleme",
       "description": "Ayda 1 yeni case, 1 demo.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1757,9 +1719,7 @@
       "title": "Fiyat Güncelleme",
       "description": "3–6 ayda bir yeni fiyat skalası.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1770,9 +1730,7 @@
       "title": "Ürünleştirme",
       "description": "En çok satan hizmeti paketle ve templatize et.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1783,9 +1741,7 @@
       "title": "Alt Yüklenici Ağı",
       "description": "Alanına göre 2–3 freelancer ile işbirliği ağı.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1810,9 +1766,7 @@
       "title": "Risk & Sözleşme Güncelleme",
       "description": "Şablonları 6 ayda bir gözden geçir.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1823,9 +1777,7 @@
       "title": "Workshop/Webinar (ops)",
       "description": "Aylık ücretsiz mini eğitim ile inbound lead.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1836,9 +1788,7 @@
       "title": "Yıllık Hedefler",
       "description": "% gelir hedefi, niş derinliği, ürünleşme planı.",
       "options": [],
-      "links": [
-        "-"
-      ],
+      "links": [],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
