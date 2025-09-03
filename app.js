@@ -554,7 +554,8 @@ els.modelSelect.addEventListener('change', e=>{
 
 els.resetProgress.addEventListener('click', ()=>{
   if(!currentModel) return;
-  localStorage.removeItem(lsKey(currentModel));
+  localStorage.removeItem(lsKey(currentModel));     // ilerleme
+  localStorage.removeItem(selKey(currentModel));    // <<< seçimler de silinsin
   renderSteps();
 });
 
