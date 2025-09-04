@@ -1,99 +1,63 @@
 # -*- coding: utf-8 -*-
 """
-Google Sheets (CSV) -> Playbook JSON dönüştürücü (sade)
-Söz dizimi (özet):
+Google Sheets (CSV) -> Playbook JSON dönüştürücü (index-temelli Option Info/Pros/Cons)
+
+Beklenen başlıklar (case-insensitive):
+StepID, ParentID, Başlık, Açıklama, Seçenekler, Kaynak/Link,
+GörünürEğer, Seçenek Info, Seçenek Pros, Seçenek Cons, Terimler
+
 - Seçenekler: "A | B | C" ya da "[A, B, C]"
-- GörünürEğer: step:ID=Değer1|Değer2, step:K=...
-- SeçenekDetay:
-    Label = info: ... | pros: a; b | cons: c; d  ||  Label2 = ...
-  veya direkt JSON:
-    {"Label":{"info":"...","pros":["..."],"cons":["..."]}, ...}
+- Seçenek Info: "infoA || infoB || infoC"
+- Seçenek Pros: "p1; p2 || p1; p2 || p1"  (madde ayırıcı ';')
+- Seçenek Cons: "c1; c2 || c1; c2 || c1"
 - Terimler: "Shopify: ... || WooCommerce: ..."
 """
+
 import argparse, csv, json, sys
 
+# ---------- yardımcılar ----------
 def norm(s): return (s or "").strip()
 
-def parse_list(cell: str):
-    s = norm(cell)
+def parse_options_cell(s: str):
+    s = norm(s)
     if not s: return []
     if s.startswith("[") and s.endswith("]"):
         s = s[1:-1]
-    # | , ; hepsini virgüna çevirip parçala
-    s = s.replace("|", ",").replace(";", ",")
-    return [p.strip() for p in s.split(",") if p.strip() and p.strip() != "-"]
-
-def parse_links(cell: str):
-    s = norm(cell)
-    if not s: return []
     s = s.replace("|", ",")
-    return [p.strip() for p in s.split(",") if p.strip() and p.strip() != "-"]
-
-def parse_option_details(cell: str):
-    """
-    DSL: "A = info: ... | pros: p1; p2 | cons: c1; c2 || B = info: ..."
-    veya JSON: '{"A":{"info":"...","pros":[...],"cons":[...]}}'
-    """
-    s = norm(cell)
-    if not s: return {}
-
-    # JSON desteği (en kolay yol)
-    if s.lstrip().startswith("{"):
-        try:
-            raw = json.loads(s)
-            out = {}
-            for label, d in raw.items():
-                info = norm(d.get("info", ""))
-                pros = d.get("pros", [])
-                cons = d.get("cons", [])
-                if isinstance(pros, str):  # "a; b" yazılmış olabilir
-                    pros = [x.strip() for x in pros.replace("|", ";").replace(",", ";").split(";") if x.strip()]
-                if isinstance(cons, str):
-                    cons = [x.strip() for x in cons.replace("|", ";").replace(",", ";").split(";") if x.strip()]
-                out[norm_label(label)] = {"info": info, "pros": pros, "cons": cons}
-            return out
-        except Exception:
-            pass  # JSON değilse DSL'e düş
-
-    # DSL
-    out = {}
-    blocks = [b.strip() for b in s.split("||") if b.strip()]
-    for b in blocks:
-        if "=" in b:
-            label, body = b.split("=", 1)
-        elif ":" in b:
-            # "Label: info: ..." yazılmışsa da yakalarız
-            label, body = b.split(":", 1)
-        else:
-            label, body = b, ""
-        label = norm_label(label)
-
-        info, pros, cons = "", [], []
-        parts = [p.strip() for p in body.split("|") if p.strip()]
-        for p in parts:
-            if ":" not in p:
-                # anahtar verilmeyip direkt info yazılmışsa
-                info = (info + " " + p).strip()
-                continue
-            key, val = p.split(":", 1)
-            key = norm(key).lower()
-            val = norm(val)
-            if key == "info":
-                info = val
-            elif key == "pros":
-                pros = [x.strip() for x in val.replace("|", ";").replace(",", ";").split(";") if x.strip()]
-            elif key == "cons":
-                cons = [x.strip() for x in val.replace("|", ";").replace(",", ";").split(";") if x.strip()]
-
-        out[label] = {"info": info, "pros": pros, "cons": cons}
+    out = []
+    for part in [p.strip() for p in s.split(",") if p.strip()]:
+        low = part.lower()
+        # güvenlik: yanlışlıkla "pros:" / "cons:" gibi önekler options'a düşmüşse at
+        if low.startswith(("pros:", "cons:", "info:", "artı:", "arti:", "eksı:", "eksi:")):
+            continue
+        out.append(part)
     return out
 
-def norm_label(s: str) -> str:
-    # baş/son boşluk, gereksiz tire/kalın nokta temizliği
-    return norm(s).strip(" -•\t")
+def parse_links_cell(s: str):
+    s = norm(s)
+    if not s: return []
+    s = s.replace("|", ",")
+    return [p.strip() for p in s.split(",") if p.strip()]
 
-def parse_glossary(cell: str):
-    s = norm(cell)
+def split_groups(s: str):
+    s = norm(s)
+    if not s: return []
+    return [g.strip() for g in s.split("||") if g.strip()]
+
+def split_bullets(s: str):
+    s = norm(s)
+    if not s: return []
+    low = s.lower()
+    for pref in ("pros:", "cons:", "artılar:", "artilar:", "artı:", "arti:",
+                 "eksiler:", "eksi:", "info:", "bilgi:", "nedir:"):
+        if low.startswith(pref):
+            s = s[len(pref):].strip()
+            break
+    s = s.replace("|", ";").replace(",", ";")
+    return [x.strip(" -•\t") for x in s.split(";") if x.strip(" -•\t")]
+
+def parse_glossary_cell(s: str):
+    s = norm(s)
     if not s: return {}
     out = {}
     for seg in [x.strip() for x in s.split("||") if x.strip()]:
@@ -104,6 +68,7 @@ def parse_glossary(cell: str):
             out[norm(seg)] = ""
     return out
 
+# ---------- ana akış ----------
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--in", dest="in_path", required=True)
@@ -111,55 +76,74 @@ def main():
     ap.add_argument("--out", dest="out_path", default=None)
     args = ap.parse_args()
 
-    with open(args.in_path, "r", encoding="utf-8") as f:
+    with open(args.in_path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         if not reader.fieldnames:
             print("CSV başlıkları okunamadı.", file=sys.stderr); sys.exit(1)
 
-        # başlık eşleştirmeleri (esnek ama basit)
-        cmap = {}
-        for k in reader.fieldnames:
-            low = k.strip().lower()
-            if "stepid" in low:                                       cmap["StepID"] = k
-            elif "parentid" in low:                                   cmap["ParentID"] = k
-            elif ("başlık" in low) or ("baslik" in low) or ("title" in low):             cmap["Başlık"] = k
-            elif ("açıklama" in low) or ("aciklama" in low) or ("desc" in low):          cmap["Açıklama"] = k
-            elif ("seçenek" in low) or ("secenek" in low) or ("options" in low):        cmap["Seçenekler"] = k
-            elif ("kaynak" in low) or ("link" in low):                                    cmap["Kaynak/Link"] = k
-            elif ("görünür" in low) or ("gorunur" in low) or ("visible" in low):        cmap["GörünürEğer"] = k
-            elif ("seçenekdetay" in low) or ("secenekdetay" in low) or ("option" in low): cmap["SeçenekDetay"] = k
-            elif ("terimler" in low) or ("sözlük" in low) or ("sozluk" in low) or ("glossary" in low): cmap["Terimler"] = k
+        # case-insensitive başlık haritası
+        headers = {h.lower(): h for h in reader.fieldnames}
+        def col(*names):
+            for n in names:
+                if n.lower() in headers: return headers[n.lower()]
+            return None
 
-        needed = ["StepID","ParentID","Başlık","Açıklama","Seçenekler","Kaynak/Link"]
-        for n in needed:
-            if n not in cmap:
-                print("Eksik kolon:", n, file=sys.stderr); sys.exit(1)
+        c_step   = col("StepID","stepid")
+        c_parent = col("ParentID","parentid")
+        c_title  = col("Başlık","Baslik","title")
+        c_desc   = col("Açıklama","Aciklama","desc")
+        c_opts   = col("Seçenekler","Secenekler","options")
+        c_links  = col("Kaynak/Link","Kaynak","Link")
+        c_vis    = col("GörünürEğer","GorunurEger","Görünür","VisibleIf","visibleif")
+        c_info   = col("Seçenek Info","Secenek Info","Option Info","Options Info")
+        c_pros   = col("Seçenek Pros","Secenek Pros","Option Pros","Options Pros","Seçenek Artılar","Secenek Artilar")
+        c_cons   = col("Seçenek Cons","Secenek Cons","Option Cons","Options Cons","Seçenek Eksiler","Secenek Eksiler")
+        c_terms  = col("Terimler","Sözlük","Sozluk","Glossary")
+
+        needed = [c_step, c_parent, c_title, c_desc, c_opts, c_links]
+        if any(x is None for x in needed):
+            print("Eksik zorunlu kolon var.", file=sys.stderr); sys.exit(1)
 
         steps = []
         for r in reader:
+            sid_raw = norm(r.get(c_step, ""))
+            if not sid_raw: continue
             try:
-                sid = int(str(r[cmap["StepID"]]).strip())
-            except Exception:
+                sid = int(sid_raw)
+            except:  # StepID başlık satırı/boş satır vs.
                 continue
-            pid = int(str(r[cmap["ParentID"]]).strip() or 0)
 
-            visible_if = norm(r.get(cmap.get("GörünürEğer",""), "")) if "GörünürEğer" in cmap else ""
+            pid_raw = norm(r.get(c_parent, ""))
+            try:
+                pid = int(pid_raw) if pid_raw else 0
+            except:
+                pid = 0
+
+            options = parse_options_cell(r.get(c_opts, ""))
+            links   = parse_links_cell(r.get(c_links, ""))
+            visible_if = norm(r.get(c_vis, "")) if c_vis else ""
+            glossary   = parse_glossary_cell(r.get(c_terms, "")) if c_terms else {}
+
+            # Info/Pros/Cons -> options ile index’e göre eşle
+            info_groups = split_groups(r.get(c_info, "")) if c_info else []
+            pros_groups = split_groups(r.get(c_pros, "")) if c_pros else []
+            cons_groups = split_groups(r.get(c_cons, "")) if c_cons else []
 
             option_details = {}
-            if "SeçenekDetay" in cmap:
-                option_details = parse_option_details(r.get(cmap["SeçenekDetay"], ""))
-
-            glossary = {}
-            if "Terimler" in cmap:
-                glossary = parse_glossary(r.get(cmap["Terimler"], ""))
+            for i, label in enumerate(options):
+                info_i = info_groups[i] if i < len(info_groups) else ""
+                pros_i = split_bullets(pros_groups[i]) if i < len(pros_groups) else []
+                cons_i = split_bullets(cons_groups[i]) if i < len(cons_groups) else []
+                if any([info_i, pros_i, cons_i]):
+                    option_details[label] = {"info": info_i, "pros": pros_i, "cons": cons_i}
 
             steps.append({
                 "id": sid,
                 "parentId": pid,
-                "title": norm(r[cmap["Başlık"]]),
-                "description": norm(r[cmap["Açıklama"]]),
-                "options": parse_list(r[cmap["Seçenekler"]]),
-                "links": parse_links(r[cmap["Kaynak/Link"]]),
+                "title": norm(r.get(c_title, "")),
+                "description": norm(r.get(c_desc, "")),
+                "options": options,
+                "links": links,
                 "visibleIf": visible_if,
                 "optionDetails": option_details,
                 "glossary": glossary
