@@ -6,8 +6,14 @@
       "parentId": 0,
       "title": "Platform Seç",
       "description": "Nerede satış yapacaksın?",
-      "options": [],
-      "links": [],
+      "options": [
+        "Etsy",
+        "Amazon Merch",
+        "Shopify"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -17,7 +23,11 @@
       "parentId": 0,
       "title": "Tasarım Yöntemi",
       "description": "Tasarımı nasıl üreteceksin?",
-      "options": [],
+      "options": [
+        "Kendim Tasarlarım",
+        "Freelancer",
+        "AI"
+      ],
       "links": [
         "Figma",
         "Photoshop",
@@ -33,18 +43,9 @@
       "title": "Fulfillment Sağlayıcı",
       "description": "POD tedarikçisi seç.",
       "options": [
-        "Printify=info: Çoklu üretici ağıyla fiyat/kalite kıyas",
-        "pros: Uygun maliyet seçenekleri",
-        "Çok üretici/ülke alternatifi",
-        "cons: Kalite tutarlılığı üreticiye göre değişebilir",
-        "Printful=info: Kendi üretim ağı",
-        "kalite ve lojistik üst seviye",
-        "pros: Yüksek kalite kontrol",
-        "Hızlı fulfillment",
-        "cons: Biraz daha pahalı olabilir",
-        "Gelato=info: Dünya çapı yerel üretim",
-        "pros: Yerel baskı → hızlı teslim/az gümrük",
-        "cons: Ürün yelpazesi daha sınırlı olabilir"
+        "Printify",
+        "Printful",
+        "Gelato"
       ],
       "links": [
         "Printify",
@@ -53,17 +54,20 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {
-        "Mockup": "Ürünün görsel sunumu; Fulfillment: Üretim ve kargolama süreci; Lead Time: Üretim+teslimat süresi"
-      }
+      "glossary": {}
     },
     {
       "id": 4,
       "parentId": 0,
       "title": "Hedef Pazar",
       "description": "Pazarı seç (fiyat/kargo buna göre).",
-      "options": [],
-      "links": [],
+      "options": [
+        "Global",
+        "Türkiye"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -73,7 +77,9 @@
       "parentId": 0,
       "title": "Marka Adı & Görsel Kimlik",
       "description": "İsim, renk paleti, logo, tipografi.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Canva",
         "Coolors"
@@ -87,7 +93,9 @@
       "parentId": 0,
       "title": "Çalışma Alanı & Klasör Yapısı",
       "description": "Drive klasörleri ve Notion görev tahtası.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Google Drive",
         "Notion"
@@ -101,7 +109,9 @@
       "parentId": 0,
       "title": "Politika & Yasaklılar",
       "description": "Platform politika ve yasaklı içerikler.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Platform Policies"
       ],
@@ -114,8 +124,12 @@
       "parentId": 0,
       "title": "Disclosure",
       "description": "Yasal uyarı: affiliate/ürün açıklamaları.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -125,7 +139,11 @@
       "parentId": 0,
       "title": "İzleme Standardı",
       "description": "UTM standardı + kısa link yöntemi.",
-      "options": [],
+      "options": [
+        "Bitly",
+        "Short.io",
+        "Kendi Alan"
+      ],
       "links": [
         "Bitly",
         "Short.io"
@@ -139,8 +157,17 @@
       "parentId": 0,
       "title": "Ürün Türü Seç",
       "description": "Başlangıç ürününü seç.",
-      "options": [],
-      "links": [],
+      "options": [
+        "T-Shirt",
+        "Kupa",
+        "Sweatshirt",
+        "Hoodie",
+        "Poster",
+        "Tote"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -150,7 +177,9 @@
       "parentId": 0,
       "title": "Etsy – Mağaza Açılışı",
       "description": "Etsy shop oluştur; doğrulama/banka.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Etsy Seller Handbook"
       ],
@@ -163,8 +192,12 @@
       "parentId": 20,
       "title": "Etsy – Mağaza Ayarları",
       "description": "Dil, para birimi, banner, bio.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
       "glossary": {}
@@ -174,8 +207,12 @@
       "parentId": 20,
       "title": "Etsy – Politika & Kargo",
       "description": "Kargo profilleri ve iade politikaları.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
       "glossary": {}
@@ -185,7 +222,11 @@
       "parentId": 20,
       "title": "Etsy – POD Entegrasyon",
       "description": "Printify/Printful/Gelato bağla.",
-      "options": [],
+      "options": [
+        "Printify",
+        "Printful",
+        "Gelato"
+      ],
       "links": [
         "Printify",
         "Printful"
@@ -199,8 +240,12 @@
       "parentId": 20,
       "title": "Etsy – Analytics",
       "description": "UTM kullan, Etsy Stats’ı takip et.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
       "glossary": {}
@@ -210,7 +255,9 @@
       "parentId": 0,
       "title": "Etsy – Niş & Trend",
       "description": "Erank/Marmalead ile niş/etiket araştır.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Erank",
         "Marmalead"
@@ -224,8 +271,12 @@
       "parentId": 0,
       "title": "Etsy – SEO Alanları",
       "description": "Başlık, 13 etiket, materyal/renk alanları.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
       "glossary": {}
@@ -235,7 +286,9 @@
       "parentId": 0,
       "title": "Etsy – Listing SOP",
       "description": "1000+ kelime açıklama, görsel sırası, varyantlar.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Etsy Listing Guide"
       ],
@@ -248,8 +301,12 @@
       "parentId": 0,
       "title": "Etsy – Kargo Fiyatlama",
       "description": "KDV, kargo şablonu, ücretsiz kargo stratejisi.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
       "glossary": {}
@@ -259,7 +316,9 @@
       "parentId": 0,
       "title": "Etsy – Ads (opsiyonel)",
       "description": "Günlük küçük bütçe otomatik kampanya.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Etsy Ads"
       ],
@@ -272,7 +331,9 @@
       "parentId": 0,
       "title": "Amazon Merch – Başvuru",
       "description": "Merch başvurusu ve bekleme süreci.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Merch by Amazon"
       ],
@@ -285,8 +346,12 @@
       "parentId": 30,
       "title": "Amazon Merch – Onboarding",
       "description": "Tier, içerik politikası, marka ismi.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
       "glossary": {}
@@ -296,7 +361,9 @@
       "parentId": 0,
       "title": "Amazon Merch – Şablonlar",
       "description": "Resim boyutları ve mockup kuralları.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Merch Templates"
       ],
@@ -309,7 +376,9 @@
       "parentId": 0,
       "title": "Amazon Merch – Policy Check",
       "description": "Telif/marka/DMCA uyumu.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Trademarkia"
       ],
@@ -322,8 +391,12 @@
       "parentId": 0,
       "title": "Amazon Merch – Upload SOP",
       "description": "Başlık/bullet/brand/keyword alanları.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
       "glossary": {}
@@ -333,8 +406,12 @@
       "parentId": 0,
       "title": "Amazon Merch – Analitik",
       "description": "Satış/konversiyon raporları.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
       "glossary": {}
@@ -344,7 +421,9 @@
       "parentId": 0,
       "title": "Shopify – Hesap Aç",
       "description": "Mağaza oluştur, ayarları yap.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Shopify Help"
       ],
@@ -357,7 +436,9 @@
       "parentId": 40,
       "title": "Shopify – Tema",
       "description": "Dawn (ücretsiz) ile başla; renk/font.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Shopify Themes"
       ],
@@ -370,7 +451,9 @@
       "parentId": 40,
       "title": "Shopify – Domain",
       "description": "Alan adı bağla; SSL aktif.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Shopify Domains"
       ],
@@ -383,7 +466,11 @@
       "parentId": 40,
       "title": "Shopify – Ödeme & Vergi",
       "description": "TR için iyzico/PayTR; KDV.",
-      "options": [],
+      "options": [
+        "iyzico",
+        "PayTR",
+        "Stripe"
+      ],
       "links": [
         "iyzico",
         "PayTR"
@@ -397,7 +484,9 @@
       "parentId": 40,
       "title": "Shopify – Kargo Profilleri",
       "description": "Ülke/zon bazlı kargo ücreti.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Shopify Shipping"
       ],
@@ -410,8 +499,12 @@
       "parentId": 40,
       "title": "Shopify – Sayfalar",
       "description": "İade/gizlilik/SSS, Hakkımızda/İletişim.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
       "glossary": {}
@@ -421,7 +514,11 @@
       "parentId": 40,
       "title": "Shopify – POD Entegrasyon",
       "description": "Printify/Printful/Gelato app’i ekle.",
-      "options": [],
+      "options": [
+        "Printify",
+        "Printful",
+        "Gelato"
+      ],
       "links": [
         "Shopify App Store"
       ],
@@ -434,8 +531,12 @@
       "parentId": 40,
       "title": "Shopify – Hız & SEO",
       "description": "Hafif tema, lazyload, meta/şema.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
       "glossary": {}
@@ -445,7 +546,9 @@
       "parentId": 40,
       "title": "Shopify – Yorumlar",
       "description": "Judge.me kur; review bileşeni.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Judge.me"
       ],
@@ -458,8 +561,12 @@
       "parentId": 40,
       "title": "Shopify – Checkout Ayarları",
       "description": "Sepeti terk eden mail, müşteri hesapları.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
       "glossary": {}
@@ -469,7 +576,14 @@
       "parentId": 0,
       "title": "Niş Seçimi (POD)",
       "description": "Farklılaşabileceğin alt niş.",
-      "options": [],
+      "options": [
+        "Meslek",
+        "Hobi",
+        "Spor",
+        "Mizah",
+        "Hayvan",
+        "Fan"
+      ],
       "links": [
         "Google Trends"
       ],
@@ -482,7 +596,9 @@
       "parentId": 0,
       "title": "Trend Avı (Genel)",
       "description": "Everbee/Erank/Redbubble trend takibi.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Everbee",
         "Erank"
@@ -496,7 +612,9 @@
       "parentId": 10,
       "title": "Beden/Ölçü Şablonları",
       "description": "Seçilen ürüne göre ölçü tablosu.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Ürün Şablonları"
       ],
@@ -509,7 +627,9 @@
       "parentId": 10,
       "title": "Fiyatlandırma Hesabı",
       "description": "Maliyet + kargo + komisyon + hedef marj.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Google Sheets"
       ],
@@ -522,7 +642,9 @@
       "parentId": 0,
       "title": "Telif/Marka Tarama",
       "description": "Tasarımlarda marka/karakter kullanma.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Trademarkia",
         "TMview"
@@ -536,7 +658,9 @@
       "parentId": 0,
       "title": "Metin/Stil Havuzu",
       "description": "Nișe özel slogan ve tipografi stilleri.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Notion Dosyası"
       ],
@@ -549,8 +673,14 @@
       "parentId": 2,
       "title": "Kendim: Tasarım Yığını",
       "description": "Araç ve çalışma presetleri.",
-      "options": [],
-      "links": [],
+      "options": [
+        "Figma",
+        "Photoshop",
+        "Illustrator"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:2=Kendim Tasarlarım",
       "optionDetails": {},
       "glossary": {}
@@ -560,8 +690,12 @@
       "parentId": 2,
       "title": "Kendim: Tuval ve Rehber",
       "description": "Artboard, grid, bleed, DPI (300), sRGB.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:2=Kendim Tasarlarım",
       "optionDetails": {},
       "glossary": {}
@@ -571,8 +705,12 @@
       "parentId": 2,
       "title": "Kendim: Şablonlar",
       "description": "Mockup ve ürün şablonlarını kopyala.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:2=Kendim Tasarlarım",
       "optionDetails": {},
       "glossary": {}
@@ -582,8 +720,14 @@
       "parentId": 2,
       "title": "Freelancer: Platform",
       "description": "Çalışacağın platformu seç.",
-      "options": [],
-      "links": [],
+      "options": [
+        "Upwork",
+        "Fiverr",
+        "Behance"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:2=Freelancer",
       "optionDetails": {},
       "glossary": {}
@@ -593,7 +737,9 @@
       "parentId": 2,
       "title": "Freelancer: Brief",
       "description": "Ölçü, stil, telif/teslim şartları; örnekler.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Brief Şablonu"
       ],
@@ -606,8 +752,12 @@
       "parentId": 2,
       "title": "Freelancer: Sözleşme",
       "description": "Lisans ve ticari kullanım şartları.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:2=Freelancer",
       "optionDetails": {},
       "glossary": {}
@@ -617,7 +767,9 @@
       "parentId": 2,
       "title": "AI: Prompt Kit",
       "description": "Stil/tema/kompozisyon/renk prompt şablonları.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Prompt Bank"
       ],
@@ -630,8 +782,14 @@
       "parentId": 2,
       "title": "AI: Upscale & Temizleme",
       "description": "4x upscale; arka plan temizliği.",
-      "options": [],
-      "links": [],
+      "options": [
+        "Topaz",
+        "Gigapixel",
+        "Remover"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:2=AI",
       "optionDetails": {},
       "glossary": {}
@@ -641,8 +799,12 @@
       "parentId": 2,
       "title": "AI: Vektörleştirme",
       "description": "İç hatlar için vektör (opsiyon).",
-      "options": [],
-      "links": [],
+      "options": [
+        "Illustrator Image Trace"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:2=AI",
       "optionDetails": {},
       "glossary": {}
@@ -652,7 +814,9 @@
       "parentId": 0,
       "title": "Kalite Kontrol Checklist",
       "description": "300 DPI, temiz kenar, doğru ölçü, telif temiz.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "QC Checklist"
       ],
@@ -665,8 +829,12 @@
       "parentId": 0,
       "title": "Varyasyon Üretimi",
       "description": "Renk/tema/nişe göre 5 varyasyon.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -676,7 +844,9 @@
       "parentId": 3,
       "title": "Printify – Mağaza Bağlantı",
       "description": "Seçilen platform hesabını bağla.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Printify Docs"
       ],
@@ -689,8 +859,12 @@
       "parentId": 3,
       "title": "Printify – Üretici Seçimi",
       "description": "Ülke/kalite/fiyat/lead-time kriteri.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:3=Printify",
       "optionDetails": {},
       "glossary": {}
@@ -700,8 +874,12 @@
       "parentId": 3,
       "title": "Printify – Shipping",
       "description": "Ürün bazlı kargo tabloları.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:3=Printify",
       "optionDetails": {},
       "glossary": {}
@@ -711,7 +889,9 @@
       "parentId": 3,
       "title": "Printful – Mağaza Bağlantı",
       "description": "App kurulumu ve sync.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Printful Docs"
       ],
@@ -724,8 +904,12 @@
       "parentId": 3,
       "title": "Printful – Ürün Kurulumu",
       "description": "Boyut/renk/etiket/inside neck (ops).",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:3=Printful",
       "optionDetails": {},
       "glossary": {}
@@ -735,8 +919,12 @@
       "parentId": 3,
       "title": "Printful – Shipping",
       "description": "Fiyat bölgeleri ve fiyat önerisi.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:3=Printful",
       "optionDetails": {},
       "glossary": {}
@@ -746,7 +934,9 @@
       "parentId": 3,
       "title": "Gelato – Mağaza Bağlantı",
       "description": "App kurulumu ve sync.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Gelato Docs"
       ],
@@ -759,8 +949,12 @@
       "parentId": 3,
       "title": "Gelato – Ürün Kurulumu",
       "description": "Üretici/ülke seçimi.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:3=Gelato",
       "optionDetails": {},
       "glossary": {}
@@ -770,8 +964,12 @@
       "parentId": 3,
       "title": "Gelato – Shipping",
       "description": "Standart/expedited profil.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:3=Gelato",
       "optionDetails": {},
       "glossary": {}
@@ -781,7 +979,9 @@
       "parentId": 0,
       "title": "Mockup Şablonları",
       "description": "Flatlay/insan üstünde/ambiyans mockup seti.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Placeit",
         "Canva"
@@ -795,8 +995,12 @@
       "parentId": 0,
       "title": "Mockup Üretimi",
       "description": "Seçilen varyasyonlara 6–8 mockup.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -806,8 +1010,12 @@
       "parentId": 0,
       "title": "Ürün Açıklama Şablonu",
       "description": "Fayda odaklı açıklama ve madde işaretleri.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -817,8 +1025,12 @@
       "parentId": 0,
       "title": "Ölçü Tablosu Görseli",
       "description": "Tabloyu görsel olarak ekle.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -828,8 +1040,12 @@
       "parentId": 0,
       "title": "Ürün Sayfası CTA’ları",
       "description": "Kargo/İade, güven rozetleri, hızlı CTA.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -839,7 +1055,9 @@
       "parentId": 1,
       "title": "Etsy – Listing Oluştur",
       "description": "Ürün → Başlık/etiket → görseller → varyant.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Etsy Listing Guide"
       ],
@@ -852,7 +1070,9 @@
       "parentId": 1,
       "title": "Etsy – SEO & Etiket",
       "description": "13 etiket ve long-tail başlık yapısı.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Erank",
         "Marmalead"
@@ -866,8 +1086,12 @@
       "parentId": 1,
       "title": "Etsy – Koleksiyon/Section",
       "description": "Mağaza bölümleri ve fav-to-cart taktikleri.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
       "glossary": {}
@@ -877,7 +1101,9 @@
       "parentId": 1,
       "title": "Amazon Merch – Upload",
       "description": "Template’e yerleştir → başlık/bullet → yayınla.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Merch Templates"
       ],
@@ -890,8 +1116,12 @@
       "parentId": 1,
       "title": "Amazon Merch – Anahtar Kelime",
       "description": "Back-end keyword alanları.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
       "glossary": {}
@@ -901,7 +1131,9 @@
       "parentId": 1,
       "title": "Shopify – Ürün Ekleme",
       "description": "Mockup + varyant + fiyat + kargo profili.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Shopify Help"
       ],
@@ -914,8 +1146,12 @@
       "parentId": 1,
       "title": "Shopify – Koleksiyon/SEO",
       "description": "Koleksiyon + meta başlık/açıklama.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
       "glossary": {}
@@ -925,7 +1161,9 @@
       "parentId": 1,
       "title": "Shopify – Yorum/UGC",
       "description": "Review bileşeni ve UGC kılavuzu.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Judge.me"
       ],
@@ -938,8 +1176,18 @@
       "parentId": 0,
       "title": "Trafik Kanalı Seç",
       "description": "İlk trafik kaynağını seç.",
-      "options": [],
-      "links": [],
+      "options": [
+        "Pinterest",
+        "TikTok",
+        "Instagram",
+        "Etsy Ads",
+        "Meta Ads",
+        "Google Ads",
+        "Organik SEO"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -949,7 +1197,9 @@
       "parentId": 110,
       "title": "Pinterest – Kurulum",
       "description": "Business hesabı, domain doğrulama, Rich Pins.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Pinterest Business"
       ],
@@ -962,7 +1212,9 @@
       "parentId": 110,
       "title": "Pinterest – Board & Anahtar",
       "description": "Kategori board’ları ve anahtar kelimeler.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Pinterest Trends"
       ],
@@ -975,7 +1227,9 @@
       "parentId": 110,
       "title": "Pinterest – Pin Şablonu",
       "description": "Şablon seti (3 varyant).",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Canva"
       ],
@@ -988,8 +1242,12 @@
       "parentId": 110,
       "title": "Pinterest – Planlayıcı",
       "description": "Haftalık 30 pin planı.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:110=Pinterest",
       "optionDetails": {},
       "glossary": {}
@@ -999,7 +1257,9 @@
       "parentId": 110,
       "title": "TikTok – Kurulum",
       "description": "Bio link, nişe özel 3 içerik sütunu.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "TikTok Business"
       ],
@@ -1012,8 +1272,12 @@
       "parentId": 110,
       "title": "TikTok – 30 Gün Plan",
       "description": "Günlük çekim/edit/yayın SOP.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:110=TikTok",
       "optionDetails": {},
       "glossary": {}
@@ -1023,7 +1287,9 @@
       "parentId": 110,
       "title": "Instagram – Kurulum",
       "description": "Reels/Carousel; link-in-bio.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Meta Business"
       ],
@@ -1036,8 +1302,12 @@
       "parentId": 110,
       "title": "Instagram – Takvim",
       "description": "Haftalık 5 Reels + 2 Carousel.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:110=Instagram",
       "optionDetails": {},
       "glossary": {}
@@ -1047,7 +1317,9 @@
       "parentId": 110,
       "title": "Etsy Ads – Otomatik",
       "description": "Otomatik kampanya + düşük bütçe.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Etsy Ads"
       ],
@@ -1060,7 +1332,9 @@
       "parentId": 110,
       "title": "Meta Ads – Katalog",
       "description": "Shopify katalog + Advantage+ (ops).",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Meta Ads Manager"
       ],
@@ -1073,7 +1347,9 @@
       "parentId": 110,
       "title": "Google Ads – Shopping",
       "description": "GMC + feed + Shopping kampanyası.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Google Merchant Center"
       ],
@@ -1086,7 +1362,9 @@
       "parentId": 110,
       "title": "Organik SEO – Blog",
       "description": "Shopify/Etsy blog rehberi; 2 yazı/hafta.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "RankMath",
         "Yoast"
@@ -1100,7 +1378,9 @@
       "parentId": 0,
       "title": "Müşteri Desteği",
       "description": "SLA ve hazır yanıt şablonları.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Zendesk",
         "Gorgias"
@@ -1114,8 +1394,12 @@
       "parentId": 0,
       "title": "İade Politikası",
       "description": "Şeffaf iade politikası ve kargo geri dönüş akışı.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1125,7 +1409,9 @@
       "parentId": 0,
       "title": "Sipariş Akışı – Etsy+POD",
       "description": "Otomatik üretim ve kargo numarası eşleme.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Printify/Printful"
       ],
@@ -1138,7 +1424,9 @@
       "parentId": 0,
       "title": "Sipariş Akışı – Shopify+POD",
       "description": "Otomatik fulfillment; e-posta bildirimleri.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Printify/Printful"
       ],
@@ -1151,8 +1439,12 @@
       "parentId": 0,
       "title": "Sipariş Akışı – Merch",
       "description": "Otomatik üretim; tasarım slot yönetimi.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
       "glossary": {}
@@ -1162,8 +1454,12 @@
       "parentId": 0,
       "title": "Kargo SLA & İletişim",
       "description": "Kargo gecikmelerinde mesaj şablonu.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1173,7 +1469,9 @@
       "parentId": 0,
       "title": "Performans Paneli",
       "description": "CTR, add-to-cart, dönüşüm paneli şablonu.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Analytics"
       ],
@@ -1186,7 +1484,9 @@
       "parentId": 0,
       "title": "Günlük Takip Tablosu",
       "description": "Ürün, trafik, maliyet, satış, marj takibi.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Google Sheets"
       ],
@@ -1199,8 +1499,12 @@
       "parentId": 0,
       "title": "Kazanan Tasarımlar",
       "description": "En iyi 20%’yi tespit et ve çoğalt.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1210,8 +1514,12 @@
       "parentId": 0,
       "title": "Zayıf Ürünler",
       "description": "90 gün sıfır satış: kaldır/güncelle.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1221,7 +1529,9 @@
       "parentId": 0,
       "title": "Yayın Öncesi Kontrol",
       "description": "Mockup, açıklama, ölçü, fiyat, kargo, politika, disclosure.",
-      "options": [],
+      "options": [
+        "-"
+      ],
       "links": [
         "Checklist"
       ],
@@ -1234,8 +1544,12 @@
       "parentId": 0,
       "title": "Yayın",
       "description": "İlk 2 hafta yoğun yayın ve günlük takip.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1245,8 +1559,12 @@
       "parentId": 0,
       "title": "İyileştirme Döngüsü",
       "description": "En iyi 3 kanal ve nişe yüklen, zayıfı bırak.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
@@ -1256,8 +1574,12 @@
       "parentId": 0,
       "title": "Ölçekleme",
       "description": "Üretici/ülke çoğaltma, varyant genişletme.",
-      "options": [],
-      "links": [],
+      "options": [
+        "-"
+      ],
+      "links": [
+        "-"
+      ],
       "visibleIf": "",
       "optionDetails": {},
       "glossary": {}
