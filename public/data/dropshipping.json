@@ -956,24 +956,45 @@
       "visibleIf": "",
       "optionDetails": {
         "TikTok": {
-          "info": "Kısa video ile hızlı test; pros: Düşük kreatif maliyeti; Viral potansiyel; cons: Tutarlılık gerek; Trend ömrü kısa",
-          "pros": [],
-          "cons": []
+          "info": "Kısa video ile hızlı test",
+          "pros": [
+            "Düşük kreatif maliyeti",
+            "Viral potansiyel"
+          ],
+          "cons": [
+            "Tutarlılık gerek",
+            "Trend ömrü kısa"
+          ]
         },
         "Meta Ads": {
-          "info": "FB/IG reklamları; pros: Geniş hedefleme; Kreatif çeşitliliği; cons: CPM dalgalı; Öğrenme süresi gerek",
-          "pros": [],
-          "cons": []
+          "info": "FB/IG reklamları",
+          "pros": [
+            "Geniş hedefleme",
+            "Kreatif çeşitliliği"
+          ],
+          "cons": [
+            "CPM dalgalı",
+            "Öğrenme süresi gerek"
+          ]
         },
         "Google Ads": {
-          "info": "Alışveriş/aranan niyete dayalı; pros: Satın almaya yakın kitle; cons: Feed/SEO temizliği şart; Rekabet pahalı olabilir",
-          "pros": [],
-          "cons": []
+          "info": "Alışveriş/aranan niyete dayalı",
+          "pros": [
+            "Satın almaya yakın kitle"
+          ],
+          "cons": [
+            "Feed/SEO temizliği şart",
+            "Rekabet pahalı olabilir"
+          ]
         },
         "Organik SEO": {
-          "info": "İçerik ve ürün sayfası optimizasyonu; pros: Uzun vadeli ücretsiz trafik; cons: Etki görmek zaman alır",
-          "pros": [],
-          "cons": []
+          "info": "İçerik ve ürün sayfası optimizasyonu",
+          "pros": [
+            "Uzun vadeli ücretsiz trafik"
+          ],
+          "cons": [
+            "Etki görmek zaman alır"
+          ]
         }
       },
       "glossary": {}

@@ -53,19 +53,33 @@
       "visibleIf": "",
       "optionDetails": {
         "Printify": {
-          "info": "Çoklu üretici ağıyla fiyat/kalite kıyas; pros: Uygun maliyet seçenekleri; Çok üretici/ülke alternatifi; cons: Kalite tutarlılığı üreticiye göre değişebilir",
-          "pros": [],
-          "cons": []
+          "info": "Çoklu üretici ağıyla fiyat/kalite kıyas",
+          "pros": [
+            "Uygun maliyet seçenekleri",
+            "Çok üretici/ülke alternatifi"
+          ],
+          "cons": [
+            "Kalite tutarlılığı üreticiye göre değişebilir"
+          ]
         },
         "Printful": {
-          "info": "Kendi üretim ağı; kalite ve lojistik üst seviye; pros: Yüksek kalite kontrol; Hızlı fulfillment; cons: Biraz daha pahalı olabilir",
-          "pros": [],
-          "cons": []
+          "info": "Kendi üretim ağı; kalite ve lojistik üst seviye",
+          "pros": [
+            "Yüksek kalite kontrol",
+            "Hızlı fulfillment"
+          ],
+          "cons": [
+            "Biraz daha pahalı olabilir"
+          ]
         },
         "Gelato": {
-          "info": "Dünya çapı yerel üretim; pros: Yerel baskı → hızlı teslim/az gümrük; cons: Ürün yelpazesi daha sınırlı olabilir",
-          "pros": [],
-          "cons": []
+          "info": "Dünya çapı yerel üretim",
+          "pros": [
+            "Yerel baskı → hızlı teslim/az gümrük"
+          ],
+          "cons": [
+            "Ürün yelpazesi daha sınırlı olabilir"
+          ]
         }
       },
       "glossary": {

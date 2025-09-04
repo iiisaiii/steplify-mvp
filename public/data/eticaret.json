@@ -142,14 +142,28 @@
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {
         "Shopify": {
-          "info": "Barındırılan e-ticaret altyapısı (barındırma/güvenlik/ödeme senin yerine yönetilir); pros: Kurulum çok hızlı; Geniş app ekosistemi; Güvenlik/uptime senin derdin değil; cons: Aylık ücret + app maliyetleri artabilir; Derin özelleştirme sınırlı",
-          "pros": [],
-          "cons": []
+          "info": "Barındırılan e-ticaret altyapısı (barındırma/güvenlik/ödeme senin yerine yönetilir)",
+          "pros": [
+            "Kurulum çok hızlı",
+            "Geniş app ekosistemi",
+            "Güvenlik/uptime senin derdin değil"
+          ],
+          "cons": [
+            "Aylık ücret + app maliyetleri artabilir",
+            "Derin özelleştirme sınırlı"
+          ]
         },
         "WooCommerce": {
-          "info": "WordPress üzerinde çalışan açık kaynak mağaza eklentisi; pros: Tam teknik kontrol ve esneklik; Eklenti/tema özgürlüğü; Barındırma maliyeti düşük başlayabilir; cons: Teknik bakım/backup/güvenlik sorumluluğu sende; Kurulum/optimizasyon daha uzun",
-          "pros": [],
-          "cons": []
+          "info": "WordPress üzerinde çalışan açık kaynak mağaza eklentisi",
+          "pros": [
+            "Tam teknik kontrol ve esneklik",
+            "Eklenti/tema özgürlüğü",
+            "Barındırma maliyeti düşük başlayabilir"
+          ],
+          "cons": [
+            "Teknik bakım/backup/güvenlik sorumluluğu sende",
+            "Kurulum/optimizasyon daha uzun"
+          ]
         }
       },
       "glossary": {

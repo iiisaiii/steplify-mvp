@@ -14,14 +14,25 @@
       "visibleIf": "",
       "optionDetails": {
         "Yüzlü": {
-          "info": "Kamerada yüzün görünür; pros: Güven/bağ kurma yüksek; Kişisel marka büyür; cons: Çekim/ışık/özgüven gerektirir",
-          "pros": [],
-          "cons": []
+          "info": "Kamerada yüzün görünür",
+          "pros": [
+            "Güven/bağ kurma yüksek",
+            "Kişisel marka büyür"
+          ],
+          "cons": [
+            "Çekim/ışık/özgüven gerektirir"
+          ]
         },
         "Yüzsüz": {
-          "info": "Voiceover/ekran kaydı/AI avatar ile üretim; pros: Çekim/ışık derdi yok; Hızlı batch üretim; cons: Güven/bağ kurmak daha zor; Avatar/TTS fazla olursa soğuk gelebilir",
-          "pros": [],
-          "cons": []
+          "info": "Voiceover/ekran kaydı/AI avatar ile üretim",
+          "pros": [
+            "Çekim/ışık derdi yok",
+            "Hızlı batch üretim"
+          ],
+          "cons": [
+            "Güven/bağ kurmak daha zor",
+            "Avatar/TTS fazla olursa soğuk gelebilir"
+          ]
         }
       },
       "glossary": {

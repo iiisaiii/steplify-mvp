@@ -33,24 +33,44 @@
       "visibleIf": "",
       "optionDetails": {
         "Upwork": {
-          "info": "Proje bazlı iş ilanları; pros: Büyük bütçeli işler; Güvenli escrow; cons: Rekabet ve komisyon; Teklif yazımı kritik",
-          "pros": [],
-          "cons": []
+          "info": "Proje bazlı iş ilanları",
+          "pros": [
+            "Büyük bütçeli işler",
+            "Güvenli escrow"
+          ],
+          "cons": [
+            "Rekabet ve komisyon",
+            "Teklif yazımı kritik"
+          ]
         },
         "Fiverr": {
-          "info": "Paketlenmiş hizmet ilanları; pros: Hızlı başlama; Paket sistemi netlik sağlar; cons: Fiyat rekabeti yüksek; Komisyon",
-          "pros": [],
-          "cons": []
+          "info": "Paketlenmiş hizmet ilanları",
+          "pros": [
+            "Hızlı başlama",
+            "Paket sistemi netlik sağlar"
+          ],
+          "cons": [
+            "Fiyat rekabeti yüksek",
+            "Komisyon"
+          ]
         },
         "LinkedIn": {
-          "info": "İçerik + DM ile inbound/outbound; pros: Otorite ve network; cons: Süreklilik/kişisel marka gerekir",
-          "pros": [],
-          "cons": []
+          "info": "İçerik + DM ile inbound/outbound",
+          "pros": [
+            "Otorite ve network"
+          ],
+          "cons": [
+            "Süreklilik/kişisel marka gerekir"
+          ]
         },
         "Soğuk E-posta": {
-          "info": "Hedefli listeye ulaşma; pros: Ölçeklenebilir; cons: Alan uyumu/warmup/engelleme riskleri",
-          "pros": [],
-          "cons": []
+          "info": "Hedefli listeye ulaşma",
+          "pros": [
+            "Ölçeklenebilir"
+          ],
+          "cons": [
+            "Alan uyumu/warmup/engelleme riskleri"
+          ]
         }
       },
       "glossary": {}
