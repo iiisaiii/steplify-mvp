@@ -41,33 +41,65 @@ def split_multi(s, seps):
 
 def parse_option_details(cell):
     """
-    "A=info: ... | pros: p1; p2 | cons: c1, c2 || B: info: ... | pros: ... | cons: ..."
-    => {"A":{"info":"...", "pros":[...], "cons":[...]}, "B":{...}}
+    "A=info: ...; pros: p1; p2; cons: c1, c2"
+    veya
+    "A=info: ... | pros: ... | cons: ..."
+    -> {"A":{"info":"...", "pros":[...], "cons":[...]}}
     """
     cell = norm(cell)
-    if not cell: return {}
+    if not cell:
+        return {}
     out = {}
+
     for seg in [x.strip() for x in cell.split("||") if x.strip()]:
+        # "Label=..." veya "Label: ..." ikisini de destekle
         m = re.match(r'^\s*([^=:|]+?)\s*(?:=|:)\s*(.*)$', seg)
         if m:
             label, body = norm(m.group(1)), norm(m.group(2))
         else:
             label, body = norm(seg), ""
+
         info, pros, cons = "", [], []
-        parts = [p.strip() for p in re.split(r"\|", body) if p.strip()] if body else []
-        for p in parts:
-            if ":" in p:
-                key, val = p.split(":", 1)
-                key, val = norm(key).lower(), norm(val)
+
+        if body:
+            if "|" in body:
+                # Eski söz dizimi: | ile ayrılmış parçalar
+                parts = [p.strip() for p in body.split("|") if p.strip()]
+                for p in parts:
+                    if ":" in p:
+                        key, val = p.split(":", 1)
+                        key, val = norm(key).lower(), norm(val)
+                    else:
+                        key, val = "info", norm(p)
+                    if key in ("info", "nedir"):
+                        info = val
+                    elif key in ("pros","arti","artı","artilar","artılar","artilari","artıları"):
+                        pros = [x for x in split_multi(val, [";", ",", "|"]) if x]
+                    elif key in ("cons","eksi","eksiler","eksileri"):
+                        cons = [x for x in split_multi(val, [";", ",", "|"]) if x]
             else:
-                key, val = "info", norm(p)
-            if key in ("info", "nedir"):
-                info = val
-            elif key in ("pros","arti","artı","artilar","artılar","artilari","artıları"):
-                pros = [x for x in split_multi(val, [";", ",", "|"]) if x]
-            elif key in ("cons","eksi","eksiler","eksileri"):
-                cons = [x for x in split_multi(val, [";", ",", "|"]) if x]
+                # Yeni: tek metin; içinde "info/pros/cons:" işaretlerini bul
+                pattern = re.compile(
+                    r'(?i)\b(info|nedir|pros|arti|artı|artilar|artılar|artilari|artıları|cons|eksi|eksiler|eksileri)\s*:\s*'
+                )
+                matches = list(pattern.finditer(body))
+                if matches:
+                    for i, m2 in enumerate(matches):
+                        key = m2.group(1).lower()
+                        start = m2.end()
+                        end = matches[i+1].start() if i+1 < len(matches) else len(body)
+                        val = body[start:end].strip(" ;,|-")
+                        if key in ("info", "nedir"):
+                            info = val
+                        elif key in ("pros","arti","artı","artilar","artılar","artilari","artıları"):
+                            pros = [x for x in split_multi(val, [";", ",", "|"]) if x]
+                        else:
+                            cons = [x for x in split_multi(val, [";", ",", "|"]) if x]
+                else:
+                    info = body.strip()
+
         out[label] = {"info": info, "pros": pros, "cons": cons}
+
     return out
 
 def parse_glossary(cell):
