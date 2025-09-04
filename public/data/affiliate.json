@@ -7,35 +7,22 @@
       "title": "İş Modeli Seç",
       "description": "Önce ürün tipini seçerek dalları belirleyelim.",
       "options": [
-        "Dijital Ürünler",
-        "Fiziksel Ürünler"
+        "Dijital Ürünler=info: Kurs",
+        "yazılım",
+        "e-kitap gibi stok gerektirmeyen ürünler",
+        "pros: Komisyon oranları genelde daha yüksek",
+        "Teslimat/kargo yok",
+        "cons: Rekabet güçlü nişlerde yüksek",
+        "İade politikaları programa göre değişir",
+        "Fiziksel Ürünler=info: Amazon/Trendyol gibi pazarlardan fiziksel ürünler",
+        "pros: Talep geniş",
+        "Sezon/niş fırsatları",
+        "cons: Komisyonlar düşük olabilir",
+        "Lojistik/iade bilgilendirmesi şart"
       ],
       "links": [],
       "visibleIf": "",
-      "optionDetails": {
-        "Dijital Ürünler": {
-          "info": "Kurs, yazılım, e-kitap gibi stok gerektirmeyen ürünler",
-          "pros": [
-            "Komisyon oranları genelde daha yüksek",
-            "Teslimat/kargo yok"
-          ],
-          "cons": [
-            "Rekabet güçlü nişlerde yüksek",
-            "İade politikaları programa göre değişir"
-          ]
-        },
-        "Fiziksel Ürünler": {
-          "info": "Amazon/Trendyol gibi pazarlardan fiziksel ürünler",
-          "pros": [
-            "Talep geniş",
-            "Sezon/niş fırsatları"
-          ],
-          "cons": [
-            "Komisyonlar düşük olabilir",
-            "Lojistik/iade bilgilendirmesi şart"
-          ]
-        }
-      },
+      "optionDetails": {},
       "glossary": {}
     },
     {
@@ -43,10 +30,7 @@
       "parentId": 1,
       "title": "Hızlı Bilgi: Dijital vs Fiziksel",
       "description": "Dijital: yüksek komisyon, teslimatsız. Fiziksel: daha çok talep, lojistik.",
-      "options": [
-        "Dijital",
-        "Fiziksel"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -99,14 +83,7 @@
       "parentId": 1,
       "title": "Dijital Ağ Seç",
       "description": "Dijital tarafta çalışacağın ağı seç.",
-      "options": [
-        "ClickBank",
-        "Digistore24",
-        "JVZoo",
-        "AppSumo",
-        "Udemy Affiliate",
-        "SaaS Partner"
-      ],
+      "options": [],
       "links": [
         "ClickBank",
         "Digistore24"
@@ -120,15 +97,7 @@
       "parentId": 1,
       "title": "Fiziksel Ağ/Program Seç",
       "description": "Fiziksel tarafta program veya ağ seç.",
-      "options": [
-        "Amazon Associates",
-        "Trendyol Partner",
-        "Hepsiburada Affiliate",
-        "AliExpress",
-        "Awin",
-        "CJ Affiliate",
-        "Impact"
-      ],
+      "options": [],
       "links": [
         "Amazon Associates",
         "Awin"
@@ -168,14 +137,7 @@
       "parentId": 0,
       "title": "Niş Seçimi (Alan)",
       "description": "Uzun vadede içerik üretebileceğin alanı seç.",
-      "options": [
-        "Fitness",
-        "Kilo Verme",
-        "Kişisel Finans",
-        "Yazılım/SaaS",
-        "Güzellik/Bakım",
-        "Ev-Yaşam"
-      ],
+      "options": [],
       "links": [
         "Google Trends"
       ],
@@ -256,11 +218,7 @@
       "parentId": 0,
       "title": "Top 3 Teklif Seç",
       "description": "Puanlamaya göre 3 ürün/teklif belirle.",
-      "options": [
-        "Aday 1",
-        "Aday 2",
-        "Aday 3"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -295,11 +253,7 @@
       "parentId": 0,
       "title": "İçerik Hedefi",
       "description": "İlk 30 gün için günlük 1 kısa video veya 1 yazı/2 gün hedefi koy.",
-      "options": [
-        "Shorts/Reels",
-        "Blog",
-        "Karışık"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -310,10 +264,7 @@
       "parentId": 0,
       "title": "Alan Adı/Link Seçimi",
       "description": "Bio-link için yöntem seç.",
-      "options": [
-        "Özel Alan (önerilir)",
-        "Shortener"
-      ],
+      "options": [],
       "links": [
         "Namecheap",
         "Cloudflare"
@@ -327,12 +278,7 @@
       "parentId": 20,
       "title": "Bio-Link/Bridge Tipi",
       "description": "Program politikasına uygun köprü sayfa tipi seç.",
-      "options": [
-        "Review",
-        "Karşılaştırma",
-        "Lead Magnet",
-        "Direkt Link"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -343,11 +289,7 @@
       "parentId": 21,
       "title": "Sayfa Aracı",
       "description": "Bridge sayfayı hangi araçla kuracaksın?",
-      "options": [
-        "Carrd",
-        "Notion",
-        "WordPress"
-      ],
+      "options": [],
       "links": [
         "Carrd",
         "Notion"
@@ -374,12 +316,7 @@
       "parentId": 0,
       "title": "Pixel/Analitik Seç",
       "description": "Piksel ve analitikleri seç ve ekle.",
-      "options": [
-        "TikTok Pixel",
-        "Meta Pixel",
-        "Google Tag",
-        "Yalnızca UTM"
-      ],
+      "options": [],
       "links": [
         "TikTok Pixel Helper"
       ],
@@ -405,11 +342,7 @@
       "parentId": 0,
       "title": "Link Kısaltma/Cloak",
       "description": "Yöntem seç ve kampanya bazlı kısa link üret.",
-      "options": [
-        "Bitly",
-        "Short.io",
-        "Kendi Alan"
-      ],
+      "options": [],
       "links": [
         "Bitly",
         "Short.io"
@@ -462,13 +395,7 @@
       "parentId": 0,
       "title": "İlk Kanalı Seç",
       "description": "Önce bir ana dağıtım kanalı seç.",
-      "options": [
-        "TikTok",
-        "Instagram",
-        "YouTube Shorts",
-        "Blog SEO",
-        "Email"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -538,10 +465,7 @@
       "parentId": 31,
       "title": "TikTok – Edit Akışı",
       "description": "CapCut/FinalCut; altyazı, pattern interrupt, logo/CTA.",
-      "options": [
-        "CapCut Mobil",
-        "CapCut Masaüstü"
-      ],
+      "options": [],
       "links": [
         "CapCut"
       ],
@@ -792,10 +716,7 @@
       "parentId": 30,
       "title": "Blog SEO – Kurulum",
       "description": "WordPress kur, hafif tema, SEO eklentisi.",
-      "options": [
-        "WordPress.com",
-        "Kendi Hosting"
-      ],
+      "options": [],
       "links": [
         "WordPress"
       ],
@@ -923,11 +844,7 @@
       "parentId": 0,
       "title": "Lead Magnet Seç (ops)",
       "description": "Hemen e-posta toplamak istersen içerik ver.",
-      "options": [
-        "Check-list",
-        "Mini e-kitap",
-        "E-posta kursu"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -938,11 +855,7 @@
       "parentId": 70,
       "title": "Form Aracı Seç",
       "description": "Form/otomasyon aracı.",
-      "options": [
-        "Mailchimp",
-        "Beehiiv",
-        "ConvertKit"
-      ],
+      "options": [],
       "links": [
         "Mailchimp"
       ],
@@ -1040,10 +953,7 @@
       "parentId": 0,
       "title": "Reklam Başlat? (Opsiyonel)",
       "description": "Erken hız için küçük bütçe test etmek ister misin?",
-      "options": [
-        "Hayır (Organik)",
-        "Evet (Test)"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -1054,11 +964,7 @@
       "parentId": 80,
       "title": "Reklam Platformu Seç",
       "description": "İlk test için platform seç.",
-      "options": [
-        "TikTok Ads",
-        "Meta Ads",
-        "Google Ads"
-      ],
+      "options": [],
       "links": [
         "TikTok Ads",
         "Meta Ads"

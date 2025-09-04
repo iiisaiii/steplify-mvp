@@ -6,13 +6,7 @@
       "parentId": 0,
       "title": "Alan Seç",
       "description": "Hangi alanda hizmet vereceksin?",
-      "options": [
-        "Yazılım",
-        "Tasarım",
-        "İçerik-SEO",
-        "NoCode",
-        "Veri/AI"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -24,55 +18,26 @@
       "title": "Platform Seç",
       "description": "Müşteriyi nereden bulacaksın?",
       "options": [
-        "Upwork",
-        "Fiverr",
-        "LinkedIn",
-        "Soğuk E-posta"
+        "Upwork=info: Proje bazlı iş ilanları",
+        "pros: Büyük bütçeli işler",
+        "Güvenli escrow",
+        "cons: Rekabet ve komisyon",
+        "Teklif yazımı kritik",
+        "Fiverr=info: Paketlenmiş hizmet ilanları",
+        "pros: Hızlı başlama",
+        "Paket sistemi netlik sağlar",
+        "cons: Fiyat rekabeti yüksek",
+        "Komisyon",
+        "LinkedIn=info: İçerik + DM ile inbound/outbound",
+        "pros: Otorite ve network",
+        "cons: Süreklilik/kişisel marka gerekir",
+        "Soğuk E-posta=info: Hedefli listeye ulaşma",
+        "pros: Ölçeklenebilir",
+        "cons: Alan uyumu/warmup/engelleme riskleri"
       ],
       "links": [],
       "visibleIf": "",
-      "optionDetails": {
-        "Upwork": {
-          "info": "Proje bazlı iş ilanları",
-          "pros": [
-            "Büyük bütçeli işler",
-            "Güvenli escrow"
-          ],
-          "cons": [
-            "Rekabet ve komisyon",
-            "Teklif yazımı kritik"
-          ]
-        },
-        "Fiverr": {
-          "info": "Paketlenmiş hizmet ilanları",
-          "pros": [
-            "Hızlı başlama",
-            "Paket sistemi netlik sağlar"
-          ],
-          "cons": [
-            "Fiyat rekabeti yüksek",
-            "Komisyon"
-          ]
-        },
-        "LinkedIn": {
-          "info": "İçerik + DM ile inbound/outbound",
-          "pros": [
-            "Otorite ve network"
-          ],
-          "cons": [
-            "Süreklilik/kişisel marka gerekir"
-          ]
-        },
-        "Soğuk E-posta": {
-          "info": "Hedefli listeye ulaşma",
-          "pros": [
-            "Ölçeklenebilir"
-          ],
-          "cons": [
-            "Alan uyumu/warmup/engelleme riskleri"
-          ]
-        }
-      },
+      "optionDetails": {},
       "glossary": {}
     },
     {
@@ -80,10 +45,7 @@
       "parentId": 0,
       "title": "Pazar",
       "description": "Öncelikli çalışacağın pazar.",
-      "options": [
-        "Global",
-        "Türkiye"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -136,13 +98,7 @@
       "parentId": 0,
       "title": "Ödeme Altyapısı",
       "description": "Global/TR’ye göre ödeme yöntemi.",
-      "options": [
-        "Wise",
-        "Payoneer",
-        "Stripe",
-        "PayPal",
-        "Havale"
-      ],
+      "options": [],
       "links": [
         "Wise",
         "Payoneer",
@@ -157,11 +113,7 @@
       "parentId": 0,
       "title": "Takvim/Randevu",
       "description": "Toplantılar için takvim ve rezervasyon linki.",
-      "options": [
-        "Calendly",
-        "SavvyCal",
-        "Google Calendar"
-      ],
+      "options": [],
       "links": [
         "Calendly",
         "Google Calendar"
@@ -175,11 +127,7 @@
       "parentId": 0,
       "title": "CRM & Pipeline",
       "description": "Aday müşteri → teklif → kazan/kaybet kanbanı.",
-      "options": [
-        "Notion",
-        "Trello",
-        "HubSpot"
-      ],
+      "options": [],
       "links": [
         "Notion",
         "Trello",
@@ -194,11 +142,7 @@
       "parentId": 0,
       "title": "Zaman Takibi & Faturalama",
       "description": "Takip ve fatura/irsaliye araçları.",
-      "options": [
-        "Clockify",
-        "Toggl",
-        "Paraşüt"
-      ],
+      "options": [],
       "links": [
         "Clockify",
         "Paraşüt"
@@ -212,11 +156,7 @@
       "parentId": 0,
       "title": "Paketleme Modeli",
       "description": "Hizmeti nasıl paketleyeceksin?",
-      "options": [
-        "Proje Bazlı",
-        "Saatlik",
-        "Ürünleştirilmiş Paket"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -326,12 +266,7 @@
       "parentId": 1,
       "title": "Yazılım: Alt Alan",
       "description": "Odak alanını seç.",
-      "options": [
-        "Web App (JS/TS)",
-        "Backend (Python/Node)",
-        "WordPress/Woo",
-        "Otomasyon/Bot"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Yazılım",
       "optionDetails": {},
@@ -431,12 +366,7 @@
       "parentId": 1,
       "title": "Tasarım: Alt Alan",
       "description": "Odak alanını seç.",
-      "options": [
-        "UI/UX",
-        "Web Tasarım",
-        "Marka/Logo",
-        "Dashboard/Design System"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Tasarım",
       "optionDetails": {},
@@ -537,12 +467,7 @@
       "parentId": 1,
       "title": "İçerik-SEO: Hizmet Tipi",
       "description": "Odak servisi seç.",
-      "options": [
-        "Blog Paketi",
-        "Teknik SEO",
-        "İçerik Stratejisi",
-        "Site İçi Optimizasyon"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=İçerik-SEO",
       "optionDetails": {},
@@ -629,12 +554,7 @@
       "parentId": 1,
       "title": "NoCode: Platform",
       "description": "Seç ve odaklan.",
-      "options": [
-        "Webflow",
-        "Bubble",
-        "Glide",
-        "Airtable + Automations"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=NoCode",
       "optionDetails": {},
@@ -710,12 +630,7 @@
       "parentId": 1,
       "title": "Veri/AI: Hizmet Tipi",
       "description": "Odak servisi seç.",
-      "options": [
-        "Dashboard/BI",
-        "Veri Toplama (Scrape)",
-        "ETL/Automation",
-        "LLM/Chatbot POC"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Veri/AI",
       "optionDetails": {},
@@ -813,11 +728,7 @@
       "parentId": 0,
       "title": "Paket Tasarımı",
       "description": "Basic/Standard/Premium kapsam ve teslim süreleri.",
-      "options": [
-        "Basic",
-        "Standard",
-        "Premium"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -1159,12 +1070,7 @@
       "parentId": 2,
       "title": "Soğuk E-posta: Liste",
       "description": "ICP’ye göre liste çıkar.",
-      "options": [
-        "Hunter",
-        "Apollo",
-        "Clay",
-        "Manual"
-      ],
+      "options": [],
       "links": [
         "Hunter",
         "Apollo"
@@ -1178,11 +1084,7 @@
       "parentId": 2,
       "title": "Soğuk E-posta: Araç",
       "description": "Sequence/otomasyon aracı seç.",
-      "options": [
-        "Instantly",
-        "Lemlist",
-        "Mailshake"
-      ],
+      "options": [],
       "links": [
         "Instantly",
         "Lemlist"

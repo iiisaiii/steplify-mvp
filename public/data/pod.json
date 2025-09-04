@@ -6,11 +6,7 @@
       "parentId": 0,
       "title": "Platform Seç",
       "description": "Nerede satış yapacaksın?",
-      "options": [
-        "Etsy",
-        "Amazon Merch",
-        "Shopify"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -21,11 +17,7 @@
       "parentId": 0,
       "title": "Tasarım Yöntemi",
       "description": "Tasarımı nasıl üreteceksin?",
-      "options": [
-        "Kendim Tasarlarım",
-        "Freelancer",
-        "AI"
-      ],
+      "options": [],
       "links": [
         "Figma",
         "Photoshop",
@@ -41,9 +33,18 @@
       "title": "Fulfillment Sağlayıcı",
       "description": "POD tedarikçisi seç.",
       "options": [
-        "Printify",
-        "Printful",
-        "Gelato"
+        "Printify=info: Çoklu üretici ağıyla fiyat/kalite kıyas",
+        "pros: Uygun maliyet seçenekleri",
+        "Çok üretici/ülke alternatifi",
+        "cons: Kalite tutarlılığı üreticiye göre değişebilir",
+        "Printful=info: Kendi üretim ağı",
+        "kalite ve lojistik üst seviye",
+        "pros: Yüksek kalite kontrol",
+        "Hızlı fulfillment",
+        "cons: Biraz daha pahalı olabilir",
+        "Gelato=info: Dünya çapı yerel üretim",
+        "pros: Yerel baskı → hızlı teslim/az gümrük",
+        "cons: Ürün yelpazesi daha sınırlı olabilir"
       ],
       "links": [
         "Printify",
@@ -51,37 +52,7 @@
         "Gelato"
       ],
       "visibleIf": "",
-      "optionDetails": {
-        "Printify": {
-          "info": "Çoklu üretici ağıyla fiyat/kalite kıyas",
-          "pros": [
-            "Uygun maliyet seçenekleri",
-            "Çok üretici/ülke alternatifi"
-          ],
-          "cons": [
-            "Kalite tutarlılığı üreticiye göre değişebilir"
-          ]
-        },
-        "Printful": {
-          "info": "Kendi üretim ağı; kalite ve lojistik üst seviye",
-          "pros": [
-            "Yüksek kalite kontrol",
-            "Hızlı fulfillment"
-          ],
-          "cons": [
-            "Biraz daha pahalı olabilir"
-          ]
-        },
-        "Gelato": {
-          "info": "Dünya çapı yerel üretim",
-          "pros": [
-            "Yerel baskı → hızlı teslim/az gümrük"
-          ],
-          "cons": [
-            "Ürün yelpazesi daha sınırlı olabilir"
-          ]
-        }
-      },
+      "optionDetails": {},
       "glossary": {
         "Mockup": "Ürünün görsel sunumu; Fulfillment: Üretim ve kargolama süreci; Lead Time: Üretim+teslimat süresi"
       }
@@ -91,10 +62,7 @@
       "parentId": 0,
       "title": "Hedef Pazar",
       "description": "Pazarı seç (fiyat/kargo buna göre).",
-      "options": [
-        "Global",
-        "Türkiye"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -157,11 +125,7 @@
       "parentId": 0,
       "title": "İzleme Standardı",
       "description": "UTM standardı + kısa link yöntemi.",
-      "options": [
-        "Bitly",
-        "Short.io",
-        "Kendi Alan"
-      ],
+      "options": [],
       "links": [
         "Bitly",
         "Short.io"
@@ -175,14 +139,7 @@
       "parentId": 0,
       "title": "Ürün Türü Seç",
       "description": "Başlangıç ürününü seç.",
-      "options": [
-        "T-Shirt",
-        "Kupa",
-        "Sweatshirt",
-        "Hoodie",
-        "Poster",
-        "Tote"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -228,11 +185,7 @@
       "parentId": 20,
       "title": "Etsy – POD Entegrasyon",
       "description": "Printify/Printful/Gelato bağla.",
-      "options": [
-        "Printify",
-        "Printful",
-        "Gelato"
-      ],
+      "options": [],
       "links": [
         "Printify",
         "Printful"
@@ -430,11 +383,7 @@
       "parentId": 40,
       "title": "Shopify – Ödeme & Vergi",
       "description": "TR için iyzico/PayTR; KDV.",
-      "options": [
-        "iyzico",
-        "PayTR",
-        "Stripe"
-      ],
+      "options": [],
       "links": [
         "iyzico",
         "PayTR"
@@ -472,11 +421,7 @@
       "parentId": 40,
       "title": "Shopify – POD Entegrasyon",
       "description": "Printify/Printful/Gelato app’i ekle.",
-      "options": [
-        "Printify",
-        "Printful",
-        "Gelato"
-      ],
+      "options": [],
       "links": [
         "Shopify App Store"
       ],
@@ -524,14 +469,7 @@
       "parentId": 0,
       "title": "Niş Seçimi (POD)",
       "description": "Farklılaşabileceğin alt niş.",
-      "options": [
-        "Meslek",
-        "Hobi",
-        "Spor",
-        "Mizah",
-        "Hayvan",
-        "Fan"
-      ],
+      "options": [],
       "links": [
         "Google Trends"
       ],
@@ -611,11 +549,7 @@
       "parentId": 2,
       "title": "Kendim: Tasarım Yığını",
       "description": "Araç ve çalışma presetleri.",
-      "options": [
-        "Figma",
-        "Photoshop",
-        "Illustrator"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:2=Kendim Tasarlarım",
       "optionDetails": {},
@@ -648,11 +582,7 @@
       "parentId": 2,
       "title": "Freelancer: Platform",
       "description": "Çalışacağın platformu seç.",
-      "options": [
-        "Upwork",
-        "Fiverr",
-        "Behance"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:2=Freelancer",
       "optionDetails": {},
@@ -700,11 +630,7 @@
       "parentId": 2,
       "title": "AI: Upscale & Temizleme",
       "description": "4x upscale; arka plan temizliği.",
-      "options": [
-        "Topaz",
-        "Gigapixel",
-        "Remover"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:2=AI",
       "optionDetails": {},
@@ -715,9 +641,7 @@
       "parentId": 2,
       "title": "AI: Vektörleştirme",
       "description": "İç hatlar için vektör (opsiyon).",
-      "options": [
-        "Illustrator Image Trace"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:2=AI",
       "optionDetails": {},
@@ -1014,15 +938,7 @@
       "parentId": 0,
       "title": "Trafik Kanalı Seç",
       "description": "İlk trafik kaynağını seç.",
-      "options": [
-        "Pinterest",
-        "TikTok",
-        "Instagram",
-        "Etsy Ads",
-        "Meta Ads",
-        "Google Ads",
-        "Organik SEO"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},

@@ -6,12 +6,7 @@
       "parentId": 0,
       "title": "Platform Seç",
       "description": "Hangi platformda mağaza açılacak?",
-      "options": [
-        "Shopify",
-        "Etsy",
-        "Amazon",
-        "Pazaryeri (TR)"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -22,12 +17,7 @@
       "parentId": 0,
       "title": "Tedarikçi Modeli Seç",
       "description": "Ürün tedarik yöntemi.",
-      "options": [
-        "AliExpress",
-        "Türkiye Tedarikçi",
-        "Print on Demand",
-        "Private Label"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -38,10 +28,7 @@
       "parentId": 0,
       "title": "Hedef Pazar",
       "description": "Öncelikli pazar.",
-      "options": [
-        "Global",
-        "Türkiye"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -93,12 +80,7 @@
       "parentId": 0,
       "title": "İzleme & Analitik Seç",
       "description": "Piksel/analitik aracını seç.",
-      "options": [
-        "TikTok Pixel",
-        "Meta Pixel",
-        "Google Tag (GA4)",
-        "Sadece UTM"
-      ],
+      "options": [],
       "links": [
         "TikTok Pixel Helper",
         "Tag Assistant"
@@ -204,11 +186,7 @@
       "parentId": 20,
       "title": "Shopify – Ödemeler",
       "description": "Ödeme sağlayıcı: TR’de iyzico/PayTR.",
-      "options": [
-        "iyzico",
-        "PayTR",
-        "Stripe"
-      ],
+      "options": [],
       "links": [
         "iyzico",
         "PayTR"
@@ -260,12 +238,7 @@
       "parentId": 20,
       "title": "Shopify – Gerekli Uygulamalar",
       "description": "Sayfa/yorum/e-posta/popup uygulamaları seç.",
-      "options": [
-        "PageFly",
-        "Judge.me",
-        "Klaviyo",
-        "Lucky Orange"
-      ],
+      "options": [],
       "links": [
         "PageFly",
         "Judge.me",
@@ -293,11 +266,7 @@
       "parentId": 20,
       "title": "Shopify – Entegrasyon (TR Tedarikçi)",
       "description": "E-fatura/kargo/ERP entegrasyonu.",
-      "options": [
-        "Entegra",
-        "Dopigo",
-        "StockMount"
-      ],
+      "options": [],
       "links": [
         "Entegra",
         "Dopigo"
@@ -311,11 +280,7 @@
       "parentId": 20,
       "title": "Shopify – POD Entegrasyon",
       "description": "POD sağlayıcını bağla.",
-      "options": [
-        "Printify",
-        "Printful",
-        "Gelato"
-      ],
+      "options": [],
       "links": [
         "Printify",
         "Printful"
@@ -377,11 +342,7 @@
       "parentId": 40,
       "title": "Etsy – POD Entegrasyon",
       "description": "Printify/Printful’ı bağla.",
-      "options": [
-        "Printify",
-        "Printful",
-        "Gelato"
-      ],
+      "options": [],
       "links": [
         "Printify",
         "Printful"
@@ -406,10 +367,7 @@
       "parentId": 0,
       "title": "Amazon – Satıcı Hesabı",
       "description": "Individual/Professional seç; doğrulama.",
-      "options": [
-        "Individual",
-        "Professional"
-      ],
+      "options": [],
       "links": [
         "Amazon Seller Central"
       ],
@@ -422,10 +380,7 @@
       "parentId": 50,
       "title": "Amazon – FBA/FBM Seçimi",
       "description": "Fulfillment modelini seç.",
-      "options": [
-        "FBA",
-        "FBM"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Amazon",
       "optionDetails": {},
@@ -493,11 +448,7 @@
       "parentId": 0,
       "title": "Pazaryeri (TR) – Hesaplar",
       "description": "Trendyol/Hepsiburada/n11 satıcı hesaplarını aç.",
-      "options": [
-        "Trendyol",
-        "Hepsiburada",
-        "n11"
-      ],
+      "options": [],
       "links": [
         "Satıcı Merkezi"
       ],
@@ -521,12 +472,7 @@
       "parentId": 60,
       "title": "Pazaryeri – Entegrasyon",
       "description": "Entegrasyon yazılımını bağla.",
-      "options": [
-        "Entegra",
-        "Dopigo",
-        "StockMount",
-        "İdeasoft"
-      ],
+      "options": [],
       "links": [
         "Entegratörler"
       ],
@@ -539,12 +485,7 @@
       "parentId": 60,
       "title": "Pazaryeri – Kargo Anlaşması",
       "description": "Yurtiçi/Aras/PTS anlaşmaları.",
-      "options": [
-        "Yurtiçi",
-        "Aras",
-        "MNG",
-        "Sürat"
-      ],
+      "options": [],
       "links": [
         "Kargo Firmaları"
       ],
@@ -608,12 +549,7 @@
       "parentId": 2,
       "title": "POD Ürün Seçimi",
       "description": "T-shirt, kupa, sweatshirt vb. başlat.",
-      "options": [
-        "T-Shirt",
-        "Kupa",
-        "Sweatshirt",
-        "Poster"
-      ],
+      "options": [],
       "links": [
         "Printify",
         "Printful"
@@ -654,11 +590,7 @@
       "parentId": 0,
       "title": "Ürün Karar",
       "description": "Top 3 ürünü belirle.",
-      "options": [
-        "Aday 1",
-        "Aday 2",
-        "Aday 3"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -946,57 +878,27 @@
       "title": "Trafik Kanalı Seç",
       "description": "İlk trafik kaynağını seç.",
       "options": [
-        "TikTok",
-        "Instagram",
-        "Influencer",
-        "Ads",
-        "SEO"
+        "TikTok=info: Kısa video ile hızlı test",
+        "pros: Düşük kreatif maliyeti",
+        "Viral potansiyel",
+        "cons: Tutarlılık gerek",
+        "Trend ömrü kısa",
+        "Meta Ads=info: FB/IG reklamları",
+        "pros: Geniş hedefleme",
+        "Kreatif çeşitliliği",
+        "cons: CPM dalgalı",
+        "Öğrenme süresi gerek",
+        "Google Ads=info: Alışveriş/aranan niyete dayalı",
+        "pros: Satın almaya yakın kitle",
+        "cons: Feed/SEO temizliği şart",
+        "Rekabet pahalı olabilir",
+        "Organik SEO=info: İçerik ve ürün sayfası optimizasyonu",
+        "pros: Uzun vadeli ücretsiz trafik",
+        "cons: Etki görmek zaman alır"
       ],
       "links": [],
       "visibleIf": "",
-      "optionDetails": {
-        "TikTok": {
-          "info": "Kısa video ile hızlı test",
-          "pros": [
-            "Düşük kreatif maliyeti",
-            "Viral potansiyel"
-          ],
-          "cons": [
-            "Tutarlılık gerek",
-            "Trend ömrü kısa"
-          ]
-        },
-        "Meta Ads": {
-          "info": "FB/IG reklamları",
-          "pros": [
-            "Geniş hedefleme",
-            "Kreatif çeşitliliği"
-          ],
-          "cons": [
-            "CPM dalgalı",
-            "Öğrenme süresi gerek"
-          ]
-        },
-        "Google Ads": {
-          "info": "Alışveriş/aranan niyete dayalı",
-          "pros": [
-            "Satın almaya yakın kitle"
-          ],
-          "cons": [
-            "Feed/SEO temizliği şart",
-            "Rekabet pahalı olabilir"
-          ]
-        },
-        "Organik SEO": {
-          "info": "İçerik ve ürün sayfası optimizasyonu",
-          "pros": [
-            "Uzun vadeli ücretsiz trafik"
-          ],
-          "cons": [
-            "Etki görmek zaman alır"
-          ]
-        }
-      },
+      "optionDetails": {},
       "glossary": {}
     },
     {
@@ -1030,10 +932,7 @@
       "parentId": 130,
       "title": "TikTok – Çekim & Edit",
       "description": "CapCut ile altyazı, pattern interrupt.",
-      "options": [
-        "CapCut Mobil",
-        "CapCut Masaüstü"
-      ],
+      "options": [],
       "links": [
         "CapCut"
       ],
@@ -1106,11 +1005,7 @@
       "parentId": 130,
       "title": "Ads – Platform",
       "description": "İlk test için platform seç.",
-      "options": [
-        "TikTok Ads",
-        "Meta Ads",
-        "Google Ads"
-      ],
+      "options": [],
       "links": [
         "TikTok Ads",
         "Meta Ads",

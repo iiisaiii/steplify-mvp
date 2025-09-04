@@ -7,34 +7,19 @@
       "title": "Kanal Tipi Seç",
       "description": "Yüzünü göstererek mi yoksa yüzsüz (voiceover/AI) mi içerik üreteceksin?",
       "options": [
-        "Yüzlü",
-        "Yüzsüz"
+        "Yüzlü=info: Kamerada yüzün görünür",
+        "pros: Güven/bağ kurma yüksek",
+        "Kişisel marka büyür",
+        "cons: Çekim/ışık/özgüven gerektirir",
+        "Yüzsüz=info: Voiceover/ekran kaydı/AI avatar ile üretim",
+        "pros: Çekim/ışık derdi yok",
+        "Hızlı batch üretim",
+        "cons: Güven/bağ kurmak daha zor",
+        "Avatar/TTS fazla olursa soğuk gelebilir"
       ],
       "links": [],
       "visibleIf": "",
-      "optionDetails": {
-        "Yüzlü": {
-          "info": "Kamerada yüzün görünür",
-          "pros": [
-            "Güven/bağ kurma yüksek",
-            "Kişisel marka büyür"
-          ],
-          "cons": [
-            "Çekim/ışık/özgüven gerektirir"
-          ]
-        },
-        "Yüzsüz": {
-          "info": "Voiceover/ekran kaydı/AI avatar ile üretim",
-          "pros": [
-            "Çekim/ışık derdi yok",
-            "Hızlı batch üretim"
-          ],
-          "cons": [
-            "Güven/bağ kurmak daha zor",
-            "Avatar/TTS fazla olursa soğuk gelebilir"
-          ]
-        }
-      },
+      "optionDetails": {},
       "glossary": {
         "TTS": "Metinden konuşma; B-roll: Ara görüntüler; LUFS: Ses yüksekliği standardı"
       }
@@ -44,15 +29,7 @@
       "parentId": 0,
       "title": "Niş Seç",
       "description": "Uzun vadede sürdürebileceğin nişi seç.",
-      "options": [
-        "Eğitim",
-        "Eğlence",
-        "Finans",
-        "Teknoloji",
-        "Sağlık",
-        "Fitness",
-        "Kişisel Gelişim"
-      ],
+      "options": [],
       "links": [
         "Google Trends",
         "AnswerThePublic"
@@ -66,10 +43,7 @@
       "parentId": 0,
       "title": "Dil & Pazar",
       "description": "İçerik dili ve hedef pazar.",
-      "options": [
-        "TR",
-        "EN (Global)"
-      ],
+      "options": [],
       "links": [
         "YouTube Demographics"
       ],
@@ -95,11 +69,7 @@
       "parentId": 0,
       "title": "Format Seç",
       "description": "İçerik formatı.",
-      "options": [
-        "Shorts",
-        "Long-form",
-        "İkisi"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -163,10 +133,7 @@
       "parentId": 1,
       "title": "Yüzlü: Donanım Seç",
       "description": "Bütçe ve akışa uygun donanım yolu.",
-      "options": [
-        "Telefon",
-        "Kamera"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Yüzlü",
       "optionDetails": {},
@@ -240,10 +207,7 @@
       "parentId": 1,
       "title": "Yüzlü: Çekim Metodu",
       "description": "Okuma tarzı seçimi.",
-      "options": [
-        "Teleprompter",
-        "Serbest Konuşma"
-      ],
+      "options": [],
       "links": [
         "PromptSmart",
         "BigVu"
@@ -257,12 +221,7 @@
       "parentId": 1,
       "title": "Yüzsüz: Üretim Yığını",
       "description": "Temel yazılım/yöntem seç.",
-      "options": [
-        "CapCut Masaüstü",
-        "Descript",
-        "Pictory",
-        "HeyGen"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Yüzsüz",
       "optionDetails": {},
@@ -273,10 +232,7 @@
       "parentId": 1,
       "title": "Yüzsüz: Ses Seçimi",
       "description": "Voiceover yöntemi.",
-      "options": [
-        "Kendi Sesim",
-        "TTS"
-      ],
+      "options": [],
       "links": [
         "ElevenLabs",
         "Descript"
@@ -290,10 +246,7 @@
       "parentId": 1,
       "title": "Yüzsüz: Avatar",
       "description": "Kamera yerine AI avatar kullanımı.",
-      "options": [
-        "Yok",
-        "AI Avatar"
-      ],
+      "options": [],
       "links": [
         "HeyGen",
         "D-ID"
@@ -453,12 +406,7 @@
       "parentId": 5,
       "title": "Long-form: Format",
       "description": "Ders/Case/Reaction/Interview’dan 1-2 format seç.",
-      "options": [
-        "Ders",
-        "Case Study",
-        "Reaction",
-        "Röportaj"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:5=Long-form|İkisi",
       "optionDetails": {},
@@ -600,11 +548,7 @@
       "parentId": 0,
       "title": "Link Altyapısı",
       "description": "Bio/landing/affiliate linkleri için yöntem seç.",
-      "options": [
-        "Linktree/Beacons",
-        "Kendi Alan + Carrd",
-        "Sadece Video Açıklama"
-      ],
+      "options": [],
       "links": [
         "Beacons",
         "Carrd"
@@ -618,11 +562,7 @@
       "parentId": 60,
       "title": "UTM & Kısaltıcı",
       "description": "Kısa link + UTM standardı oluştur.",
-      "options": [
-        "Bitly",
-        "Short.io",
-        "Kendi Alan"
-      ],
+      "options": [],
       "links": [
         "Bitly",
         "Short.io"
@@ -636,10 +576,7 @@
       "parentId": 0,
       "title": "Pixel/Analytics",
       "description": "Google Tag (GA4) veya sadece UTM ile takip.",
-      "options": [
-        "GA4",
-        "Yalnızca UTM"
-      ],
+      "options": [],
       "links": [
         "GA4",
         "Tag Manager"
@@ -701,12 +638,7 @@
       "parentId": 0,
       "title": "Dağıtım Seç",
       "description": "Çapraz paylaşım yapacak mısın?",
-      "options": [
-        "Reels",
-        "TikTok",
-        "LinkedIn",
-        "Yok"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -756,12 +688,7 @@
       "parentId": 0,
       "title": "Monetizasyon Modeli",
       "description": "Gelir kaynağını seç.",
-      "options": [
-        "YouTube Partner",
-        "Affiliate",
-        "Sponsorluk",
-        "Ürün"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -798,12 +725,7 @@
       "parentId": 80,
       "title": "Affiliate: Program Seç",
       "description": "Alanına uygun programı seç.",
-      "options": [
-        "Amazon Associates",
-        "ClickBank",
-        "Digistore24",
-        "SaaS Partner"
-      ],
+      "options": [],
       "links": [
         "Amazon",
         "ClickBank"
@@ -879,11 +801,7 @@
       "parentId": 80,
       "title": "Ürün: Karar",
       "description": "Merch/kurs/dijital ürün seç.",
-      "options": [
-        "Merch",
-        "Kurs",
-        "Dijital Ürün"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:80=Ürün",
       "optionDetails": {},

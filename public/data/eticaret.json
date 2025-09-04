@@ -6,11 +6,7 @@
       "parentId": 0,
       "title": "Model Seç",
       "description": "İş modelini belirle (dallar buna göre açılır).",
-      "options": [
-        "D2C (Kendi Marka)",
-        "Arbitraj",
-        "Pazaryeri"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -21,10 +17,7 @@
       "parentId": 0,
       "title": "Hedef Pazar",
       "description": "Operasyon ve ödeme/kargo pazarına göre değişir.",
-      "options": [
-        "Global",
-        "Türkiye"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -76,12 +69,7 @@
       "parentId": 0,
       "title": "İzleme Aracı Seç",
       "description": "Piksel/analitik tercihini seç.",
-      "options": [
-        "TikTok Pixel",
-        "Meta Pixel",
-        "Google Tag (GA4)",
-        "Sadece UTM"
-      ],
+      "options": [],
       "links": [
         "TikTok Pixel Helper",
         "Tag Assistant"
@@ -135,37 +123,22 @@
       "title": "D2C: Platform Seç",
       "description": "Kendi siteni hangi altyapıyla kuracaksın?",
       "options": [
-        "Shopify",
-        "WooCommerce"
+        "Shopify=info: Barındırılan e-ticaret altyapısı (barındırma/güvenlik/ödeme senin yerine yönetilir)",
+        "pros: Kurulum çok hızlı",
+        "Geniş app ekosistemi",
+        "Güvenlik/uptime senin derdin değil",
+        "cons: Aylık ücret + app maliyetleri artabilir",
+        "Derin özelleştirme sınırlı",
+        "WooCommerce=info: WordPress üzerinde çalışan açık kaynak mağaza eklentisi",
+        "pros: Tam teknik kontrol ve esneklik",
+        "Eklenti/tema özgürlüğü",
+        "Barındırma maliyeti düşük başlayabilir",
+        "cons: Teknik bakım/backup/güvenlik sorumluluğu sende",
+        "Kurulum/optimizasyon daha uzun"
       ],
       "links": [],
       "visibleIf": "step:1=D2C (Kendi Marka)",
-      "optionDetails": {
-        "Shopify": {
-          "info": "Barındırılan e-ticaret altyapısı (barındırma/güvenlik/ödeme senin yerine yönetilir)",
-          "pros": [
-            "Kurulum çok hızlı",
-            "Geniş app ekosistemi",
-            "Güvenlik/uptime senin derdin değil"
-          ],
-          "cons": [
-            "Aylık ücret + app maliyetleri artabilir",
-            "Derin özelleştirme sınırlı"
-          ]
-        },
-        "WooCommerce": {
-          "info": "WordPress üzerinde çalışan açık kaynak mağaza eklentisi",
-          "pros": [
-            "Tam teknik kontrol ve esneklik",
-            "Eklenti/tema özgürlüğü",
-            "Barındırma maliyeti düşük başlayabilir"
-          ],
-          "cons": [
-            "Teknik bakım/backup/güvenlik sorumluluğu sende",
-            "Kurulum/optimizasyon daha uzun"
-          ]
-        }
-      },
+      "optionDetails": {},
       "glossary": {
         "Shopify": "Barındırılan e-ticaret platformu; WooCommerce: WordPress eklentisi ile kendi mağazan; GA4: Google Analytics 4; UTM: Kampanya etiketleme standardı"
       }
@@ -227,11 +200,7 @@
       "parentId": 11,
       "title": "Shopify – Ödeme Sağlayıcı",
       "description": "Ülkeye göre sağlayıcıyı bağla.",
-      "options": [
-        "iyzico",
-        "PayTR",
-        "Stripe"
-      ],
+      "options": [],
       "links": [
         "iyzico",
         "PayTR",
@@ -285,12 +254,7 @@
       "parentId": 11,
       "title": "Shopify – Uygulamalar",
       "description": "Sayfa/yorum/e-posta/davranış analizi.",
-      "options": [
-        "PageFly",
-        "Judge.me",
-        "Klaviyo",
-        "Lucky Orange"
-      ],
+      "options": [],
       "links": [
         "PageFly",
         "Judge.me",
@@ -423,11 +387,7 @@
       "parentId": 1,
       "title": "D2C: Tedarik Modeli",
       "description": "Ürünü nasıl temin edeceksin?",
-      "options": [
-        "Kendi Üretim",
-        "Toptan (Wholesale)",
-        "Özel Etiket (Private Label)"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
@@ -548,11 +508,7 @@
       "parentId": 1,
       "title": "Arbitraj Tür Seç",
       "description": "Arbitraj yöntemini seç.",
-      "options": [
-        "Retail Arbitraj",
-        "Online Arbitraj",
-        "Wholesale (B2B)"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
@@ -563,12 +519,7 @@
       "parentId": 40,
       "title": "Pazar Seç (Arbitraj)",
       "description": "Hangi pazar?",
-      "options": [
-        "Amazon TR",
-        "Trendyol",
-        "Hepsiburada",
-        "n11"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
@@ -592,12 +543,7 @@
       "parentId": 40,
       "title": "Ürün Taraması – Araçlar",
       "description": "Barkod tarama/kârlılık hesap.",
-      "options": [
-        "SellerAmp",
-        "Keepa",
-        "BuyBotPro",
-        "Yok"
-      ],
+      "options": [],
       "links": [
         "SellerAmp",
         "Keepa"
@@ -687,12 +633,7 @@
       "parentId": 1,
       "title": "Pazaryeri Seç",
       "description": "TR pazaryeri kurulum dalı.",
-      "options": [
-        "Trendyol",
-        "Hepsiburada",
-        "n11",
-        "Amazon TR"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
@@ -716,12 +657,7 @@
       "parentId": 50,
       "title": "Entegrasyon Yazılımı",
       "description": "Ürün/stok/sipariş senkronu.",
-      "options": [
-        "Entegra",
-        "Dopigo",
-        "StockMount",
-        "İdeasoft"
-      ],
+      "options": [],
       "links": [
         "Entegratörler"
       ],
@@ -734,13 +670,7 @@
       "parentId": 50,
       "title": "Kargo Anlaşması",
       "description": "Firmalarla gönderi anlaşması.",
-      "options": [
-        "Yurtiçi",
-        "Aras",
-        "MNG",
-        "Sürat",
-        "PTS"
-      ],
+      "options": [],
       "links": [
         "Kargo Firmaları"
       ],
@@ -753,11 +683,7 @@
       "parentId": 50,
       "title": "E-Fatura/E-İrsaliye",
       "description": "Özel entegratör veya GİB portal.",
-      "options": [
-        "Paraşüt",
-        "Logo",
-        "KolayBi’"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
@@ -854,11 +780,7 @@
       "parentId": 0,
       "title": "Top 3 Ürün Seç",
       "description": "3 ürünü shortlist yap.",
-      "options": [
-        "Aday 1",
-        "Aday 2",
-        "Aday 3"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -987,14 +909,7 @@
       "parentId": 0,
       "title": "Pazarlama Kanalı Seç",
       "description": "İlk trafik kaynağını seç.",
-      "options": [
-        "TikTok",
-        "Instagram",
-        "Google Ads",
-        "Influencer",
-        "Email",
-        "SEO"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "",
       "optionDetails": {},
@@ -1031,10 +946,7 @@
       "parentId": 80,
       "title": "TikTok – Çekim & Edit",
       "description": "Altyazı, pattern interrupt, kapak.",
-      "options": [
-        "CapCut Mobil",
-        "CapCut Masaüstü"
-      ],
+      "options": [],
       "links": [
         "CapCut"
       ],
@@ -1121,10 +1033,7 @@
       "parentId": 80,
       "title": "Email – Altyapı",
       "description": "Klaviyo/Shopify Email; pop-up ve segmentler.",
-      "options": [
-        "Klaviyo",
-        "Shopify Email"
-      ],
+      "options": [],
       "links": [
         "Klaviyo"
       ],
@@ -1296,11 +1205,7 @@
       "parentId": 1,
       "title": "Arbitraj: Repricer (ops)",
       "description": "Otomatik fiyatlandırma aracı.",
-      "options": [
-        "RepricerExpress",
-        "Seller Snap",
-        "Yok"
-      ],
+      "options": [],
       "links": [],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
