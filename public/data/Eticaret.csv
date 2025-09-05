@@ -1,126 +1,126 @@
 StepID,ParentID,Başlık,Açıklama,Seçenekler,Kaynak/Link,GörünürEğer,Seçenek Info,Seçenek Pros,Seçenek Cons,Terimler
-1,0,Model Seç,İş modelini belirle (dallar buna göre açılır).,"[D2C (Kendi Marka), Arbitraj, Pazaryeri]",-,,,,,
-2,0,Hedef Pazar,Operasyon ve ödeme/kargo pazarına göre değişir.,"[Global, Türkiye]",-,,,,,
-3,0,Marka Adı & Domain,"İsim düşün, domain kontrol et.",[-],"Namecheap, Google Domains",,,,,
-4,0,Şirket & Hukuk (Öneri),"Şirket, KVKK/Privacy, iade/mesafeli satış; şablonları doldur.",[-],Ticaret Bakanlığı Rehberleri,,,,,
-5,0,Çalışma Alanı & Klasör,Drive klasörleri + Notion görev tahtası.,[-],"Google Drive, Notion",,,,,
-6,0,İzleme Aracı Seç,Piksel/analitik tercihini seç.,"[TikTok Pixel, Meta Pixel, Google Tag (GA4), Sadece UTM]","TikTok Pixel Helper, Tag Assistant",,,,,
-7,0,UTM Standardı,utm_source/medium/campaign/content adlandırma.,[-],UTM Builder,,,,,
-8,0,Takip Sheet,"Ürün, trafik, maliyet, satış, marj tablosu.",[-],Google Sheets,,,,,
-9,0,Disclosure,İade/teslimat ve reklam/affiliate açıklamaları.,[-],FTC/AB Yönergeleri,,,,,
-,,,,,,,,,,
-10,1,D2C: Platform Seç,Kendi siteni hangi altyapıyla kuracaksın?,"[Shopify, WooCommerce]",-,step:1=D2C (Kendi Marka),,,,
-11,10,Shopify – Hesap Aç,Shopify hesabı oluştur.,[-],Shopify Help,step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-12,11,Shopify – Mağaza Ayarları,"Para birimi, bölge, saat dilimi.",[-],Shopify Admin,step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-13,11,Shopify – Tema,Dawn (ücretsiz) ile başla; logo/renk/font.,[-],Shopify Themes,step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-14,11,Shopify – Domain,Alan adını bağla; SSL aktif.,[-],Shopify Domains,step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-15,11,Shopify – Ödeme Sağlayıcı,Ülkeye göre sağlayıcıyı bağla.,"[iyzico, PayTR, Stripe]","iyzico, PayTR, Stripe",step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-16,11,Shopify – Vergi/KDV,Ayarları pazarına göre yap.,[-],Shopify Taxes,step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-17,11,Shopify – Kargo Profilleri,Zon/ülke bazlı ücret profilleri.,[-],Shopify Shipping,step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-18,11,Shopify – Zorunlu Sayfalar,İade/teslimat/gizlilik; Hakkımızda/İletişim.,[-],Shopify Policies,step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-19,11,Shopify – Uygulamalar,Sayfa/yorum/e-posta/davranış analizi.,"[PageFly, Judge.me, Klaviyo, Lucky Orange]","PageFly, Judge.me, Klaviyo",step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-20,11,Shopify – Pixel/GA4,"Kodu tema/gtm ile kur, test et.",[-],Tag Manager,step:1=D2C (Kendi Marka); step:10=Shopify,,,,
-,,,,,,,,,,
-21,10,Woo – Barındırma & Domain,"Hosting, domain, SSL.",[-],"Cloudways, Hostinger",step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,
-22,21,Woo – Kurulum & Tema,Astra/Blocksy; hafif builder.,[-],WordPress.org,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,
-23,21,Woo – Ödeme,Eklentiler: iyzico/PayTR/Stripe/PayPal.,[-],"iyzico Woo, PayTR Woo",step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,
-24,21,Woo – Kargo,Zone/weight rate; kargo plug-in.,[-],Woo Shipping,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,
-25,21,Woo – Vergi/KDV,KDV oranları ve fatura bilgileri.,[-],Woo Taxes,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,
-26,21,Woo – Sayfa & Menü,İade/gizlilik/SSS; ana menü-navigasyon.,[-],-,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,
-27,21,Woo – Eklenti Paketi,"SEO (RankMath), hız (WP Rocket), form (Fluent).",[-],"RankMath, WP Rocket",step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,
-28,21,Woo – Pixel/GA4,"GA4/Pixel, Tag Manager ile kur.",[-],Tag Manager,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,
-,,,,,,,,,,
-30,1,D2C: Tedarik Modeli,Ürünü nasıl temin edeceksin?,"[Kendi Üretim, Toptan (Wholesale), Özel Etiket (Private Label)]",-,step:1=D2C (Kendi Marka),,,,
-31,30,Kendi Üretim – Hazırlık,"Üretici, hammadde, kalite standartları.",[-],ISO/CE Rehberleri,step:30=Kendi Üretim,,,,
-32,30,Toptan – Tedarikçi Bul,Distribütör/wholesaler; fiyat/MOQ sözleşmesi.,[-],-,step:30=Toptan (Wholesale),,,,
-33,30,Private Label – Araştırma,"Alibaba/1688; marka tescil, kalıp/numune.",[-],"Alibaba, Trademarkia",step:30=Özel Etiket (Private Label),,,,
-34,30,Paketleme & Barkod,EAN/UPC; ambalaj & etiket yönetmeliği.,[-],GS1,step:1=D2C (Kendi Marka),,,,
-35,30,Fiyatlandırma Modeli,Maliyet + kargo + vergi + hedef marj.,[-],Google Sheets,step:1=D2C (Kendi Marka),,,,
-36,1,D2C: Ürün Foto & İçerik,"Stüdyo çekimi, boyut/renk; açıklama/FAQ.",[-],-,step:1=D2C (Kendi Marka),,,,
-37,1,D2C: Ürün Sayfası Şablonu,"USP, fayda bullet’ları, sosyal kanıt, güven rozetleri.",[-],PageFly/Elementor,step:1=D2C (Kendi Marka),,,,
-38,1,D2C: Stok & SKU,Yapı: Kategori-AltKategori-Ürün-Varyant; SKU kuralı.,[-],-,step:1=D2C (Kendi Marka),,,,
-39,1,D2C: Kargo & İade Metinleri,"Net kargo süresi, iade koşulları; müşteri güveni.",[-],-,step:1=D2C (Kendi Marka),,,,
-,,,,,,,,,,
-40,1,Arbitraj Tür Seç,Arbitraj yöntemini seç.,"[Retail Arbitraj, Online Arbitraj, Wholesale (B2B)]",-,step:1=Arbitraj,,,,
-41,40,Pazar Seç (Arbitraj),Hangi pazar?,"[Amazon TR, Trendyol, Hepsiburada, n11]",-,step:1=Arbitraj,,,,
-42,41,Hesap Aç & Doğrulama,"Gerekli evraklar, IBAN, vergi, fatura.",[-],Platform Yardım,step:1=Arbitraj,,,,
-43,40,Ürün Taraması – Araçlar,Barkod tarama/kârlılık hesap.,"[SellerAmp, Keepa, BuyBotPro, Yok]","SellerAmp, Keepa",step:1=Arbitraj,,,,
-44,40,Kısıtlama/Listing Kuralları,"Gated category, marka izinleri; paralel ithalat/garanti.",[-],Platform Policies,step:1=Arbitraj,,,,
-45,40,Kâr & Ücret Hesabı,"Komisyon, kargo, iade, vergi dahil net kâr.",[-],Sheets Şablonu,step:1=Arbitraj,,,,
-46,40,Paketleme & Barkod,"FNSKU/mağaza barkodu, kargo etiketi.",[-],GS1/Amazon,step:1=Arbitraj,,,,
-47,41,Listing Aç/Join,Eğer kendi listing değilse “join listing”; değilse yeni aç.,[-],Platform Docs,step:1=Arbitraj,,,,
-48,41,Kargo Süreçleri (FBM/FBA),Pazara göre FBM/FBA benzeri akış.,[-],-,step:1=Arbitraj,,,,
-49,41,Müşteri Destek SOP,Sık sorular ve iade politikası.,[-],Zendesk/Gorgias,step:1=Arbitraj,,,,
-,,,,,,,,,,
-50,1,Pazaryeri Seç,TR pazaryeri kurulum dalı.,"[Trendyol, Hepsiburada, n11, Amazon TR]",-,step:1=Pazaryeri,,,,
-51,50,Hesap Aç & Onay,Sözleşme/evrak/yetkili doğrulamaları.,[-],Satıcı Merkezi,step:1=Pazaryeri,,,,
-52,50,Entegrasyon Yazılımı,Ürün/stok/sipariş senkronu.,"[Entegra, Dopigo, StockMount, İdeasoft]",Entegratörler,step:1=Pazaryeri,,,,
-53,50,Kargo Anlaşması,Firmalarla gönderi anlaşması.,"[Yurtiçi, Aras, MNG, Sürat, PTS]",Kargo Firmaları,step:1=Pazaryeri,,,,
-54,50,E-Fatura/E-İrsaliye,Özel entegratör veya GİB portal.,"[Paraşüt, Logo, KolayBi’]",-,step:1=Pazaryeri,,,,
-55,50,Mağaza Ayarları,"Komisyon, iade, kargo şablonları, mağaza vitrini.",[-],-,step:1=Pazaryeri,,,,
-56,50,Kategori Kuralları,"Zorunlu alanlar, görsel boyutu, başlık formatı.",[-],Platform Docs,step:1=Pazaryeri,,,,
-57,50,Ürün Aktarım,Entegrasyon yazılımı ile toplu ürün yükle.,[-],Entegratörler,step:1=Pazaryeri,,,,
-58,50,Kampanya/Kupon Araçları,Platform içi kampanya/indirim araçları.,[-],-,step:1=Pazaryeri,,,,
-59,50,Müşteri Soruları & Puan,Yanıt süresi ve CSAT puanı hedefi.,[-],-,step:1=Pazaryeri,,,,
-,,,,,,,,,,
-60,0,Ürün Araştırma – Genel,"Talep, rekabet, kârlılık; 10 aday çıkar.",[-],"TikTok Creative Center, Amazon Movers",,,,,
-61,0,Puanlama Matrisi,Kriter puanlama: Talep × Marj × Rekabet × Tedarik Riski.,[-],Sheets Şablonu,,,,,
-62,0,Top 3 Ürün Seç,3 ürünü shortlist yap.,"[Aday 1, Aday 2, Aday 3]",-,,,,,
-63,0,Tedarik Onayı,Numune/kalite kontrol/sertifika (gerekirse).,[-],-,,,,,
-64,0,Fiyatlandırma Stratejisi,EDLP/High-Low/Bundle/Volume; ilk fiyatı belirle.,[-],-,,,,,
-,,,,,,,,,,
-70,0,İçerik & Fotoğraf,Stüdyo/flatlay; lifestyle 3 görsel; video (ops.).,[-],-,,,,,
-71,0,SEO Alanları,Meta başlık/açıklama; schema/ürün özellikleri.,[-],RankMath/Yoast/Shopify,,,,,
-72,0,Ürün Sayfası CTA,"Güven rozetleri, stok az uyarısı, “kargo ücretsiz” eşiği.",[-],-,,,,,
-73,0,Kategori & Filtreler,Kategori ağaçları ve facet filtreler.,[-],-,,,,,
-74,0,Ödeme Akışı,Kargo/ödeme adımları; “misafir ödeme” açık.,[-],-,,,,,
-75,0,Abandoned Cart,E-posta serisi ve kupon.,[-],Klaviyo/Shopify Email,,,,,
-76,0,Yorum/UGC,Aktif yorum toplama; e-posta tetikleyici.,[-],Judge.me/Yotpo,,,,,
-77,0,Canlı Destek/FAQ,Temel sorulara hızlı cevap.,[-],Tidio/Gorgias,,,,,
-,,,,,,,,,,
-80,0,Pazarlama Kanalı Seç,İlk trafik kaynağını seç.,"[TikTok, Instagram, Google Ads, Influencer, Email, SEO]",-,,,,,
-81,80,TikTok – Hesap & Bio,"İşletme profili, bio link, anahtar kelimeler.",[-],TikTok Business,step:80=TikTok,,,,
-82,80,TikTok – 30 Gün Plan,Günlük içerik takvimi; 3 sütun.,[-],Sheet Şablon,step:80=TikTok,,,,
-83,80,TikTok – Çekim & Edit,"Altyazı, pattern interrupt, kapak.","[CapCut Mobil, CapCut Masaüstü]",CapCut,step:80=TikTok,,,,
-84,80,Instagram – Kurulum,"Profesyonel hesap, bio, highlight.",[-],Meta Business,step:80=Instagram,,,,
-85,80,Instagram – İçerik Sütunları,Reels/Carousel/Hikaye yayın standardı.,[-],-,step:80=Instagram,,,,
-86,80,Google Ads – Altyapı,GMC + feed + pixel/consent.,[-],Google Merchant Center,step:80=Google Ads,,,,
-87,80,Google Ads – Kampanya,Shopping/Performance Max test.,[-],Google Ads,step:80=Google Ads,,,,
-88,80,Influencer – Ara,"Brief, liste, fiyat/erişim.",[-],Modash/Incense,step:80=Influencer,,,,
-89,80,Influencer – Sözleşme,"Kullanım izni, teslim tarihi, revizyon.",[-],-,step:80=Influencer,,,,
-90,80,Email – Altyapı,Klaviyo/Shopify Email; pop-up ve segmentler.,"[Klaviyo, Shopify Email]",Klaviyo,step:80=Email,,,,
-91,80,Email – Otomasyon,"Hoş geldin, sepet terk, win-back akışları.",[-],Klaviyo Flows,step:80=Email,,,,
-92,80,SEO – Plan,"20 anahtar kelime, içerik takvimi.",[-],Ahrefs/Semrush,step:80=SEO,,,,
-93,80,SEO – Blog/Hub,Kategoriye uygun hub yazıları.,[-],-,step:80=SEO,,,,
-,,,,,,,,,,
-100,6,Pixel/GA4 Kurulum,"Seçilen aracı siteye entegre et, test event’leri.",[-],Tag Assistant,step:6=Tiktok Pixel|Meta Pixel|Google Tag (GA4),,,,
-101,6,Yalnızca UTM Akışı,UTM + kısa link; tıklama kaydı.,[-],Bitly/Short.io,step:6=Sadece UTM,,,,
-102,0,Consent/Çerez Barı,GDPR/KVKK uyumlu çerez onayı.,[-],Termly/CookieYes,,,,,
-103,0,Arama Konsolu & Site Haritası,Search Console + sitemap.xml/robots.txt.,[-],Google Search Console,,,,,
-104,0,Hız & Core Web Vitals,"İmaj sıkıştırma, lazyload, CDN.",[-],PageSpeed Insights,,,,,
-,,,,,,,,,,
-110,1,D2C: Ürün Ekleme,Ürün → varyant → fiyat → kargo profili.,[-],Platform Docs,step:1=D2C (Kendi Marka),,,,
-111,1,D2C: Koleksiyon & Menü,Koleksiyonlar ve navigasyon.,[-],-,step:1=D2C (Kendi Marka),,,,
-112,1,D2C: Kampanya & Kupon,Kupon/promo; minimum sepet tutarı.,[-],-,step:1=D2C (Kendi Marka),,,,
-113,1,D2C: Blog & İçerik,Haftada 2 yazı; kategoriye iç link.,[-],-,step:1=D2C (Kendi Marka),,,,
-,,,,,,,,,,
-120,1,Arbitraj: Fiyat Rekabeti,BuyBox/Lowest price; minimum marj kuralı.,[-],-,step:1=Arbitraj,,,,
-121,1,Arbitraj: Repricer (ops),Otomatik fiyatlandırma aracı.,"[RepricerExpress, Seller Snap, Yok]",-,step:1=Arbitraj,,,,
-122,1,Arbitraj: Stok Döngüsü,Hızlı stok yenileme ve geri sipariş.,[-],-,step:1=Arbitraj,,,,
-,,,,,,,,,,
-130,1,Pazaryeri: Ürün Açılışı,Zorunlu alanlar; varyant/renk/beden.,[-],Satıcı Merkezi,step:1=Pazaryeri,,,,
-131,1,Pazaryeri: Medya Kuralları,"Görsel boyutları, sıralama, video (ops.).",[-],Platform Docs,step:1=Pazaryeri,,,,
-132,1,Pazaryeri: SEO Başlık & Açıklama,"Kelime sırası, nitelikler, etiketler.",[-],-,step:1=Pazaryeri,,,,
-133,1,Pazaryeri: Kategori Özgü Alanlar,Giyim/elektronik vb. zorunlu alanlar.,[-],-,step:1=Pazaryeri,,,,
-,,,,,,,,,,
-140,0,Müşteri Desteği,Kanal/e-posta/telefon şablonları; SLA.,[-],"Zendesk, Gorgias",,,,,
-141,0,İade/Değişim Akışı,"Form, adres, kargo etiketi; şartlar.",[-],-,,,,,
-142,0,Faturalandırma,E-fatura senaryoları; iade/iptal.,[-],-,,,,,
-143,0,Kargo SLA,"Tahmini teslimat, gecikme mesaj şablonları.",[-],-,,,,,
-144,0,Depo/Operasyon,"İç süreç: kabul, stok, paketleme kontrol listesi.",[-],-,,,,,
-,,,,,,,,,,
-150,0,Yayın Öncesi Kontrol,"Ürün, fiyat, kargo, ödeme, piksel, hız, çerez onayı.",[-],Checklist,,,,,
-151,0,Yayın & İlk 7 Gün,Yoğun trafik/izleme; günlük rapor.,[-],-,,,,,
-152,0,Analitik Paneli,"GA4, reklam panelleri; ROAS/LTV.",[-],Analytics,,,,,
-153,0,İyileştirme Döngüsü,"Koleksiyon, kategori, en iyi 20% ürün; zayıfı kaldır/güncelle.",[-],-,,,,,
-154,0,Ölçekleme,"Bütçe/kanal arttırma, yeni pazar, yeni kategori.",[-],-,,,,,
+1,0,Model Seç,İş modelini belirle (dallar buna göre açılır).,"[D2C (Kendi Marka), Arbitraj, Pazaryeri]",-,,D2C (Kendi Marka): D2C (Kendi Marka) için kısa açıklama. || Arbitraj: Arbitraj için kısa açıklama. || Pazaryeri: Pazaryeri için kısa açıklama.,Uygulaması kolay || Uygulaması kolay || Uygulaması kolay,Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+2,0,Hedef Pazar,Operasyon ve ödeme/kargo pazarına göre değişir.,"[Global, Türkiye]",-,,Global: Global için kısa açıklama. || Türkiye: Türkiye için kısa açıklama.,Uygulaması kolay || Uygulaması kolay,Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir,Desi: Kargo hacim ağırlığı hesabı
+3,0,Marka Adı & Domain,"İsim düşün, domain kontrol et.",[-],"Namecheap, Google Domains",,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+4,0,Şirket & Hukuk (Öneri),"Şirket, KVKK/Privacy, iade/mesafeli satış; şablonları doldur.",[-],Ticaret Bakanlığı Rehberleri,,,,,Mesafeli Satış Sözleşmesi: Online satış yasal sözleşmesi || KVKK/Çerez Politikası: Veri işleme ve çerez izinleri || İade/İptal Koşulları: Süre ve iade adresi
+5,0,Çalışma Alanı & Klasör,Drive klasörleri + Notion görev tahtası.,[-],"Google Drive, Notion",,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+6,0,İzleme Aracı Seç,Piksel/analitik tercihini seç.,"[TikTok Pixel, Meta Pixel, Google Tag (GA4), Sadece UTM]","TikTok Pixel Helper, Tag Assistant",,TikTok Pixel: TikTok Pixel için kısa açıklama. || Meta Pixel: Meta Pixel ile muhasebe/ERP veya e‑Fatura/e‑Arşiv. || Google Tag (GA4): GA4 analitik kurulum. || Sadece UTM: Sadece UTM için kısa açıklama.,Uygulaması kolay || Entegrasyon ile otomasyon; KDV/irsaliye düzeni || Davranış raporları; Funnel ölçümü || Uygulaması kolay,Her senaryoda uygun olmayabilir || Kurulum maliyeti; Öğrenme eğrisi || Kurulum/etiketleme bilgisi; Örnekleme sorunları || Her senaryoda uygun olmayabilir,GA4: Google Analytics 4 || Meta Pixel/CAPI: Reklam eşleme ve olay izleme
+7,0,UTM Standardı,utm_source/medium/campaign/content adlandırma.,[-],UTM Builder,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+8,0,Takip Sheet,"Ürün, trafik, maliyet, satış, marj tablosu.",[-],Google Sheets,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+9,0,Disclosure,İade/teslimat ve reklam/affiliate açıklamaları.,[-],FTC/AB Yönergeleri,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+10,1,D2C: Platform Seç,Kendi siteni hangi altyapıyla kuracaksın?,"[Shopify, WooCommerce]",-,step:1=D2C (Kendi Marka),Shopify: Shopify ile e‑ticaret mağazası. || WooCommerce: WordPress üzerinde WooCommerce mağazası.,Kurulum hızlı; Uygulama ekosistemi geniş; Barındırma dahil || Tam kontrol; Eklenti özgürlüğü; Düşük lisans maliyeti,Aylık ücretler; Türk pazarına bazı entegrasyonlar ücretli || Teknik bakım/hosting; Güvenlik/perf. ayarı gerekir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+11,10,Shopify – Hesap Aç,Shopify hesabı oluştur.,[-],Shopify Help,step:1=D2C (Kendi Marka); step:10=Shopify,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+12,11,Shopify – Mağaza Ayarları,"Para birimi, bölge, saat dilimi.",[-],Shopify Admin,step:1=D2C (Kendi Marka); step:10=Shopify,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+13,11,Shopify – Tema,Dawn (ücretsiz) ile başla; logo/renk/font.,[-],Shopify Themes,step:1=D2C (Kendi Marka); step:10=Shopify,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+14,11,Shopify – Domain,Alan adını bağla; SSL aktif.,[-],Shopify Domains,step:1=D2C (Kendi Marka); step:10=Shopify,,,,SSL/TLS & CDN: Güvenlik ve hız bileşenleri
+15,11,Shopify – Ödeme Sağlayıcı,Ülkeye göre sağlayıcıyı bağla.,"[iyzico, PayTR, Stripe]","iyzico, PayTR, Stripe",step:1=D2C (Kendi Marka); step:10=Shopify,iyzico: iyzico sanal POS/ödeme geçidi. || PayTR: PayTR sanal POS. || Stripe: Yurt dışı ödemeleri için Stripe.,Kolay entegrasyon; Taksit/3D Secure; Link ödeme || TR bankalarıyla uyum; Fraud önleme araçları || Küresel kart kabul; Abonelik/checkout akışları,Komisyon oranları; İade/chargeback masrafları || Komisyon oranları; Aylık ücret planları || Kur konusunda risk; TR’de sınırlamalar olabilir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+16,11,Shopify – Vergi/KDV,Ayarları pazarına göre yap.,[-],Shopify Taxes,step:1=D2C (Kendi Marka); step:10=Shopify,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+17,11,Shopify – Kargo Profilleri,Zon/ülke bazlı ücret profilleri.,[-],Shopify Shipping,step:1=D2C (Kendi Marka); step:10=Shopify,,,,Desi: Kargo hacim ağırlığı hesabı
+18,11,Shopify – Zorunlu Sayfalar,İade/teslimat/gizlilik; Hakkımızda/İletişim.,[-],Shopify Policies,step:1=D2C (Kendi Marka); step:10=Shopify,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+19,11,Shopify – Uygulamalar,Sayfa/yorum/e-posta/davranış analizi.,"[PageFly, Judge.me, Klaviyo, Lucky Orange]","PageFly, Judge.me, Klaviyo",step:1=D2C (Kendi Marka); step:10=Shopify,PageFly: PageFly için kısa açıklama. || Judge.me: Judge.me için kısa açıklama. || Klaviyo: Klaviyo ile e‑posta/CRM/sohbet. || Lucky Orange: Lucky Orange için kısa açıklama.,Uygulaması kolay || Uygulaması kolay || Otomasyon; Segmentasyon || Uygulaması kolay,Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir || Aylık ücretler; Kurulum zamanı || Her senaryoda uygun olmayabilir,3D Secure / Sanal POS: Güvenli ödeme doğrulaması
+20,11,Shopify – Pixel/GA4,"Kodu tema/gtm ile kur, test et.",[-],Tag Manager,step:1=D2C (Kendi Marka); step:10=Shopify,,,,GA4: Google Analytics 4 || GTM: Google Tag Manager || Meta Pixel/CAPI: Reklam eşleme ve olay izleme
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+21,10,Woo – Barındırma & Domain,"Hosting, domain, SSL.",[-],"Cloudways, Hostinger",step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,SSL/TLS & CDN: Güvenlik ve hız bileşenleri
+22,21,Woo – Kurulum & Tema,Astra/Blocksy; hafif builder.,[-],WordPress.org,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+23,21,Woo – Ödeme,Eklentiler: iyzico/PayTR/Stripe/PayPal.,[-],"iyzico Woo, PayTR Woo",step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+24,21,Woo – Kargo,Zone/weight rate; kargo plug-in.,[-],Woo Shipping,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,Desi: Kargo hacim ağırlığı hesabı
+25,21,Woo – Vergi/KDV,KDV oranları ve fatura bilgileri.,[-],Woo Taxes,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+26,21,Woo – Sayfa & Menü,İade/gizlilik/SSS; ana menü-navigasyon.,[-],-,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+27,21,Woo – Eklenti Paketi,"SEO (RankMath), hız (WP Rocket), form (Fluent).",[-],"RankMath, WP Rocket",step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+28,21,Woo – Pixel/GA4,"GA4/Pixel, Tag Manager ile kur.",[-],Tag Manager,step:1=D2C (Kendi Marka); step:10=WooCommerce,,,,GA4: Google Analytics 4 || GTM: Google Tag Manager || Meta Pixel/CAPI: Reklam eşleme ve olay izleme
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+30,1,D2C: Tedarik Modeli,Ürünü nasıl temin edeceksin?,"[Kendi Üretim, Toptan (Wholesale), Özel Etiket (Private Label)]",-,step:1=D2C (Kendi Marka),Kendi Üretim: Kendi Üretim için kısa açıklama. || Toptan (Wholesale): Toptan (Wholesale) için kısa açıklama. || Özel Etiket (Private Label): Ambalaj/etiket/GTIN barkod hazırlığı.,Uygulaması kolay || Uygulaması kolay || Lojistik/raf uyumu; Pazar yeri zorunluluğu,Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir || Ek maliyet; Standartlara uyum gerekir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+31,30,Kendi Üretim – Hazırlık,"Üretici, hammadde, kalite standartları.",[-],ISO/CE Rehberleri,step:30=Kendi Üretim,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+32,30,Toptan – Tedarikçi Bul,Distribütör/wholesaler; fiyat/MOQ sözleşmesi.,[-],-,step:30=Toptan (Wholesale),,,,Mesafeli Satış Sözleşmesi: Online satış yasal sözleşmesi
+33,30,Private Label – Araştırma,"Alibaba/1688; marka tescil, kalıp/numune.",[-],"Alibaba, Trademarkia",step:30=Özel Etiket (Private Label),,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+34,30,Paketleme & Barkod,EAN/UPC; ambalaj & etiket yönetmeliği.,[-],GS1,step:1=D2C (Kendi Marka),,,,GTIN/EAN: Global barkodlar
+35,30,Fiyatlandırma Modeli,Maliyet + kargo + vergi + hedef marj.,[-],Google Sheets,step:1=D2C (Kendi Marka),,,,Desi: Kargo hacim ağırlığı hesabı
+36,1,D2C: Ürün Foto & İçerik,"Stüdyo çekimi, boyut/renk; açıklama/FAQ.",[-],-,step:1=D2C (Kendi Marka),,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+37,1,D2C: Ürün Sayfası Şablonu,"USP, fayda bullet’ları, sosyal kanıt, güven rozetleri.",[-],PageFly/Elementor,step:1=D2C (Kendi Marka),,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+38,1,D2C: Stok & SKU,Yapı: Kategori-AltKategori-Ürün-Varyant; SKU kuralı.,[-],-,step:1=D2C (Kendi Marka),,,,SKU: Stok tutma birimi
+39,1,D2C: Kargo & İade Metinleri,"Net kargo süresi, iade koşulları; müşteri güveni.",[-],-,step:1=D2C (Kendi Marka),,,,İade/İptal Koşulları: Süre ve iade adresi || Desi: Kargo hacim ağırlığı hesabı
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+40,1,Arbitraj Tür Seç,Arbitraj yöntemini seç.,"[Retail Arbitraj, Online Arbitraj, Wholesale (B2B)]",-,step:1=Arbitraj,Retail Arbitraj: Retail Arbitraj ile muhasebe/ERP veya e‑Fatura/e‑Arşiv. || Online Arbitraj: Online Arbitraj için kısa açıklama. || Wholesale (B2B): Wholesale (B2B) için kısa açıklama.,Entegrasyon ile otomasyon; KDV/irsaliye düzeni || Uygulaması kolay || Uygulaması kolay,Kurulum maliyeti; Öğrenme eğrisi || Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+41,40,Pazar Seç (Arbitraj),Hangi pazar?,"[Amazon TR, Trendyol, Hepsiburada, n11]",-,step:1=Arbitraj,Amazon TR: Amazon TR’de satış. || Trendyol: Trendyol pazar yerinde mağaza. || Hepsiburada: Hepsiburada pazar yerinde mağaza. || n11: n11 pazar yerinde mağaza.,Prime lojistik; Güven algısı || Yüksek pazar trafiği; Hızlı satış potansiyeli || Geniş müşteri tabanı; Kampanya görünürlüğü || Ek trafik/kanal çeşitliliği; Basit listeleme,Komisyon/lojistik kesintileri; Kategori onayları || Komisyon/rekabet; Marka kontrolü sınırlı || Komisyonlar; Operasyon kuralları || Komisyonlar; Fiyat rekabeti,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+42,41,Hesap Aç & Doğrulama,"Gerekli evraklar, IBAN, vergi, fatura.",[-],Platform Yardım,step:1=Arbitraj,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+43,40,Ürün Taraması – Araçlar,Barkod tarama/kârlılık hesap.,"[SellerAmp, Keepa, BuyBotPro, Yok]","SellerAmp, Keepa",step:1=Arbitraj,SellerAmp: SellerAmp için kısa açıklama. || Keepa: Keepa için kısa açıklama. || BuyBotPro: BuyBotPro için kısa açıklama. || Yok: Yok için kısa açıklama.,Uygulaması kolay || Uygulaması kolay || Uygulaması kolay || Uygulaması kolay,Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir,GTIN/EAN: Global barkodlar
+44,40,Kısıtlama/Listing Kuralları,"Gated category, marka izinleri; paralel ithalat/garanti.",[-],Platform Policies,step:1=Arbitraj,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+45,40,Kâr & Ücret Hesabı,"Komisyon, kargo, iade, vergi dahil net kâr.",[-],Sheets Şablonu,step:1=Arbitraj,,,,İade/İptal Koşulları: Süre ve iade adresi || Desi: Kargo hacim ağırlığı hesabı
+46,40,Paketleme & Barkod,"FNSKU/mağaza barkodu, kargo etiketi.",[-],GS1/Amazon,step:1=Arbitraj,,,,Desi: Kargo hacim ağırlığı hesabı || GTIN/EAN: Global barkodlar || SKU: Stok tutma birimi
+47,41,Listing Aç/Join,Eğer kendi listing değilse “join listing”; değilse yeni aç.,[-],Platform Docs,step:1=Arbitraj,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+48,41,Kargo Süreçleri (FBM/FBA),Pazara göre FBM/FBA benzeri akış.,[-],-,step:1=Arbitraj,,,,Desi: Kargo hacim ağırlığı hesabı
+49,41,Müşteri Destek SOP,Sık sorular ve iade politikası.,[-],Zendesk/Gorgias,step:1=Arbitraj,,,,İade/İptal Koşulları: Süre ve iade adresi
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+50,1,Pazaryeri Seç,TR pazaryeri kurulum dalı.,"[Trendyol, Hepsiburada, n11, Amazon TR]",-,step:1=Pazaryeri,Trendyol: Trendyol pazar yerinde mağaza. || Hepsiburada: Hepsiburada pazar yerinde mağaza. || n11: n11 pazar yerinde mağaza. || Amazon TR: Amazon TR’de satış.,Yüksek pazar trafiği; Hızlı satış potansiyeli || Geniş müşteri tabanı; Kampanya görünürlüğü || Ek trafik/kanal çeşitliliği; Basit listeleme || Prime lojistik; Güven algısı,Komisyon/rekabet; Marka kontrolü sınırlı || Komisyonlar; Operasyon kuralları || Komisyonlar; Fiyat rekabeti || Komisyon/lojistik kesintileri; Kategori onayları,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+51,50,Hesap Aç & Onay,Sözleşme/evrak/yetkili doğrulamaları.,[-],Satıcı Merkezi,step:1=Pazaryeri,,,,Mesafeli Satış Sözleşmesi: Online satış yasal sözleşmesi
+52,50,Entegrasyon Yazılımı,Ürün/stok/sipariş senkronu.,"[Entegra, Dopigo, StockMount, İdeasoft]",Entegratörler,step:1=Pazaryeri,Entegra: Pazar yeri entegrasyon yazılımı. || Dopigo: Pazar yeri entegrasyon yazılımı. || StockMount: Pazar yeri entegrasyon yazılımı. || İdeasoft: İdeasoft için kısa açıklama.,Stok/sipariş senkronizasyonu; Çok kanallı satış || Stok/sipariş senkronizasyonu; Çok kanallı satış || Stok/sipariş senkronizasyonu; Çok kanallı satış || Uygulaması kolay,Aylık lisans; Kurulum/veri haritalama || Aylık lisans; Kurulum/veri haritalama || Aylık lisans; Kurulum/veri haritalama || Her senaryoda uygun olmayabilir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+53,50,Kargo Anlaşması,Firmalarla gönderi anlaşması.,"[Yurtiçi, Aras, MNG, Sürat, PTS]",Kargo Firmaları,step:1=Pazaryeri,Yurtiçi: Yurtiçi ile kargo entegrasyonu/kontrat. || Aras: Aras ile kargo entegrasyonu/kontrat. || MNG: MNG ile kargo entegrasyonu/kontrat. || Sürat: Sürat ile kargo entegrasyonu/kontrat. || PTS: PTS için kısa açıklama.,Takip entegrasyonu; Kontratlı indirim || Takip entegrasyonu; Kontratlı indirim || Takip entegrasyonu; Kontratlı indirim || Takip entegrasyonu; Kontratlı indirim || Uygulaması kolay,Desi maliyeti; İade yönetimi || Desi maliyeti; İade yönetimi || Desi maliyeti; İade yönetimi || Desi maliyeti; İade yönetimi || Her senaryoda uygun olmayabilir,Desi: Kargo hacim ağırlığı hesabı
+54,50,E-Fatura/E-İrsaliye,Özel entegratör veya GİB portal.,"[Paraşüt, Logo, KolayBi’]",-,step:1=Pazaryeri,Paraşüt: Paraşüt ile muhasebe/ERP veya e‑Fatura/e‑Arşiv. || Logo: Logo ile muhasebe/ERP veya e‑Fatura/e‑Arşiv. || KolayBi’: KolayBi’ için kısa açıklama.,Entegrasyon ile otomasyon; KDV/irsaliye düzeni || Entegrasyon ile otomasyon; KDV/irsaliye düzeni || Uygulaması kolay,Kurulum maliyeti; Öğrenme eğrisi || Kurulum maliyeti; Öğrenme eğrisi || Her senaryoda uygun olmayabilir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+55,50,Mağaza Ayarları,"Komisyon, iade, kargo şablonları, mağaza vitrini.",[-],-,step:1=Pazaryeri,,,,İade/İptal Koşulları: Süre ve iade adresi || Desi: Kargo hacim ağırlığı hesabı
+56,50,Kategori Kuralları,"Zorunlu alanlar, görsel boyutu, başlık formatı.",[-],Platform Docs,step:1=Pazaryeri,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+57,50,Ürün Aktarım,Entegrasyon yazılımı ile toplu ürün yükle.,[-],Entegratörler,step:1=Pazaryeri,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+58,50,Kampanya/Kupon Araçları,Platform içi kampanya/indirim araçları.,[-],-,step:1=Pazaryeri,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+59,50,Müşteri Soruları & Puan,Yanıt süresi ve CSAT puanı hedefi.,[-],-,step:1=Pazaryeri,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+60,0,Ürün Araştırma – Genel,"Talep, rekabet, kârlılık; 10 aday çıkar.",[-],"TikTok Creative Center, Amazon Movers",,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+61,0,Puanlama Matrisi,Kriter puanlama: Talep × Marj × Rekabet × Tedarik Riski.,[-],Sheets Şablonu,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+62,0,Top 3 Ürün Seç,3 ürünü shortlist yap.,"[Aday 1, Aday 2, Aday 3]",-,,Aday 1: Aday 1 için kısa açıklama. || Aday 2: Aday 2 için kısa açıklama. || Aday 3: Aday 3 için kısa açıklama.,Uygulaması kolay || Uygulaması kolay || Uygulaması kolay,Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+63,0,Tedarik Onayı,Numune/kalite kontrol/sertifika (gerekirse).,[-],-,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+64,0,Fiyatlandırma Stratejisi,EDLP/High-Low/Bundle/Volume; ilk fiyatı belirle.,[-],-,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+70,0,İçerik & Fotoğraf,Stüdyo/flatlay; lifestyle 3 görsel; video (ops.).,[-],-,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+71,0,SEO Alanları,Meta başlık/açıklama; schema/ürün özellikleri.,[-],RankMath/Yoast/Shopify,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+72,0,Ürün Sayfası CTA,"Güven rozetleri, stok az uyarısı, “kargo ücretsiz” eşiği.",[-],-,,,,,Desi: Kargo hacim ağırlığı hesabı
+73,0,Kategori & Filtreler,Kategori ağaçları ve facet filtreler.,[-],-,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+74,0,Ödeme Akışı,Kargo/ödeme adımları; “misafir ödeme” açık.,[-],-,,,,,Desi: Kargo hacim ağırlığı hesabı
+75,0,Abandoned Cart,E-posta serisi ve kupon.,[-],Klaviyo/Shopify Email,,,,,3D Secure / Sanal POS: Güvenli ödeme doğrulaması
+76,0,Yorum/UGC,Aktif yorum toplama; e-posta tetikleyici.,[-],Judge.me/Yotpo,,,,,3D Secure / Sanal POS: Güvenli ödeme doğrulaması
+77,0,Canlı Destek/FAQ,Temel sorulara hızlı cevap.,[-],Tidio/Gorgias,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+80,0,Pazarlama Kanalı Seç,İlk trafik kaynağını seç.,"[TikTok, Instagram, Google Ads, Influencer, Email, SEO]",-,,TikTok: TikTok için kısa açıklama. || Instagram: Instagram için kısa açıklama. || Google Ads: Google Ads ile ücretli trafik. || Influencer: Influencer için kısa açıklama. || Email: Email için kısa açıklama. || SEO: Teknik ve içerik SEO çalışmaları.,Uygulaması kolay || Uygulaması kolay || Hızlı hacim; Hedefleme || Uygulaması kolay || Uygulaması kolay || Organik trafik,Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir || Bütçe/optimizasyon şart; Kâr marjını daraltabilir || Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir || Zaman/emek gerektirir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+81,80,TikTok – Hesap & Bio,"İşletme profili, bio link, anahtar kelimeler.",[-],TikTok Business,step:80=TikTok,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+82,80,TikTok – 30 Gün Plan,Günlük içerik takvimi; 3 sütun.,[-],Sheet Şablon,step:80=TikTok,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+83,80,TikTok – Çekim & Edit,"Altyazı, pattern interrupt, kapak.","[CapCut Mobil, CapCut Masaüstü]",CapCut,step:80=TikTok,CapCut Mobil: CapCut Mobil için kısa açıklama. || CapCut Masaüstü: CapCut Masaüstü için kısa açıklama.,Uygulaması kolay || Uygulaması kolay,Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+84,80,Instagram – Kurulum,"Profesyonel hesap, bio, highlight.",[-],Meta Business,step:80=Instagram,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+85,80,Instagram – İçerik Sütunları,Reels/Carousel/Hikaye yayın standardı.,[-],-,step:80=Instagram,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+86,80,Google Ads – Altyapı,GMC + feed + pixel/consent.,[-],Google Merchant Center,step:80=Google Ads,,,,Meta Pixel/CAPI: Reklam eşleme ve olay izleme || Google Merchant: Ürün feed ve alışveriş listeleri
+87,80,Google Ads – Kampanya,Shopping/Performance Max test.,[-],Google Ads,step:80=Google Ads,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+88,80,Influencer – Ara,"Brief, liste, fiyat/erişim.",[-],Modash/Incense,step:80=Influencer,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+89,80,Influencer – Sözleşme,"Kullanım izni, teslim tarihi, revizyon.",[-],-,step:80=Influencer,,,,Mesafeli Satış Sözleşmesi: Online satış yasal sözleşmesi
+90,80,Email – Altyapı,Klaviyo/Shopify Email; pop-up ve segmentler.,"[Klaviyo, Shopify Email]",Klaviyo,step:80=Email,Klaviyo: Klaviyo ile e‑posta/CRM/sohbet. || Shopify Email: Shopify ile e‑ticaret mağazası.,Otomasyon; Segmentasyon || Kurulum hızlı; Uygulama ekosistemi geniş; Barındırma dahil,Aylık ücretler; Kurulum zamanı || Aylık ücretler; Türk pazarına bazı entegrasyonlar ücretli,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+91,80,Email – Otomasyon,"Hoş geldin, sepet terk, win-back akışları.",[-],Klaviyo Flows,step:80=Email,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+92,80,SEO – Plan,"20 anahtar kelime, içerik takvimi.",[-],Ahrefs/Semrush,step:80=SEO,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+93,80,SEO – Blog/Hub,Kategoriye uygun hub yazıları.,[-],-,step:80=SEO,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+100,6,Pixel/GA4 Kurulum,"Seçilen aracı siteye entegre et, test event’leri.",[-],Tag Assistant,step:6=Tiktok Pixel|Meta Pixel|Google Tag (GA4),,,,GA4: Google Analytics 4 || Meta Pixel/CAPI: Reklam eşleme ve olay izleme
+101,6,Yalnızca UTM Akışı,UTM + kısa link; tıklama kaydı.,[-],Bitly/Short.io,step:6=Sadece UTM,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+102,0,Consent/Çerez Barı,GDPR/KVKK uyumlu çerez onayı.,[-],Termly/CookieYes,,,,,KVKK/Çerez Politikası: Veri işleme ve çerez izinleri
+103,0,Arama Konsolu & Site Haritası,Search Console + sitemap.xml/robots.txt.,[-],Google Search Console,,,,,Google Merchant: Ürün feed ve alışveriş listeleri || Teknik SEO: Sitemap/robots/canonical/redirect
+104,0,Hız & Core Web Vitals,"İmaj sıkıştırma, lazyload, CDN.",[-],PageSpeed Insights,,,,,SSL/TLS & CDN: Güvenlik ve hız bileşenleri
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+110,1,D2C: Ürün Ekleme,Ürün → varyant → fiyat → kargo profili.,[-],Platform Docs,step:1=D2C (Kendi Marka),,,,Desi: Kargo hacim ağırlığı hesabı
+111,1,D2C: Koleksiyon & Menü,Koleksiyonlar ve navigasyon.,[-],-,step:1=D2C (Kendi Marka),,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+112,1,D2C: Kampanya & Kupon,Kupon/promo; minimum sepet tutarı.,[-],-,step:1=D2C (Kendi Marka),,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+113,1,D2C: Blog & İçerik,Haftada 2 yazı; kategoriye iç link.,[-],-,step:1=D2C (Kendi Marka),,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+120,1,Arbitraj: Fiyat Rekabeti,BuyBox/Lowest price; minimum marj kuralı.,[-],-,step:1=Arbitraj,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+121,1,Arbitraj: Repricer (ops),Otomatik fiyatlandırma aracı.,"[RepricerExpress, Seller Snap, Yok]",-,step:1=Arbitraj,RepricerExpress: RepricerExpress için kısa açıklama. || Seller Snap: Seller Snap için kısa açıklama. || Yok: Yok için kısa açıklama.,Uygulaması kolay || Uygulaması kolay || Uygulaması kolay,Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir || Her senaryoda uygun olmayabilir,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+122,1,Arbitraj: Stok Döngüsü,Hızlı stok yenileme ve geri sipariş.,[-],-,step:1=Arbitraj,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+130,1,Pazaryeri: Ürün Açılışı,Zorunlu alanlar; varyant/renk/beden.,[-],Satıcı Merkezi,step:1=Pazaryeri,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+131,1,Pazaryeri: Medya Kuralları,"Görsel boyutları, sıralama, video (ops.).",[-],Platform Docs,step:1=Pazaryeri,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+132,1,Pazaryeri: SEO Başlık & Açıklama,"Kelime sırası, nitelikler, etiketler.",[-],-,step:1=Pazaryeri,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+133,1,Pazaryeri: Kategori Özgü Alanlar,Giyim/elektronik vb. zorunlu alanlar.,[-],-,step:1=Pazaryeri,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+140,0,Müşteri Desteği,Kanal/e-posta/telefon şablonları; SLA.,[-],"Zendesk, Gorgias",,,,,3D Secure / Sanal POS: Güvenli ödeme doğrulaması
+141,0,İade/Değişim Akışı,"Form, adres, kargo etiketi; şartlar.",[-],-,,,,,Desi: Kargo hacim ağırlığı hesabı
+142,0,Faturalandırma,E-fatura senaryoları; iade/iptal.,[-],-,,,,,İade/İptal Koşulları: Süre ve iade adresi
+143,0,Kargo SLA,"Tahmini teslimat, gecikme mesaj şablonları.",[-],-,,,,,Desi: Kargo hacim ağırlığı hesabı
+144,0,Depo/Operasyon,"İç süreç: kabul, stok, paketleme kontrol listesi.",[-],-,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+,,,,,,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+150,0,Yayın Öncesi Kontrol,"Ürün, fiyat, kargo, ödeme, piksel, hız, çerez onayı.",[-],Checklist,,,,,KVKK/Çerez Politikası: Veri işleme ve çerez izinleri || Desi: Kargo hacim ağırlığı hesabı
+151,0,Yayın & İlk 7 Gün,Yoğun trafik/izleme; günlük rapor.,[-],-,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+152,0,Analitik Paneli,"GA4, reklam panelleri; ROAS/LTV.",[-],Analytics,,,,,GA4: Google Analytics 4
+153,0,İyileştirme Döngüsü,"Koleksiyon, kategori, en iyi 20% ürün; zayıfı kaldır/güncelle.",[-],-,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade
+154,0,Ölçekleme,"Bütçe/kanal arttırma, yeni pazar, yeni kategori.",[-],-,,,,,Sipariş Akışı: Sepet → Ödeme → Teslimat → İade

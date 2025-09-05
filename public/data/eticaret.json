@@ -15,8 +15,38 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "D2C (Kendi Marka)": {
+          "info": "D2C (Kendi Marka): D2C (Kendi Marka) için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Arbitraj": {
+          "info": "Arbitraj: Arbitraj için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Pazaryeri": {
+          "info": "Pazaryeri: Pazaryeri için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 2,
@@ -31,8 +61,29 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Global": {
+          "info": "Global: Global için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Türkiye": {
+          "info": "Türkiye: Türkiye için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 3,
@@ -48,7 +99,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 4,
@@ -63,7 +116,11 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mesafeli Satış Sözleşmesi": "Online satış yasal sözleşmesi",
+        "KVKK/Çerez Politikası": "Veri işleme ve çerez izinleri",
+        "İade/İptal Koşulları": "Süre ve iade adresi"
+      }
     },
     {
       "id": 5,
@@ -79,7 +136,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 6,
@@ -97,8 +156,52 @@
         "Tag Assistant"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "TikTok Pixel": {
+          "info": "TikTok Pixel: TikTok Pixel için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Meta Pixel": {
+          "info": "Meta Pixel: Meta Pixel ile muhasebe/ERP veya e‑Fatura/e‑Arşiv.",
+          "pros": [
+            "Entegrasyon ile otomasyon",
+            "KDV/irsaliye düzeni"
+          ],
+          "cons": [
+            "Kurulum maliyeti",
+            "Öğrenme eğrisi"
+          ]
+        },
+        "Google Tag (GA4)": {
+          "info": "Google Tag (GA4): GA4 analitik kurulum.",
+          "pros": [
+            "Davranış raporları",
+            "Funnel ölçümü"
+          ],
+          "cons": [
+            "Kurulum/etiketleme bilgisi",
+            "Örnekleme sorunları"
+          ]
+        },
+        "Sadece UTM": {
+          "info": "Sadece UTM: Sadece UTM için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "GA4": "Google Analytics 4",
+        "Meta Pixel/CAPI": "Reklam eşleme ve olay izleme"
+      }
     },
     {
       "id": 7,
@@ -113,7 +216,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 8,
@@ -128,7 +233,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 9,
@@ -143,7 +250,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 10,
@@ -158,8 +267,35 @@
         "-"
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Shopify": {
+          "info": "Shopify: Shopify ile e‑ticaret mağazası.",
+          "pros": [
+            "Kurulum hızlı",
+            "Uygulama ekosistemi geniş",
+            "Barındırma dahil"
+          ],
+          "cons": [
+            "Aylık ücretler",
+            "Türk pazarına bazı entegrasyonlar ücretli"
+          ]
+        },
+        "WooCommerce": {
+          "info": "WooCommerce: WordPress üzerinde WooCommerce mağazası.",
+          "pros": [
+            "Tam kontrol",
+            "Eklenti özgürlüğü",
+            "Düşük lisans maliyeti"
+          ],
+          "cons": [
+            "Teknik bakım/hosting",
+            "Güvenlik/perf. ayarı gerekir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 11,
@@ -174,7 +310,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 12,
@@ -189,7 +327,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 13,
@@ -204,7 +344,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 14,
@@ -219,7 +361,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "SSL/TLS & CDN": "Güvenlik ve hız bileşenleri"
+      }
     },
     {
       "id": 15,
@@ -237,8 +381,45 @@
         "Stripe"
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "iyzico": {
+          "info": "iyzico: iyzico sanal POS/ödeme geçidi.",
+          "pros": [
+            "Kolay entegrasyon",
+            "Taksit/3D Secure",
+            "Link ödeme"
+          ],
+          "cons": [
+            "Komisyon oranları",
+            "İade/chargeback masrafları"
+          ]
+        },
+        "PayTR": {
+          "info": "PayTR: PayTR sanal POS.",
+          "pros": [
+            "TR bankalarıyla uyum",
+            "Fraud önleme araçları"
+          ],
+          "cons": [
+            "Komisyon oranları",
+            "Aylık ücret planları"
+          ]
+        },
+        "Stripe": {
+          "info": "Stripe: Yurt dışı ödemeleri için Stripe.",
+          "pros": [
+            "Küresel kart kabul",
+            "Abonelik/checkout akışları"
+          ],
+          "cons": [
+            "Kur konusunda risk",
+            "TR’de sınırlamalar olabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 16,
@@ -253,7 +434,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 17,
@@ -268,7 +451,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 18,
@@ -283,7 +468,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 19,
@@ -302,8 +489,49 @@
         "Klaviyo"
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "PageFly": {
+          "info": "PageFly: PageFly için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Judge.me": {
+          "info": "Judge.me: Judge.me için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Klaviyo": {
+          "info": "Klaviyo: Klaviyo ile e‑posta/CRM/sohbet.",
+          "pros": [
+            "Otomasyon",
+            "Segmentasyon"
+          ],
+          "cons": [
+            "Aylık ücretler",
+            "Kurulum zamanı"
+          ]
+        },
+        "Lucky Orange": {
+          "info": "Lucky Orange: Lucky Orange için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "3D Secure / Sanal POS": "Güvenli ödeme doğrulaması"
+      }
     },
     {
       "id": 20,
@@ -318,7 +546,11 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GA4": "Google Analytics 4",
+        "GTM": "Google Tag Manager",
+        "Meta Pixel/CAPI": "Reklam eşleme ve olay izleme"
+      }
     },
     {
       "id": 21,
@@ -334,7 +566,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "SSL/TLS & CDN": "Güvenlik ve hız bileşenleri"
+      }
     },
     {
       "id": 22,
@@ -349,7 +583,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 23,
@@ -365,7 +601,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 24,
@@ -380,7 +618,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 25,
@@ -395,7 +635,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 26,
@@ -410,7 +652,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 27,
@@ -426,7 +670,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 28,
@@ -441,7 +687,11 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka); step:10=WooCommerce",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GA4": "Google Analytics 4",
+        "GTM": "Google Tag Manager",
+        "Meta Pixel/CAPI": "Reklam eşleme ve olay izleme"
+      }
     },
     {
       "id": 30,
@@ -457,8 +707,40 @@
         "-"
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Kendi Üretim": {
+          "info": "Kendi Üretim: Kendi Üretim için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Toptan (Wholesale)": {
+          "info": "Toptan (Wholesale): Toptan (Wholesale) için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Özel Etiket (Private Label)": {
+          "info": "Özel Etiket (Private Label): Ambalaj/etiket/GTIN barkod hazırlığı.",
+          "pros": [
+            "Lojistik/raf uyumu",
+            "Pazar yeri zorunluluğu"
+          ],
+          "cons": [
+            "Ek maliyet",
+            "Standartlara uyum gerekir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 31,
@@ -473,7 +755,9 @@
       ],
       "visibleIf": "step:30=Kendi Üretim",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 32,
@@ -488,7 +772,9 @@
       ],
       "visibleIf": "step:30=Toptan (Wholesale)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mesafeli Satış Sözleşmesi": "Online satış yasal sözleşmesi"
+      }
     },
     {
       "id": 33,
@@ -504,7 +790,9 @@
       ],
       "visibleIf": "step:30=Özel Etiket (Private Label)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 34,
@@ -519,7 +807,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GTIN/EAN": "Global barkodlar"
+      }
     },
     {
       "id": 35,
@@ -534,7 +824,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 36,
@@ -549,7 +841,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 37,
@@ -564,7 +858,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 38,
@@ -579,7 +875,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "SKU": "Stok tutma birimi"
+      }
     },
     {
       "id": 39,
@@ -594,7 +892,10 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "İade/İptal Koşulları": "Süre ve iade adresi",
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 40,
@@ -610,8 +911,40 @@
         "-"
       ],
       "visibleIf": "step:1=Arbitraj",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Retail Arbitraj": {
+          "info": "Retail Arbitraj: Retail Arbitraj ile muhasebe/ERP veya e‑Fatura/e‑Arşiv.",
+          "pros": [
+            "Entegrasyon ile otomasyon",
+            "KDV/irsaliye düzeni"
+          ],
+          "cons": [
+            "Kurulum maliyeti",
+            "Öğrenme eğrisi"
+          ]
+        },
+        "Online Arbitraj": {
+          "info": "Online Arbitraj: Online Arbitraj için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Wholesale (B2B)": {
+          "info": "Wholesale (B2B): Wholesale (B2B) için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 41,
@@ -628,8 +961,55 @@
         "-"
       ],
       "visibleIf": "step:1=Arbitraj",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Amazon TR": {
+          "info": "Amazon TR: Amazon TR’de satış.",
+          "pros": [
+            "Prime lojistik",
+            "Güven algısı"
+          ],
+          "cons": [
+            "Komisyon/lojistik kesintileri",
+            "Kategori onayları"
+          ]
+        },
+        "Trendyol": {
+          "info": "Trendyol: Trendyol pazar yerinde mağaza.",
+          "pros": [
+            "Yüksek pazar trafiği",
+            "Hızlı satış potansiyeli"
+          ],
+          "cons": [
+            "Komisyon/rekabet",
+            "Marka kontrolü sınırlı"
+          ]
+        },
+        "Hepsiburada": {
+          "info": "Hepsiburada: Hepsiburada pazar yerinde mağaza.",
+          "pros": [
+            "Geniş müşteri tabanı",
+            "Kampanya görünürlüğü"
+          ],
+          "cons": [
+            "Komisyonlar",
+            "Operasyon kuralları"
+          ]
+        },
+        "n11": {
+          "info": "n11: n11 pazar yerinde mağaza.",
+          "pros": [
+            "Ek trafik/kanal çeşitliliği",
+            "Basit listeleme"
+          ],
+          "cons": [
+            "Komisyonlar",
+            "Fiyat rekabeti"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 42,
@@ -644,7 +1024,9 @@
       ],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 43,
@@ -662,8 +1044,47 @@
         "Keepa"
       ],
       "visibleIf": "step:1=Arbitraj",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "SellerAmp": {
+          "info": "SellerAmp: SellerAmp için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Keepa": {
+          "info": "Keepa: Keepa için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "BuyBotPro": {
+          "info": "BuyBotPro: BuyBotPro için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Yok": {
+          "info": "Yok: Yok için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "GTIN/EAN": "Global barkodlar"
+      }
     },
     {
       "id": 44,
@@ -678,7 +1099,9 @@
       ],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 45,
@@ -693,7 +1116,10 @@
       ],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "İade/İptal Koşulları": "Süre ve iade adresi",
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 46,
@@ -708,7 +1134,11 @@
       ],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı",
+        "GTIN/EAN": "Global barkodlar",
+        "SKU": "Stok tutma birimi"
+      }
     },
     {
       "id": 47,
@@ -723,7 +1153,9 @@
       ],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 48,
@@ -738,7 +1170,9 @@
       ],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 49,
@@ -753,7 +1187,9 @@
       ],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "İade/İptal Koşulları": "Süre ve iade adresi"
+      }
     },
     {
       "id": 50,
@@ -770,8 +1206,55 @@
         "-"
       ],
       "visibleIf": "step:1=Pazaryeri",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Trendyol": {
+          "info": "Trendyol: Trendyol pazar yerinde mağaza.",
+          "pros": [
+            "Yüksek pazar trafiği",
+            "Hızlı satış potansiyeli"
+          ],
+          "cons": [
+            "Komisyon/rekabet",
+            "Marka kontrolü sınırlı"
+          ]
+        },
+        "Hepsiburada": {
+          "info": "Hepsiburada: Hepsiburada pazar yerinde mağaza.",
+          "pros": [
+            "Geniş müşteri tabanı",
+            "Kampanya görünürlüğü"
+          ],
+          "cons": [
+            "Komisyonlar",
+            "Operasyon kuralları"
+          ]
+        },
+        "n11": {
+          "info": "n11: n11 pazar yerinde mağaza.",
+          "pros": [
+            "Ek trafik/kanal çeşitliliği",
+            "Basit listeleme"
+          ],
+          "cons": [
+            "Komisyonlar",
+            "Fiyat rekabeti"
+          ]
+        },
+        "Amazon TR": {
+          "info": "Amazon TR: Amazon TR’de satış.",
+          "pros": [
+            "Prime lojistik",
+            "Güven algısı"
+          ],
+          "cons": [
+            "Komisyon/lojistik kesintileri",
+            "Kategori onayları"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 51,
@@ -786,7 +1269,9 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mesafeli Satış Sözleşmesi": "Online satış yasal sözleşmesi"
+      }
     },
     {
       "id": 52,
@@ -803,8 +1288,53 @@
         "Entegratörler"
       ],
       "visibleIf": "step:1=Pazaryeri",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Entegra": {
+          "info": "Entegra: Pazar yeri entegrasyon yazılımı.",
+          "pros": [
+            "Stok/sipariş senkronizasyonu",
+            "Çok kanallı satış"
+          ],
+          "cons": [
+            "Aylık lisans",
+            "Kurulum/veri haritalama"
+          ]
+        },
+        "Dopigo": {
+          "info": "Dopigo: Pazar yeri entegrasyon yazılımı.",
+          "pros": [
+            "Stok/sipariş senkronizasyonu",
+            "Çok kanallı satış"
+          ],
+          "cons": [
+            "Aylık lisans",
+            "Kurulum/veri haritalama"
+          ]
+        },
+        "StockMount": {
+          "info": "StockMount: Pazar yeri entegrasyon yazılımı.",
+          "pros": [
+            "Stok/sipariş senkronizasyonu",
+            "Çok kanallı satış"
+          ],
+          "cons": [
+            "Aylık lisans",
+            "Kurulum/veri haritalama"
+          ]
+        },
+        "İdeasoft": {
+          "info": "İdeasoft: İdeasoft için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 53,
@@ -822,8 +1352,64 @@
         "Kargo Firmaları"
       ],
       "visibleIf": "step:1=Pazaryeri",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Yurtiçi": {
+          "info": "Yurtiçi: Yurtiçi ile kargo entegrasyonu/kontrat.",
+          "pros": [
+            "Takip entegrasyonu",
+            "Kontratlı indirim"
+          ],
+          "cons": [
+            "Desi maliyeti",
+            "İade yönetimi"
+          ]
+        },
+        "Aras": {
+          "info": "Aras: Aras ile kargo entegrasyonu/kontrat.",
+          "pros": [
+            "Takip entegrasyonu",
+            "Kontratlı indirim"
+          ],
+          "cons": [
+            "Desi maliyeti",
+            "İade yönetimi"
+          ]
+        },
+        "MNG": {
+          "info": "MNG: MNG ile kargo entegrasyonu/kontrat.",
+          "pros": [
+            "Takip entegrasyonu",
+            "Kontratlı indirim"
+          ],
+          "cons": [
+            "Desi maliyeti",
+            "İade yönetimi"
+          ]
+        },
+        "Sürat": {
+          "info": "Sürat: Sürat ile kargo entegrasyonu/kontrat.",
+          "pros": [
+            "Takip entegrasyonu",
+            "Kontratlı indirim"
+          ],
+          "cons": [
+            "Desi maliyeti",
+            "İade yönetimi"
+          ]
+        },
+        "PTS": {
+          "info": "PTS: PTS için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 54,
@@ -839,8 +1425,42 @@
         "-"
       ],
       "visibleIf": "step:1=Pazaryeri",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Paraşüt": {
+          "info": "Paraşüt: Paraşüt ile muhasebe/ERP veya e‑Fatura/e‑Arşiv.",
+          "pros": [
+            "Entegrasyon ile otomasyon",
+            "KDV/irsaliye düzeni"
+          ],
+          "cons": [
+            "Kurulum maliyeti",
+            "Öğrenme eğrisi"
+          ]
+        },
+        "Logo": {
+          "info": "Logo: Logo ile muhasebe/ERP veya e‑Fatura/e‑Arşiv.",
+          "pros": [
+            "Entegrasyon ile otomasyon",
+            "KDV/irsaliye düzeni"
+          ],
+          "cons": [
+            "Kurulum maliyeti",
+            "Öğrenme eğrisi"
+          ]
+        },
+        "KolayBi’": {
+          "info": "KolayBi’: KolayBi’ için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 55,
@@ -855,7 +1475,10 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "İade/İptal Koşulları": "Süre ve iade adresi",
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 56,
@@ -870,7 +1493,9 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 57,
@@ -885,7 +1510,9 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 58,
@@ -900,7 +1527,9 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 59,
@@ -915,7 +1544,9 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 60,
@@ -931,7 +1562,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 61,
@@ -946,7 +1579,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 62,
@@ -962,8 +1597,38 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Aday 1": {
+          "info": "Aday 1: Aday 1 için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Aday 2": {
+          "info": "Aday 2: Aday 2 için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Aday 3": {
+          "info": "Aday 3: Aday 3 için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 63,
@@ -978,7 +1643,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 64,
@@ -993,7 +1660,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 70,
@@ -1008,7 +1677,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 71,
@@ -1023,7 +1694,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 72,
@@ -1038,7 +1711,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 73,
@@ -1053,7 +1728,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 74,
@@ -1068,7 +1745,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 75,
@@ -1083,7 +1762,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "3D Secure / Sanal POS": "Güvenli ödeme doğrulaması"
+      }
     },
     {
       "id": 76,
@@ -1098,7 +1779,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "3D Secure / Sanal POS": "Güvenli ödeme doğrulaması"
+      }
     },
     {
       "id": 77,
@@ -1113,7 +1796,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 80,
@@ -1132,8 +1817,67 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "TikTok": {
+          "info": "TikTok: TikTok için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Instagram": {
+          "info": "Instagram: Instagram için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Google Ads": {
+          "info": "Google Ads: Google Ads ile ücretli trafik.",
+          "pros": [
+            "Hızlı hacim",
+            "Hedefleme"
+          ],
+          "cons": [
+            "Bütçe/optimizasyon şart",
+            "Kâr marjını daraltabilir"
+          ]
+        },
+        "Influencer": {
+          "info": "Influencer: Influencer için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Email": {
+          "info": "Email: Email için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "SEO": {
+          "info": "SEO: Teknik ve içerik SEO çalışmaları.",
+          "pros": [
+            "Organik trafik"
+          ],
+          "cons": [
+            "Zaman/emek gerektirir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 81,
@@ -1148,7 +1892,9 @@
       ],
       "visibleIf": "step:80=TikTok",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 82,
@@ -1163,7 +1909,9 @@
       ],
       "visibleIf": "step:80=TikTok",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 83,
@@ -1178,8 +1926,29 @@
         "CapCut"
       ],
       "visibleIf": "step:80=TikTok",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "CapCut Mobil": {
+          "info": "CapCut Mobil: CapCut Mobil için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "CapCut Masaüstü": {
+          "info": "CapCut Masaüstü: CapCut Masaüstü için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 84,
@@ -1194,7 +1963,9 @@
       ],
       "visibleIf": "step:80=Instagram",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 85,
@@ -1209,7 +1980,9 @@
       ],
       "visibleIf": "step:80=Instagram",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 86,
@@ -1224,7 +1997,10 @@
       ],
       "visibleIf": "step:80=Google Ads",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Meta Pixel/CAPI": "Reklam eşleme ve olay izleme",
+        "Google Merchant": "Ürün feed ve alışveriş listeleri"
+      }
     },
     {
       "id": 87,
@@ -1239,7 +2015,9 @@
       ],
       "visibleIf": "step:80=Google Ads",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 88,
@@ -1254,7 +2032,9 @@
       ],
       "visibleIf": "step:80=Influencer",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 89,
@@ -1269,7 +2049,9 @@
       ],
       "visibleIf": "step:80=Influencer",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mesafeli Satış Sözleşmesi": "Online satış yasal sözleşmesi"
+      }
     },
     {
       "id": 90,
@@ -1284,8 +2066,34 @@
         "Klaviyo"
       ],
       "visibleIf": "step:80=Email",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Klaviyo": {
+          "info": "Klaviyo: Klaviyo ile e‑posta/CRM/sohbet.",
+          "pros": [
+            "Otomasyon",
+            "Segmentasyon"
+          ],
+          "cons": [
+            "Aylık ücretler",
+            "Kurulum zamanı"
+          ]
+        },
+        "Shopify Email": {
+          "info": "Shopify Email: Shopify ile e‑ticaret mağazası.",
+          "pros": [
+            "Kurulum hızlı",
+            "Uygulama ekosistemi geniş",
+            "Barındırma dahil"
+          ],
+          "cons": [
+            "Aylık ücretler",
+            "Türk pazarına bazı entegrasyonlar ücretli"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 91,
@@ -1300,7 +2108,9 @@
       ],
       "visibleIf": "step:80=Email",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 92,
@@ -1315,7 +2125,9 @@
       ],
       "visibleIf": "step:80=SEO",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 93,
@@ -1330,7 +2142,9 @@
       ],
       "visibleIf": "step:80=SEO",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 100,
@@ -1345,7 +2159,10 @@
       ],
       "visibleIf": "step:6=Tiktok Pixel|Meta Pixel|Google Tag (GA4)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GA4": "Google Analytics 4",
+        "Meta Pixel/CAPI": "Reklam eşleme ve olay izleme"
+      }
     },
     {
       "id": 101,
@@ -1360,7 +2177,9 @@
       ],
       "visibleIf": "step:6=Sadece UTM",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 102,
@@ -1375,7 +2194,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "KVKK/Çerez Politikası": "Veri işleme ve çerez izinleri"
+      }
     },
     {
       "id": 103,
@@ -1390,7 +2211,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Google Merchant": "Ürün feed ve alışveriş listeleri",
+        "Teknik SEO": "Sitemap/robots/canonical/redirect"
+      }
     },
     {
       "id": 104,
@@ -1405,7 +2229,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "SSL/TLS & CDN": "Güvenlik ve hız bileşenleri"
+      }
     },
     {
       "id": 110,
@@ -1420,7 +2246,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 111,
@@ -1435,7 +2263,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 112,
@@ -1450,7 +2280,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 113,
@@ -1465,7 +2297,9 @@
       ],
       "visibleIf": "step:1=D2C (Kendi Marka)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 120,
@@ -1480,7 +2314,9 @@
       ],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 121,
@@ -1496,8 +2332,38 @@
         "-"
       ],
       "visibleIf": "step:1=Arbitraj",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "RepricerExpress": {
+          "info": "RepricerExpress: RepricerExpress için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Seller Snap": {
+          "info": "Seller Snap: Seller Snap için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Yok": {
+          "info": "Yok: Yok için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 122,
@@ -1512,7 +2378,9 @@
       ],
       "visibleIf": "step:1=Arbitraj",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 130,
@@ -1527,7 +2395,9 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 131,
@@ -1542,7 +2412,9 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 132,
@@ -1557,7 +2429,9 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 133,
@@ -1572,7 +2446,9 @@
       ],
       "visibleIf": "step:1=Pazaryeri",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 140,
@@ -1588,7 +2464,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "3D Secure / Sanal POS": "Güvenli ödeme doğrulaması"
+      }
     },
     {
       "id": 141,
@@ -1603,7 +2481,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 142,
@@ -1618,7 +2498,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "İade/İptal Koşulları": "Süre ve iade adresi"
+      }
     },
     {
       "id": 143,
@@ -1633,7 +2515,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 144,
@@ -1648,7 +2532,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 150,
@@ -1663,7 +2549,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "KVKK/Çerez Politikası": "Veri işleme ve çerez izinleri",
+        "Desi": "Kargo hacim ağırlığı hesabı"
+      }
     },
     {
       "id": 151,
@@ -1678,7 +2567,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 152,
@@ -1693,7 +2584,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GA4": "Google Analytics 4"
+      }
     },
     {
       "id": 153,
@@ -1708,7 +2601,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     },
     {
       "id": 154,
@@ -1723,7 +2618,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sipariş Akışı": "Sepet → Ödeme → Teslimat → İade"
+      }
     }
   ]
 }
