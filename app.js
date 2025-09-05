@@ -1,5 +1,5 @@
-/* Steplify MVP — JSON loader + freemium + branching (visibleIf) + modal info + next-visible-step + glossary */
-console.log('Steplify app v4.1');
+/* Steplify MVP — JSON loader + freemium + branching (visibleIf) + modal info + next-visible-step + glossary + notes */
+console.log('Steplify app v4.2');
 
 const FREE_LIMIT = 5;
 const PREMIUM_KEY = "steplify_premium";   // localStorage anahtarı
@@ -99,6 +99,12 @@ function setProgress(m,obj){ localStorage.setItem(lsKey(m), JSON.stringify(obj||
 
 function getSelections(m){ try{ return JSON.parse(localStorage.getItem(selKey(m))||'{}'); }catch(_){ return {}; } }
 function setSelections(m,obj){ localStorage.setItem(selKey(m), JSON.stringify(obj||{})); }
+
+// ---- Notes (mini not alanı) ----
+function noteKey(model, stepId){ return `notes::${model}::${stepId}`; }
+function getNote(model, stepId){ try{ return localStorage.getItem(noteKey(model, stepId)) || ''; }catch(_){ return ''; } }
+function setNote(model, stepId, text){ try{ localStorage.setItem(noteKey(model, stepId), String(text||'')); }catch(_){ } }
+function debounce(fn, delay){ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), delay); }; }
 
 // ---- URL hash (derin link) ----
 function setHash(model, stepId){ try{ location.hash = `${encodeURIComponent(model)}:${stepId}`; }catch(_){} }
@@ -230,6 +236,75 @@ function renderGlossaryCard(step){
   });
 
   card.appendChild(list);
+  return card;
+}
+
+/* --------- NOTLAR (Mini Notes) yardımcıları --------- */
+function renderNotesCard(step){
+  const lockedCandidateIndex = getVisibleOrderedSteps().findIndex(s=>s.id===step.id);
+  const locked = (lockedCandidateIndex >= FREE_LIMIT) && !isPremium();
+  if (locked) return null; // kilitliyse not alanını gösterme
+
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.style.marginTop = '12px';
+
+  const head = document.createElement('div');
+  head.style.display='flex';
+  head.style.alignItems='center';
+  head.style.justifyContent='space-between';
+  head.style.gap='8px';
+
+  const h = document.createElement('h3');
+  h.textContent = 'Notların';
+  h.style.margin = '0';
+  head.appendChild(h);
+
+  const clearBtn = document.createElement('button');
+  clearBtn.className = 'btn small outline';
+  clearBtn.textContent = 'Temizle';
+  head.appendChild(clearBtn);
+
+  card.appendChild(head);
+
+  const ta = document.createElement('textarea');
+  ta.value = getNote(currentModel, step.id);
+  ta.rows = 6;
+  ta.style.width = '100%';
+  ta.style.marginTop = '8px';
+  ta.style.padding = '10px';
+  ta.style.border = '1px solid #e5e7eb';
+  ta.style.borderRadius = '10px';
+  ta.style.fontFamily = 'inherit';
+  ta.style.fontSize = '14px';
+  ta.placeholder = 'Bu adımla ilgili kişisel notlarını yaz... (otomatik kaydedilir)';
+  card.appendChild(ta);
+
+  const status = document.createElement('div');
+  status.className = 'muted';
+  status.style.fontSize = '12px';
+  status.style.marginTop = '6px';
+  status.style.opacity = '0';
+  status.textContent = 'Kaydedildi ✓';
+  card.appendChild(status);
+
+  const showSaved = () => {
+    status.style.opacity = '1';
+    setTimeout(()=>{ status.style.opacity = '0'; }, 1200);
+  };
+
+  const saveDebounced = debounce((val)=>{
+    setNote(currentModel, step.id, val);
+    showSaved();
+  }, 400);
+
+  ta.addEventListener('input', (e)=> saveDebounced(e.target.value));
+  clearBtn.addEventListener('click', ()=>{
+    ta.value = '';
+    setNote(currentModel, step.id, '');
+    showSaved();
+  });
+
   return card;
 }
 
@@ -368,17 +443,17 @@ function showStep(step, index){
           modalHtml = tip;
         }
 
-        const ok = await openModal(label, modalHtml);
-        if (!ok) return;
+      const ok = await openModal(label, modalHtml);
+      if (!ok) return;
 
-        // seçimi & ilerlemeyi kaydet
-        const _sels = getSelections(currentModel); _sels[step.id] = label; setSelections(currentModel, _sels);
-        const p = getProgress(currentModel); p[step.id] = true; setProgress(currentModel, p);
+      // seçimi & ilerlemeyi kaydet
+      const _sels = getSelections(currentModel); _sels[step.id] = label; setSelections(currentModel, _sels);
+      const p = getProgress(currentModel); p[step.id] = true; setProgress(currentModel, p);
 
-        // görünür listeyi güncelle ve bir sonraki GÖRÜNÜR adıma geç
-        renderSteps();
-        const {next, nextIdx} = nextVisibleAfter(step.id);
-        if (next) showStep(next, nextIdx);
+      // görünür listeyi güncelle ve bir sonraki GÖRÜNÜR adıma geç
+      renderSteps();
+      const {next, nextIdx} = nextVisibleAfter(step.id);
+      if (next) showStep(next, nextIdx);
       });
 
       optionsWrap.appendChild(b);
@@ -399,6 +474,10 @@ function showStep(step, index){
       });
     }
   }
+
+  // --- Notlar kartı (her zaman; kilitli adımda gösterilmez) ---
+  const notesCard = renderNotesCard(step);
+  if (notesCard) els.stepView.appendChild(notesCard);
 
   // Sağdaki "Kaynaklar"
   els.linksList.innerHTML = '';
@@ -491,7 +570,10 @@ els.modelSelect.addEventListener('change', e=>{
 
 // İlerlemeyi sıfırla (seçimler dahil)
 els.resetProgress.addEventListener('click', ()=>{
-  if(!currentModel) return; localStorage.removeItem(lsKey(currentModel)); localStorage.removeItem(selKey(currentModel)); renderSteps();
+  if(!currentModel) return;
+  localStorage.removeItem(lsKey(currentModel));
+  localStorage.removeItem(selKey(currentModel));
+  renderSteps();
 });
 
 // JSON yükleme
