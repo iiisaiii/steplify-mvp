@@ -14,8 +14,37 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Dijital Ürünler": {
+          "info": "Dijital Ürünler: Stoksuz, teslimat/kargo yok; ürün formatı kurs, yazılım, e-kitap, üyelik.",
+          "pros": [
+            "Dijital Ürünler: Komisyon oranları genelde daha yüksek",
+            "Küresel pazara anında ulaşım",
+            "İade ve lojistik yok"
+          ],
+          "cons": [
+            "Dijital Ürünler: Bazı nişlerde rekabet yüksek",
+            "Kalite farkı ve iade politikaları programdan programa değişir"
+          ]
+        },
+        "Fiziksel Ürünler": {
+          "info": "Fiziksel Ürünler: Amazon/Trendyol/Hepsiburada gibi pazarlardan fiziksel ürünler.",
+          "pros": [
+            "Fiziksel Ürünler: Talep çok geniş",
+            "Sezon/niş fırsatları",
+            "Trend ürünler yakalanabilir"
+          ],
+          "cons": [
+            "Fiziksel Ürünler: Komisyon oranları görece düşük olabilir",
+            "Lojistik/iade şartları ve sevkiyat bilgisi gerekir"
+          ]
+        }
+      },
+      "glossary": {
+        "Cookie": "Kullanıcıyı tanıyıp komisyon atfeden tarayıcı verisi.",
+        "EPC": "Click başına kazanç (Earnings Per Click).",
+        "UTM": "Kaynak/medium/campaign parametreleri ile link işaretleme."
+      }
     },
     {
       "id": 2,
@@ -30,8 +59,33 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Dijital": {
+          "info": "Dijital: Dijital tekliflerle çalışma, teslimatsız gelir modeli.",
+          "pros": [
+            "Dijital: Yüksek komisyon",
+            "Hızlı dağıtım"
+          ],
+          "cons": [
+            "Dijital: Rekabet güçlü nişlerde yüksektir"
+          ]
+        },
+        "Fiziksel": {
+          "info": "Fiziksel: Fiziksel ürün teklifleri.",
+          "pros": [
+            "Fiziksel: Geniş tüketici kitlesi"
+          ],
+          "cons": [
+            "Fiziksel: Teslimat/iade süreçleri",
+            "Komisyon daha düşük olabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Cookie": "Kullanıcıyı tanıyıp komisyon atfeden tarayıcı verisi.",
+        "EPC": "Click başına kazanç (Earnings Per Click).",
+        "UTM": "Kaynak/medium/campaign parametreleri ile link işaretleme."
+      }
     },
     {
       "id": 3,
@@ -47,7 +101,11 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Cookie": "Kullanıcıyı tanıyıp komisyon atfeden tarayıcı verisi.",
+        "EPC": "Click başına kazanç (Earnings Per Click).",
+        "UTM": "Kaynak/medium/campaign parametreleri ile link işaretleme."
+      }
     },
     {
       "id": 4,
@@ -63,7 +121,11 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Cookie": "Kullanıcıyı tanıyıp komisyon atfeden tarayıcı verisi.",
+        "EPC": "Click başına kazanç (Earnings Per Click).",
+        "UTM": "Kaynak/medium/campaign parametreleri ile link işaretleme."
+      }
     },
     {
       "id": 5,
@@ -79,7 +141,11 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Cookie": "Kullanıcıyı tanıyıp komisyon atfeden tarayıcı verisi.",
+        "EPC": "Click başına kazanç (Earnings Per Click).",
+        "UTM": "Kaynak/medium/campaign parametreleri ile link işaretleme."
+      }
     },
     {
       "id": 6,
@@ -99,7 +165,74 @@
         "Digistore24"
       ],
       "visibleIf": "step:1=Dijital Ürünler",
-      "optionDetails": {},
+      "optionDetails": {
+        "ClickBank": {
+          "info": "ClickBank: Dijital ürün pazaryeri; e-kitap, kurs, yazılım.",
+          "pros": [
+            "ClickBank: Kolay kayıt",
+            "Çok sayıda teklif",
+            "Yerleşik izleme"
+          ],
+          "cons": [
+            "ClickBank: Kalite değişken",
+            "Bazı nişlerde yoğun rekabet"
+          ]
+        },
+        "Digistore24": {
+          "info": "Digistore24: Dijital/karma ürün pazaryeri; AB odaklı güçlü ödemeler.",
+          "pros": [
+            "Digistore24: Yüksek komisyonlar",
+            "Kolay link yönetimi"
+          ],
+          "cons": [
+            "Digistore24: Bazı nişlerde Türkçe materyal az"
+          ]
+        },
+        "JVZoo": {
+          "info": "JVZoo: İnternet pazarlama/yazılım odaklı affiliate pazarı.",
+          "pros": [
+            "JVZoo: Lansman bazlı yüksek EPC fırsatları"
+          ],
+          "cons": [
+            "JVZoo: Kısa ömürlü kampanyalar sık",
+            "Kalite değişken"
+          ]
+        },
+        "AppSumo": {
+          "info": "AppSumo: Yaşam boyu lisans (LTD) yazılım kampanyaları.",
+          "pros": [
+            "AppSumo: Yüksek talep",
+            "İçerik oluşturması kolay (inceleme/karşılaştırma)"
+          ],
+          "cons": [
+            "AppSumo: Kampanyalar süreli",
+            "Bazı tekliflerde onay gerekir"
+          ]
+        },
+        "Udemy Affiliate": {
+          "info": "Udemy Affiliate: Udemy kursları için affiliate programı.",
+          "pros": [
+            "Udemy Affiliate: Çok ürün",
+            "geniş kategori",
+            "Düşük bariyer"
+          ],
+          "cons": [
+            "Udemy Affiliate: Komisyon nispeten düşük",
+            "İndirim dönemlerine bağımlılık"
+          ]
+        },
+        "SaaS Partner": {
+          "info": "SaaS Partner: Tek tek SaaS ürünlerinin resmi partner/affiliate programları.",
+          "pros": [
+            "SaaS Partner: Tekrarlayan (MRR) komisyon imkanı",
+            "B2B nişlerde yüksek LTV"
+          ],
+          "cons": [
+            "SaaS Partner: Onay süreçleri olabilir",
+            "Ürün öğrenme eğrisi"
+          ]
+        }
+      },
       "glossary": {}
     },
     {
@@ -121,7 +254,80 @@
         "Awin"
       ],
       "visibleIf": "step:1=Fiziksel Ürünler",
-      "optionDetails": {},
+      "optionDetails": {
+        "Amazon Associates": {
+          "info": "Amazon Associates: Amazon’un resmi affiliate programı.",
+          "pros": [
+            "Amazon Associates: Geniş ürün kataloğu",
+            "Güvenilir alışveriş dönüşümü"
+          ],
+          "cons": [
+            "Amazon Associates: Komisyon oranı düşük",
+            "24 saat cookie penceresi"
+          ]
+        },
+        "Trendyol Partner": {
+          "info": "Trendyol Partner: Trendyol satışları için yerel affiliate ağı.",
+          "pros": [
+            "Trendyol Partner: Yerel kitleye yüksek güven",
+            "Kampanya dönemleri"
+          ],
+          "cons": [
+            "Trendyol Partner: Komisyon kategoriye göre değişir"
+          ]
+        },
+        "Hepsiburada Affiliate": {
+          "info": "Hepsiburada Affiliate: Hepsiburada’nın affiliate programı.",
+          "pros": [
+            "Hepsiburada Affiliate: Geniş kategori çeşitliliği"
+          ],
+          "cons": [
+            "Hepsiburada Affiliate: Komisyon kategori ve kampanyaya göre değişir"
+          ]
+        },
+        "AliExpress": {
+          "info": "AliExpress: AliExpress affiliate ağı.",
+          "pros": [
+            "AliExpress: Düşük fiyatlı çok sayıda ürün",
+            "Global kitleye erişim"
+          ],
+          "cons": [
+            "AliExpress: Teslimat süresi uzun olabilir",
+            "İade/kalite riskleri"
+          ]
+        },
+        "Awin": {
+          "info": "Awin: Küresel affiliate ağı (perakende, seyahat vb.).",
+          "pros": [
+            "Awin: Binlerce marka",
+            "Gelişmiş raporlama"
+          ],
+          "cons": [
+            "Awin: Onay gerekebilir",
+            "Arayüz karmaşık olabilir"
+          ]
+        },
+        "CJ Affiliate": {
+          "info": "CJ Affiliate: Büyük markaların yer aldığı global ağ.",
+          "pros": [
+            "CJ Affiliate: Güçlü reklamvereni havuzu",
+            "Gelişmiş izleme"
+          ],
+          "cons": [
+            "CJ Affiliate: Onay ve limitler olabiliyor"
+          ]
+        },
+        "Impact": {
+          "info": "Impact: Partner/affiliate yönetim platformu.",
+          "pros": [
+            "Impact: Gelişmiş otomasyon",
+            "Geniş marka portföyü"
+          ],
+          "cons": [
+            "Impact: Kurulum/onay süreçleri"
+          ]
+        }
+      },
       "glossary": {}
     },
     {
@@ -171,7 +377,73 @@
         "Google Trends"
       ],
       "visibleIf": "",
-      "optionDetails": {},
+      "optionDetails": {
+        "Fitness": {
+          "info": "Fitness: Antrenman, beslenme, ekipman; geniş kitle.",
+          "pros": [
+            "Fitness: Sürekli talep",
+            "İçerik üretmesi kolay"
+          ],
+          "cons": [
+            "Fitness: Yoğun rekabet",
+            "Mevsimsellik etkisi"
+          ]
+        },
+        "Kilo Verme": {
+          "info": "Kilo Verme: Diyet, supplement, planlar.",
+          "pros": [
+            "Kilo Verme: Yüksek dönüşüm potansiyeli"
+          ],
+          "cons": [
+            "Kilo Verme: Yasal iddialarda dikkat",
+            "Rekabet yüksek"
+          ]
+        },
+        "Kişisel Finans": {
+          "info": "Kişisel Finans: Birikim, yatırım, kart/uygulama tavsiyeleri.",
+          "pros": [
+            "Kişisel Finans: MRR/SaaS fırsatları",
+            "Yüksek LTV"
+          ],
+          "cons": [
+            "Kişisel Finans: Uygunluk/uyumluluk gerektirir",
+            "Güven inşası şart"
+          ]
+        },
+        "Yazılım/SaaS": {
+          "info": "Yazılım/SaaS: Araç önerileri, üretkenlik, otomasyon.",
+          "pros": [
+            "Yazılım/SaaS: Tekrarlayan komisyon",
+            "B2B içerik fırsatı"
+          ],
+          "cons": [
+            "Yazılım/SaaS: Ürün öğrenme eğrisi",
+            "Demo/test gerektirir"
+          ]
+        },
+        "Güzellik/Bakım": {
+          "info": "Güzellik/Bakım: Kozmetik, cilt bakımı, güzellik cihazları.",
+          "pros": [
+            "Güzellik/Bakım: Trend etkisi yüksek",
+            "UGC içerikler iyi çalışır"
+          ],
+          "cons": [
+            "Güzellik/Bakım: Stok/çeşit çok",
+            "Deneyim gerektirir"
+          ]
+        },
+        "Ev-Yaşam": {
+          "info": "Ev-Yaşam: Ev ürünleri, dekorasyon, küçük ev aletleri.",
+          "pros": [
+            "Ev-Yaşam: Geniş kitle",
+            "Fiziksel pazar yerleri uyumlu"
+          ],
+          "cons": [
+            "Ev-Yaşam: Kargo/iade hassasiyeti",
+            "Komisyon düşük olabilir"
+          ]
+        }
+      },
       "glossary": {}
     },
     {
@@ -266,8 +538,38 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Aday 1": {
+          "info": "Aday 1: En güçlü aday; yüksek EPC ve düşük iade.",
+          "pros": [
+            "Aday 1: Yüksek EPC"
+          ],
+          "cons": [
+            "Aday 1: Stok/kampanya takibi gerekebilir"
+          ]
+        },
+        "Aday 2": {
+          "info": "Aday 2: Yedek güçlü aday; farklı persona hedefi.",
+          "pros": [
+            "Aday 2: Çeşitlilik sağlar"
+          ],
+          "cons": [
+            "Aday 2: Test bütçesi gerekir"
+          ]
+        },
+        "Aday 3": {
+          "info": "Aday 3: Uzun vadeli potansiyel; ek test gerekli.",
+          "pros": [
+            "Aday 3: Uzun vadeli büyüme"
+          ],
+          "cons": [
+            "Aday 3: Kısa vadede düşük dönüşüm olabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Click başına kazanç (Earnings Per Click)."
+      }
     },
     {
       "id": 17,
@@ -313,7 +615,41 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
+      "optionDetails": {
+        "Shorts/Reels": {
+          "info": "Shorts/Reels: Kısa dikey video odaklı içerik taktiği.",
+          "pros": [
+            "Shorts/Reels: Hızlı keşif/dolaşım",
+            "Seri üretim kolay"
+          ],
+          "cons": [
+            "Shorts/Reels: Ömür kısa",
+            "Derin bağ kurmak zor"
+          ]
+        },
+        "Blog": {
+          "info": "Blog: SEO odaklı yazılı içerik.",
+          "pros": [
+            "Blog: Pasif trafik",
+            "Uzun vadede kümülatif etki"
+          ],
+          "cons": [
+            "Blog: Zaman alır",
+            "Rekabetli anahtar kelimeler"
+          ]
+        },
+        "Karışık": {
+          "info": "Karışık: Video + yazı hibrit yaklaşım.",
+          "pros": [
+            "Karışık: Çok kanallı temas",
+            "Risk dağıtımı"
+          ],
+          "cons": [
+            "Karışık: Operasyon karmaşık",
+            "Tutarlılık zor"
+          ]
+        }
+      },
       "glossary": {}
     },
     {
@@ -330,8 +666,33 @@
         "Cloudflare"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Özel Alan (önerilir)": {
+          "info": "Özel Alan (önerilir): Kendi alan adında köprü sayfa.",
+          "pros": [
+            "Özel Alan (önerilir): Marka güvenirliği",
+            "Esnek izleme"
+          ],
+          "cons": [
+            "Özel Alan (önerilir): Alan/hosting maliyeti",
+            "Kurulum zamanı"
+          ]
+        },
+        "Shortener": {
+          "info": "Shortener: Kısaltılmış dış bağlantı kullanımı.",
+          "pros": [
+            "Shortener: Hızlı kurulum",
+            "Basit"
+          ],
+          "cons": [
+            "Shortener: Marka algısı zayıf",
+            "Bazı platformlar engelleyebilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Cloak": "Affiliate linki, kullanıcı dostu URL ile gizlemek."
+      }
     },
     {
       "id": 21,
@@ -348,8 +709,53 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Review": {
+          "info": "Review: Tek ürün inceleme sayfası.",
+          "pros": [
+            "Review: Niyet yüksek",
+            "Uzun içerik fırsatı"
+          ],
+          "cons": [
+            "Review: Araştırma gerekir"
+          ]
+        },
+        "Karşılaştırma": {
+          "info": "Karşılaştırma: Alternatifleri kıyaslayan sayfa.",
+          "pros": [
+            "Karşılaştırma: Dönüşüm niyeti yüksek",
+            "Birden çok ürün satışı"
+          ],
+          "cons": [
+            "Karşılaştırma: Tablo/veri hazırlama gerekir"
+          ]
+        },
+        "Lead Magnet": {
+          "info": "Lead Magnet: E-posta karşılığı değerli içerik.",
+          "pros": [
+            "Lead Magnet: Liste büyütür",
+            "CRM/otomasyon mümkün"
+          ],
+          "cons": [
+            "Lead Magnet: Magnet üretimi gerekir",
+            "Ek araçlar maliyeti"
+          ]
+        },
+        "Direkt Link": {
+          "info": "Direkt Link: Köprü sayfa olmadan doğrudan satış linki.",
+          "pros": [
+            "Direkt Link: Hızlı",
+            "Basit"
+          ],
+          "cons": [
+            "Direkt Link: Takip/AB test zor",
+            "Platform politikaları riskli olabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Cloak": "Affiliate linki, kullanıcı dostu URL ile gizlemek."
+      }
     },
     {
       "id": 22,
@@ -366,7 +772,41 @@
         "Notion"
       ],
       "visibleIf": "step:21=Review|Karşılaştırma|Lead Magnet",
-      "optionDetails": {},
+      "optionDetails": {
+        "Carrd": {
+          "info": "Carrd: Tek sayfalık basit site aracı.",
+          "pros": [
+            "Carrd: Çok hızlı kurulum",
+            "Ucuz"
+          ],
+          "cons": [
+            "Carrd: Sınırlı esneklik",
+            "Blog/SEO için uygun değil"
+          ]
+        },
+        "Notion": {
+          "info": "Notion: No-code sayfa/kitapçık; hızlı yayın.",
+          "pros": [
+            "Notion: Hızlı üretim",
+            "İşbirliği kolay"
+          ],
+          "cons": [
+            "Notion: SEO/analytics sınırlı",
+            "Tasarım kısıtları"
+          ]
+        },
+        "WordPress": {
+          "info": "WordPress: Esnek CMS; eklentilerle genişleme.",
+          "pros": [
+            "WordPress: Tam kontrol",
+            "SEO gücü"
+          ],
+          "cons": [
+            "WordPress: Bakım/hosting sorumluluğu",
+            "Öğrenme eğrisi"
+          ]
+        }
+      },
       "glossary": {}
     },
     {
@@ -399,8 +839,55 @@
         "TikTok Pixel Helper"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "TikTok Pixel": {
+          "info": "TikTok Pixel: TikTok dönüşüm izleme kodu.",
+          "pros": [
+            "TikTok Pixel: Reklam optimizasyonu",
+            "Olay bazlı raporlama"
+          ],
+          "cons": [
+            "TikTok Pixel: Kurulum hataya açık"
+          ]
+        },
+        "Meta Pixel": {
+          "info": "Meta Pixel: Meta (FB/IG) izleme kodu.",
+          "pros": [
+            "Meta Pixel: Retargeting",
+            "Zengin olay seti"
+          ],
+          "cons": [
+            "Meta Pixel: Tarayıcı/çerez kısıtları"
+          ]
+        },
+        "Google Tag": {
+          "info": "Google Tag: Google Tag Manager ile merkezi etiket.",
+          "pros": [
+            "Google Tag: Tek yerden yönetim",
+            "Kolay AB test etiketleme"
+          ],
+          "cons": [
+            "Google Tag: Öğrenme eğrisi"
+          ]
+        },
+        "Yalnızca UTM": {
+          "info": "Yalnızca UTM: Basit kampanya izleme parametreleri.",
+          "pros": [
+            "Yalnızca UTM: Sıfır teknik kurulum",
+            "Hızlı başlangıç"
+          ],
+          "cons": [
+            "Yalnızca UTM: Dönüşüm verisi yok",
+            "Sadece tıklama tarafı"
+          ]
+        }
+      },
+      "glossary": {
+        "GA4": "Google Analytics 4; olay tabanlı analiz.",
+        "UTM": "Kaynak/medium/campaign parametreleri ile link işaretleme.",
+        "GTM": "Google Tag Manager; etiketleri merkezi yönetme.",
+        "Pixel": "Dönüşüm ve olayları izleyen izleme kodu."
+      }
     },
     {
       "id": 25,
@@ -415,7 +902,11 @@
       ],
       "visibleIf": "step:24=Tiktok Pixel|Meta Pixel|Google Tag",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GA4": "Google Analytics 4; olay tabanlı analiz.",
+        "GTM": "Google Tag Manager; etiketleri merkezi yönetme.",
+        "Pixel": "Dönüşüm ve olayları izleyen izleme kodu."
+      }
     },
     {
       "id": 26,
@@ -432,8 +923,43 @@
         "Short.io"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Bitly": {
+          "info": "Bitly: Popüler link kısaltma ve tıklama analizi.",
+          "pros": [
+            "Bitly: Basit raporlar",
+            "Ücretsiz plan"
+          ],
+          "cons": [
+            "Bitly: Markasız link",
+            "Sınırlı özelleştirme"
+          ]
+        },
+        "Short.io": {
+          "info": "Short.io: Özel alanla markalı link kısaltma.",
+          "pros": [
+            "Short.io: Markalı kısa link",
+            "Gelişmiş özellikler"
+          ],
+          "cons": [
+            "Short.io: Ücretli plan",
+            "Kurulum gerekir"
+          ]
+        },
+        "Kendi Alan": {
+          "info": "Kendi Alan: Kendi alanında kısa yönlendirme.",
+          "pros": [
+            "Kendi Alan: Tam kontrol",
+            "Marka güveni"
+          ],
+          "cons": [
+            "Kendi Alan: Kurulum/hosting gerekir"
+          ]
+        }
+      },
+      "glossary": {
+        "Cloak": "Affiliate linki, kullanıcı dostu URL ile gizlemek."
+      }
     },
     {
       "id": 27,
@@ -448,7 +974,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "UTM": "Kaynak/medium/campaign parametreleri ile link işaretleme."
+      }
     },
     {
       "id": 28,
@@ -496,8 +1024,64 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "TikTok": {
+          "info": "TikTok: Kısa dikey video ile hızlı erişim.",
+          "pros": [
+            "TikTok: Keşfet potansiyeli",
+            "UGC ile uygun"
+          ],
+          "cons": [
+            "TikTok: Durağan trafik değil",
+            "Format kısıtları"
+          ]
+        },
+        "Instagram": {
+          "info": "Instagram: Reels/Story ile ürün hikayesi.",
+          "pros": [
+            "Instagram: Güven/DM ile dönüşüm",
+            "Influencer işbirlikleri"
+          ],
+          "cons": [
+            "Instagram: Erişim düşüşleri",
+            "Bağlantı kısıtları"
+          ]
+        },
+        "YouTube Shorts": {
+          "info": "YouTube Shorts: YouTube içi kısa video; kalıcı arşiv.",
+          "pros": [
+            "YouTube Shorts: YouTube öneri sistemi",
+            "Monetizasyon opsiyonu"
+          ],
+          "cons": [
+            "YouTube Shorts: Üretim ritmi gerekir"
+          ]
+        },
+        "Blog SEO": {
+          "info": "Blog SEO: Arama niyeti yüksek organik trafik.",
+          "pros": [
+            "Blog SEO: Uzun vadeli pasif trafik"
+          ],
+          "cons": [
+            "Blog SEO: Zor anahtar kelimeler",
+            "Zaman alır"
+          ]
+        },
+        "Email": {
+          "info": "Email: Listeye e-posta ile tekrarlı temas.",
+          "pros": [
+            "Email: Sahip olunan kanal",
+            "Otomasyon"
+          ],
+          "cons": [
+            "Email: Liste büyütme maliyeti",
+            "Inbox yerleştirme sorunları"
+          ]
+        }
+      },
+      "glossary": {
+        "CTR": "Tıklama oranı (Click-Through Rate)."
+      }
     },
     {
       "id": 31,
@@ -587,7 +1171,29 @@
         "CapCut"
       ],
       "visibleIf": "step:30=TikTok",
-      "optionDetails": {},
+      "optionDetails": {
+        "CapCut Mobil": {
+          "info": "CapCut Mobil: Mobil video düzenleme uygulaması.",
+          "pros": [
+            "CapCut Mobil: Hızlı",
+            "Şablonlar var"
+          ],
+          "cons": [
+            "CapCut Mobil: Detaylı kontrol sınırlı"
+          ]
+        },
+        "CapCut Masaüstü": {
+          "info": "CapCut Masaüstü: Masaüstü video editörü.",
+          "pros": [
+            "CapCut Masaüstü: İnce kontrol",
+            "Plug-in/FX"
+          ],
+          "cons": [
+            "CapCut Masaüstü: Öğrenme eğrisi",
+            "Makine gereksinimi"
+          ]
+        }
+      },
       "glossary": {}
     },
     {
@@ -708,7 +1314,9 @@
       ],
       "visibleIf": "step:30=Instagram",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Cloak": "Affiliate linki, kullanıcı dostu URL ile gizlemek."
+      }
     },
     {
       "id": 45,
@@ -903,8 +1511,33 @@
         "WordPress"
       ],
       "visibleIf": "step:30=Blog SEO",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "WordPress.com": {
+          "info": "WordPress.com: Barındırmalı WordPress servisi.",
+          "pros": [
+            "WordPress.com: Kurulum yok",
+            "Kolay yönetim"
+          ],
+          "cons": [
+            "WordPress.com: Eklenti kısıtı",
+            "Esneklik sınırlı"
+          ]
+        },
+        "Kendi Hosting": {
+          "info": "Kendi Hosting: Kendi barındırmanda WordPress.",
+          "pros": [
+            "Kendi Hosting: Tam kontrol",
+            "SEO/eklentiler özgür"
+          ],
+          "cons": [
+            "Kendi Hosting: Bakım sorumluluğu",
+            "Güvenlik/performans takibi"
+          ]
+        }
+      },
+      "glossary": {
+        "GA4": "Google Analytics 4; olay tabanlı analiz."
+      }
     },
     {
       "id": 61,
@@ -965,7 +1598,9 @@
       ],
       "visibleIf": "step:30=Blog SEO",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Cloak": "Affiliate linki, kullanıcı dostu URL ile gizlemek."
+      }
     },
     {
       "id": 65,
@@ -1043,7 +1678,9 @@
       ],
       "visibleIf": "step:30=Blog SEO",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GA4": "Google Analytics 4; olay tabanlı analiz."
+      }
     },
     {
       "id": 70,
@@ -1059,8 +1696,39 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Check-list": {
+          "info": "Check-list: Tek sayfalık görev listesi.",
+          "pros": [
+            "Check-list: Hızlı üretim",
+            "Yüksek kayıt oranı"
+          ],
+          "cons": [
+            "Check-list: Değer sınırlı olabilir"
+          ]
+        },
+        "Mini e-kitap": {
+          "info": "Mini e-kitap: 5–15 sayfa içgörü/özet içerik.",
+          "pros": [
+            "Mini e-kitap: Uzmanlık sergiler"
+          ],
+          "cons": [
+            "Mini e-kitap: Yazım süresi gerekir"
+          ]
+        },
+        "E-posta kursu": {
+          "info": "E-posta kursu: 3–7 gün drip eğitim serisi.",
+          "pros": [
+            "E-posta kursu: Otomasyonla 7/24 çalışır"
+          ],
+          "cons": [
+            "E-posta kursu: Senaryo yazımı gerekir"
+          ]
+        }
+      },
+      "glossary": {
+        "Lead Magnet": "E-posta karşılığı verilen değerli içerik."
+      }
     },
     {
       "id": 71,
@@ -1076,7 +1744,37 @@
         "Mailchimp"
       ],
       "visibleIf": "step:70=Check-list|Mini e-kitap|E-posta kursu",
-      "optionDetails": {},
+      "optionDetails": {
+        "Mailchimp": {
+          "info": "Mailchimp: E-posta pazarlama aracı.",
+          "pros": [
+            "Mailchimp: Ücretsiz başlangıç",
+            "Basit kurulum"
+          ],
+          "cons": [
+            "Mailchimp: Gelişmiş otomasyon sınırlı"
+          ]
+        },
+        "Beehiiv": {
+          "info": "Beehiiv: Bülten platformu + referans sistemi.",
+          "pros": [
+            "Beehiiv: Kolay büyüme araçları"
+          ],
+          "cons": [
+            "Beehiiv: Gelişmiş CRM kısıtlı"
+          ]
+        },
+        "ConvertKit": {
+          "info": "ConvertKit: Yaratıcılar için otomasyonlu e-posta aracı.",
+          "pros": [
+            "ConvertKit: Gelişmiş otomasyon",
+            "Tag/segment"
+          ],
+          "cons": [
+            "ConvertKit: Ücretli plan yüksek başlayabilir"
+          ]
+        }
+      },
       "glossary": {}
     },
     {
@@ -1107,7 +1805,9 @@
       ],
       "visibleIf": "step:70=Check-list|Mini e-kitap|E-posta kursu",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Lead Magnet": "E-posta karşılığı verilen değerli içerik."
+      }
     },
     {
       "id": 74,
@@ -1122,7 +1822,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Cloak": "Affiliate linki, kullanıcı dostu URL ile gizlemek."
+      }
     },
     {
       "id": 75,
@@ -1197,8 +1899,33 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Hayır (Organik)": {
+          "info": "Hayır (Organik): Önce içerikle doğal trafik.",
+          "pros": [
+            "Hayır (Organik): Maliyet yok",
+            "Gerçek geri bildirim"
+          ],
+          "cons": [
+            "Hayır (Organik): Zaman alır"
+          ]
+        },
+        "Evet (Test)": {
+          "info": "Evet (Test): Küçük bütçe ile validasyon.",
+          "pros": [
+            "Evet (Test): Hızlı veri"
+          ],
+          "cons": [
+            "Evet (Test): Bütçe riski",
+            "Politika ihlali riski"
+          ]
+        }
+      },
+      "glossary": {
+        "AOV": "Ortalama sipariş değeri (Average Order Value).",
+        "CTR": "Tıklama oranı (Click-Through Rate).",
+        "Retargeting": "Tekrar hedefleme; daha önce etkileşenlere reklam gösterme."
+      }
     },
     {
       "id": 81,
@@ -1215,8 +1942,45 @@
         "Meta Ads"
       ],
       "visibleIf": "step:80=Evet (Test)",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "TikTok Ads": {
+          "info": "TikTok Ads: TikTok reklamları.",
+          "pros": [
+            "TikTok Ads: Düşük CPM",
+            "UGC uyumu"
+          ],
+          "cons": [
+            "TikTok Ads: Politika hassas",
+            "Kreatif döngüsü hızlı tükenir"
+          ]
+        },
+        "Meta Ads": {
+          "info": "Meta Ads: Facebook/Instagram reklamları.",
+          "pros": [
+            "Meta Ads: Geniş hedefleme",
+            "Retargeting"
+          ],
+          "cons": [
+            "Meta Ads: Maliyet dalgalanır",
+            "Öğrenme aşaması"
+          ]
+        },
+        "Google Ads": {
+          "info": "Google Ads: Arama/Nihai niyet reklamları.",
+          "pros": [
+            "Google Ads: Yüksek niyet"
+          ],
+          "cons": [
+            "Google Ads: Anahtar kelime maliyeti",
+            "Kalite puanı gereksinimleri"
+          ]
+        }
+      },
+      "glossary": {
+        "AOV": "Ortalama sipariş değeri (Average Order Value).",
+        "CTR": "Tıklama oranı (Click-Through Rate).",
+        "Retargeting": "Tekrar hedefleme; daha önce etkileşenlere reklam gösterme."
+      }
     },
     {
       "id": 82,
@@ -1261,7 +2025,11 @@
       ],
       "visibleIf": "step:80=Evet (Test)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "AOV": "Ortalama sipariş değeri (Average Order Value).",
+        "CTR": "Tıklama oranı (Click-Through Rate).",
+        "Retargeting": "Tekrar hedefleme; daha önce etkileşenlere reklam gösterme."
+      }
     },
     {
       "id": 90,

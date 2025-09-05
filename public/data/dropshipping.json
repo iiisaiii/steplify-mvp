@@ -16,8 +16,60 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Shopify": {
+          "info": "Shopify: Barındırılan e‑ticaret platformu; kurulum hızlı, uygulama ekosistemi geniş.",
+          "pros": [
+            "Kurulum ve tema yönetimi çok hızlı",
+            "App Store ile neredeyse sınırsız özellik",
+            "Güvenlik/hosting otomatik"
+          ],
+          "cons": [
+            "Aylık ücret ve bazı uygulama maliyetleri",
+            "Kapsamlı özelleştirme için kod/uygulama gerekir",
+            "İşlem ücretleri planlara göre değişir"
+          ]
+        },
+        "Etsy": {
+          "info": "Etsy: El işi/özel üretim ağırlıklı pazar yeri; hazır ziyaretçi trafiği.",
+          "pros": [
+            "Hazır hedeflenmiş trafik",
+            "Başlangıç eşiği düşük",
+            "Güvenilir ödeme altyapısı"
+          ],
+          "cons": [
+            "Komisyon ve listeleme ücretleri",
+            "Mağaza tasarımı/kural kısıtları",
+            "Politika ihlallerinde mağaza kapanabilir"
+          ]
+        },
+        "Amazon": {
+          "info": "Amazon: Büyük pazar yeri; sıkı politika. Dropshipping FBM’de fatura/doğrulama şart.",
+          "pros": [
+            "Çok yüksek talep",
+            "Prime ile hızlı teslimat beklentisi net",
+            "Arama niyetli müşteri"
+          ],
+          "cons": [
+            "Sıkı kurallar ve hesap doğrulama",
+            "Komisyon/lojistik maliyetleri yüksek",
+            "Politika ihlali riskinde hesap kapanması"
+          ]
+        },
+        "Pazaryeri (TR)": {
+          "info": "Pazaryeri (TR): Pazaryeri (TR) seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 2,
@@ -34,8 +86,59 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "AliExpress": {
+          "info": "AliExpress: Geniş tedarikçi ağı ve düşük MOQ; kargo süreleri uzayabilir.",
+          "pros": [
+            "Ürün çeşitliliği çok yüksek",
+            "Düşük minimum sipariş",
+            "Kolay tedarik başlangıcı"
+          ],
+          "cons": [
+            "Kargo ve teslimat süreleri uzun",
+            "Kalite/satıcı tutarlılığı değişken",
+            "İade/garanti süreçleri zorlayıcı"
+          ]
+        },
+        "Türkiye Tedarikçi": {
+          "info": "Türkiye Tedarikçi: Türkiye Tedarikçi tedarik seçeneği için kontrol listesi.",
+          "pros": [
+            "Kolay başlangıç",
+            "Geniş ürün havuzu"
+          ],
+          "cons": [
+            "Kalite/termin değişken",
+            "Kargo ve iade süreçleri karmaşık"
+          ]
+        },
+        "Print on Demand": {
+          "info": "Print on Demand: Print on Demand tedarik seçeneği için kontrol listesi.",
+          "pros": [
+            "Kolay başlangıç",
+            "Geniş ürün havuzu"
+          ],
+          "cons": [
+            "Kalite/termin değişken",
+            "Kargo ve iade süreçleri karmaşık"
+          ]
+        },
+        "Private Label": {
+          "info": "Private Label: Private Label tedarik seçeneği için kontrol listesi.",
+          "pros": [
+            "Kolay başlangıç",
+            "Geniş ürün havuzu"
+          ],
+          "cons": [
+            "Kalite/termin değişken",
+            "Kargo ve iade süreçleri karmaşık"
+          ]
+        }
+      },
+      "glossary": {
+        "MOQ": "Minimum sipariş adedi",
+        "SKU": "Stok tutma birimi; ürün varyant kodu",
+        "Processing Time": "Siparişin kargoya verilene kadar geçen süre"
+      }
     },
     {
       "id": 3,
@@ -50,8 +153,30 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Global": {
+          "info": "Global: Global seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Türkiye": {
+          "info": "Türkiye: Türkiye seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 4,
@@ -67,7 +192,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 5,
@@ -83,7 +211,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 6,
@@ -98,7 +229,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 7,
@@ -116,8 +250,52 @@
         "Tag Assistant"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "TikTok Pixel": {
+          "info": "TikTok Pixel: Kısa video tabanlı performans; ürün-kreatif uyumu çok önemli.",
+          "pros": [
+            "Organik + ücretli potansiyel",
+            "UGC ile yüksek etkileşim"
+          ],
+          "cons": [
+            "Trend bağımlılığı",
+            "Hesap/rekabet dalgalanmaları"
+          ]
+        },
+        "Meta Pixel": {
+          "info": "Meta Pixel: Meta Pixel seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Google Tag (GA4)": {
+          "info": "Google Tag (GA4): Arama/niyet tabanlı trafik; feed, stok ve marj optimizasyonu şart.",
+          "pros": [
+            "Satın almaya yakın kitle",
+            "Uzun vadeli kârlılık imkânı"
+          ],
+          "cons": [
+            "Feed ve veri kalitesi kritik",
+            "Yoğun rekabette tıklama maliyetleri artar"
+          ]
+        },
+        "Sadece UTM": {
+          "info": "Sadece UTM: Sadece UTM seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 8,
@@ -132,7 +310,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "UTM": "Kampanya kaynak/medium takip parametreleri"
+      }
     },
     {
       "id": 9,
@@ -147,7 +327,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 10,
@@ -163,7 +346,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 20,
@@ -178,7 +364,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 21,
@@ -193,7 +382,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 22,
@@ -208,7 +400,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 23,
@@ -223,7 +418,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 24,
@@ -240,8 +438,45 @@
         "PayTR"
       ],
       "visibleIf": "step:1=Shopify",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "iyzico": {
+          "info": "iyzico: Türkiye yerel ödeme sağlayıcıları; taksit ve yerel kart desteği.",
+          "pros": [
+            "TR kart/taksit avantajı",
+            "Hızlı onay ve destek"
+          ],
+          "cons": [
+            "Komisyon oranları değişken",
+            "Bazı entegrasyonlarda ek geliştirme gerekir"
+          ]
+        },
+        "PayTR": {
+          "info": "PayTR: Türkiye yerel ödeme sağlayıcıları; taksit ve yerel kart desteği.",
+          "pros": [
+            "TR kart/taksit avantajı",
+            "Hızlı onay ve destek"
+          ],
+          "cons": [
+            "Komisyon oranları değişken",
+            "Bazı entegrasyonlarda ek geliştirme gerekir"
+          ]
+        },
+        "Stripe": {
+          "info": "Stripe: Geliştirici dostu modern ödeme altyapısı.",
+          "pros": [
+            "Hızlı entegrasyon",
+            "Birçok para birimi/destek"
+          ],
+          "cons": [
+            "Türkiye’de sınırlı erişim olabilir",
+            "İade/chargeback maliyetleri"
+          ]
+        }
+      },
+      "glossary": {
+        "Chargeback": "Kart itirazı; ters ibraz",
+        "Fraud": "Dolandırıcılık şüphesi işlemler"
+      }
     },
     {
       "id": 25,
@@ -257,7 +492,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 26,
@@ -272,7 +510,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 27,
@@ -287,7 +528,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 28,
@@ -306,8 +550,50 @@
         "Klaviyo"
       ],
       "visibleIf": "step:1=Shopify",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "PageFly": {
+          "info": "PageFly: PageFly seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Judge.me": {
+          "info": "Judge.me: Judge.me seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Klaviyo": {
+          "info": "Klaviyo: Müşteri listesine otomatik akışlar (welcome, sepet, winback).",
+          "pros": [
+            "Mülkiyet senin (1P veri)",
+            "Yüksek ROI potansiyeli"
+          ],
+          "cons": [
+            "Liste büyütme süreci gerekir",
+            "Uyumluluk (KVKK/GDPR) şart"
+          ]
+        },
+        "Lucky Orange": {
+          "info": "Lucky Orange: Lucky Orange seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 29,
@@ -322,7 +608,11 @@
       ],
       "visibleIf": "step:1=Shopify; step:2=AliExpress",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "MOQ": "Minimum sipariş adedi",
+        "SKU": "Stok tutma birimi; ürün varyant kodu",
+        "Processing Time": "Siparişin kargoya verilene kadar geçen süre"
+      }
     },
     {
       "id": 30,
@@ -339,8 +629,48 @@
         "Dopigo"
       ],
       "visibleIf": "step:1=Shopify; step:2=Türkiye Tedarikçi",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Entegra": {
+          "info": "Entegra: Entegra tedarik seçeneği için kontrol listesi.",
+          "pros": [
+            "Kolay başlangıç",
+            "Geniş ürün havuzu"
+          ],
+          "cons": [
+            "Kalite/termin değişken",
+            "Kargo ve iade süreçleri karmaşık"
+          ]
+        },
+        "Dopigo": {
+          "info": "Dopigo: Dopigo tedarik seçeneği için kontrol listesi.",
+          "pros": [
+            "Kolay başlangıç",
+            "Geniş ürün havuzu"
+          ],
+          "cons": [
+            "Kalite/termin değişken",
+            "Kargo ve iade süreçleri karmaşık"
+          ]
+        },
+        "StockMount": {
+          "info": "StockMount: StockMount tedarik seçeneği için kontrol listesi.",
+          "pros": [
+            "Kolay başlangıç",
+            "Geniş ürün havuzu"
+          ],
+          "cons": [
+            "Kalite/termin değişken",
+            "Kargo ve iade süreçleri karmaşık"
+          ]
+        }
+      },
+      "glossary": {
+        "MOQ": "Minimum sipariş adedi",
+        "SKU": "Stok tutma birimi; ürün varyant kodu",
+        "Processing Time": "Siparişin kargoya verilene kadar geçen süre",
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 31,
@@ -357,8 +687,39 @@
         "Printful"
       ],
       "visibleIf": "step:1=Shopify; step:2=Print on Demand",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Printify": {
+          "info": "Printify: Printify seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Printful": {
+          "info": "Printful: Printful seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Gelato": {
+          "info": "Gelato: Gelato seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 32,
@@ -373,7 +734,9 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GTM": "Google Tag Manager; etiket yönetimi"
+      }
     },
     {
       "id": 40,
@@ -388,7 +751,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 41,
@@ -403,7 +769,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 42,
@@ -418,7 +787,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 43,
@@ -435,8 +807,39 @@
         "Printful"
       ],
       "visibleIf": "step:1=Etsy; step:2=Print on Demand",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Printify": {
+          "info": "Printify: Printify seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Printful": {
+          "info": "Printful: Printful seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Gelato": {
+          "info": "Gelato: Gelato seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 44,
@@ -451,7 +854,9 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "UTM": "Kampanya kaynak/medium takip parametreleri"
+      }
     },
     {
       "id": 50,
@@ -466,8 +871,30 @@
         "Amazon Seller Central"
       ],
       "visibleIf": "step:1=Amazon",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Individual": {
+          "info": "Individual: Individual seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Professional": {
+          "info": "Professional: Professional seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 51,
@@ -482,8 +909,30 @@
         "-"
       ],
       "visibleIf": "step:1=Amazon",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "FBA": {
+          "info": "FBA: FBA seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "FBM": {
+          "info": "FBM: FBM seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 52,
@@ -498,7 +947,10 @@
       ],
       "visibleIf": "step:1=Amazon",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 53,
@@ -513,7 +965,10 @@
       ],
       "visibleIf": "step:1=Amazon",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 54,
@@ -528,7 +983,10 @@
       ],
       "visibleIf": "step:1=Amazon; step:51=FBM",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 55,
@@ -543,7 +1001,10 @@
       ],
       "visibleIf": "step:1=Amazon; step:51=FBA",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 56,
@@ -558,7 +1019,9 @@
       ],
       "visibleIf": "step:1=Amazon",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "UTM": "Kampanya kaynak/medium takip parametreleri"
+      }
     },
     {
       "id": 60,
@@ -574,8 +1037,51 @@
         "Satıcı Merkezi"
       ],
       "visibleIf": "step:1=Pazaryeri (TR)",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Trendyol": {
+          "info": "Trendyol: Türkiye yerel pazar yeri; kategoriye göre komisyon ve kargo anlaşmaları.",
+          "pros": [
+            "Hazır trafik ve güven",
+            "Kampanya/satıcı paneli araçları",
+            "Kapıda iade/süreç yönetimi oturmuş"
+          ],
+          "cons": [
+            "Komisyon ve pazarlama payı",
+            "Listeleme/ret süreçleri",
+            "Rekabet ve fiyat baskısı yüksek"
+          ]
+        },
+        "Hepsiburada": {
+          "info": "Hepsiburada: Türkiye yerel pazar yeri; kategoriye göre komisyon ve kargo anlaşmaları.",
+          "pros": [
+            "Hazır trafik ve güven",
+            "Kampanya/satıcı paneli araçları",
+            "Kapıda iade/süreç yönetimi oturmuş"
+          ],
+          "cons": [
+            "Komisyon ve pazarlama payı",
+            "Listeleme/ret süreçleri",
+            "Rekabet ve fiyat baskısı yüksek"
+          ]
+        },
+        "n11": {
+          "info": "n11: Türkiye yerel pazar yeri; kategoriye göre komisyon ve kargo anlaşmaları.",
+          "pros": [
+            "Hazır trafik ve güven",
+            "Kampanya/satıcı paneli araçları",
+            "Kapıda iade/süreç yönetimi oturmuş"
+          ],
+          "cons": [
+            "Komisyon ve pazarlama payı",
+            "Listeleme/ret süreçleri",
+            "Rekabet ve fiyat baskısı yüksek"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 61,
@@ -590,7 +1096,10 @@
       ],
       "visibleIf": "step:1=Pazaryeri (TR)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 62,
@@ -607,8 +1116,48 @@
         "Entegratörler"
       ],
       "visibleIf": "step:1=Pazaryeri (TR)",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Entegra": {
+          "info": "Entegra: Entegra seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Dopigo": {
+          "info": "Dopigo: Dopigo seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "StockMount": {
+          "info": "StockMount: StockMount seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "İdeasoft": {
+          "info": "İdeasoft: İdeasoft seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 63,
@@ -625,8 +1174,48 @@
         "Kargo Firmaları"
       ],
       "visibleIf": "step:1=Pazaryeri (TR)",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Yurtiçi": {
+          "info": "Yurtiçi: Yurtiçi seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Aras": {
+          "info": "Aras: Aras seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "MNG": {
+          "info": "MNG: MNG seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Sürat": {
+          "info": "Sürat: Sürat seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 64,
@@ -641,7 +1230,10 @@
       ],
       "visibleIf": "step:1=Pazaryeri (TR)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 70,
@@ -657,7 +1249,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 71,
@@ -672,7 +1267,11 @@
       ],
       "visibleIf": "step:2=AliExpress",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "MOQ": "Minimum sipariş adedi",
+        "SKU": "Stok tutma birimi; ürün varyant kodu",
+        "Processing Time": "Siparişin kargoya verilene kadar geçen süre"
+      }
     },
     {
       "id": 72,
@@ -687,7 +1286,13 @@
       ],
       "visibleIf": "step:2=Türkiye Tedarikçi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "MOQ": "Minimum sipariş adedi",
+        "SKU": "Stok tutma birimi; ürün varyant kodu",
+        "Processing Time": "Siparişin kargoya verilene kadar geçen süre",
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 73,
@@ -705,8 +1310,48 @@
         "Printful"
       ],
       "visibleIf": "step:2=Print on Demand",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "T-Shirt": {
+          "info": "T-Shirt: T-Shirt seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Kupa": {
+          "info": "Kupa: Kupa seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Sweatshirt": {
+          "info": "Sweatshirt: Sweatshirt seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Poster": {
+          "info": "Poster: Poster seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 74,
@@ -722,7 +1367,10 @@
       ],
       "visibleIf": "step:2=Private Label",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 75,
@@ -737,7 +1385,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 76,
@@ -753,8 +1404,39 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Aday 1": {
+          "info": "Aday 1: Aday 1 seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Aday 2": {
+          "info": "Aday 2: Aday 2 seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "Aday 3": {
+          "info": "Aday 3: Aday 3 seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 80,
@@ -770,7 +1452,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 81,
@@ -785,7 +1470,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 82,
@@ -801,7 +1489,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 83,
@@ -816,7 +1507,10 @@
       ],
       "visibleIf": "step:7=Tiktok Pixel|Meta Pixel|Google Tag (GA4)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 90,
@@ -831,7 +1525,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 91,
@@ -846,7 +1543,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 92,
@@ -861,7 +1561,11 @@
       ],
       "visibleIf": "step:1=Shopify; step:2=AliExpress",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "MOQ": "Minimum sipariş adedi",
+        "SKU": "Stok tutma birimi; ürün varyant kodu",
+        "Processing Time": "Siparişin kargoya verilene kadar geçen süre"
+      }
     },
     {
       "id": 93,
@@ -876,7 +1580,11 @@
       ],
       "visibleIf": "step:1=Shopify; step:2=Türkiye Tedarikçi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "MOQ": "Minimum sipariş adedi",
+        "SKU": "Stok tutma birimi; ürün varyant kodu",
+        "Processing Time": "Siparişin kargoya verilene kadar geçen süre"
+      }
     },
     {
       "id": 94,
@@ -891,7 +1599,10 @@
       ],
       "visibleIf": "step:1=Shopify; step:2=Print on Demand",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 95,
@@ -906,7 +1617,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 96,
@@ -921,7 +1635,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 97,
@@ -936,7 +1653,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 100,
@@ -951,7 +1671,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 101,
@@ -967,7 +1690,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 102,
@@ -982,7 +1708,10 @@
       ],
       "visibleIf": "step:1=Etsy; step:2=Print on Demand",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 103,
@@ -997,7 +1726,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 110,
@@ -1012,7 +1744,10 @@
       ],
       "visibleIf": "step:1=Amazon",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 111,
@@ -1027,7 +1762,10 @@
       ],
       "visibleIf": "step:1=Amazon; step:51=FBA",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 112,
@@ -1042,7 +1780,10 @@
       ],
       "visibleIf": "step:1=Amazon; step:51=FBM",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 120,
@@ -1057,7 +1798,10 @@
       ],
       "visibleIf": "step:1=Pazaryeri (TR)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 121,
@@ -1072,7 +1816,10 @@
       ],
       "visibleIf": "step:1=Pazaryeri (TR)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 122,
@@ -1088,7 +1835,10 @@
       ],
       "visibleIf": "step:1=Pazaryeri (TR)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 130,
@@ -1106,8 +1856,63 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "TikTok": {
+          "info": "TikTok: Kısa video tabanlı performans; ürün-kreatif uyumu çok önemli.",
+          "pros": [
+            "Organik + ücretli potansiyel",
+            "UGC ile yüksek etkileşim"
+          ],
+          "cons": [
+            "Trend bağımlılığı",
+            "Hesap/rekabet dalgalanmaları"
+          ]
+        },
+        "Instagram": {
+          "info": "Instagram: Ödeme yapan kitleye hızlı erişim; öğrenme ve hesap sağlığı kritik.",
+          "pros": [
+            "Hızlı test ve ölçekleme",
+            "Kreatif odaklı performans"
+          ],
+          "cons": [
+            "Politika/ban riski",
+            "Optimizasyon döngüsü bütçe ister"
+          ]
+        },
+        "Influencer": {
+          "info": "Influencer: İçerik üreticiler üzerinden içerik/ürün pazarlaması.",
+          "pros": [
+            "Güven ve sosyal kanıt",
+            "Kreatif çeşitliliği"
+          ],
+          "cons": [
+            "Öngörülebilirlik düşük olabilir",
+            "Ölçümleme ve sözleşme yönetimi şart"
+          ]
+        },
+        "Ads": {
+          "info": "Ads: Ads seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "SEO": {
+          "info": "SEO: SEO seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 131,
@@ -1122,7 +1927,10 @@
       ],
       "visibleIf": "step:130=TikTok",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 132,
@@ -1137,7 +1945,10 @@
       ],
       "visibleIf": "step:130=TikTok",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 133,
@@ -1152,8 +1963,30 @@
         "CapCut"
       ],
       "visibleIf": "step:130=TikTok",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "CapCut Mobil": {
+          "info": "CapCut Mobil: CapCut Mobil seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        },
+        "CapCut Masaüstü": {
+          "info": "CapCut Masaüstü: CapCut Masaüstü seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her senaryoda uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 134,
@@ -1168,7 +2001,9 @@
       ],
       "visibleIf": "step:130=TikTok",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GTM": "Google Tag Manager; etiket yönetimi"
+      }
     },
     {
       "id": 135,
@@ -1183,7 +2018,9 @@
       ],
       "visibleIf": "step:130=Instagram",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GTM": "Google Tag Manager; etiket yönetimi"
+      }
     },
     {
       "id": 136,
@@ -1198,7 +2035,9 @@
       ],
       "visibleIf": "step:130=Instagram",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "GTM": "Google Tag Manager; etiket yönetimi"
+      }
     },
     {
       "id": 137,
@@ -1214,7 +2053,10 @@
       ],
       "visibleIf": "step:130=Influencer",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 138,
@@ -1229,7 +2071,10 @@
       ],
       "visibleIf": "step:130=Influencer",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 139,
@@ -1247,8 +2092,45 @@
         "Google Ads"
       ],
       "visibleIf": "step:130=Ads",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "TikTok Ads": {
+          "info": "TikTok Ads: Kısa video tabanlı performans; ürün-kreatif uyumu çok önemli.",
+          "pros": [
+            "Organik + ücretli potansiyel",
+            "UGC ile yüksek etkileşim"
+          ],
+          "cons": [
+            "Trend bağımlılığı",
+            "Hesap/rekabet dalgalanmaları"
+          ]
+        },
+        "Meta Ads": {
+          "info": "Meta Ads: Ödeme yapan kitleye hızlı erişim; öğrenme ve hesap sağlığı kritik.",
+          "pros": [
+            "Hızlı test ve ölçekleme",
+            "Kreatif odaklı performans"
+          ],
+          "cons": [
+            "Politika/ban riski",
+            "Optimizasyon döngüsü bütçe ister"
+          ]
+        },
+        "Google Ads": {
+          "info": "Google Ads: Arama/niyet tabanlı trafik; feed, stok ve marj optimizasyonu şart.",
+          "pros": [
+            "Satın almaya yakın kitle",
+            "Uzun vadeli kârlılık imkânı"
+          ],
+          "cons": [
+            "Feed ve veri kalitesi kritik",
+            "Yoğun rekabette tıklama maliyetleri artar"
+          ]
+        }
+      },
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 140,
@@ -1263,7 +2145,10 @@
       ],
       "visibleIf": "step:130=Ads",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 141,
@@ -1278,7 +2163,10 @@
       ],
       "visibleIf": "step:130=Ads",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 142,
@@ -1294,7 +2182,10 @@
       ],
       "visibleIf": "step:130=SEO",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 150,
@@ -1310,7 +2201,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 151,
@@ -1325,7 +2219,11 @@
       ],
       "visibleIf": "step:1=Shopify; step:2=AliExpress",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "MOQ": "Minimum sipariş adedi",
+        "SKU": "Stok tutma birimi; ürün varyant kodu",
+        "Processing Time": "Siparişin kargoya verilene kadar geçen süre"
+      }
     },
     {
       "id": 152,
@@ -1340,7 +2238,11 @@
       ],
       "visibleIf": "step:1=Shopify; step:2=Türkiye Tedarikçi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "MOQ": "Minimum sipariş adedi",
+        "SKU": "Stok tutma birimi; ürün varyant kodu",
+        "Processing Time": "Siparişin kargoya verilene kadar geçen süre"
+      }
     },
     {
       "id": 153,
@@ -1355,7 +2257,10 @@
       ],
       "visibleIf": "step:1=Shopify; step:2=Print on Demand",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 154,
@@ -1370,7 +2275,10 @@
       ],
       "visibleIf": "step:1=Etsy; step:2=Print on Demand",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 155,
@@ -1385,7 +2293,10 @@
       ],
       "visibleIf": "step:1=Amazon; step:51=FBA",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 156,
@@ -1400,7 +2311,10 @@
       ],
       "visibleIf": "step:1=Amazon; step:51=FBM",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 157,
@@ -1416,7 +2330,10 @@
       ],
       "visibleIf": "step:1=Pazaryeri (TR)",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     },
     {
       "id": 160,
@@ -1431,7 +2348,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "EPC": "Earnings Per Click; tıklama başına kazanç",
+        "AOV": "Average Order Value; ortalama sipariş tutarı"
+      }
     },
     {
       "id": 161,
@@ -1446,7 +2366,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "UTM": "Kampanya kaynak/medium takip parametreleri"
+      }
     },
     {
       "id": 162,
@@ -1461,7 +2383,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DDP/DDU": "Gümrük vergisi ödenmiş/ödenmemiş teslim şekli",
+        "HS Code": "Gümrük tarife kodu"
+      }
     }
   ]
 }

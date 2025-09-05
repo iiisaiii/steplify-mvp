@@ -15,8 +15,45 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Etsy": {
+          "info": "Etsy: Etsy üzerinde POD ürün listeleme.",
+          "pros": [
+            "Organik pazar yeri trafiği",
+            "El işi/kişiselleştirme algısı"
+          ],
+          "cons": [
+            "Komisyon/ücretler",
+            "Marka kontrolü sınırlı"
+          ]
+        },
+        "Amazon Merch": {
+          "info": "Amazon Merch: Amazon (Merch/KDP) üzerinden POD.",
+          "pros": [
+            "Çok büyük müşteri kitlesi",
+            "Prime lojistik avantajı"
+          ],
+          "cons": [
+            "Onay/başvuru süreçleri",
+            "Rekabet ve telif kısıtları"
+          ]
+        },
+        "Shopify": {
+          "info": "Shopify: Shopify mağazası üzerinden POD satışı.",
+          "pros": [
+            "Tam kontrol ve marka",
+            "Uygulama ekosistemi geniş"
+          ],
+          "cons": [
+            "Aylık ücret ve uygulama maliyeti",
+            "Trafik üretmek gerekir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 2,
@@ -34,8 +71,39 @@
         "Midjourney"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Kendim Tasarlarım": {
+          "info": "Kendim Tasarlarım: Kendim Tasarlarım seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Freelancer": {
+          "info": "Freelancer: Freelancer seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "AI": {
+          "info": "AI: AI seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 3,
@@ -53,8 +121,44 @@
         "Gelato"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Printify": {
+          "info": "Printify: Printify; tedarikçi ağı üzerinden uygun maliyet POD.",
+          "pros": [
+            "Birçok üretici seçeneği",
+            "Fiyat rekabeti"
+          ],
+          "cons": [
+            "Kalite/teslimat tutarlılığı üreticiye göre değişir"
+          ]
+        },
+        "Printful": {
+          "info": "Printful: Printful; geniş ürün yelpazesi ve global fulfillment.",
+          "pros": [
+            "Kalite ve entegrasyonlar iyi",
+            "Geniş depo ağı"
+          ],
+          "cons": [
+            "Birim maliyet görece yüksek",
+            "Kar marjı daralabilir"
+          ]
+        },
+        "Gelato": {
+          "info": "Gelato: Gelato; yerel baskı ortaklarıyla hızlı teslim.",
+          "pros": [
+            "Yerel üretim -> hızlı sevk",
+            "Kalite tutarlı"
+          ],
+          "cons": [
+            "Birim maliyet orta-üst",
+            "Tüm ürünlerde kapsam sınırlı olabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 4,
@@ -69,8 +173,30 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Global": {
+          "info": "Global: Global seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Türkiye": {
+          "info": "Türkiye: Türkiye seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 5,
@@ -86,7 +212,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Telif/Marka": "Tescilli içerik kullanmaktan kaçın"
+      }
     },
     {
       "id": 6,
@@ -102,7 +230,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 7,
@@ -117,7 +248,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 8,
@@ -132,7 +266,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 9,
@@ -149,8 +286,39 @@
         "Short.io"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Bitly": {
+          "info": "Bitly: Bitly seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Short.io": {
+          "info": "Short.io: Short.io seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Kendi Alan": {
+          "info": "Kendi Alan: Kendi Alan seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 10,
@@ -169,8 +337,76 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "T-Shirt": {
+          "info": "T-Shirt: Tekstil POD (DTG/DTF/screen print).",
+          "pros": [
+            "Talep yüksek",
+            "Varyasyon çeşitliliği"
+          ],
+          "cons": [
+            "Beden iade süreçleri",
+            "Renk/kalite tutarlılığına dikkat"
+          ]
+        },
+        "Kupa": {
+          "info": "Kupa: Kupa/termos/şişe gibi aksesuar POD.",
+          "pros": [
+            "Hediye kategorisi güçlü",
+            "Kişiselleştirmeye uygun"
+          ],
+          "cons": [
+            "Kırılma/lojistik riski",
+            "Ağırlık -> kargo maliyeti"
+          ]
+        },
+        "Sweatshirt": {
+          "info": "Sweatshirt: Tekstil POD (DTG/DTF/screen print).",
+          "pros": [
+            "Talep yüksek",
+            "Varyasyon çeşitliliği"
+          ],
+          "cons": [
+            "Beden iade süreçleri",
+            "Renk/kalite tutarlılığına dikkat"
+          ]
+        },
+        "Hoodie": {
+          "info": "Hoodie: Tekstil POD (DTG/DTF/screen print).",
+          "pros": [
+            "Talep yüksek",
+            "Varyasyon çeşitliliği"
+          ],
+          "cons": [
+            "Beden iade süreçleri",
+            "Renk/kalite tutarlılığına dikkat"
+          ]
+        },
+        "Poster": {
+          "info": "Poster: Poster/duvar ürünleri POD.",
+          "pros": [
+            "Kırılmasız lojistik",
+            "Yüksek tasarım özgürlüğü"
+          ],
+          "cons": [
+            "Hasar riskine karşı paketleme",
+            "Büyük boyutta sevk maliyeti"
+          ]
+        },
+        "Tote": {
+          "info": "Tote: Tote seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 20,
@@ -185,7 +421,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 21,
@@ -200,7 +439,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 22,
@@ -215,7 +457,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 23,
@@ -232,8 +477,44 @@
         "Printful"
       ],
       "visibleIf": "step:1=Etsy",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Printify": {
+          "info": "Printify: Printify; tedarikçi ağı üzerinden uygun maliyet POD.",
+          "pros": [
+            "Birçok üretici seçeneği",
+            "Fiyat rekabeti"
+          ],
+          "cons": [
+            "Kalite/teslimat tutarlılığı üreticiye göre değişir"
+          ]
+        },
+        "Printful": {
+          "info": "Printful: Printful; geniş ürün yelpazesi ve global fulfillment.",
+          "pros": [
+            "Kalite ve entegrasyonlar iyi",
+            "Geniş depo ağı"
+          ],
+          "cons": [
+            "Birim maliyet görece yüksek",
+            "Kar marjı daralabilir"
+          ]
+        },
+        "Gelato": {
+          "info": "Gelato: Gelato; yerel baskı ortaklarıyla hızlı teslim.",
+          "pros": [
+            "Yerel üretim -> hızlı sevk",
+            "Kalite tutarlı"
+          ],
+          "cons": [
+            "Birim maliyet orta-üst",
+            "Tüm ürünlerde kapsam sınırlı olabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 24,
@@ -248,7 +529,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 25,
@@ -264,7 +548,9 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Evergreen/Trend": "Sürekli aranan vs kısa süreli trend ürünler"
+      }
     },
     {
       "id": 26,
@@ -279,7 +565,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 27,
@@ -294,7 +583,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 28,
@@ -309,7 +601,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 29,
@@ -324,7 +619,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 30,
@@ -339,7 +637,10 @@
       ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 31,
@@ -354,7 +655,9 @@
       ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Telif/Marka": "Tescilli içerik kullanmaktan kaçın"
+      }
     },
     {
       "id": 32,
@@ -369,7 +672,9 @@
       ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mockup": "Ürünün gerçekçi sunum görseli"
+      }
     },
     {
       "id": 33,
@@ -384,7 +689,9 @@
       ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Telif/Marka": "Tescilli içerik kullanmaktan kaçın"
+      }
     },
     {
       "id": 34,
@@ -399,7 +706,10 @@
       ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 35,
@@ -414,7 +724,10 @@
       ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 40,
@@ -429,7 +742,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 41,
@@ -444,7 +760,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 42,
@@ -459,7 +778,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 43,
@@ -476,8 +798,39 @@
         "PayTR"
       ],
       "visibleIf": "step:1=Shopify",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "iyzico": {
+          "info": "iyzico: iyzico seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "PayTR": {
+          "info": "PayTR: PayTR seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Stripe": {
+          "info": "Stripe: Stripe seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 44,
@@ -492,7 +845,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 45,
@@ -507,7 +863,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 46,
@@ -523,8 +882,44 @@
         "Shopify App Store"
       ],
       "visibleIf": "step:1=Shopify",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Printify": {
+          "info": "Printify: Printify; tedarikçi ağı üzerinden uygun maliyet POD.",
+          "pros": [
+            "Birçok üretici seçeneği",
+            "Fiyat rekabeti"
+          ],
+          "cons": [
+            "Kalite/teslimat tutarlılığı üreticiye göre değişir"
+          ]
+        },
+        "Printful": {
+          "info": "Printful: Printful; geniş ürün yelpazesi ve global fulfillment.",
+          "pros": [
+            "Kalite ve entegrasyonlar iyi",
+            "Geniş depo ağı"
+          ],
+          "cons": [
+            "Birim maliyet görece yüksek",
+            "Kar marjı daralabilir"
+          ]
+        },
+        "Gelato": {
+          "info": "Gelato: Gelato; yerel baskı ortaklarıyla hızlı teslim.",
+          "pros": [
+            "Yerel üretim -> hızlı sevk",
+            "Kalite tutarlı"
+          ],
+          "cons": [
+            "Birim maliyet orta-üst",
+            "Tüm ürünlerde kapsam sınırlı olabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 47,
@@ -539,7 +934,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 48,
@@ -554,7 +952,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 49,
@@ -569,7 +970,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 50,
@@ -588,8 +992,66 @@
         "Google Trends"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Meslek": {
+          "info": "Meslek: Meslek için niş/dinleyici hedefleme.",
+          "pros": [
+            "Doğru kitle -> yüksek dönüşüm"
+          ],
+          "cons": [
+            "Araştırma ve test gerekli"
+          ]
+        },
+        "Hobi": {
+          "info": "Hobi: Hobi için niş/dinleyici hedefleme.",
+          "pros": [
+            "Doğru kitle -> yüksek dönüşüm"
+          ],
+          "cons": [
+            "Araştırma ve test gerekli"
+          ]
+        },
+        "Spor": {
+          "info": "Spor: Spor için niş/dinleyici hedefleme.",
+          "pros": [
+            "Doğru kitle -> yüksek dönüşüm"
+          ],
+          "cons": [
+            "Araştırma ve test gerekli"
+          ]
+        },
+        "Mizah": {
+          "info": "Mizah: Mizah için niş/dinleyici hedefleme.",
+          "pros": [
+            "Doğru kitle -> yüksek dönüşüm"
+          ],
+          "cons": [
+            "Araştırma ve test gerekli"
+          ]
+        },
+        "Hayvan": {
+          "info": "Hayvan: Hayvan için niş/dinleyici hedefleme.",
+          "pros": [
+            "Doğru kitle -> yüksek dönüşüm"
+          ],
+          "cons": [
+            "Araştırma ve test gerekli"
+          ]
+        },
+        "Fan": {
+          "info": "Fan: Fan için niş/dinleyici hedefleme.",
+          "pros": [
+            "Doğru kitle -> yüksek dönüşüm"
+          ],
+          "cons": [
+            "Araştırma ve test gerekli"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 51,
@@ -605,7 +1067,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Evergreen/Trend": "Sürekli aranan vs kısa süreli trend ürünler"
+      }
     },
     {
       "id": 52,
@@ -620,7 +1084,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 53,
@@ -635,7 +1102,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 54,
@@ -651,7 +1121,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Telif/Marka": "Tescilli içerik kullanmaktan kaçın"
+      }
     },
     {
       "id": 55,
@@ -666,7 +1138,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 60,
@@ -682,8 +1157,43 @@
         "-"
       ],
       "visibleIf": "step:2=Kendim Tasarlarım",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Figma": {
+          "info": "Figma: Figma seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Photoshop": {
+          "info": "Photoshop: Profesyonel tasarım araçları (PS/AI/Affinity/Procreate).",
+          "pros": [
+            "Vektör ve yüksek DPI kontrolü",
+            "Gelişmiş efektler"
+          ],
+          "cons": [
+            "Öğrenme eğrisi",
+            "Lisans/cihaz maliyeti"
+          ]
+        },
+        "Illustrator": {
+          "info": "Illustrator: Profesyonel tasarım araçları (PS/AI/Affinity/Procreate).",
+          "pros": [
+            "Vektör ve yüksek DPI kontrolü",
+            "Gelişmiş efektler"
+          ],
+          "cons": [
+            "Öğrenme eğrisi",
+            "Lisans/cihaz maliyeti"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 61,
@@ -698,7 +1208,11 @@
       ],
       "visibleIf": "step:2=Kendim Tasarlarım",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DPI": "Baskı çözünürlüğü (300 DPI önerilir)",
+        "CMYK/RGB": "Baskı ve ekran renk uzayları",
+        "Bleed": "Taşma payı; kesimde kayıp olmaması için"
+      }
     },
     {
       "id": 62,
@@ -713,7 +1227,9 @@
       ],
       "visibleIf": "step:2=Kendim Tasarlarım",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mockup": "Ürünün gerçekçi sunum görseli"
+      }
     },
     {
       "id": 63,
@@ -729,8 +1245,39 @@
         "-"
       ],
       "visibleIf": "step:2=Freelancer",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Upwork": {
+          "info": "Upwork: Upwork seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Fiverr": {
+          "info": "Fiverr: Fiverr seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Behance": {
+          "info": "Behance: Behance seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 64,
@@ -745,7 +1292,9 @@
       ],
       "visibleIf": "step:2=Freelancer",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Telif/Marka": "Tescilli içerik kullanmaktan kaçın"
+      }
     },
     {
       "id": 65,
@@ -760,7 +1309,10 @@
       ],
       "visibleIf": "step:2=Freelancer",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 66,
@@ -775,7 +1327,10 @@
       ],
       "visibleIf": "step:2=AI",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 67,
@@ -791,8 +1346,39 @@
         "-"
       ],
       "visibleIf": "step:2=AI",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Topaz": {
+          "info": "Topaz: Topaz seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Gigapixel": {
+          "info": "Gigapixel: Gigapixel seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        },
+        "Remover": {
+          "info": "Remover: Remover seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her mağazada uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 68,
@@ -806,8 +1392,23 @@
         "-"
       ],
       "visibleIf": "step:2=AI",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Illustrator Image Trace": {
+          "info": "Illustrator Image Trace: Profesyonel tasarım araçları (PS/AI/Affinity/Procreate).",
+          "pros": [
+            "Vektör ve yüksek DPI kontrolü",
+            "Gelişmiş efektler"
+          ],
+          "cons": [
+            "Öğrenme eğrisi",
+            "Lisans/cihaz maliyeti"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 69,
@@ -822,7 +1423,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "DPI": "Baskı çözünürlüğü (300 DPI önerilir)",
+        "Telif/Marka": "Tescilli içerik kullanmaktan kaçın"
+      }
     },
     {
       "id": 70,
@@ -837,7 +1441,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 80,
@@ -852,7 +1459,10 @@
       ],
       "visibleIf": "step:3=Printify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 81,
@@ -867,7 +1477,10 @@
       ],
       "visibleIf": "step:3=Printify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 82,
@@ -882,7 +1495,10 @@
       ],
       "visibleIf": "step:3=Printify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 83,
@@ -897,7 +1513,10 @@
       ],
       "visibleIf": "step:3=Printful",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 84,
@@ -912,7 +1531,10 @@
       ],
       "visibleIf": "step:3=Printful",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 85,
@@ -927,7 +1549,10 @@
       ],
       "visibleIf": "step:3=Printful",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 86,
@@ -942,7 +1567,10 @@
       ],
       "visibleIf": "step:3=Gelato",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 87,
@@ -957,7 +1585,10 @@
       ],
       "visibleIf": "step:3=Gelato",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 88,
@@ -972,7 +1603,10 @@
       ],
       "visibleIf": "step:3=Gelato",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 90,
@@ -988,7 +1622,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mockup": "Ürünün gerçekçi sunum görseli"
+      }
     },
     {
       "id": 91,
@@ -1003,7 +1639,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mockup": "Ürünün gerçekçi sunum görseli"
+      }
     },
     {
       "id": 92,
@@ -1018,7 +1656,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 93,
@@ -1033,7 +1674,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 94,
@@ -1048,7 +1692,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 100,
@@ -1063,7 +1710,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 101,
@@ -1079,7 +1729,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 102,
@@ -1094,7 +1747,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 103,
@@ -1109,7 +1765,10 @@
       ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 104,
@@ -1124,7 +1783,10 @@
       ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 105,
@@ -1139,7 +1801,9 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mockup": "Ürünün gerçekçi sunum görseli"
+      }
     },
     {
       "id": 106,
@@ -1154,7 +1818,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 107,
@@ -1169,7 +1836,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 110,
@@ -1189,8 +1859,89 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Pinterest": {
+          "info": "Pinterest: Sosyal medya trafiği (özellikle görsel platformlar).",
+          "pros": [
+            "Düşük maliyetli organik trafik",
+            "Topluluk oluşturma"
+          ],
+          "cons": [
+            "Süreklilik ve içerik gerektirir",
+            "Trendlere bağımlılık"
+          ]
+        },
+        "TikTok": {
+          "info": "TikTok: Sosyal medya trafiği (özellikle görsel platformlar).",
+          "pros": [
+            "Düşük maliyetli organik trafik",
+            "Topluluk oluşturma"
+          ],
+          "cons": [
+            "Süreklilik ve içerik gerektirir",
+            "Trendlere bağımlılık"
+          ]
+        },
+        "Instagram": {
+          "info": "Instagram: Ürün sayfası SEO: başlık, açıklama, tag, kategori.",
+          "pros": [
+            "Organik keşif",
+            "Uzun vadeli satış"
+          ],
+          "cons": [
+            "Araştırma/optimizasyon zamanı",
+            "Anahtar kelime rekabeti"
+          ]
+        },
+        "Etsy Ads": {
+          "info": "Etsy Ads: Etsy üzerinde POD ürün listeleme.",
+          "pros": [
+            "Organik pazar yeri trafiği",
+            "El işi/kişiselleştirme algısı"
+          ],
+          "cons": [
+            "Komisyon/ücretler",
+            "Marka kontrolü sınırlı"
+          ]
+        },
+        "Meta Ads": {
+          "info": "Meta Ads: Ücretli reklam (Meta/Google/Pinterest).",
+          "pros": [
+            "Hızlı trafik",
+            "Hedefleme esnekliği"
+          ],
+          "cons": [
+            "Bütçe ve optimizasyon bilgisi gerekir",
+            "Kâr marjını daraltabilir"
+          ]
+        },
+        "Google Ads": {
+          "info": "Google Ads: Ücretli reklam (Meta/Google/Pinterest).",
+          "pros": [
+            "Hızlı trafik",
+            "Hedefleme esnekliği"
+          ],
+          "cons": [
+            "Bütçe ve optimizasyon bilgisi gerekir",
+            "Kâr marjını daraltabilir"
+          ]
+        },
+        "Organik SEO": {
+          "info": "Organik SEO: Ürün sayfası SEO: başlık, açıklama, tag, kategori.",
+          "pros": [
+            "Organik keşif",
+            "Uzun vadeli satış"
+          ],
+          "cons": [
+            "Araştırma/optimizasyon zamanı",
+            "Anahtar kelime rekabeti"
+          ]
+        }
+      },
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 111,
@@ -1205,7 +1956,10 @@
       ],
       "visibleIf": "step:110=Pinterest",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 112,
@@ -1220,7 +1974,10 @@
       ],
       "visibleIf": "step:110=Pinterest",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 113,
@@ -1235,7 +1992,10 @@
       ],
       "visibleIf": "step:110=Pinterest",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 114,
@@ -1250,7 +2010,10 @@
       ],
       "visibleIf": "step:110=Pinterest",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 115,
@@ -1265,7 +2028,10 @@
       ],
       "visibleIf": "step:110=TikTok",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 116,
@@ -1280,7 +2046,10 @@
       ],
       "visibleIf": "step:110=TikTok",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 117,
@@ -1295,7 +2064,10 @@
       ],
       "visibleIf": "step:110=Instagram",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 118,
@@ -1310,7 +2082,10 @@
       ],
       "visibleIf": "step:110=Instagram",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 119,
@@ -1325,7 +2100,10 @@
       ],
       "visibleIf": "step:110=Etsy Ads; step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 120,
@@ -1340,7 +2118,10 @@
       ],
       "visibleIf": "step:110=Meta Ads; step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 121,
@@ -1355,7 +2136,10 @@
       ],
       "visibleIf": "step:110=Google Ads; step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 122,
@@ -1371,7 +2155,10 @@
       ],
       "visibleIf": "step:110=Organik SEO",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 130,
@@ -1387,7 +2174,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 131,
@@ -1402,7 +2192,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 132,
@@ -1417,7 +2210,10 @@
       ],
       "visibleIf": "step:1=Etsy",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 133,
@@ -1432,7 +2228,10 @@
       ],
       "visibleIf": "step:1=Shopify",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 134,
@@ -1447,7 +2246,10 @@
       ],
       "visibleIf": "step:1=Amazon Merch",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 135,
@@ -1462,7 +2264,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 140,
@@ -1477,7 +2282,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 141,
@@ -1492,7 +2300,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 142,
@@ -1507,7 +2318,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 143,
@@ -1522,7 +2336,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 150,
@@ -1537,7 +2354,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Mockup": "Ürünün gerçekçi sunum görseli"
+      }
     },
     {
       "id": 151,
@@ -1552,7 +2371,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 152,
@@ -1567,7 +2389,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     },
     {
       "id": 153,
@@ -1582,7 +2407,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Sizing": "Tablo ve beden ölçü bilgisi",
+        "Return Policy": "İade/iptal koşulları"
+      }
     }
   ]
 }

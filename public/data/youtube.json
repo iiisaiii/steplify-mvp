@@ -14,8 +14,35 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Yüzlü": {
+          "info": "Yüzlü: Kamerada yüzünü göstererek içerik üretimi.",
+          "pros": [
+            "Güven/bağ kurma yüksek",
+            "Kişisel marka büyür",
+            "Sadık kitle oluşur"
+          ],
+          "cons": [
+            "Çekim/ışık/özgüven gerektirir",
+            "Zaman maliyeti daha yüksek"
+          ]
+        },
+        "Yüzsüz": {
+          "info": "Yüzsüz: Yüz göstermeden voiceover/ekran kaydı/AI avatar ile üretim.",
+          "pros": [
+            "Hızlı batch üretim",
+            "Mahremiyet korunur"
+          ],
+          "cons": [
+            "Güven kurmak daha zor",
+            "Soğuk/geçici hissedilebilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 2,
@@ -36,8 +63,77 @@
         "AnswerThePublic"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Eğitim": {
+          "info": "Eğitim: Eğitim seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Eğlence": {
+          "info": "Eğlence: İngilizce içerik dili.",
+          "pros": [
+            "Global kitle",
+            "CPM/RPM daha yüksek olabilir"
+          ],
+          "cons": [
+            "Rekabet çok yüksek",
+            "Aksan/akıcılık gerektirir"
+          ]
+        },
+        "Finans": {
+          "info": "Finans: Finans seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Teknoloji": {
+          "info": "Teknoloji: Teknoloji seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Sağlık": {
+          "info": "Sağlık: Sağlık seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Fitness": {
+          "info": "Fitness: Fitness seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Kişisel Gelişim": {
+          "info": "Kişisel Gelişim: Kişisel Gelişim seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 3,
@@ -52,8 +148,34 @@
         "YouTube Demographics"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "TR": {
+          "info": "TR: Türkçe içerik dili.",
+          "pros": [
+            "Yerel bağ ve topluluk",
+            "Rekabet görece düşük"
+          ],
+          "cons": [
+            "CPM düşük olabilir",
+            "Global ölçek sınırlı"
+          ]
+        },
+        "EN (Global)": {
+          "info": "EN (Global): İngilizce içerik dili.",
+          "pros": [
+            "Global kitle",
+            "CPM/RPM daha yüksek olabilir"
+          ],
+          "cons": [
+            "Rekabet çok yüksek",
+            "Aksan/akıcılık gerektirir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 4,
@@ -68,7 +190,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 5,
@@ -84,8 +209,43 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Shorts": {
+          "info": "Shorts: Dikey, kısa form (≤60 sn) videolar.",
+          "pros": [
+            "Yüksek keşif potansiyeli",
+            "Hızlı test/iterasyon"
+          ],
+          "cons": [
+            "Monetizasyon sınırlı",
+            "Sadakat/derinlik düşük"
+          ]
+        },
+        "Long-form": {
+          "info": "Long-form: Yatay, uzun form videolar.",
+          "pros": [
+            "Uzun vadeli keşif + gelir",
+            "Derin bağ ve otorite"
+          ],
+          "cons": [
+            "Üretim süreci daha ağır",
+            "Süre tutturma/retention zor"
+          ]
+        },
+        "İkisi": {
+          "info": "İkisi: İkisi seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 6,
@@ -100,7 +260,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 7,
@@ -116,7 +279,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 8,
@@ -131,7 +297,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 9,
@@ -146,7 +315,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 10,
@@ -161,8 +333,30 @@
         "-"
       ],
       "visibleIf": "step:1=Yüzlü",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Telefon": {
+          "info": "Telefon: Telefon seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Kamera": {
+          "info": "Kamera: Kamera seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 11,
@@ -177,7 +371,10 @@
       ],
       "visibleIf": "step:1=Yüzlü; step:10=Telefon",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 12,
@@ -193,7 +390,10 @@
       ],
       "visibleIf": "step:1=Yüzlü; step:10=Kamera",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 13,
@@ -208,7 +408,10 @@
       ],
       "visibleIf": "step:1=Yüzlü",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 14,
@@ -224,7 +427,10 @@
       ],
       "visibleIf": "step:1=Yüzlü",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 15,
@@ -239,7 +445,10 @@
       ],
       "visibleIf": "step:1=Yüzlü",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 16,
@@ -255,8 +464,30 @@
         "BigVu"
       ],
       "visibleIf": "step:1=Yüzlü",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Teleprompter": {
+          "info": "Teleprompter: Teleprompter seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Serbest Konuşma": {
+          "info": "Serbest Konuşma: Serbest Konuşma seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 20,
@@ -273,8 +504,54 @@
         "-"
       ],
       "visibleIf": "step:1=Yüzsüz",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "CapCut Masaüstü": {
+          "info": "CapCut Masaüstü: Hızlı, kolay video editörü (masaüstü/mobil).",
+          "pros": [
+            "Kullanımı kolay",
+            "Şablonlar/altyazı/otomatik özellikler"
+          ],
+          "cons": [
+            "İnce ayarda kısıtlı",
+            "Ekip içi büyük projelere uygun değil"
+          ]
+        },
+        "Descript": {
+          "info": "Descript: Transkript tabanlı düzenleme ve ses klonlama.",
+          "pros": [
+            "Sözlü hataları metinden silme",
+            "Podcast/video için hızlı"
+          ],
+          "cons": [
+            "Ücretli plan",
+            "Türkçe desteği sınırlı olabilir"
+          ]
+        },
+        "Pictory": {
+          "info": "Pictory: Pictory seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "HeyGen": {
+          "info": "HeyGen: İngilizce içerik dili.",
+          "pros": [
+            "Global kitle",
+            "CPM/RPM daha yüksek olabilir"
+          ],
+          "cons": [
+            "Rekabet çok yüksek",
+            "Aksan/akıcılık gerektirir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 21,
@@ -290,8 +567,34 @@
         "Descript"
       ],
       "visibleIf": "step:1=Yüzsüz",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Kendi Sesim": {
+          "info": "Kendi Sesim: İngilizce içerik dili.",
+          "pros": [
+            "Global kitle",
+            "CPM/RPM daha yüksek olabilir"
+          ],
+          "cons": [
+            "Rekabet çok yüksek",
+            "Aksan/akıcılık gerektirir"
+          ]
+        },
+        "TTS": {
+          "info": "TTS: Metinden-Konuşma (TTS) ile seslendirme.",
+          "pros": [
+            "Hızlı üretim",
+            "Yüz/voiceover olmadan içerik"
+          ],
+          "cons": [
+            "Doğallık düşük olabilir",
+            "İzleyici bağlanması zor"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 22,
@@ -307,8 +610,32 @@
         "D-ID"
       ],
       "visibleIf": "step:1=Yüzsüz",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Yok": {
+          "info": "Yok: Yok seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "AI Avatar": {
+          "info": "AI Avatar: Yapay zekâ avatarı ile yüzsüz anlatım.",
+          "pros": [
+            "Hızlı üretim",
+            "Yüz göstermeden marka oluşturma"
+          ],
+          "cons": [
+            "Lisans ve araç maliyetleri",
+            "Doğallık sınırlı"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 23,
@@ -325,7 +652,9 @@
       ],
       "visibleIf": "step:1=Yüzsüz",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "B‑roll": "Ara görüntüler/kapama planları"
+      }
     },
     {
       "id": 24,
@@ -340,7 +669,9 @@
       ],
       "visibleIf": "step:1=Yüzsüz",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "B‑roll": "Ara görüntüler/kapama planları"
+      }
     },
     {
       "id": 30,
@@ -355,7 +686,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 31,
@@ -370,7 +704,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Hook": "İlk saniyelerde ilgiyi yakalayan giriş"
+      }
     },
     {
       "id": 32,
@@ -385,7 +721,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 33,
@@ -400,7 +739,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 34,
@@ -415,7 +757,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 35,
@@ -430,7 +775,10 @@
       ],
       "visibleIf": "step:5=Shorts|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 36,
@@ -445,7 +793,9 @@
       ],
       "visibleIf": "step:5=Shorts|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Hook": "İlk saniyelerde ilgiyi yakalayan giriş"
+      }
     },
     {
       "id": 37,
@@ -460,7 +810,10 @@
       ],
       "visibleIf": "step:5=Shorts|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 38,
@@ -475,7 +828,10 @@
       ],
       "visibleIf": "step:5=Shorts|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 39,
@@ -490,7 +846,10 @@
       ],
       "visibleIf": "step:5=Shorts|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 40,
@@ -507,8 +866,48 @@
         "-"
       ],
       "visibleIf": "step:5=Long-form|İkisi",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Ders": {
+          "info": "Ders: Ders seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Case Study": {
+          "info": "Case Study: Case Study seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Reaction": {
+          "info": "Reaction: Reaction seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Röportaj": {
+          "info": "Röportaj: Röportaj seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 41,
@@ -523,7 +922,9 @@
       ],
       "visibleIf": "step:5=Long-form|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "Hook": "İlk saniyelerde ilgiyi yakalayan giriş"
+      }
     },
     {
       "id": 42,
@@ -538,7 +939,10 @@
       ],
       "visibleIf": "step:5=Long-form|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 43,
@@ -553,7 +957,10 @@
       ],
       "visibleIf": "step:5=Long-form|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "B‑roll": "Ara görüntüler/kapama planları",
+        "LUFS": "Ses yüksekliği standardı (YouTube ~‑14 LUFS)"
+      }
     },
     {
       "id": 44,
@@ -569,7 +976,9 @@
       ],
       "visibleIf": "step:5=Long-form|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "CTR": "Click‑Through Rate; küçük resim tıklanma oranı"
+      }
     },
     {
       "id": 50,
@@ -585,7 +994,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 51,
@@ -600,7 +1012,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 52,
@@ -615,7 +1030,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 53,
@@ -630,7 +1048,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 54,
@@ -645,7 +1066,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 55,
@@ -660,7 +1084,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 56,
@@ -675,7 +1102,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 60,
@@ -692,8 +1122,43 @@
         "Carrd"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Linktree/Beacons": {
+          "info": "Linktree/Beacons: Türkçe içerik dili.",
+          "pros": [
+            "Yerel bağ ve topluluk",
+            "Rekabet görece düşük"
+          ],
+          "cons": [
+            "CPM düşük olabilir",
+            "Global ölçek sınırlı"
+          ]
+        },
+        "Kendi Alan + Carrd": {
+          "info": "Kendi Alan + Carrd: İngilizce içerik dili.",
+          "pros": [
+            "Global kitle",
+            "CPM/RPM daha yüksek olabilir"
+          ],
+          "cons": [
+            "Rekabet çok yüksek",
+            "Aksan/akıcılık gerektirir"
+          ]
+        },
+        "Sadece Video Açıklama": {
+          "info": "Sadece Video Açıklama: Sadece Video Açıklama seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 61,
@@ -710,8 +1175,41 @@
         "Short.io"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Bitly": {
+          "info": "Bitly: Bitly seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Short.io": {
+          "info": "Short.io: Short.io seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Kendi Alan": {
+          "info": "Kendi Alan: İngilizce içerik dili.",
+          "pros": [
+            "Global kitle",
+            "CPM/RPM daha yüksek olabilir"
+          ],
+          "cons": [
+            "Rekabet çok yüksek",
+            "Aksan/akıcılık gerektirir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 62,
@@ -727,8 +1225,29 @@
         "Tag Manager"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "GA4": {
+          "info": "GA4: GA4 seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Yalnızca UTM": {
+          "info": "Yalnızca UTM: Yalnızca UTM seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "GA4": "Google Analytics 4; olay tabanlı ölçüm"
+      }
     },
     {
       "id": 63,
@@ -743,7 +1262,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 70,
@@ -758,7 +1280,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "CTR": "Click‑Through Rate; küçük resim tıklanma oranı"
+      }
     },
     {
       "id": 71,
@@ -773,7 +1297,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 72,
@@ -788,7 +1315,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 73,
@@ -805,8 +1335,48 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Reels": {
+          "info": "Reels: Reels seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "TikTok": {
+          "info": "TikTok: TikTok seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "LinkedIn": {
+          "info": "LinkedIn: LinkedIn seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Yok": {
+          "info": "Yok: Yok seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 74,
@@ -821,7 +1391,10 @@
       ],
       "visibleIf": "step:73=Reels",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 75,
@@ -836,7 +1409,10 @@
       ],
       "visibleIf": "step:73=TikTok",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 76,
@@ -851,7 +1427,10 @@
       ],
       "visibleIf": "step:73=LinkedIn",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 80,
@@ -868,8 +1447,48 @@
         "-"
       ],
       "visibleIf": "",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "YouTube Partner": {
+          "info": "YouTube Partner: YouTube Partner seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Affiliate": {
+          "info": "Affiliate: Affiliate seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Sponsorluk": {
+          "info": "Sponsorluk: Sponsorluk seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Ürün": {
+          "info": "Ürün: Ürün seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "RPM": "1000 izlenmede kazanılan gelir",
+        "CPM": "1000 gösterim reklam maliyeti"
+      }
     },
     {
       "id": 81,
@@ -884,7 +1503,10 @@
       ],
       "visibleIf": "step:80=YouTube Partner",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 82,
@@ -899,7 +1521,10 @@
       ],
       "visibleIf": "step:80=YouTube Partner",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 83,
@@ -917,8 +1542,48 @@
         "ClickBank"
       ],
       "visibleIf": "step:80=Affiliate",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Amazon Associates": {
+          "info": "Amazon Associates: Amazon Associates seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "ClickBank": {
+          "info": "ClickBank: ClickBank seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Digistore24": {
+          "info": "Digistore24: Digistore24 seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "SaaS Partner": {
+          "info": "SaaS Partner: SaaS Partner seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 84,
@@ -933,7 +1598,10 @@
       ],
       "visibleIf": "step:80=Affiliate",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 85,
@@ -949,7 +1617,10 @@
       ],
       "visibleIf": "step:80=Affiliate",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 86,
@@ -964,7 +1635,10 @@
       ],
       "visibleIf": "step:80=Sponsorluk",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 87,
@@ -979,7 +1653,10 @@
       ],
       "visibleIf": "step:80=Sponsorluk",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 88,
@@ -994,7 +1671,10 @@
       ],
       "visibleIf": "step:80=Sponsorluk",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 89,
@@ -1010,8 +1690,39 @@
         "-"
       ],
       "visibleIf": "step:80=Ürün",
-      "optionDetails": {},
-      "glossary": {}
+      "optionDetails": {
+        "Merch": {
+          "info": "Merch: Merch seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Kurs": {
+          "info": "Kurs: Kurs seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        },
+        "Dijital Ürün": {
+          "info": "Dijital Ürün: Dijital Ürün seçeneği için kısa açıklama.",
+          "pros": [
+            "Uygulaması kolay"
+          ],
+          "cons": [
+            "Her içerik türünde uygun olmayabilir"
+          ]
+        }
+      },
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 90,
@@ -1027,7 +1738,10 @@
       ],
       "visibleIf": "step:80=Ürün",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 95,
@@ -1042,7 +1756,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "CTR": "Click‑Through Rate; küçük resim tıklanma oranı",
+        "AVD": "Average View Duration; ortalama izlenme süresi"
+      }
     },
     {
       "id": 96,
@@ -1058,7 +1775,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 97,
@@ -1073,7 +1793,9 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "CTR": "Click‑Through Rate; küçük resim tıklanma oranı"
+      }
     },
     {
       "id": 98,
@@ -1088,7 +1810,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 99,
@@ -1103,7 +1828,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 100,
@@ -1118,7 +1846,10 @@
       ],
       "visibleIf": "step:1=Yüzlü",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 101,
@@ -1133,7 +1864,10 @@
       ],
       "visibleIf": "step:1=Yüzlü",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 102,
@@ -1148,7 +1882,10 @@
       ],
       "visibleIf": "step:1=Yüzlü",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 103,
@@ -1163,7 +1900,9 @@
       ],
       "visibleIf": "step:1=Yüzlü",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "B‑roll": "Ara görüntüler/kapama planları"
+      }
     },
     {
       "id": 110,
@@ -1178,7 +1917,9 @@
       ],
       "visibleIf": "step:1=Yüzsüz",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "LUFS": "Ses yüksekliği standardı (YouTube ~‑14 LUFS)"
+      }
     },
     {
       "id": 111,
@@ -1194,7 +1935,9 @@
       ],
       "visibleIf": "step:1=Yüzsüz",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "B‑roll": "Ara görüntüler/kapama planları"
+      }
     },
     {
       "id": 112,
@@ -1209,7 +1952,10 @@
       ],
       "visibleIf": "step:1=Yüzsüz",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 113,
@@ -1224,7 +1970,10 @@
       ],
       "visibleIf": "step:1=Yüzsüz",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 120,
@@ -1239,7 +1988,10 @@
       ],
       "visibleIf": "step:5=Shorts|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 121,
@@ -1254,7 +2006,10 @@
       ],
       "visibleIf": "step:5=Long-form|İkisi",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 130,
@@ -1269,7 +2024,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 131,
@@ -1284,7 +2042,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 132,
@@ -1299,7 +2060,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 133,
@@ -1314,7 +2078,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 134,
@@ -1329,7 +2096,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 140,
@@ -1344,7 +2114,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 141,
@@ -1359,7 +2132,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 142,
@@ -1374,7 +2150,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     },
     {
       "id": 143,
@@ -1389,7 +2168,10 @@
       ],
       "visibleIf": "",
       "optionDetails": {},
-      "glossary": {}
+      "glossary": {
+        "End Screen": "Videonun sonunda çıkan yönlendirme ekranı",
+        "Cards": "Video içinde tıklanabilir kartlar"
+      }
     }
   ]
 }
