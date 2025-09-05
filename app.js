@@ -1,5 +1,5 @@
-/* Steplify MVP — JSON loader + freemium + branching (visibleIf) + modal info + next-visible-step */
-console.log('Steplify app v4');
+/* Steplify MVP — JSON loader + freemium + branching (visibleIf) + modal info + next-visible-step + glossary */
+console.log('Steplify app v4.1');
 
 const FREE_LIMIT = 5;
 const PREMIUM_KEY = "steplify_premium";   // localStorage anahtarı
@@ -110,12 +110,8 @@ function getHash(){
 }
 
 // ---- Görünürlük kuralları ----
-// kural örnekleri:
-// "step:1=Dijital Ürünler"
-// "step:6=ClickBank|Digistore24|JVZoo"
-// "step:1!=Fiziksel"
-// "step:1=Dijital Ürünler AND step:6=ClickBank"  ("," veya AND = VE)
-// "step:1=Dijital Ürünler || step:1=Fiziksel"    ("||" veya OR = VEYA)
+// "step:1=Dijital Ürünler" | "step:6=ClickBank|Digistore24" | "step:1!=Fiziksel"
+// AND: "," veya "AND",  OR: "||" veya "OR"
 const norm = s => String(s||'').trim().toLowerCase();
 function evalAtom(token, sels){
   token = token.trim();
@@ -162,6 +158,79 @@ function markActive(stepId){
   const idx = order.findIndex(s=>s.id===stepId);
   const items = [...els.stepsList.querySelectorAll('.step')];
   if (idx>=0 && items[idx]) items[idx].classList.add('active');
+}
+
+/* --------- TERİMLER (Glossary) yardımcıları --------- */
+// Şekil 1: object  { "Shopify": "barındırılan..." }
+// Şekil 2: string  "Shopify: ... || WooCommerce: ..."
+// Şekil 3: array   ["Shopify: ...", "Woo: ..."]
+function normalizeGlossary(gl){
+  if (!gl) return [];
+  // Objeyse
+  if (typeof gl === 'object' && !Array.isArray(gl)){
+    return Object.keys(gl).map(k=>({ term:String(k), desc:String(gl[k]||'') })).filter(x=>x.term.trim());
+  }
+  // Diziyse
+  if (Array.isArray(gl)){
+    const out=[];
+    gl.forEach(item=>{
+      if (item==null) return;
+      const s=String(item);
+      const i=s.indexOf(':');
+      if (i>=0) out.push({term:s.slice(0,i).trim(), desc:s.slice(i+1).trim()});
+      else out.push({term:s.trim(), desc:''});
+    });
+    return out.filter(x=>x.term);
+  }
+  // Dizeyse: "A: ... || B: ..."
+  const s = String(gl);
+  const segs = s.split('||').map(x=>x.trim()).filter(Boolean);
+  const out=[];
+  segs.forEach(seg=>{
+    const i = seg.indexOf(':');
+    if (i>=0) out.push({term:seg.slice(0,i).trim(), desc:seg.slice(i+1).trim()});
+    else out.push({term:seg.trim(), desc:''});
+  });
+  return out.filter(x=>x.term);
+}
+function renderGlossaryCard(step){
+  const entries = normalizeGlossary(step.glossary || step['Terimler']);
+  if (!entries.length) return null;
+
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.style.marginTop = '12px';
+
+  const title = document.createElement('h3');
+  title.textContent = 'Terimler';
+  title.style.marginTop = '0';
+  title.style.marginBottom = '8px';
+  card.appendChild(title);
+
+  const list = document.createElement('dl');
+  list.style.display='grid';
+  list.style.gridTemplateColumns='max-content 1fr';
+  list.style.columnGap='12px';
+  list.style.rowGap='8px';
+  list.style.margin='0';
+
+  entries.forEach(({term, desc})=>{
+    const dt=document.createElement('dt');
+    dt.style.fontWeight='600';
+    dt.style.margin='0';
+    dt.textContent = term;
+
+    const dd=document.createElement('dd');
+    dd.style.margin='0';
+    dd.style.color='#475569';
+    dd.textContent = desc || '—';
+
+    list.appendChild(dt);
+    list.appendChild(dd);
+  });
+
+  card.appendChild(list);
+  return card;
 }
 
 // ---- Render ----
@@ -258,6 +327,10 @@ function showStep(step, index){
   const h=document.createElement('h2'); h.textContent = `${step.id}. ${step.title}`;
   const d=document.createElement('p'); d.textContent = step.description || 'Açıklama yok.';
   els.stepView.appendChild(h); els.stepView.appendChild(d);
+
+  // --- Terimler kartı (varsa) ---
+  const glossaryCard = renderGlossaryCard(step);
+  if (glossaryCard) els.stepView.appendChild(glossaryCard);
 
   const sels = getSelections(currentModel);
   if (sels[step.id]){
@@ -384,7 +457,8 @@ function sanitizePlan(obj){
     visibleIf: typeof s.visibleIf==='string' ? s.visibleIf.slice(0,1000)
             : (typeof s['GörünürEğer']==='string' ? s['GörünürEğer'].slice(0,1000) : undefined),
     optionDetails: (s.optionDetails && typeof s.optionDetails==='object') ? s.optionDetails : {},
-    glossary: (s.glossary && typeof s.glossary==='object') ? s.glossary : {},
+    glossary: (s.glossary && typeof s.glossary==='object') ? s.glossary
+            : (typeof s['Terimler']==='string' || Array.isArray(s['Terimler']) ? s['Terimler'] : {}),
   })).filter(s=>Number.isFinite(s.id));
   return { model: obj.model, steps };
 }
