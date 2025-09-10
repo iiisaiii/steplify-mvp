@@ -1,120 +1,156 @@
-*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111}
-.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid #eee;background:#fff}
-.brand{font-weight:700;font-size:18px}
-.badge{margin-left:8px;padding:2px 6px;border-radius:8px;background:#f1f5f9;color:#334155;font-size:12px}
-.actions{display:flex;gap:8px;align-items:center}
-.btn{background:#111;color:#fff;border:none;border-radius:10px;padding:10px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
-.btn:hover{opacity:.9}
-.btn.small{padding:8px 10px;font-size:12px;border-radius:8px}
-.btn.primary{background:#2563eb}
-.btn.outline{background:#fff;color:#111;border:1px solid #ddd}
-.select{padding:8px 10px;border-radius:8px;border:1px solid #ddd}
-.layout{display:grid;grid-template-columns:280px 1fr 280px;gap:16px;padding:16px;min-height:calc(100vh - 64px)}
-.sidebar,.rightbar{position:sticky;top:64px;height:calc(100vh - 96px);overflow:auto}
-.sidebar-head{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
-.progress{height:8px;background:#f1f5f9;border-radius:6px;overflow:hidden}
-#progressBar{height:8px;background:#22c55e;width:0%}
-.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
-.step{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid #eee;border-radius:10px;background:#fff;cursor:pointer}
-.step.locked{opacity:.55}
-.step .title{font-weight:600}
-.step .meta{font-size:12px;color:#64748b}
-.content .card{background:#fff;border:1px solid #eee;border-radius:14px;padding:16px}
-.rightbar .card{background:#fff;border:1px solid #eee;border-radius:14px;padding:16px;margin-bottom:12px}
-.rightbar .card.info{background:#f8fafc}
-.links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
-.links a{color:#2563eb;text-decoration:none}
-.muted{color:#64748b}
-.doc{padding:24px}
-.demo-tip{margin-top:12px;padding:12px;border:1px dashed #ddd;border-radius:10px;background:#fafafa}
-.foot{padding:16px 24px;border-top:1px solid #eee;color:#64748b}
-@media(max-width:1000px){.layout{grid-template-columns:1fr} .sidebar,.rightbar{height:auto;position:static}}
-/* Seçenek butonları kapsayıcısı: ortalı ve ferah */
-.options{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:16px;
-  flex-wrap:wrap;
-  margin:24px 0 8px;
+/* Steplify — Modern Tech Cred theme
+   Renk sistemi + gradient + erişilebilir odak halkası
+   -------------------------------------------------- */
+
+/* ========== Design Tokens (CSS Variables) ========== */
+:root{
+  /* Brand */
+  --brand:        #2563EB;  /* Blue 600 */
+  --brand-2:      #14B8A6;  /* Teal 500 */
+  --gradient-brand: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+
+  /* Text & Surfaces */
+  --bg:           #FFFFFF;
+  --bg-soft:      #EEF2FF;  /* Indigo 50 benzeri */
+  --card:         #FFFFFF;
+  --border:       #E5E7EB;
+  --text:         #0F172A;  /* Slate 900 */
+  --muted:        #475569;  /* Slate 600 */
+
+  /* States */
+  --success:      #16A34A;
+  --warning:      #F59E0B;
+  --error:        #DC2626;
+
+  /* Effects */
+  --shadow-sm:    0 1px 2px rgba(0,0,0,.05);
+  --shadow-md:    0 6px 14px rgba(0,0,0,.08);
+  --ring:         0 0 0 3px rgba(37, 99, 235, .22);
 }
-.option-btn { color:#111; }
-/* Büyük, kart gibi buton */
+
+/* ========== Reset / Base ========== */
+*{ box-sizing:border-box }
+html,body{ margin:0; padding:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text); background:var(--bg); }
+a{ color:var(--brand); text-decoration:none }
+a:hover{ text-decoration:underline }
+
+/* Focus visible (erişilebilirlik) */
+:focus-visible{ outline:none; box-shadow:var(--ring); border-radius:8px }
+
+/* ========== Topbar ========== */
+.topbar{
+  position:sticky; top:0; z-index:10;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 16px; border-bottom:1px solid var(--border); background:var(--bg);
+}
+.topbar::after{
+  content:""; position:absolute; left:0; right:0; bottom:-1px; height:3px;
+  background:var(--gradient-brand); opacity:.85;
+}
+.brand{ font-weight:700; font-size:18px }
+.badge{ margin-left:8px; padding:2px 6px; border-radius:8px; background:var(--bg-soft); color:#334155; font-size:12px }
+.actions{ display:flex; gap:8px; align-items:center }
+
+/* ========== Layout ========== */
+.layout{
+  display:grid; grid-template-columns:280px 1fr 280px; gap:16px; padding:16px;
+  min-height:calc(100vh - 64px)
+}
+.sidebar,.rightbar{ position:sticky; top:64px; height:calc(100vh - 96px); overflow:auto }
+.sidebar-head{ display:flex; flex-direction:column; gap:8px; margin-bottom:8px }
+
+/* ========== Progress ========== */
+.progress{ height:8px; background:var(--bg-soft); border-radius:6px; overflow:hidden }
+#progressBar{ height:8px; width:0%; background-image:var(--gradient-brand) }
+
+/* ========== Lists / Cards ========== */
+.steps{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px }
+.step{
+  display:flex; align-items:center; gap:10px; padding:8px;
+  border:1px solid var(--border); border-radius:10px; background:var(--card);
+  cursor:pointer; transition: box-shadow .12s ease, border-color .12s ease;
+}
+.step:hover{ box-shadow:var(--shadow-sm) }
+.step.active{ border-color:var(--brand); box-shadow:0 0 0 3px rgba(37,99,235,.12) }
+.step.locked{ opacity:.60 }
+.step .title{ font-weight:600 }
+.step .meta{ font-size:12px; color:var(--muted) }
+
+.content .card,
+.rightbar .card{
+  background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px;
+}
+.rightbar .card{ margin-bottom:12px }
+.rightbar .card.info{
+  background-image:var(--gradient-brand); color:#fff; border-color:transparent;
+}
+.rightbar .card.info a{ color:#fff; text-decoration:underline }
+
+/* Premium kilit kartı (JS’de inline stil set edilse bile bastır) */
+.card:has(#buyPremium){
+  background-image:var(--gradient-brand) !important;
+  border-color:transparent !important; color:#fff;
+}
+.card:has(#buyPremium) b{ color:#fff }
+.card:has(#buyPremium) #buyPremium{
+  background:#fff; color:#0F172A; border:none;
+}
+
+/* ========== Buttons ========== */
+.btn{
+  background:#111; color:#fff; border:none; border-radius:10px; padding:10px 14px;
+  cursor:pointer; display:inline-flex; align-items:center; gap:8px; box-shadow:var(--shadow-sm);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease, background .12s ease;
+}
+.btn:hover{ transform:translateY(-1px); box-shadow:var(--shadow-md) }
+.btn.small{ padding:8px 10px; font-size:12px; border-radius:8px }
+.btn.primary{
+  background-image:var(--gradient-brand);
+}
+.btn.outline{
+  background:var(--bg); color:var(--text); border:1px solid var(--border)
+}
+
+/* Options (ortalı büyük) */
+.options{ display:flex; justify-content:center; align-items:center; gap:16px; flex-wrap:wrap; margin:24px 0 8px }
 .btn.option-btn{
-  font-size:18px;
-  padding:14px 22px;
-  border-radius:12px;
-  border:1px solid #e5e7eb;        /* #eee de olur */
-  background:#fff;
-  box-shadow:0 1px 2px rgba(0,0,0,.05);
-  transition:transform .12s ease, box-shadow .12s ease;
+  font-size:18px; padding:14px 22px; border-radius:12px;
+  border:1px solid var(--border); background:var(--card); color:var(--text);
+  box-shadow:var(--shadow-sm);
 }
-
-/* hover efekti */
-.btn.option-btn:hover{
-  transform:translateY(-1px);
-  box-shadow:0 6px 14px rgba(0,0,0,.08);
-}
-
-/* mobilde iki satıra rahat sığsın */
-@media (max-width: 640px){
-  .btn.option-btn{ width:100%; max-width:320px; }
-}
-/* ---- Option modal ---- */
-.hidden{ display:none; }
-
-.modal-mask{
-  position:fixed; inset:0;
-  background:rgba(0,0,0,.4);
-  display:flex; align-items:center; justify-content:center;
-  z-index:50;
-}
-
-.modal{
-  background:#fff;
-  border-radius:12px;
-  padding:20px;
-  width:min(520px, 90vw);
-  box-shadow:0 12px 30px rgba(0,0,0,.18);
-}
-
-.modal-actions{
-  display:flex; gap:8px; justify-content:flex-end; margin-top:16px;
-}
-/* ----- Modal butonlarını garanti altına al ----- */
-#steplifyModal #modalOk {
-  background: #2563eb !important;
-  color: #fff !important;
-  border: 1px solid #1e40af !important;
-}
-#steplifyModal #modalCancel {
-  background: #fff !important;
-  color: #111 !important;
-  border: 1px solid #cbd5e1 !important;
-}
-
-/* Modal maskesi her şeyin üzerinde olsun (ihtiyaten yükseltelim) */
-.modal-mask { z-index: 9999 !important; }
-
-/* Option butonunun rengi sadece ona uygulansın */
-.btn.option-btn { color:#111; }
-
-/* İstersen .option-btn tek başına olan kuralı silebilirsin */
-/* Modal mask en üstte kalsın */
-.modal-mask,
-#steplifyModal { z-index: 9999 !important; }
-
-/* Modal içindeki butonları görünür kıl */
-#steplifyModal #modalOk,
-#steplifyModal #modalCancel {
-  display: inline-flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Option butonunun rengi sadece option’lara uygulansın */
-.btn.option-btn { color:#111; }
+.btn.option-btn:hover{ transform:translateY(-1px); box-shadow:var(--shadow-md) }
 .btn.option-btn.selected{
-  border-color:#2563eb;
-  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+  border-color:var(--brand); box-shadow:0 0 0 3px rgba(37,99,235,.15)
 }
+
+/* ========== Model Tabs (JS’de #modelTabs) ========== */
+#modelTabs{ scrollbar-width:thin }
+#modelTabs .btn.small{ border-radius:999px }
+#modelTabs .btn.small.primary{
+  background-image:var(--gradient-brand);
+}
+#modelTabs .btn.small.outline{
+  border-color:var(--border)
+}
+
+/* ========== Links ========== */
+.links{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px }
+.links a{ color:var(--brand) }
+.muted{ color:var(--muted) }
+
+/* ========== Utilities ========== */
+.doc{ padding:24px }
+.demo-tip{ margin-top:12px; padding:12px; border:1px dashed var(--border); border-radius:10px; background:#fafafa }
+.foot{ padding:16px 24px; border-top:1px solid var(--border); color:var(--muted) }
+
+/* Modal üst katmanda kalsın */
+#steplifyModal{ z-index: 9999 !important }
+
+/* Responsive */
+@media(max-width:1000px){
+  .layout{ grid-template-columns:1fr }
+  .sidebar,.rightbar{ height:auto; position:static }
+}
+
+/* (Opsiyonel) Gradient arka plan yardımcı sınıfı */
+.bg-gradient-brand{ background-image:var(--gradient-brand) }
