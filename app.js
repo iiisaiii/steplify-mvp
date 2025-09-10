@@ -1,9 +1,14 @@
-/* Steplify — v4.4 (tabs)
-   JSON loader + freemium + branching (visibleIf) + modal info + next-visible-step + glossary + notes + notes panel + model tabs */
-console.log('Steplify app v4.4');
+/* Steplify — v4.5
+   - JSON loader + freemium + branching (visibleIf)
+   - modal info + next-visible-step + glossary + notes
+   - model tabs (brand’ın yanında)
+   - hover ile açılan sidebar
+   - JSON Yükle gizlendi
+*/
+console.log('Steplify app v4.5');
 
 const FREE_LIMIT = 5;
-const PREMIUM_KEY = "steplify_premium";   // localStorage anahtarı
+const PREMIUM_KEY = "steplify_premium";
 
 function isPremium(){ try{ return localStorage.getItem(PREMIUM_KEY)==="1"; }catch(_){ return false; } }
 function setPremium(v){ localStorage.setItem(PREMIUM_KEY, v ? "1" : "0"); reflectPremiumUI(); }
@@ -80,8 +85,7 @@ function openModal(title, htmlText){
   const m = ensureModal();
   m.style.display = 'flex';
   m.querySelector('#modalTitle').textContent = title || '';
-  const box = m.querySelector('#modalText');
-  box.innerHTML = htmlText || '';
+  m.querySelector('#modalText').innerHTML = htmlText || '';
   return new Promise(res => { _modalResolver = res; });
 }
 function closeModal(ok){
@@ -101,7 +105,6 @@ function setProgress(m,obj){ localStorage.setItem(lsKey(m), JSON.stringify(obj||
 function getSelections(m){ try{ return JSON.parse(localStorage.getItem(selKey(m))||'{}'); }catch(_){ return {}; } }
 function setSelections(m,obj){ localStorage.setItem(selKey(m), JSON.stringify(obj||{})); }
 
-// ---- Notes (mini not alanı) ----
 function noteKey(model, stepId){ return `notes::${model}::${stepId}`; }
 function getNote(model, stepId){ try{ return localStorage.getItem(noteKey(model, stepId)) || ''; }catch(_){ return ''; } }
 function setNote(model, stepId, text){ try{ localStorage.setItem(noteKey(model, stepId), String(text||'')); }catch(_){ } }
@@ -110,10 +113,7 @@ function clearNotesForModel(model){
   try{
     const prefix = `notes::${model}::`;
     const toDel = [];
-    for (let i=0;i<localStorage.length;i++){
-      const k = localStorage.key(i);
-      if (k && k.startsWith(prefix)) toDel.push(k);
-    }
+    for (let i=0;i<localStorage.length;i++){ const k = localStorage.key(i); if (k && k.startsWith(prefix)) toDel.push(k); }
     toDel.forEach(k=>localStorage.removeItem(k));
   }catch(_){}
 }
@@ -129,15 +129,13 @@ function getHash(){
 }
 
 // ---- Görünürlük kuralları ----
-// "step:1=Dijital Ürünler" | "step:6=ClickBank|Digistore24" | "step:1!=Fiziksel"
-// AND: "," veya "AND",  OR: "||" veya "OR"
 const norm = s => String(s||'').trim().toLowerCase();
 function evalAtom(token, sels){
   token = token.trim();
   let negate=false;
   if (token.startsWith('!')){ negate=true; token=token.slice(1).trim(); }
   const m = token.match(/^step\s*:\s*(\d+)\s*(!?=)\s*(.+)$/i);
-  if (!m) return true; // tanınmayan ifade bozmasın
+  if (!m) return true;
   const stepId = Number(m[1]);
   const op = m[2];
   const values = m[3].split('|').map(v=>norm(v));
@@ -179,7 +177,7 @@ function markActive(stepId){
   if (idx>=0 && items[idx]) items[idx].classList.add('active');
 }
 
-/* --------- TERİMLER (Glossary) yardımcıları --------- */
+/* --------- TERİMLER --------- */
 function normalizeGlossary(gl){
   if (!gl) return [];
   if (typeof gl === 'object' && !Array.isArray(gl)){
@@ -216,8 +214,7 @@ function renderGlossaryCard(step){
 
   const title = document.createElement('h3');
   title.textContent = 'Terimler';
-  title.style.marginTop = '0';
-  title.style.marginBottom = '8px';
+  title.style.margin = '0 0 8px 0';
   card.appendChild(title);
 
   const list = document.createElement('dl');
@@ -228,100 +225,60 @@ function renderGlossaryCard(step){
   list.style.margin='0';
 
   entries.forEach(({term, desc})=>{
-    const dt=document.createElement('dt');
-    dt.style.fontWeight='600';
-    dt.style.margin='0';
-    dt.textContent = term;
-
-    const dd=document.createElement('dd');
-    dd.style.margin='0';
-    dd.style.color='#475569';
-    dd.textContent = desc || '—';
-
-    list.appendChild(dt);
-    list.appendChild(dd);
+    const dt=document.createElement('dt'); dt.style.fontWeight='600'; dt.style.margin='0'; dt.textContent = term;
+    const dd=document.createElement('dd'); dd.style.margin='0'; dd.style.color='#475569'; dd.textContent = desc || '—';
+    list.appendChild(dt); list.appendChild(dd);
   });
 
   card.appendChild(list);
   return card;
 }
 
-/* --------- NOTLAR (Adım içi mini not alanı) --------- */
+/* --------- NOTLAR --------- */
 function renderNotesCard(step){
   const lockedCandidateIndex = getVisibleOrderedSteps().findIndex(s=>s.id===step.id);
   const locked = (lockedCandidateIndex >= FREE_LIMIT) && !isPremium();
-  if (locked) return null; // kilitliyse not alanını gösterme
+  if (locked) return null;
 
   const card = document.createElement('div');
   card.className = 'card';
   card.style.marginTop = '12px';
 
   const head = document.createElement('div');
-  head.style.display='flex';
-  head.style.alignItems='center';
-  head.style.justifyContent='space-between';
-  head.style.gap='8px';
+  head.style.display='flex'; head.style.alignItems='center'; head.style.justifyContent='space-between'; head.style.gap='8px';
 
-  const h = document.createElement('h3');
-  h.textContent = 'Notların';
-  h.style.margin = '0';
-  head.appendChild(h);
+  const h = document.createElement('h3'); h.textContent = 'Notların'; h.style.margin='0'; head.appendChild(h);
 
-  const clearBtn = document.createElement('button');
-  clearBtn.className = 'btn small outline';
-  clearBtn.textContent = 'Temizle';
-  head.appendChild(clearBtn);
+  const clearBtn = document.createElement('button'); clearBtn.className='btn small outline'; clearBtn.textContent='Temizle'; head.appendChild(clearBtn);
 
   card.appendChild(head);
 
   const ta = document.createElement('textarea');
   ta.value = getNote(currentModel, step.id);
   ta.rows = 6;
-  ta.style.width = '100%';
-  ta.style.marginTop = '8px';
-  ta.style.padding = '10px';
-  ta.style.border = '1px solid #e5e7eb';
-  ta.style.borderRadius = '10px';
-  ta.style.fontFamily = 'inherit';
-  ta.style.fontSize = '14px';
+  ta.style.width = '100%'; ta.style.marginTop = '8px'; ta.style.padding = '10px';
+  ta.style.border = '1px solid #e5e7eb'; ta.style.borderRadius = '10px';
+  ta.style.fontFamily = 'inherit'; ta.style.fontSize = '14px';
   ta.placeholder = 'Bu adımla ilgili kişisel notlarını yaz... (otomatik kaydedilir)';
   card.appendChild(ta);
 
   const status = document.createElement('div');
-  status.className = 'muted';
-  status.style.fontSize = '12px';
-  status.style.marginTop = '6px';
-  status.style.opacity = '0';
-  status.textContent = 'Kaydedildi ✓';
+  status.className = 'muted'; status.style.fontSize = '12px'; status.style.marginTop = '6px';
+  status.style.opacity = '0'; status.textContent = 'Kaydedildi ✓';
   card.appendChild(status);
 
-  const showSaved = () => {
-    status.style.opacity = '1';
-    setTimeout(()=>{ status.style.opacity = '0'; }, 1200);
-  };
-
-  const saveDebounced = debounce((val)=>{
-    setNote(currentModel, step.id, val);
-    renderNotesPanel(); // sağ paneli canlı güncelle
-    showSaved();
-  }, 400);
+  const showSaved = () => { status.style.opacity = '1'; setTimeout(()=>{ status.style.opacity = '0'; }, 1200); };
+  const saveDebounced = debounce((val)=>{ setNote(currentModel, step.id, val); renderNotesPanel(); showSaved(); }, 400);
 
   ta.addEventListener('input', (e)=> saveDebounced(e.target.value));
-  clearBtn.addEventListener('click', ()=>{
-    ta.value = '';
-    setNote(currentModel, step.id, '');
-    renderNotesPanel(); // sağ paneli güncelle
-    showSaved();
-  });
+  clearBtn.addEventListener('click', ()=>{ ta.value=''; setNote(currentModel, step.id, ''); renderNotesPanel(); showSaved(); });
 
   return card;
 }
 
 /* --------- SAĞ PANEL: Tüm Notlar --------- */
 function ensureNotesPanel(){
-  // Sağ sütun
-  const right = document.querySelector('.rightbar');
-  if (!right) return null;
+  const right = document.querySelector('.rightbar'); if (!right) return null;
 
   let card = document.getElementById('allNotesCard');
   if (card) return card;
@@ -332,19 +289,12 @@ function ensureNotesPanel(){
   card.style.marginTop = '12px';
 
   const head = document.createElement('div');
-  head.style.display = 'flex';
-  head.style.alignItems = 'center';
-  head.style.justifyContent = 'space-between';
-  head.style.gap = '8px';
+  head.style.display='flex'; head.style.alignItems='center'; head.style.justifyContent='space-between'; head.style.gap='8px';
 
-  const h = document.createElement('h3');
-  h.textContent = 'Tüm Notlar';
-  h.style.margin = '0';
-  head.appendChild(h);
+  const h = document.createElement('h3'); h.textContent='Tüm Notlar'; h.style.margin='0'; head.appendChild(h);
 
   const clear = document.createElement('button');
-  clear.className = 'btn small outline';
-  clear.textContent = 'Notları Sıfırla';
+  clear.className='btn small outline'; clear.textContent='Notları Sıfırla';
   clear.addEventListener('click', ()=>{
     if (!currentModel) return;
     if (!confirm(`"${currentModel}" modelindeki TÜM notları silmek istediğine emin misin?`)) return;
@@ -356,120 +306,65 @@ function ensureNotesPanel(){
   card.appendChild(head);
 
   const list = document.createElement('ul');
-  list.id = 'allNotesList';
-  list.style.listStyle = 'none';
-  list.style.margin = '10px 0 0 0';
-  list.style.padding = '0';
-  list.style.display = 'flex';
-  list.style.flexDirection = 'column';
-  list.style.gap = '8px';
+  list.id='allNotesList';
+  list.style.listStyle='none'; list.style.margin='10px 0 0 0'; list.style.padding='0';
+  list.style.display='flex'; list.style.flexDirection='column'; list.style.gap='8px';
   card.appendChild(list);
 
-  // Freemium bilgi kartından önce eklemeye çalış; yoksa en sona koy
   const infoCard = right.querySelector('.card.info');
-  if (infoCard) right.insertBefore(card, infoCard);
-  else right.appendChild(card);
+  if (infoCard) right.insertBefore(card, infoCard); else right.appendChild(card);
 
   return card;
 }
 
 function renderNotesPanel(){
-  const card = ensureNotesPanel();
-  if (!card || !currentModel) return;
-
-  const list = card.querySelector('#allNotesList');
-  list.innerHTML = '';
+  const card = ensureNotesPanel(); if (!card || !currentModel) return;
+  const list = card.querySelector('#allNotesList'); list.innerHTML='';
 
   const steps = computeOrder(models[currentModel] || []);
   const items = [];
-  steps.forEach(s=>{
-    const n = getNote(currentModel, s.id);
-    if (n && n.trim()){
-      items.push({ id: s.id, title: s.title, text: n.trim() });
-    }
-  });
+  steps.forEach(s=>{ const n=getNote(currentModel, s.id); if (n && n.trim()) items.push({id:s.id, title:s.title, text:n.trim()}); });
 
-  if (!items.length){
-    const empty = document.createElement('div');
-    empty.className = 'muted';
-    empty.textContent = 'Bu model için kayıtlı not bulunmuyor.';
-    list.appendChild(empty);
-    return;
-  }
+  if (!items.length){ const empty=document.createElement('div'); empty.className='muted'; empty.textContent='Bu model için kayıtlı not bulunmuyor.'; list.appendChild(empty); return; }
 
   items.forEach(({id, title, text})=>{
-    const li = document.createElement('li');
-    li.style.border = '1px solid #e5e7eb';
-    li.style.borderRadius = '10px';
-    li.style.padding = '10px';
+    const li=document.createElement('li');
+    li.style.border='1px solid #e5e7eb'; li.style.borderRadius='10px'; li.style.padding='10px';
 
-    const row = document.createElement('div');
-    row.style.display = 'flex';
-    row.style.alignItems = 'center';
-    row.style.justifyContent = 'space-between';
-    row.style.gap = '8px';
+    const row=document.createElement('div');
+    row.style.display='flex'; row.style.alignItems='center'; row.style.justifyContent='space-between'; row.style.gap='8px';
 
-    const left = document.createElement('div');
-    left.style.display = 'flex';
-    left.style.flexDirection = 'column';
-
-    const h = document.createElement('div');
-    h.style.fontWeight = '600';
-    h.textContent = `${id}. ${title}`;
-    left.appendChild(h);
-
-    const preview = document.createElement('div');
-    preview.className = 'muted';
-    preview.style.fontSize = '12px';
-    preview.style.marginTop = '4px';
-    const firstLine = text.split(/\r?\n/)[0].slice(0, 140);
-    preview.textContent = firstLine + (text.length > firstLine.length ? '…' : '');
-    left.appendChild(preview);
-
+    const left=document.createElement('div'); left.style.display='flex'; left.style.flexDirection='column';
+    const h=document.createElement('div'); h.style.fontWeight='600'; h.textContent=`${id}. ${title}`; left.appendChild(h);
+    const preview=document.createElement('div'); preview.className='muted'; preview.style.fontSize='12px'; preview.style.marginTop='4px';
+    const firstLine=text.split(/\r?\n/)[0].slice(0,140); preview.textContent=firstLine + (text.length>firstLine.length ? '…' : ''); left.appendChild(preview);
     row.appendChild(left);
 
-    const actions = document.createElement('div');
-    actions.style.display = 'flex';
-    actions.style.gap = '6px';
-
-    const openBtn = document.createElement('button');
-    openBtn.className = 'btn small';
-    openBtn.textContent = 'Aç';
+    const actions=document.createElement('div'); actions.style.display='flex'; actions.style.gap='6px';
+    const openBtn=document.createElement('button'); openBtn.className='btn small'; openBtn.textContent='Aç';
     openBtn.addEventListener('click', ()=>{
-      const vis = getVisibleOrderedSteps();
-      const idx = vis.findIndex(s=>s.id===id);
+      const vis = getVisibleOrderedSteps(); const idx = vis.findIndex(s=>s.id===id);
       if (idx>=0) showStep(vis[idx], idx);
-      else {
-        const order = computeOrder(models[currentModel] || []);
-        const rawIdx = order.findIndex(s=>s.id===id);
-        if (rawIdx>=0) showStep(order[rawIdx], rawIdx);
-      }
+      else { const order=computeOrder(models[currentModel]||[]); const rawIdx=order.findIndex(s=>s.id===id); if (rawIdx>=0) showStep(order[rawIdx], rawIdx); }
     });
     actions.appendChild(openBtn);
 
-    const delBtn = document.createElement('button');
-    delBtn.className = 'btn small outline';
-    delBtn.textContent = '🗑️';
-    delBtn.title = 'Bu notu sil';
-    delBtn.addEventListener('click', ()=>{
-      removeNote(currentModel, id);
-      renderNotesPanel();
-    });
+    const delBtn=document.createElement('button'); delBtn.className='btn small outline'; delBtn.textContent='🗑️'; delBtn.title='Bu notu sil';
+    delBtn.addEventListener('click', ()=>{ removeNote(currentModel, id); renderNotesPanel(); });
     actions.appendChild(delBtn);
 
-    row.appendChild(actions);
-    li.appendChild(row);
-    list.appendChild(li);
+    row.appendChild(actions); li.appendChild(row); list.appendChild(li);
   });
 }
 
-/* --------- MODEL TABS (dropdown yerine) --------- */
+/* --------- MODEL TABS (brand’in sağında) --------- */
 function ensureTabbar(){
-  // actions kapsayıcısı = modelSelect'in parent'ı
-  const actions = els.modelSelect ? els.modelSelect.parentElement : null;
-  if (!actions) return null;
+  const topbar = document.querySelector('.topbar');
+  const brand  = document.querySelector('.topbar .brand');
+  const actions= document.querySelector('.topbar .actions');
+  if (!topbar || !brand || !actions) return null;
 
-  // Dropdown'ı gizle
+  // modelSelect dropdown'ı gizli kalsın (fallback için)
   if (els.modelSelect) els.modelSelect.style.display = 'none';
 
   let bar = document.getElementById('modelTabs');
@@ -477,81 +372,81 @@ function ensureTabbar(){
 
   bar = document.createElement('div');
   bar.id = 'modelTabs';
-  bar.style.display = 'flex';
-  bar.style.gap = '6px';
-  bar.style.alignItems = 'center';
-  bar.style.overflowX = 'auto';
-  bar.style.maxWidth = 'min(60vw, 560px)';   // üst menüde taşmadan scroll
-  bar.style.padding = '2px';
 
-  // resetProgress butonundan önce yerleştir (daha mantıklı akış)
-  if (els.resetProgress) actions.insertBefore(bar, els.resetProgress);
-  else actions.appendChild(bar);
+  // brand ile actions arasına yerleştir
+  topbar.insertBefore(bar, actions);
 
   return bar;
 }
 
 function renderModelTabs(){
-  const bar = ensureTabbar();
-  if (!bar) return;
-
+  const bar = ensureTabbar(); if (!bar) return;
   bar.innerHTML = '';
   const names = Object.keys(models);
 
-  if (!names.length){
-    bar.style.display = 'none';
-    return;
-  }
-  bar.style.display = 'flex';
+  if (!names.length){ bar.style.display='none'; return; }
+  bar.style.display='flex';
 
   names.forEach(name=>{
     const btn = document.createElement('button');
     btn.className = 'btn small ' + (name===currentModel ? 'primary' : 'outline');
-    btn.textContent = name;
-    btn.style.whiteSpace = 'nowrap';
-
+    btn.textContent = name; btn.style.whiteSpace='nowrap';
     btn.addEventListener('click', ()=>{
       if (currentModel === name) return;
       currentModel = name;
-      // Dropdown fallback'ı da güncel tut
       if (els.modelSelect) els.modelSelect.value = name;
-
-      renderModelTabs();  // aktif sekme rengi güncellensin
-      renderSteps();
-      renderNotesPanel();
-
-      const vis = getVisibleOrderedSteps();
-      if (vis[0]) showStep(vis[0], 0);
+      renderModelTabs(); renderSteps(); renderNotesPanel();
+      const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
     });
-
     bar.appendChild(btn);
   });
 }
 
-// ---- Render ----
-function renderModels(){
-  // Dropdown'u yine dolduruyoruz (erişilebilirlik/fallback), ama gizli
-  els.modelSelect.innerHTML = '';
-  const names = Object.keys(models);
-  names.forEach(n=>{
-    const opt=document.createElement('option'); opt.value=n; opt.textContent=n; els.modelSelect.appendChild(opt);
+/* --------- Hover Sidebar Hotzone --------- */
+function ensureSidebarHover(){
+  // Hotzone oluştur
+  if (!document.getElementById('sidebarHotzone')){
+    const hz = document.createElement('div');
+    hz.id = 'sidebarHotzone';
+    document.body.appendChild(hz);
+  }
+  const hz = document.getElementById('sidebarHotzone');
+  const sb = document.querySelector('.sidebar');
+
+  if (!hz || !sb) return;
+
+  let hideTimer = null;
+  const open = ()=>{ document.body.classList.add('sidebar-open'); if (hideTimer){ clearTimeout(hideTimer); hideTimer=null; } };
+  const close= ()=>{ document.body.classList.remove('sidebar-open'); };
+
+  hz.addEventListener('pointerenter', open);
+  hz.addEventListener('pointerleave', ()=>{
+    // küçük gecikme: kullanıcı sidebar'a geçerken kapanmasın
+    hideTimer = setTimeout(()=>{ if (!sb.matches(':hover')) close(); }, 120);
   });
 
-  // Hash / varsayılan model seçimi
+  sb.addEventListener('pointerenter', open);
+  sb.addEventListener('pointerleave', ()=>{
+    hideTimer = setTimeout(()=>{ if (!hz.matches(':hover')) close(); }, 120);
+  });
+}
+
+/* --------- Render --------- */
+function renderModels(){
+  els.modelSelect.innerHTML = '';
+  const names = Object.keys(models);
+  names.forEach(n=>{ const opt=document.createElement('option'); opt.value=n; opt.textContent=n; els.modelSelect.appendChild(opt); });
+
   if (names.length){
     const {model,id} = getHash();
     currentModel = (model && models[model]) ? model : (currentModel && models[currentModel]) ? currentModel : names[0];
-
     if (els.modelSelect) els.modelSelect.value = currentModel;
 
-    // Sekmeleri renderla
     renderModelTabs();
-
     renderSteps();
-    renderNotesPanel(); // sağ paneli modele göre doldur
+    renderNotesPanel();
 
-    const vis = getVisibleOrderedSteps();
-    const first = vis[0];
+    const vis = getVisibleOrderedSteps(); const first = vis[0];
     if (id){
       const idx = vis.findIndex(s=>s.id===id);
       if (idx>=0) showStep(vis[idx], idx);
@@ -561,7 +456,7 @@ function renderModels(){
     }
   } else {
     currentModel = null;
-    renderModelTabs(); // boşsa gizlenir
+    renderModelTabs();
   }
 }
 
@@ -598,16 +493,11 @@ function renderSteps(){
       renderSteps();
     });
 
-    const title=document.createElement('div'); title.className='title'; title.textContent = `${s.id}. ${s.title}`;
-    const meta=document.createElement('div'); meta.className='meta';
-    meta.textContent = s.parentId ? `Üst adım: ${s.parentId}` : 'Kök adım';
-    const chosen = sels[s.id];
-    if (chosen) meta.textContent += ` • Seçim: ${chosen}`;
+    const title=document.createElement('div'); title.className='title';
+    // sade: sadece adım başlığı
+    title.textContent = `${s.id}. ${s.title}`;
 
-    const row=document.createElement('div'); row.style.display='flex'; row.style.flexDirection='column';
-    row.appendChild(title); row.appendChild(meta);
-
-    li.appendChild(cb); li.appendChild(row);
+    li.appendChild(cb); li.appendChild(title);
     li.addEventListener('click',()=>showStep(s, idx));
     els.stepsList.appendChild(li);
   });
@@ -615,9 +505,6 @@ function renderSteps(){
   const pct = order.length ? Math.round((doneCount / order.length) * 100) : 0;
   els.progressBar.style.width = `${pct}%`;
   els.progressBar.title = `${pct}% tamamlandı`;
-
-  // Not paneli hep güncel kalsın
-  renderNotesPanel();
 }
 
 function nextVisibleAfter(stepId){
@@ -638,7 +525,7 @@ function showStep(step, index){
   const d=document.createElement('p'); d.textContent = step.description || 'Açıklama yok.';
   els.stepView.appendChild(h); els.stepView.appendChild(d);
 
-  // --- Terimler kartı (varsa) ---
+  // Terimler
   const glossaryCard = renderGlossaryCard(step);
   if (glossaryCard) els.stepView.appendChild(glossaryCard);
 
@@ -650,7 +537,7 @@ function showStep(step, index){
 
   const locked = (index >= FREE_LIMIT) && !isPremium();
 
-  // Seçenek butonları
+  // Seçenekler
   const options = Array.isArray(step.options) ? step.options : [];
   if (options.length){
     const optionsWrap=document.createElement('div'); optionsWrap.className='options';
@@ -662,7 +549,7 @@ function showStep(step, index){
       b.addEventListener('click', async ()=>{
         if (locked) return;
 
-        // modal içeriğini optionDetails'tan üret
+        // modal içeriği
         let modalHtml = '';
         const od = (step.optionDetails && step.optionDetails[label]) || null;
         if (od){
@@ -681,11 +568,9 @@ function showStep(step, index){
         const ok = await openModal(label, modalHtml);
         if (!ok) return;
 
-        // seçimi & ilerlemeyi kaydet
         const _sels = getSelections(currentModel); _sels[step.id] = label; setSelections(currentModel, _sels);
         const p = getProgress(currentModel); p[step.id] = true; setProgress(currentModel, p);
 
-        // görünür listeyi güncelle ve bir sonraki GÖRÜNÜR adıma geç
         renderSteps();
         const {next, nextIdx} = nextVisibleAfter(step.id);
         if (next) showStep(next, nextIdx);
@@ -695,10 +580,8 @@ function showStep(step, index){
     });
     els.stepView.appendChild(optionsWrap);
   } else {
-    // Opsiyon yoksa içerikten ilerleme butonu
     if (!locked){
-      const wrap=document.createElement('div');
-      wrap.style.marginTop='12px';
+      const wrap=document.createElement('div'); wrap.style.marginTop='12px';
       wrap.innerHTML = `<button id="finishStep" class="btn small primary">Adımı Tamamla → Sonraki</button>`;
       els.stepView.appendChild(wrap);
       wrap.querySelector('#finishStep').addEventListener('click', ()=>{
@@ -710,11 +593,11 @@ function showStep(step, index){
     }
   }
 
-  // --- Notlar kartı (kilitli adımda gösterilmez) ---
+  // Notlar
   const notesCard = renderNotesCard(step);
   if (notesCard) els.stepView.appendChild(notesCard);
 
-  // Sağdaki "Kaynaklar"
+  // Kaynaklar
   els.linksList.innerHTML = '';
   (step.links || []).forEach(u=>{
     const val = String(u||'').trim();
@@ -736,7 +619,7 @@ function showStep(step, index){
     els.stepView.appendChild(lock);
   }
 
-  // Aktif adımı işaretle ve hash'i güncelle
+  // Aktif adımı işaretle ve hash
   markActive(step.id);
   setHash(currentModel, step.id);
 }
@@ -781,6 +664,12 @@ function sanitizePlan(obj){
 document.addEventListener('DOMContentLoaded', ()=>{
   ensureModal(); closeModal(false); reflectPremiumUI(); loadDataFiles();
 
+  // JSON Yükle butonunu tamamen kaldır (istek)
+  if (els.jsonInput){
+    const lbl = els.jsonInput.closest('label');
+    if (lbl && lbl.parentElement) lbl.parentElement.removeChild(lbl);
+  }
+
   // Üst menüye "Notları Sıfırla" butonu ekle
   if (els.resetProgress){
     const clearNotesBtn = document.createElement('button');
@@ -796,6 +685,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     els.resetProgress.insertAdjacentElement('afterend', clearNotesBtn);
   }
 
+  // Hover sidebar
+  ensureSidebarHover();
+
   if (els.loadSample){
     els.loadSample.addEventListener('click', ()=>{
       const names = Object.keys(models); if (!names.length) return alert('Örnekler yüklenemedi. JSON dosyaları bulunamadı.');
@@ -807,7 +699,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
   }
 
-  // Hash değişince ilgili görünür adıma git
+  // Hash değişince
   window.addEventListener('hashchange', ()=>{
     const {model,id} = getHash(); if (!model || !models[model] || !Number.isFinite(id)) return;
     currentModel = model;
@@ -818,7 +710,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   });
 });
 
-// Model değişimi (fallback: dropdown hâlâ çalışır ama gizli)
+// Model değişimi (fallback: dropdown gizli ama çalışır)
 els.modelSelect.addEventListener('change', e=>{
   currentModel = e.target.value;
   renderModelTabs();
@@ -835,26 +727,27 @@ els.resetProgress.addEventListener('click', ()=>{
   renderSteps();
 });
 
-// JSON yükleme
-els.jsonInput.addEventListener('change', (e)=>{
-  const file=e.target.files[0]; if(!file) return;
-  const reader=new FileReader();
-  reader.onload=()=>{
-    try{
-      const raw=JSON.parse(reader.result); const obj=sanitizePlan(raw);
-      if(obj){
-        models[obj.model]=obj.steps;
-        // model listesi değişmiş olabilir → sekmeleri tazele
-        renderModels();
-      } else {
-        alert('Geçersiz/çok büyük JSON.');
-      }
-    }catch(err){ alert('JSON okunamadı: '+err.message); }
-  };
-  reader.readAsText(file, 'utf-8');
-});
+// JSON yükleme (artık gizli ama fonksiyonel kalsın)
+if (els.jsonInput){
+  els.jsonInput.addEventListener('change', (e)=>{
+    const file=e.target.files[0]; if(!file) return;
+    const reader=new FileReader();
+    reader.onload=()=>{
+      try{
+        const raw=JSON.parse(reader.result); const obj=sanitizePlan(raw);
+        if(obj){
+          models[obj.model]=obj.steps;
+          renderModels();
+        } else {
+          alert('Geçersiz/çok büyük JSON.');
+        }
+      }catch(err){ alert('JSON okunamadı: '+err.message); }
+    };
+    reader.readAsText(file, 'utf-8');
+  });
+}
 
-// Premium state dışarıdan değişirse UI'yı yansıt
+// Premium state dışarıdan değişirse UI
 window.addEventListener('storage',(e)=>{ if(e.key===PREMIUM_KEY) reflectPremiumUI(); });
 
 // URL ile premium açma (debug)
