@@ -1,6 +1,6 @@
-/* Steplify — v4.3 (notes panel)
-   JSON loader + freemium + branching (visibleIf) + modal info + next-visible-step + glossary + notes + notes panel */
-console.log('Steplify app v4.3');
+/* Steplify — v4.4 (tabs)
+   JSON loader + freemium + branching (visibleIf) + modal info + next-visible-step + glossary + notes + notes panel + model tabs */
+console.log('Steplify app v4.4');
 
 const FREE_LIMIT = 5;
 const PREMIUM_KEY = "steplify_premium";   // localStorage anahtarı
@@ -440,7 +440,6 @@ function renderNotesPanel(){
       const idx = vis.findIndex(s=>s.id===id);
       if (idx>=0) showStep(vis[idx], idx);
       else {
-        // görünürlük kuralı gizliyorsa ilk önce seçimi temizleyip denemek istenirse ileride ele alırız
         const order = computeOrder(models[currentModel] || []);
         const rawIdx = order.findIndex(s=>s.id===id);
         if (rawIdx>=0) showStep(order[rawIdx], rawIdx);
@@ -464,29 +463,91 @@ function renderNotesPanel(){
   });
 }
 
-// ---- URL hash (derin link) ----
-function setHash(model, stepId){ try{ location.hash = `${encodeURIComponent(model)}:${stepId}`; }catch(_){} }
-function getHash(){
-  const h=(location.hash||'').replace(/^#/, '');
-  if(!h) return {model:null,id:null};
-  const [m,idStr]=h.split(':'); const id=Number(idStr);
-  return {model:decodeURIComponent(m||''), id:Number.isFinite(id)?id:null};
+/* --------- MODEL TABS (dropdown yerine) --------- */
+function ensureTabbar(){
+  // actions kapsayıcısı = modelSelect'in parent'ı
+  const actions = els.modelSelect ? els.modelSelect.parentElement : null;
+  if (!actions) return null;
+
+  // Dropdown'ı gizle
+  if (els.modelSelect) els.modelSelect.style.display = 'none';
+
+  let bar = document.getElementById('modelTabs');
+  if (bar) return bar;
+
+  bar = document.createElement('div');
+  bar.id = 'modelTabs';
+  bar.style.display = 'flex';
+  bar.style.gap = '6px';
+  bar.style.alignItems = 'center';
+  bar.style.overflowX = 'auto';
+  bar.style.maxWidth = 'min(60vw, 560px)';   // üst menüde taşmadan scroll
+  bar.style.padding = '2px';
+
+  // resetProgress butonundan önce yerleştir (daha mantıklı akış)
+  if (els.resetProgress) actions.insertBefore(bar, els.resetProgress);
+  else actions.appendChild(bar);
+
+  return bar;
+}
+
+function renderModelTabs(){
+  const bar = ensureTabbar();
+  if (!bar) return;
+
+  bar.innerHTML = '';
+  const names = Object.keys(models);
+
+  if (!names.length){
+    bar.style.display = 'none';
+    return;
+  }
+  bar.style.display = 'flex';
+
+  names.forEach(name=>{
+    const btn = document.createElement('button');
+    btn.className = 'btn small ' + (name===currentModel ? 'primary' : 'outline');
+    btn.textContent = name;
+    btn.style.whiteSpace = 'nowrap';
+
+    btn.addEventListener('click', ()=>{
+      if (currentModel === name) return;
+      currentModel = name;
+      // Dropdown fallback'ı da güncel tut
+      if (els.modelSelect) els.modelSelect.value = name;
+
+      renderModelTabs();  // aktif sekme rengi güncellensin
+      renderSteps();
+      renderNotesPanel();
+
+      const vis = getVisibleOrderedSteps();
+      if (vis[0]) showStep(vis[0], 0);
+    });
+
+    bar.appendChild(btn);
+  });
 }
 
 // ---- Render ----
 function renderModels(){
+  // Dropdown'u yine dolduruyoruz (erişilebilirlik/fallback), ama gizli
   els.modelSelect.innerHTML = '';
   const names = Object.keys(models);
   names.forEach(n=>{
     const opt=document.createElement('option'); opt.value=n; opt.textContent=n; els.modelSelect.appendChild(opt);
   });
 
+  // Hash / varsayılan model seçimi
   if (names.length){
     const {model,id} = getHash();
-    currentModel = (model && models[model]) ? model : names[0];
-    els.modelSelect.value = currentModel;
-    renderSteps();
+    currentModel = (model && models[model]) ? model : (currentModel && models[currentModel]) ? currentModel : names[0];
 
+    if (els.modelSelect) els.modelSelect.value = currentModel;
+
+    // Sekmeleri renderla
+    renderModelTabs();
+
+    renderSteps();
     renderNotesPanel(); // sağ paneli modele göre doldur
 
     const vis = getVisibleOrderedSteps();
@@ -500,6 +561,7 @@ function renderModels(){
     }
   } else {
     currentModel = null;
+    renderModelTabs(); // boşsa gizlenir
   }
 }
 
@@ -554,7 +616,7 @@ function renderSteps(){
   els.progressBar.style.width = `${pct}%`;
   els.progressBar.title = `${pct}% tamamlandı`;
 
-  // Not paneli, adım listesi her güncellendiğinde de güncel kalsın
+  // Not paneli hep güncel kalsın
   renderNotesPanel();
 }
 
@@ -648,7 +710,7 @@ function showStep(step, index){
     }
   }
 
-  // --- Notlar kartı (her zaman; kilitli adımda gösterilmez) ---
+  // --- Notlar kartı (kilitli adımda gösterilmez) ---
   const notesCard = renderNotesCard(step);
   if (notesCard) els.stepView.appendChild(notesCard);
 
@@ -737,7 +799,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
   if (els.loadSample){
     els.loadSample.addEventListener('click', ()=>{
       const names = Object.keys(models); if (!names.length) return alert('Örnekler yüklenemedi. JSON dosyaları bulunamadı.');
-      currentModel = names[0]; els.modelSelect.value = currentModel; renderSteps();
+      currentModel = names[0];
+      if (els.modelSelect) els.modelSelect.value = currentModel;
+      renderModelTabs();
+      renderSteps();
       const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
     });
   }
@@ -745,14 +810,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // Hash değişince ilgili görünür adıma git
   window.addEventListener('hashchange', ()=>{
     const {model,id} = getHash(); if (!model || !models[model] || !Number.isFinite(id)) return;
-    currentModel = model; if (els.modelSelect) els.modelSelect.value = model; renderSteps();
+    currentModel = model;
+    if (els.modelSelect) els.modelSelect.value = model;
+    renderModelTabs();
+    renderSteps();
     const vis = getVisibleOrderedSteps(); const idx = vis.findIndex(s=>s.id===id); if (idx>=0) showStep(vis[idx], idx);
   });
 });
 
-// Model değişimi
+// Model değişimi (fallback: dropdown hâlâ çalışır ama gizli)
 els.modelSelect.addEventListener('change', e=>{
-  currentModel = e.target.value; renderSteps();
+  currentModel = e.target.value;
+  renderModelTabs();
+  renderSteps();
   renderNotesPanel();
   const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
 });
@@ -772,8 +842,13 @@ els.jsonInput.addEventListener('change', (e)=>{
   reader.onload=()=>{
     try{
       const raw=JSON.parse(reader.result); const obj=sanitizePlan(raw);
-      if(obj){ models[obj.model]=obj.steps; renderModels(); }
-      else alert('Geçersiz/çok büyük JSON.');
+      if(obj){
+        models[obj.model]=obj.steps;
+        // model listesi değişmiş olabilir → sekmeleri tazele
+        renderModels();
+      } else {
+        alert('Geçersiz/çok büyük JSON.');
+      }
     }catch(err){ alert('JSON okunamadı: '+err.message); }
   };
   reader.readAsText(file, 'utf-8');
