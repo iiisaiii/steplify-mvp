@@ -1,6 +1,5 @@
-/* Steplify — Modern Tech Cred theme
-   Renk sistemi + gradient + erişilebilir odak halkası
-   -------------------------------------------------- */
+/* Steplify — Modern Tech Cred + hover sidebar + renkli arka plan
+   --------------------------------------------------------------- */
 
 /* ========== Design Tokens (CSS Variables) ========== */
 :root{
@@ -11,7 +10,8 @@
 
   /* Text & Surfaces */
   --bg:           #FFFFFF;
-  --bg-soft:      #EEF2FF;  /* Indigo 50 benzeri */
+  --bg-soft:      #EEF2FF;
+  --bg-soft-2:    #F1FAF9;  /* teal 50 benzeri */
   --card:         #FFFFFF;
   --border:       #E5E7EB;
   --text:         #0F172A;  /* Slate 900 */
@@ -30,7 +30,16 @@
 
 /* ========== Reset / Base ========== */
 *{ box-sizing:border-box }
-html,body{ margin:0; padding:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text); background:var(--bg); }
+html,body{ margin:0; padding:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text) }
+
+/* Hafif renkli arkaplan */
+body{
+  background:
+    radial-gradient(1200px 800px at -10% -10%, var(--bg-soft) 0%, transparent 60%),
+    radial-gradient(1200px 800px at 110% 10%, var(--bg-soft-2) 0%, transparent 60%),
+    #fff;
+}
+
 a{ color:var(--brand); text-decoration:none }
 a:hover{ text-decoration:underline }
 
@@ -39,34 +48,70 @@ a:hover{ text-decoration:underline }
 
 /* ========== Topbar ========== */
 .topbar{
-  position:sticky; top:0; z-index:10;
+  position:sticky; top:0; z-index:20;
   display:flex; align-items:center; justify-content:space-between;
-  padding:10px 16px; border-bottom:1px solid var(--border); background:var(--bg);
+  padding:10px 16px; border-bottom:1px solid var(--border); background:#fff;
 }
 .topbar::after{
   content:""; position:absolute; left:0; right:0; bottom:-1px; height:3px;
   background:var(--gradient-brand); opacity:.85;
 }
-.brand{ font-weight:700; font-size:18px }
+.brand{ font-weight:700; font-size:18px; white-space:nowrap }
 .badge{ margin-left:8px; padding:2px 6px; border-radius:8px; background:var(--bg-soft); color:#334155; font-size:12px }
 .actions{ display:flex; gap:8px; align-items:center }
 
+/* ========== Model Tabs (JS’de #modelTabs) ========== */
+#modelTabs{
+  display:flex; gap:6px; align-items:center; overflow-x:auto; padding:2px;
+  max-width: min(48vw, 640px);
+}
+#modelTabs .btn.small{ border-radius:999px; white-space:nowrap }
+#modelTabs .btn.small.primary{ background-image:var(--gradient-brand) }
+#modelTabs .btn.small.outline{ border-color:var(--border) }
+
 /* ========== Layout ========== */
+/* Sidebar’ı fixed yapacağımız için grid’i 2 kolona indiriyoruz */
 .layout{
-  display:grid; grid-template-columns:280px 1fr 280px; gap:16px; padding:16px;
+  display:grid; grid-template-columns:1fr 280px; gap:16px; padding:16px;
   min-height:calc(100vh - 64px)
 }
-.sidebar,.rightbar{ position:sticky; top:64px; height:calc(100vh - 96px); overflow:auto }
-.sidebar-head{ display:flex; flex-direction:column; gap:8px; margin-bottom:8px }
+.rightbar{ position:sticky; top:64px; height:calc(100vh - 96px); overflow:auto }
+.content .card,
+.rightbar .card{
+  background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px;
+}
+.rightbar .card{ margin-bottom:12px }
+.rightbar .card.info{ background-image:var(--gradient-brand); color:#fff; border-color:transparent; }
+.rightbar .card.info a{ color:#fff; text-decoration:underline }
 
-/* ========== Progress ========== */
+/* ========== Hover ile Açılan Sidebar ========== */
+.sidebar{
+  position:fixed; left:0; top:64px; z-index:30;
+  width:280px; height:calc(100vh - 96px); overflow:auto;
+  background:#fff; border-right:1px solid var(--border);
+  transform: translateX(-264px);
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow:none;
+  border-top-left-radius:0; border-bottom-left-radius:0;
+}
+body.sidebar-open .sidebar{
+  transform: translateX(0);
+  box-shadow: 0 10px 24px rgba(15,23,42,.12);
+}
+.sidebar-head{ display:flex; flex-direction:column; gap:8px; margin:8px 8px 8px 8px }
 .progress{ height:8px; background:var(--bg-soft); border-radius:6px; overflow:hidden }
 #progressBar{ height:8px; width:0%; background-image:var(--gradient-brand) }
 
-/* ========== Lists / Cards ========== */
-.steps{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px }
+/* Hotzone (ekranın sol şeridi) */
+#sidebarHotzone{
+  position:fixed; left:0; top:64px; height:calc(100vh - 64px); width:14px;
+  z-index:25; background:transparent;
+}
+
+/* ========== Steps List ========== */
+.steps{ list-style:none; margin:8px; padding:0; display:flex; flex-direction:column; gap:6px }
 .step{
-  display:flex; align-items:center; gap:10px; padding:8px;
+  display:flex; align-items:center; gap:10px; padding:10px 12px;
   border:1px solid var(--border); border-radius:10px; background:var(--card);
   cursor:pointer; transition: box-shadow .12s ease, border-color .12s ease;
 }
@@ -74,42 +119,9 @@ a:hover{ text-decoration:underline }
 .step.active{ border-color:var(--brand); box-shadow:0 0 0 3px rgba(37,99,235,.12) }
 .step.locked{ opacity:.60 }
 .step .title{ font-weight:600 }
-.step .meta{ font-size:12px; color:var(--muted) }
+.step .meta{ display:none } /* istek: Üst adım / Kök adım yazma */
 
-.content .card,
-.rightbar .card{
-  background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px;
-}
-.rightbar .card{ margin-bottom:12px }
-.rightbar .card.info{
-  background-image:var(--gradient-brand); color:#fff; border-color:transparent;
-}
-.rightbar .card.info a{ color:#fff; text-decoration:underline }
-
-/* Premium kilit kartı (JS’de inline stil set edilse bile bastır) */
-.card:has(#buyPremium){
-  background-image:var(--gradient-brand) !important;
-  border-color:transparent !important; color:#fff;
-}
-.card:has(#buyPremium) b{ color:#fff }
-.card:has(#buyPremium) #buyPremium{
-  background:#fff; color:#0F172A; border:none;
-}
-
-/* ========== Buttons ========== */
-.btn{
-  background:#111; color:#fff; border:none; border-radius:10px; padding:10px 14px;
-  cursor:pointer; display:inline-flex; align-items:center; gap:8px; box-shadow:var(--shadow-sm);
-  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease, background .12s ease;
-}
-.btn:hover{ transform:translateY(-1px); box-shadow:var(--shadow-md) }
-.btn.small{ padding:8px 10px; font-size:12px; border-radius:8px }
-.btn.primary{
-  background-image:var(--gradient-brand);
-}
-.btn.outline{
-  background:var(--bg); color:var(--text); border:1px solid var(--border)
-}
+.content h2{ margin-top:0 }
 
 /* Options (ortalı büyük) */
 .options{ display:flex; justify-content:center; align-items:center; gap:16px; flex-wrap:wrap; margin:24px 0 8px }
@@ -119,26 +131,33 @@ a:hover{ text-decoration:underline }
   box-shadow:var(--shadow-sm);
 }
 .btn.option-btn:hover{ transform:translateY(-1px); box-shadow:var(--shadow-md) }
-.btn.option-btn.selected{
-  border-color:var(--brand); box-shadow:0 0 0 3px rgba(37,99,235,.15)
+.btn.option-btn.selected{ border-color:var(--brand); box-shadow:0 0 0 3px rgba(37,99,235,.15) }
+
+/* ========== Buttons ========== */
+.btn{
+  background:#111; color:#fff; border:none; border-radius:10px; padding:10px 14px;
+  cursor:pointer; display:inline-flex; align-items:center; gap:8px; box-shadow:var(--shadow-sm);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease, background .12s ease;
+}
+.btn:hover{ transform:translateY(-1px); box-shadow:var(--shadow-md) }
+.btn.small{ padding:8px 10px; font-size:12px; border-radius:8px }
+.btn.primary{ background-image:var(--gradient-brand) }
+.btn.outline{ background:#fff; color:var(--text); border:1px solid var(--border) }
+
+/* Premium kilit kartı (JS inline stilini override et) */
+.card:has(#buyPremium){
+  background-image:var(--gradient-brand) !important;
+  border-color:transparent !important; color:#fff;
+}
+.card:has(#buyPremium) b{ color:#fff }
+.card:has(#buyPremium) #buyPremium{
+  background:#fff; color:#0F172A; border:none;
 }
 
-/* ========== Model Tabs (JS’de #modelTabs) ========== */
-#modelTabs{ scrollbar-width:thin }
-#modelTabs .btn.small{ border-radius:999px }
-#modelTabs .btn.small.primary{
-  background-image:var(--gradient-brand);
-}
-#modelTabs .btn.small.outline{
-  border-color:var(--border)
-}
-
-/* ========== Links ========== */
+/* Links & misc */
 .links{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px }
 .links a{ color:var(--brand) }
 .muted{ color:var(--muted) }
-
-/* ========== Utilities ========== */
 .doc{ padding:24px }
 .demo-tip{ margin-top:12px; padding:12px; border:1px dashed var(--border); border-radius:10px; background:#fafafa }
 .foot{ padding:16px 24px; border-top:1px solid var(--border); color:var(--muted) }
@@ -149,8 +168,6 @@ a:hover{ text-decoration:underline }
 /* Responsive */
 @media(max-width:1000px){
   .layout{ grid-template-columns:1fr }
-  .sidebar,.rightbar{ height:auto; position:static }
+  .rightbar{ height:auto; position:static }
+  #modelTabs{ max-width: 70vw }
 }
-
-/* (Opsiyonel) Gradient arka plan yardımcı sınıfı */
-.bg-gradient-brand{ background-image:var(--gradient-brand) }
