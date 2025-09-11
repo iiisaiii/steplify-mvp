@@ -1,10 +1,10 @@
-/* Steplify — Trustful Light Theme (Blue/Teal)
-   - yumuşak mavi/teal arka plan
-   - gradient brand vurguları
-   - hover sidebar, tabbar, premium kart teması
+/* Steplify — Trustful Light + Dark Theme
+   - Mavi/yeşil güven paleti (açık)
+   - Derin lacivert/teal paleti (koyu)
+   - Hover sidebar, tabbar, premium kart teması
 */
 
-/* ========== Design Tokens (CSS Variables) ========== */
+/* ========== Light Tokens (default) ========== */
 :root{
   /* Brand (güven-mavi) */
   --brand:        #1D4ED8; /* Blue 700 */
@@ -35,6 +35,28 @@
   --ring:      0 0 0 3px rgba(29, 78, 216, .22);
 }
 
+/* ========== Dark Tokens (override) ========== */
+:root[data-theme="dark"]{
+  --brand:        #60A5FA; /* Blue 400 */
+  --brand-2:      #34D399; /* Emerald 400 */
+  --gradient-brand: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+
+  --bg:        #0B1220;
+  --bg-2:      #0A1528;
+  --bg-3:      #0A1F1A;
+  --bg-soft:   #132036;
+  --bg-soft-2: #0C2A22;
+  --card:      #0F172A; /* slate-900-ish */
+  --border:    #1E293B;
+
+  --text:   #E6EDF7;
+  --muted:  #9AA5B2;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.35);
+  --shadow-md: 0 10px 26px rgba(0,0,0,.45);
+  --ring:      0 0 0 3px rgba(96, 165, 250, .28);
+}
+
 /* ========== Reset / Base ========== */
 *{ box-sizing:border-box }
 html,body{
@@ -43,7 +65,7 @@ html,body{
   color:var(--text);
 }
 
-/* Arka plan: belirgin, ama yormayan mavi→teal degrade + radial dokular */
+/* Arka plan: mavi→teal degrade + radial dokular (her iki temada da değişkenler üzerinden) */
 body{
   background:
     radial-gradient(1100px 700px at -12% -10%, var(--bg-soft) 0%, rgba(0,0,0,0) 62%),
@@ -65,12 +87,16 @@ a:hover{ text-decoration:underline }
   -webkit-backdrop-filter:saturate(120%) blur(6px);
   backdrop-filter:saturate(120%) blur(6px);
 }
+:root[data-theme="dark"] .topbar{
+  background:rgba(15,23,42,.72);
+}
 .topbar::after{
   content:""; position:absolute; left:0; right:0; bottom:-1px; height:3px;
   background:var(--gradient-brand); opacity:.85;
 }
 .brand{ font-weight:700; font-size:18px; white-space:nowrap }
 .badge{ margin-left:8px; padding:2px 6px; border-radius:8px; background:#E6EEFF; color:#1F2A44; font-size:12px }
+:root[data-theme="dark"] .badge{ background:#0F1B31; color:#A7B7D3 }
 .actions{ display:flex; gap:8px; align-items:center }
 
 /* ========== Model Tabs (brand yanında) ========== */
@@ -80,7 +106,8 @@ a:hover{ text-decoration:underline }
 }
 #modelTabs .btn.small{ border-radius:999px; white-space:nowrap }
 #modelTabs .btn.small.primary{ background-image:var(--gradient-brand) }
-#modelTabs .btn.small.outline{ border-color:var(--border); background:rgba(255,255,255,.8) }
+#modelTabs .btn.small.outline{ border-color:var(--border); background:rgba(255,255,255,.85) }
+:root[data-theme="dark"] #modelTabs .btn.small.outline{ background:rgba(15,23,42,.6); color:var(--text) }
 
 /* ========== Layout ========== */
 .layout{
@@ -110,6 +137,9 @@ a:hover{ text-decoration:underline }
   transition: transform .18s ease, box-shadow .18s ease;
   box-shadow:none;
 }
+:root[data-theme="dark"] .sidebar{
+  background:linear-gradient(180deg, #0F172A 0%, #0B1220 100%);
+}
 body.sidebar-open .sidebar{
   transform: translateX(0);
   box-shadow: 0 10px 24px rgba(2, 6, 23, .12);
@@ -135,8 +165,14 @@ body.sidebar-open .sidebar{
 .step:hover{ box-shadow:var(--shadow-sm); background:#FFFFFF }
 .step.active{ border-color:var(--brand); box-shadow:0 0 0 3px rgba(29,78,216,.14) }
 .step.locked{ opacity:.60 }
+:root[data-theme="dark"] .step{
+  background:rgba(15,23,42,.78);
+}
+:root[data-theme="dark"] .step:hover{
+  background:rgba(15,23,42,.92);
+}
 .step .title{ font-weight:600 }
-.step .meta{ display:none } /* sadeleştirme: üst/kök yazma */
+.step .meta{ display:none } /* sadeleştirme */
 
 /* ========== Options (orta büyük butonlar) ========== */
 .options{ display:flex; justify-content:center; align-items:center; gap:16px; flex-wrap:wrap; margin:24px 0 8px }
@@ -147,6 +183,9 @@ body.sidebar-open .sidebar{
 }
 .btn.option-btn:hover{ transform:translateY(-1px); box-shadow:var(--shadow-md) }
 .btn.option-btn.selected{ border-color:var(--brand); box-shadow:0 0 0 3px rgba(29,78,216,.15) }
+:root[data-theme="dark"] .btn.option-btn{
+  background:linear-gradient(180deg,#0F172A 0%, #0B1220 100%);
+}
 
 /* ========== Buttons ========== */
 .btn{
@@ -158,6 +197,9 @@ body.sidebar-open .sidebar{
 .btn.small{ padding:8px 10px; font-size:12px; border-radius:8px }
 .btn.primary{ background-image:var(--gradient-brand) }
 .btn.outline{ background:#fff; color:var(--text); border:1px solid var(--border) }
+:root[data-theme="dark"] .btn.outline{
+  background:transparent; color:var(--text); border:1px solid var(--border);
+}
 
 /* Premium kilit kartı */
 .card:has(#buyPremium){
@@ -175,6 +217,7 @@ body.sidebar-open .sidebar{
 .muted{ color:var(--muted) }
 .doc{ padding:24px }
 .demo-tip{ margin-top:12px; padding:12px; border:1px dashed var(--border); border-radius:10px; background:#F8FBFF }
+:root[data-theme="dark"] .demo-tip{ background:#0F172A }
 .foot{ padding:16px 24px; border-top:1px solid var(--border); color:var(--muted) }
 
 /* Modal üst katmanda kalsın */
