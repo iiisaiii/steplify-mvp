@@ -1,17 +1,61 @@
-/* Steplify — v4.5
+/* Steplify — v4.6
    - JSON loader + freemium + branching (visibleIf)
    - modal info + next-visible-step + glossary + notes
    - model tabs (brand’ın yanında)
    - hover ile açılan sidebar
-   - JSON Yükle gizlendi
+   - LIGHT/DARK tema (toggle + sistem tercihini varsayılan alma)
+   - JSON Yükle gizli (fonksiyonel)
 */
-console.log('Steplify app v4.5');
+console.log('Steplify app v4.6');
 
 const FREE_LIMIT = 5;
 const PREMIUM_KEY = "steplify_premium";
+const THEME_KEY   = "steplify_theme";   // 'light' | 'dark' | (unset => system)
 
 function isPremium(){ try{ return localStorage.getItem(PREMIUM_KEY)==="1"; }catch(_){ return false; } }
 function setPremium(v){ localStorage.setItem(PREMIUM_KEY, v ? "1" : "0"); reflectPremiumUI(); }
+
+/* ======== Theme ======== */
+function systemPrefersDark(){
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+function storedTheme(){
+  try{ return localStorage.getItem(THEME_KEY) || null; }catch(_){ return null; }
+}
+function applyThemeFromSetting(){
+  const pref = storedTheme();                         // 'light' / 'dark' / null
+  const theme = pref || (systemPrefersDark() ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+  renderThemeToggle();
+}
+function toggleTheme(){
+  const current = document.documentElement.getAttribute('data-theme') || (systemPrefersDark() ? 'dark' : 'light');
+  const next = current === 'dark' ? 'light' : 'dark';
+  try{ localStorage.setItem(THEME_KEY, next); }catch(_){}
+  applyThemeFromSetting();
+}
+function renderThemeToggle(){
+  const actions = document.querySelector('.topbar .actions');
+  if (!actions) return;
+  let btn = document.getElementById('themeToggleBtn');
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  const label = current === 'dark' ? '☀️ Açık' : '🌙 Koyu';
+  if (!btn){
+    btn = document.createElement('button');
+    btn.id = 'themeToggleBtn';
+    btn.className = 'btn small outline';
+    btn.title = 'Tema değiştir (Açık/Koyu)';
+    btn.addEventListener('click', toggleTheme);
+    // Aksiyonların en soluna koy
+    actions.insertBefore(btn, actions.firstChild);
+  }
+  btn.textContent = label;
+}
+// Sistem tercihi değişirse ve kullanıcı özel ayar seçmediyse güncelle
+if (window.matchMedia){
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  mq.addEventListener?.('change', ()=>{ if (!storedTheme()) applyThemeFromSetting(); });
+}
 
 let models = {};    // { modelName: steps[] }
 let currentModel = null;
@@ -227,10 +271,9 @@ function renderGlossaryCard(step){
   entries.forEach(({term, desc})=>{
     const dt=document.createElement('dt'); dt.style.fontWeight='600'; dt.style.margin='0'; dt.textContent = term;
     const dd=document.createElement('dd'); dd.style.margin='0'; dd.style.color='#475569'; dd.textContent = desc || '—';
-    list.appendChild(dt); list.appendChild(dd);
+    card.appendChild(list); list.appendChild(dt); list.appendChild(dd);
   });
 
-  card.appendChild(list);
   return card;
 }
 
@@ -316,7 +359,6 @@ function ensureNotesPanel(){
 
   return card;
 }
-
 function renderNotesPanel(){
   const card = ensureNotesPanel(); if (!card || !currentModel) return;
   const list = card.querySelector('#allNotesList'); list.innerHTML='';
@@ -357,14 +399,13 @@ function renderNotesPanel(){
   });
 }
 
-/* --------- MODEL TABS (brand’in sağında) --------- */
+/* --------- MODEL TABS --------- */
 function ensureTabbar(){
   const topbar = document.querySelector('.topbar');
   const brand  = document.querySelector('.topbar .brand');
   const actions= document.querySelector('.topbar .actions');
   if (!topbar || !brand || !actions) return null;
 
-  // modelSelect dropdown'ı gizli kalsın (fallback için)
   if (els.modelSelect) els.modelSelect.style.display = 'none';
 
   let bar = document.getElementById('modelTabs');
@@ -372,13 +413,9 @@ function ensureTabbar(){
 
   bar = document.createElement('div');
   bar.id = 'modelTabs';
-
-  // brand ile actions arasına yerleştir
   topbar.insertBefore(bar, actions);
-
   return bar;
 }
-
 function renderModelTabs(){
   const bar = ensureTabbar(); if (!bar) return;
   bar.innerHTML = '';
@@ -404,15 +441,11 @@ function renderModelTabs(){
 
 /* --------- Hover Sidebar Hotzone --------- */
 function ensureSidebarHover(){
-  // Hotzone oluştur
   if (!document.getElementById('sidebarHotzone')){
-    const hz = document.createElement('div');
-    hz.id = 'sidebarHotzone';
-    document.body.appendChild(hz);
+    const hz = document.createElement('div'); hz.id = 'sidebarHotzone'; document.body.appendChild(hz);
   }
   const hz = document.getElementById('sidebarHotzone');
   const sb = document.querySelector('.sidebar');
-
   if (!hz || !sb) return;
 
   let hideTimer = null;
@@ -420,15 +453,9 @@ function ensureSidebarHover(){
   const close= ()=>{ document.body.classList.remove('sidebar-open'); };
 
   hz.addEventListener('pointerenter', open);
-  hz.addEventListener('pointerleave', ()=>{
-    // küçük gecikme: kullanıcı sidebar'a geçerken kapanmasın
-    hideTimer = setTimeout(()=>{ if (!sb.matches(':hover')) close(); }, 120);
-  });
-
+  hz.addEventListener('pointerleave', ()=>{ hideTimer = setTimeout(()=>{ if (!sb.matches(':hover')) close(); }, 120); });
   sb.addEventListener('pointerenter', open);
-  sb.addEventListener('pointerleave', ()=>{
-    hideTimer = setTimeout(()=>{ if (!hz.matches(':hover')) close(); }, 120);
-  });
+  sb.addEventListener('pointerleave', ()=>{ hideTimer = setTimeout(()=>{ if (!hz.matches(':hover')) close(); }, 120); });
 }
 
 /* --------- Render --------- */
@@ -470,7 +497,6 @@ function renderSteps(){
   }
 
   const progress = getProgress(currentModel);
-  const sels = getSelections(currentModel);
   const order = getVisibleOrderedSteps();
 
   els.sidebarTitle.textContent = `Adımlar — ${currentModel}`;
@@ -494,7 +520,6 @@ function renderSteps(){
     });
 
     const title=document.createElement('div'); title.className='title';
-    // sade: sadece adım başlığı
     title.textContent = `${s.id}. ${s.title}`;
 
     li.appendChild(cb); li.appendChild(title);
@@ -514,7 +539,6 @@ function nextVisibleAfter(stepId){
 }
 
 function showStep(step, index){
-  // Adım görünür değilse, ilk görünür adıma atla
   const vis = getVisibleOrderedSteps();
   if (!vis.some(s=>s.id===step.id)){
     const first = vis[0]; if (first) return showStep(first, 0); else return;
@@ -525,7 +549,6 @@ function showStep(step, index){
   const d=document.createElement('p'); d.textContent = step.description || 'Açıklama yok.';
   els.stepView.appendChild(h); els.stepView.appendChild(d);
 
-  // Terimler
   const glossaryCard = renderGlossaryCard(step);
   if (glossaryCard) els.stepView.appendChild(glossaryCard);
 
@@ -537,7 +560,6 @@ function showStep(step, index){
 
   const locked = (index >= FREE_LIMIT) && !isPremium();
 
-  // Seçenekler
   const options = Array.isArray(step.options) ? step.options : [];
   if (options.length){
     const optionsWrap=document.createElement('div'); optionsWrap.className='options';
@@ -549,7 +571,6 @@ function showStep(step, index){
       b.addEventListener('click', async ()=>{
         if (locked) return;
 
-        // modal içeriği
         let modalHtml = '';
         const od = (step.optionDetails && step.optionDetails[label]) || null;
         if (od){
@@ -593,11 +614,9 @@ function showStep(step, index){
     }
   }
 
-  // Notlar
   const notesCard = renderNotesCard(step);
   if (notesCard) els.stepView.appendChild(notesCard);
 
-  // Kaynaklar
   els.linksList.innerHTML = '';
   (step.links || []).forEach(u=>{
     const val = String(u||'').trim();
@@ -611,7 +630,6 @@ function showStep(step, index){
     els.linksList.appendChild(li);
   });
 
-  // Kilit kartı
   if (locked){
     const lock=document.createElement('div'); lock.className='card'; lock.style.marginTop='12px'; lock.style.background='#fff7ed'; lock.style.borderColor='#fdba74';
     lock.innerHTML = `<b>Premium Kilit</b><br/>Bu adımı görmek için Premium'a geç.
@@ -619,12 +637,11 @@ function showStep(step, index){
     els.stepView.appendChild(lock);
   }
 
-  // Aktif adımı işaretle ve hash
   markActive(step.id);
   setHash(currentModel, step.id);
 }
 
-// ---- Veri yükleme ----
+/* ---- Veri yükleme ---- */
 async function loadDataFiles(){
   for (const f of DATA_FILES){
     try{
@@ -639,7 +656,7 @@ async function loadDataFiles(){
   if (isPremium()){ console.log("Premium aktif! UI güncelleniyor..."); renderSteps(); }
 }
 
-// ---- JSON güvenliği (sanitize) ----
+/* ---- JSON güvenliği (sanitize) ---- */
 function sanitizePlan(obj){
   if (!obj || typeof obj!=='object') return null;
   if (typeof obj.model!=='string' || obj.model.length>60) return null;
@@ -660,9 +677,11 @@ function sanitizePlan(obj){
   return { model: obj.model, steps };
 }
 
-// ---- Eventler ----
+/* ---- Eventler ---- */
 document.addEventListener('DOMContentLoaded', ()=>{
-  ensureModal(); closeModal(false); reflectPremiumUI(); loadDataFiles();
+  applyThemeFromSetting();            // <<< tema uygula
+  ensureModal(); closeModal(false);
+  reflectPremiumUI(); loadDataFiles();
 
   // JSON Yükle butonunu tamamen kaldır (istek)
   if (els.jsonInput){
@@ -693,8 +712,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       const names = Object.keys(models); if (!names.length) return alert('Örnekler yüklenemedi. JSON dosyaları bulunamadı.');
       currentModel = names[0];
       if (els.modelSelect) els.modelSelect.value = currentModel;
-      renderModelTabs();
-      renderSteps();
+      renderModelTabs(); renderSteps();
       const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
     });
   }
@@ -704,8 +722,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const {model,id} = getHash(); if (!model || !models[model] || !Number.isFinite(id)) return;
     currentModel = model;
     if (els.modelSelect) els.modelSelect.value = model;
-    renderModelTabs();
-    renderSteps();
+    renderModelTabs(); renderSteps();
     const vis = getVisibleOrderedSteps(); const idx = vis.findIndex(s=>s.id===id); if (idx>=0) showStep(vis[idx], idx);
   });
 });
@@ -713,9 +730,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 // Model değişimi (fallback: dropdown gizli ama çalışır)
 els.modelSelect.addEventListener('change', e=>{
   currentModel = e.target.value;
-  renderModelTabs();
-  renderSteps();
-  renderNotesPanel();
+  renderModelTabs(); renderSteps(); renderNotesPanel();
   const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
 });
 
@@ -727,7 +742,7 @@ els.resetProgress.addEventListener('click', ()=>{
   renderSteps();
 });
 
-// JSON yükleme (artık gizli ama fonksiyonel kalsın)
+// JSON yükleme (gizli ama fonksiyonel kalsın)
 if (els.jsonInput){
   els.jsonInput.addEventListener('change', (e)=>{
     const file=e.target.files[0]; if(!file) return;
