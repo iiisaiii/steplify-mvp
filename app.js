@@ -211,7 +211,16 @@ function getVisibleOrderedSteps(){
   return order.filter(s => evaluateVisibility(s.visibleIf, sels));
 }
 
-function reflectPremiumUI(){ const on=isPremium(); if (els.premiumBtn) els.premiumBtn.style.display = on ? 'none' : ''; }
+function reflectPremiumUI(){ 
+  const on = isPremium(); 
+  if (els.premiumBtn) els.premiumBtn.style.display = on ? 'none' : ''; 
+
+  // Premium açıldığında adımların kilidini UI tarafında da yenile
+  if (currentModel && models[currentModel]) {
+    renderSteps();
+  }
+}
+
 
 function markActive(stepId){
   [...els.stepsList.querySelectorAll('.step')].forEach(li=>li.classList.remove('active'));
