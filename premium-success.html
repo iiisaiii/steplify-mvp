@@ -10,15 +10,19 @@
   <main class="layout">
     <section class="content card">
       <h1>🎉 Tebrikler!</h1>
-      <p>Satın alma işlemin başarıyla tamamlandı. Artık tüm adımların kilidi açıldı.</p>
-      <p>Premium kullanıcısın 🚀</p>
+      <p>Ödemen alındı. Premium hesabın aktif ediliyor...</p>
 
       <div style="margin-top:1rem">
         <a href="/" class="btn primary">Ana Sayfaya Dön</a>
       </div>
       <script>
-      // Premium satın alma sonrası localStorage'a kaydet
-      localStorage.setItem("steplify_premium", "1");
+      // Basit MVP mantığı: dönüş URL'sine gelen HERKES'i premium yapıyoruz.
+      localStorage.setItem("steplifyPremium", "true");
+      
+      // Küçük bir gecikme ile ana sayfaya dön
+      setTimeout(function () {
+        window.location.href = "index.html";
+      }, 1500);
       </script>
     </section>
   </main>
