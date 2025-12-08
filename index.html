@@ -4,24 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Steplify – Adım Adım Yol Haritaları</title>
-  <meta name="description" content="Affiliate, Dropshipping, YouTube, POD, E-ticaret ve Freelance için adım adım planlar. İlk 5 adım ücretsiz.">
+  <meta name="description" content="Affiliate, Dropshipping, YouTube, POD, E-ticaret ve Freelance için adım-adım planlar. İlk 5 adım ücretsiz.">
   <link rel="canonical" href="https://www.steplify.net/">
   <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
     <div class="brand">Steplify <span class="badge">MVP</span></div>
     <div class="actions">
-      <label class="btn small">
-        JSON Yükle
-        <input id="jsonInput" type="file" accept=".json" hidden />
-      </label>
+      <!-- JSON yükleme kaldırıldı -->
       <select id="modelSelect" class="select"></select>
       <button id="resetProgress" class="btn outline small">İlerlemeyi Sıfırla</button>
       <a id="premiumBtn" class="btn primary small" href="/premium.html">Premium'a Geç</a>
+      <!-- ileride burada oturum açma düğmesi görünecek -->
     </div>
   </header>
 
@@ -33,11 +30,13 @@
       </div>
       <ul id="stepsList" class="steps"></ul>
     </aside>
+
     <section class="content">
       <div id="stepView" class="card">
         <h2>Hoş geldin 👋</h2>
-        <p>Soldan bir adım seç veya kendi JSON'unu yükle. <b>Freemium:</b> İlk 5 adım ücretsiz, sonrası kilitli.</p>
-        <p class="muted">İlerleme tarayıcında saklanır (localStorage). JSON format dokümanı için <a href="README.html" target="_blank">README</a>.</p>
+        <p>Soldan bir adım seç veya örnek playbook'ları yükle. <b>Freemium:</b> İlk 5 adım ücretsiz, sonrası kilitli.</p>
+        <p class="muted">İlerleme tarayıcıda saklanır (localStorage) — daha sonra oturum/kullanıcı ile eşitleme eklenecektir.</p>
+
         <div class="demo-tip">
           <strong>Demo:</strong> Aşağıdaki butonla örnek playbook'ları yükleyebilirsin.
           <div style="margin-top:.5rem">
@@ -46,6 +45,7 @@
         </div>
       </div>
     </section>
+
     <aside class="rightbar">
       <div class="card">
         <h3>Kaynaklar</h3>
