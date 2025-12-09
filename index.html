@@ -18,7 +18,8 @@
       <select id="modelSelect" class="select"></select>
       <button id="resetProgress" class="btn outline small">İlerlemeyi Sıfırla</button>
       <a id="premiumBtn" class="btn primary small" href="/premium.html">Premium'a Geç</a>
-      <!-- ileride burada oturum açma düğmesi görünecek -->
+      <!-- Oturum giriş düğmesi (UI iskeleti) -->
+      <button id="loginBtn" class="btn small outline" style="margin-left:.5rem">Giriş / Kayıt</button>
     </div>
   </header>
 
@@ -35,7 +36,7 @@
       <div id="stepView" class="card">
         <h2>Hoş geldin 👋</h2>
         <p>Soldan bir adım seç veya örnek playbook'ları yükle. <b>Freemium:</b> İlk 5 adım ücretsiz, sonrası kilitli.</p>
-        <p class="muted">İlerleme tarayıcıda saklanır (localStorage) — daha sonra oturum/kullanıcı ile eşitleme eklenecektir.</p>
+        <p class="muted">İlerleme tarayıcıda saklanır (localStorage). Oturum/üye olma eklendiğinde ilerleme hesabına bağlanıp sunucuda eşitlenecektir.</p>
 
         <div class="demo-tip">
           <strong>Demo:</strong> Aşağıdaki butonla örnek playbook'ları yükleyebilirsin.
@@ -59,6 +60,21 @@
   </main>
 
   <footer class="foot">© 2025 Steplify — Basit plan, net adımlar.</footer>
+
+  <!-- Giriş modal iskeleti (basit) -->
+  <div id="authModal" class="modal" style="display:none">
+    <div class="modal-content">
+      <button id="closeAuth" class="modal-close">×</button>
+      <h3>Giriş / Kayıt</h3>
+      <div id="authBody">
+        <!-- Buraya auth formları eklenecek (MVP: email/password) -->
+        <p class="muted">Bu modal şu an sadece UI iskeletidir; backend entegrasyonu yapıldığında çalışacaktır.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase JS (tarayıcı için) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/supabase.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
