@@ -89,6 +89,29 @@
 
   <!-- Supabase JS (tarayıcı için) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/supabase.min.js"></script>
+  <!-- Supabase UMD CDN + ESM fallback (PLACE THIS BEFORE <script src="app.js"> ) -->
+  <script>
+    (function(){
+      // UMD yüklemesi için jsDelivr
+      var s = document.createElement('script');
+      s.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/supabase.min.js";
+      s.async = false;
+      s.onload = function(){ console.log('Supabase UMD loaded (jsdelivr).'); };
+      s.onerror = function(){
+        console.warn('Supabase UMD failed to load - trying ESM fallback.');
+        // ESM fallback - import createClient and attach minimal wrapper to window.supabase
+        var m = document.createElement('script');
+        m.type = 'module';
+        m.textContent = `
+          import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+          window.supabase = { createClient };
+          console.log('Supabase ESM fallback loaded.');
+        `;
+        document.head.appendChild(m);
+      };
+      document.head.appendChild(s);
+    })();
+  </script>
   <script src="app.js"></script>
 </body>
 </html>
