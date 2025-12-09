@@ -872,6 +872,78 @@ document.addEventListener('DOMContentLoaded', async () => {
     closeAuth.addEventListener('click', ()=>{ if (authModal) authModal.style.display = 'none'; });
   }
 
+   // --- Home inline auth handlers (add inside DOMContentLoaded handler) ---
+   const homeEmail = document.getElementById('homeEmail');
+   const homePassword = document.getElementById('homePassword');
+   const homeSignUp = document.getElementById('homeSignUp');
+   const homeSignIn = document.getElementById('homeSignIn');
+   const homeGoogle = document.getElementById('homeGoogle');
+   const homeAuthStatus = document.getElementById('homeAuthStatus');
+   
+   function homeSetStatus(txt, isError=false){
+     if (!homeAuthStatus) return;
+     homeAuthStatus.textContent = txt || '';
+     homeAuthStatus.style.color = isError ? '#b00020' : '#0b6f3a';
+   }
+   
+   if (homeSignUp){
+     homeSignUp.addEventListener('click', async ()=>{
+       homeSetStatus('Kayıt oluşturuluyor...');
+       if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
+       const email = (homeEmail?.value || '').trim();
+       const pw = (homePassword?.value || '').trim();
+       if (!email || !pw){ homeSetStatus('Email ve parola gerekli', true); return; }
+       try{
+         const res = await supabaseClient.auth.signUp({ email, password: pw });
+         if (res.error) homeSetStatus('Kayıt hatası: ' + (res.error.message || JSON.stringify(res.error)), true);
+         else homeSetStatus('Kayıt isteği gönderildi. E-postayı onaylayın (varsa).');
+       }catch(e){
+         console.error(e); homeSetStatus('Kayıt sırasında hata', true);
+       }
+     });
+   }
+   
+   if (homeSignIn){
+     homeSignIn.addEventListener('click', async ()=>{
+       homeSetStatus('Giriş yapılıyor...');
+       if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
+       const email = (homeEmail?.value || '').trim();
+       const pw = (homePassword?.value || '').trim();
+       if (!email || !pw){ homeSetStatus('Email ve parola gerekli', true); return; }
+       try{
+         const res = await supabaseClient.auth.signInWithPassword({ email, password: pw });
+         if (res.error) homeSetStatus('Giriş hatası: ' + (res.error.message || JSON.stringify(res.error)), true);
+         else {
+           homeSetStatus('Giriş başarılı.');
+           // modal kullanıyorsan kapat, home'ı gizle ve app state'i güncelle (onAuthStateChange handler zaten var)
+           const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
+           const authModal = document.getElementById('authModal'); if (authModal) authModal.style.display='none';
+         }
+       }catch(e){
+         console.error(e); homeSetStatus('Giriş sırasında hata', true);
+       }
+     });
+   }
+   
+   // Google OAuth (redirect-based): works after provider is enabled in Supabase
+   if (homeGoogle){
+     homeGoogle.addEventListener('click', async ()=>{
+       homeSetStatus('Google yönlendiriliyor...');
+       if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
+       try{
+         // Supabase JS v2 OAuth
+         await supabaseClient.auth.signInWithOAuth({
+           provider: 'google',
+           options: {
+             // redirectTo optional: you can set to current origin if needed
+             redirectTo: window.location.href
+           }
+         });
+       }catch(e){
+         console.error(e); homeSetStatus('Google ile giriş hatası', true);
+       }
+     });
+   }
 
    // --- Brand (Steplify) click: go to home landing ---
    const brandEl = document.getElementById('brandLink') || document.querySelector('.topbar .brand');
