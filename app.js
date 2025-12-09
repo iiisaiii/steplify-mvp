@@ -609,26 +609,26 @@ function renderModels(){
   const names = Object.keys(models);
   names.forEach(n=>{ const opt=document.createElement('option'); opt.value=n; opt.textContent=n; els.modelSelect.appendChild(opt); });
 
-  if (names.length){
-    const {model,id} = getHash();
-    currentModel = (model && models[model]) ? model : (currentModel && models[currentModel]) ? currentModel : names[0];
-    if (els.modelSelect) els.modelSelect.value = currentModel;
+  // Determine currentModel from hash only; do NOT default to first model.
+  const {model,id} = getHash();
+  currentModel = (model && models[model]) ? model : null;
 
-    renderModelTabs();
-    renderSteps();
-    renderNotesPanel();
+  // Update modelSelect UI (if present)
+  if (els.modelSelect && currentModel) els.modelSelect.value = currentModel;
 
-    const vis = getVisibleOrderedSteps(); const first = vis[0];
-    if (id){
-      const idx = vis.findIndex(s=>s.id===id);
-      if (idx>=0) showStep(vis[idx], idx);
-      else if (first) showStep(first, 0);
-    } else if (first){
-      showStep(first, 0);
-    }
-  } else {
-    currentModel = null;
-    renderModelTabs();
+  renderModelTabs();
+  renderSteps();
+  renderNotesPanel();
+
+  // Show or hide the home landing based on whether a model is selected
+  const home = document.getElementById('homeLanding');
+  if (home) home.style.display = currentModel ? 'none' : 'block';
+
+  // If URL had a hash with a step id, show that step (deep link)
+  if (currentModel && Number.isFinite(id)){
+    const vis = getVisibleOrderedSteps();
+    const idx = vis.findIndex(s=>s.id===id);
+    if (idx>=0) showStep(vis[idx], idx);
   }
 }
 
@@ -983,6 +983,33 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderModelTabs(); renderSteps();
     const vis = getVisibleOrderedSteps(); const idx = vis.findIndex(s=>s.id===id); if (idx>=0) showStep(vis[idx], idx);
   });
+
+   // inside DOMContentLoaded handler near end:
+   const exploreBtn = document.getElementById('exploreModelsBtn');
+   if (exploreBtn){
+     exploreBtn.addEventListener('click', ()=>{
+       // açılacak ilk model varsa onu seç
+       const names = Object.keys(models);
+       if (names.length){
+         currentModel = names[0];
+         if (els.modelSelect) els.modelSelect.value = currentModel;
+         renderModelTabs(); renderSteps(); renderNotesPanel();
+         const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
+         const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
+       } else {
+         alert('Henüz model yok.');
+       }
+     });
+   }
+   
+   // open auth modal from home
+   const openFromHome = document.getElementById('openAuthFromHome');
+   if (openFromHome){
+     openFromHome.addEventListener('click', ()=>{
+       const authModal = document.getElementById('authModal');
+       if (authModal) authModal.style.display = 'flex';
+     });
+   }
 });
 // === END REPLACEMENT ===
 
