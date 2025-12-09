@@ -14,11 +14,9 @@
   <header class="topbar">
     <div class="brand">Steplify <span class="badge">MVP</span></div>
     <div class="actions">
-      <!-- JSON yükleme kaldırıldı -->
       <select id="modelSelect" class="select"></select>
       <button id="resetProgress" class="btn outline small">İlerlemeyi Sıfırla</button>
       <a id="premiumBtn" class="btn primary small" href="/premium.html">Premium'a Geç</a>
-      <!-- Oturum giriş düğmesi (UI iskeleti) -->
       <button id="loginBtn" class="btn small outline" style="margin-left:.5rem">Giriş / Kayıt</button>
     </div>
   </header>
@@ -39,7 +37,7 @@
         <p class="muted">İlerleme tarayıcıda saklanır (localStorage). Oturum/üye olma eklendiğinde ilerleme hesabına bağlanıp sunucuda eşitlenecektir.</p>
 
         <div class="demo-tip">
-          <strong>Demo:</strong> Aşağıdaki butonla örnek playbook'ları yükleyebilirsin.
+          <strong>Demo:</strong>
           <div style="margin-top:.5rem">
             <button id="loadSample" class="btn small">Örnekleri Yükle</button>
           </div>
@@ -61,7 +59,7 @@
 
   <footer class="foot">© 2025 Steplify — Basit plan, net adımlar.</footer>
 
-  <!-- Replace the existing authModal block with this one -->
+  <!-- Auth modal -->
   <div id="authModal" class="modal" style="display:none">
     <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="authTitle">
       <button id="closeAuth" class="modal-close" aria-label="Kapat">×</button>
@@ -87,31 +85,10 @@
     </div>
   </div>
 
-  <!-- Supabase JS (tarayıcı için) -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/supabase.min.js"></script>
-  <!-- Supabase UMD CDN + ESM fallback (PLACE THIS BEFORE <script src="app.js"> ) -->
-  <script>
-    (function(){
-      // UMD yüklemesi için jsDelivr
-      var s = document.createElement('script');
-      s.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/supabase.min.js";
-      s.async = false;
-      s.onload = function(){ console.log('Supabase UMD loaded (jsdelivr).'); };
-      s.onerror = function(){
-        console.warn('Supabase UMD failed to load - trying ESM fallback.');
-        // ESM fallback - import createClient and attach minimal wrapper to window.supabase
-        var m = document.createElement('script');
-        m.type = 'module';
-        m.textContent = `
-          import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
-          window.supabase = { createClient };
-          console.log('Supabase ESM fallback loaded.');
-        `;
-        document.head.appendChild(m);
-      };
-      document.head.appendChild(s);
-    })();
-  </script>
+  <!-- Load local supabase UMD (vendor) to avoid CDN blocking -->
+  <script src="/public/vendor/supabase.min.js"></script>
+
+  <!-- App script -->
   <script src="app.js"></script>
 </body>
 </html>
