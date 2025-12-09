@@ -229,3 +229,67 @@ body.sidebar-open .sidebar{
   .rightbar{ height:auto; position:static }
   #modelTabs{ max-width: 70vw }
 }
+/* Auth modal styling (add at end of styles.css) */
+#authModal.modal {
+  display: none;            /* JS ile display:flex yapılacak */
+  position: fixed;
+  inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+/* koyu arkaplan / backdrop (isteğe bağlı) */
+#authModal.modal::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  pointer-events: none;
+  z-index: 99990;
+}
+
+/* kutu (içerik) */
+#authModal .modal-content {
+  position: relative;
+  z-index: 99999;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 18px 50px rgba(2,6,23,0.18);
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  max-height: 90vh;
+  overflow: auto;
+  color: #0f172a; /* text color */
+  font-size: 14px;
+}
+
+/* Close butonu (varsa) */
+#authModal .modal-close {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Form elemanları biraz stil */
+#authModal input[type="email"],
+#authModal input[type="password"] {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #e6eef6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  font-size: 13px;
+}
+#authModal .btn { margin-right: 6px; }
