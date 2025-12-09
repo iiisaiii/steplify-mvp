@@ -872,6 +872,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     closeAuth.addEventListener('click', ()=>{ if (authModal) authModal.style.display = 'none'; });
   }
 
+
+   // --- Brand (Steplify) click: go to home landing ---
+   const brandEl = document.getElementById('brandLink') || document.querySelector('.topbar .brand');
+   if (brandEl){
+     brandEl.style.cursor = 'pointer';
+     brandEl.addEventListener('click', (e) => {
+       e.preventDefault?.();
+       // reset selection to show home landing
+       currentModel = null;
+       if (els.modelSelect) els.modelSelect.value = '';
+       renderModelTabs();
+       renderSteps();
+       renderNotesPanel();
+       const home = document.getElementById('homeLanding');
+       if (home) home.style.display = 'block';
+       // remove hash so deep-link doesn't immediately reopen a model
+       try { history.replaceState(null, '', location.pathname + location.search); } catch(_) {}
+     });
+   }
+   
   // Auth form controls
   const authEmail = document.getElementById('authEmail');
   const authPassword = document.getElementById('authPassword');
