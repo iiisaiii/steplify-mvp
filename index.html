@@ -61,14 +61,28 @@
 
   <footer class="foot">© 2025 Steplify — Basit plan, net adımlar.</footer>
 
-  <!-- Giriş modal iskeleti (basit) -->
+  <!-- Replace the existing authModal block with this one -->
   <div id="authModal" class="modal" style="display:none">
-    <div class="modal-content">
-      <button id="closeAuth" class="modal-close">×</button>
-      <h3>Giriş / Kayıt</h3>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button id="closeAuth" class="modal-close" aria-label="Kapat">×</button>
+      <h3 id="authTitle">Giriş / Kayıt</h3>
       <div id="authBody">
-        <!-- Buraya auth formları eklenecek (MVP: email/password) -->
-        <p class="muted">Bu modal şu an sadece UI iskeletidir; backend entegrasyonu yapıldığında çalışacaktır.</p>
+        <form id="authForm" autocomplete="off">
+          <div class="form-row">
+            <label for="authEmail">E-posta</label><br/>
+            <input id="authEmail" name="email" type="email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-row" style="margin-top:.5rem">
+            <label for="authPassword">Parola</label><br/>
+            <input id="authPassword" name="password" type="password" required minlength="6" placeholder="En az 6 karakter" />
+          </div>
+          <div style="margin-top:.75rem; display:flex; gap:.5rem; align-items:center">
+            <button id="authSignUp" type="button" class="btn small">Kayıt Ol</button>
+            <button id="authSignIn" type="button" class="btn primary small">Giriş Yap</button>
+            <button id="authSignOut" type="button" class="btn outline small" style="margin-left:auto">Çıkış</button>
+          </div>
+          <div id="authStatus" style="margin-top:.75rem;color:#333;font-size:.9rem"></div>
+        </form>
       </div>
     </div>
   </div>
