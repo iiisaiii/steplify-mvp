@@ -857,8 +857,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   if (loginBtn){
     loginBtn.addEventListener('click', ()=>{
-      if (authModal) authModal.style.display = 'block';
-    });
+        if (authModal) {
+          // gösterirken flex yaparak ortala
+          authModal.style.display = 'flex';
+          authModal.style.position = 'fixed';
+          authModal.style.inset = '0';
+          authModal.style.alignItems = 'center';
+          authModal.style.justifyContent = 'center';
+          authModal.style.zIndex = '99999';
+        }
+      });
   }
   if (closeAuth){
     closeAuth.addEventListener('click', ()=>{ if (authModal) authModal.style.display = 'none'; });
