@@ -69,6 +69,142 @@ const DATA_FILES = [
   {name:"Freelance",         path:"/public/data/freelance.json"},
 ];
 
+/* ========== SUPABASE & PROGRESS SYNC EKLEMELERİ (EKLEME BLOĞU) ==========
+   Bu blok DATA_FILES tanımının hemen sonrasına eklenecek.
+   Supabase bilgileri senin verdiğin ile dolduruldu.
+=========================================================== */
+
+const SUPABASE_URL = 'https://lkppsqrpjdmuaekezdyz.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrcHBzcXJwamRtdWFla2V6ZHl6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUyNjYwNDEsImV4cCI6MjA4MDg0MjA0MX0.OcXL3lDU53rmNbEvcsjk-Qzxsd2yQxBEIDZj2I4R9Kk';
+
+let supabaseClient = null;
+
+function initSupabaseClient(url = SUPABASE_URL, key = SUPABASE_ANON_KEY){
+  if (!window.supabase || !window.supabase.createClient){
+    console.warn('supabase-js kütüphanesi bulunamadı. index.html içinde CDN scriptinin yüklü olduğundan emin olun.');
+    return null;
+  }
+  try{
+    supabaseClient = window.supabase.createClient(url, key);
+    return supabaseClient;
+  }catch(e){
+    console.error('Supabase init hatası:', e);
+    supabaseClient = null;
+    return null;
+  }
+}
+
+/* Güvenli mergeProgress tanımı: eğer repo zaten bir mergeProgress içeriyorsa üzerine yazma */
+if (typeof mergeProgress === 'undefined'){
+  function mergeProgress(local, server){
+    if (!server) return local;
+    if (!local) return server;
+    try{
+      const la = new Date(local.updated_at || 0).getTime();
+      const sa = new Date(server.updated_at || 0).getTime();
+      if (sa > la) return server;
+      if (la > sa) return local;
+      const combined = {
+        model: local.model || server.model,
+        completed: Array.from(new Set([...(local.completed||[]), ...(server.completed||[])])),
+        position: Math.max(local.position||0, server.position||0),
+        updated_at: (la >= sa) ? local.updated_at : server.updated_at
+      };
+      return combined;
+    }catch(_){
+      return local;
+    }
+  }
+}
+
+/* Local progress helpers */
+const PROGRESS_KEY = 'steplify_progress';
+function loadLocalProgress(){
+  try{ const s = localStorage.getItem(PROGRESS_KEY); return s ? JSON.parse(s) : null; }catch(_){ return null; }
+}
+function saveLocalProgress(p){
+  try{ localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); }catch(_){}
+}
+
+/* Sunucudan yükleme (Supabase tablo yapısı: progress { id, user_id, data jsonb, updated_at } öngörülmüştür) */
+async function loadProgressFromServer(userId){
+  if (!supabaseClient) return null;
+  try{
+    const { data, error } = await supabaseClient
+      .from('progress')
+      .select('data, updated_at')
+      .eq('user_id', userId)
+      .single();
+    if (error){
+      // Eğer kayıt yoksa null dönebilir
+      return data ? data.data : null;
+    }
+    return data ? data.data : null;
+  }catch(err){
+    console.error('loadProgressFromServer hata:', err);
+    return null;
+  }
+}
+
+/* Sunucuya eşitleme: upsert (user_id unique constraint önerilir) */
+async function syncProgressToServer(userId, progress){
+  if (!supabaseClient) return { ok:false };
+  try{
+    const payload = { user_id: userId, data: progress };
+    const { data, error } = await supabaseClient
+      .from('progress')
+      .upsert(payload, { onConflict: ['user_id'] })
+      .select()
+      .single();
+    if (error){
+      console.error('syncProgressToServer hata:', error);
+      return { ok:false, error };
+    }
+    return { ok:true, data };
+  }catch(err){
+    console.error('syncProgressToServer hata:', err);
+    return { ok:false, error: err };
+  }
+}
+
+/* Auth / session yönetimi (onAuthStateChange kullanımı) */
+function setupSupabaseAuthHandlers(){
+  if (!supabaseClient || !supabaseClient.auth) return;
+  supabaseClient.auth.onAuthStateChange(async (event, session) => {
+    const user = session?.user ?? null;
+    if (user){
+      // login: server progress al, merge, local'a uygula, gerekirse server'a yaz
+      const serverProg = await loadProgressFromServer(user.id);
+      const localProg = loadLocalProgress();
+      const merged = mergeProgress(localProg, serverProg);
+      if (!merged.updated_at) merged.updated_at = new Date().toISOString();
+      saveLocalProgress(merged);
+      if (!serverProg || new Date(merged.updated_at) > new Date(serverProg.updated_at || 0)){
+        await syncProgressToServer(user.id, merged);
+      }
+      // TODO: UI güncellemesi (renderModel gibi çağrı)
+    } else {
+      // logout: local mod devam eder
+      // TODO: UI güncellemesi (render)
+    }
+  });
+}
+
+/* Basit auth yardımcıları (UI tarafından tetiklenebilir) */
+async function supaSignInWithEmail(email, password){
+  if (!supabaseClient) return { error: 'no_client' };
+  return await supabaseClient.auth.signInWithPassword({ email, password });
+}
+async function supaSignOut(){
+  if (!supabaseClient) return;
+  return await supabaseClient.auth.signOut();
+}
+
+/* Başlatma örneği: DOMContentLoaded içinde veya app başlangıcında çağır
+   initSupabaseClient();
+   setupSupabaseAuthHandlers();
+*/
+
 // DOM elemanları
 const els = {
   jsonInput: document.getElementById('jsonInput'),
