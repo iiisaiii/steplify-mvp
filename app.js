@@ -828,6 +828,117 @@ document.addEventListener('DOMContentLoaded', ()=>{
   ensureModal(); closeModal(false);
   reflectPremiumUI(); loadDataFiles();
 
+
+   /* --- Auth form handlers & startup (add into app.js, ensure functions above exist) --- */
+   
+   async function supaSignUpWithEmail(email, password){
+     if (!supabaseClient) return { error: 'no_client' };
+     try{
+       const res = await supabaseClient.auth.signUp({ email, password });
+       return res;
+     }catch(err){
+       return { error: err };
+     }
+   }
+   
+   async function supaSignInWithEmail(email, password){
+     if (!supabaseClient) return { error: 'no_client' };
+     try{
+       // Using signInWithPassword for supabase v2
+       const res = await supabaseClient.auth.signInWithPassword({ email, password });
+       return res;
+     }catch(err){
+       return { error: err };
+     }
+   }
+   
+   /* Attach UI listeners: add inside your existing DOMContentLoaded handler */
+   document.addEventListener('DOMContentLoaded', ()=>{
+     // ensure supabase is initialized
+     initSupabaseClient();
+     setupSupabaseAuthHandlers();
+   
+     // show/hide modal (if not already present)
+     const loginBtn = document.getElementById('loginBtn');
+     const authModal = document.getElementById('authModal');
+     const closeAuth = document.getElementById('closeAuth');
+     if (loginBtn){
+       loginBtn.addEventListener('click', ()=>{
+         if (authModal) authModal.style.display = 'block';
+       });
+     }
+     if (closeAuth){
+       closeAuth.addEventListener('click', ()=>{ if (authModal) authModal.style.display = 'none'; });
+     }
+   
+     // form controls
+     const authEmail = document.getElementById('authEmail');
+     const authPassword = document.getElementById('authPassword');
+     const authSignUp = document.getElementById('authSignUp');
+     const authSignIn = document.getElementById('authSignIn');
+     const authSignOutBtn = document.getElementById('authSignOut');
+     const authStatus = document.getElementById('authStatus');
+   
+     function setStatus(msg, isError=false){
+       if (!authStatus) return;
+       authStatus.textContent = msg || '';
+       authStatus.style.color = isError ? '#b00020' : '#0b6f3a';
+     }
+   
+     if (authSignUp){
+       authSignUp.addEventListener('click', async ()=>{
+         setStatus('Kayıt oluşturuluyor...');
+         try{
+           const email = authEmail.value.trim();
+           const pw = authPassword.value.trim();
+           if (!email || !pw){ setStatus('Email ve parola gerekli', true); return; }
+           const r = await supaSignUpWithEmail(email, pw);
+           if (r.error) {
+             setStatus('Kayıt hatası: ' + (r.error.message || JSON.stringify(r.error)), true);
+           } else {
+             setStatus('Kayıt isteği gönderildi. E-postayı onaylayın (varsa).');
+           }
+         }catch(e){
+           setStatus('Kayıt sırasında hata', true);
+           console.error(e);
+         }
+       });
+     }
+   
+     if (authSignIn){
+       authSignIn.addEventListener('click', async ()=>{
+         setStatus('Giriş yapılıyor...');
+         try{
+           const email = authEmail.value.trim();
+           const pw = authPassword.value.trim();
+           if (!email || !pw){ setStatus('Email ve parola gerekli', true); return; }
+           const r = await supaSignInWithEmail(email, pw);
+           if (r.error) {
+             setStatus('Giriş hatası: ' + (r.error.message || JSON.stringify(r.error)), true);
+           } else {
+             setStatus('Giriş başarılı.');
+             if (authModal) authModal.style.display = 'none';
+           }
+         }catch(e){
+           setStatus('Giriş sırasında hata', true);
+           console.error(e);
+         }
+       });
+     }
+   
+     if (authSignOutBtn){
+       authSignOutBtn.addEventListener('click', async ()=>{
+         setStatus('Çıkış yapılıyor...');
+         try{
+           await supaSignOut();
+           setStatus('Çıkış yapıldı.');
+         }catch(e){
+           setStatus('Çıkış hatası', true);
+         }
+       });
+     }
+   });
+   
   // JSON Yükle butonunu tamamen kaldır (istek)
   if (els.jsonInput){
     const lbl = els.jsonInput.closest('label');
