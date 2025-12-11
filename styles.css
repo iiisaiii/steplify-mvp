@@ -293,3 +293,152 @@ body.sidebar-open .sidebar{
   font-size: 13px;
 }
 #authModal .btn { margin-right: 6px; }
+
+.home-landing {
+  padding: 72px 20px 56px;
+  background: radial-gradient(circle at top left, #eef2ff 0, #f8fafc 40%, #ffffff 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.home-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 32px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .home-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-copy h1 {
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  line-height: 1.1;
+  margin: 8px 0 12px;
+}
+
+.home-copy .lead {
+  font-size: 1rem;
+  color: #334155;
+  max-width: 480px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.home-cta-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn.big {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+}
+
+.home-copy .small {
+  margin-top: 8px;
+}
+
+.home-tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.home-tags .tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  font-size: 12px;
+  color: #475569;
+}
+
+/* Sağdaki küçük preview kartı */
+
+.home-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.preview-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  background: #0f172a;
+  color: #e5e7eb;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.45);
+  overflow: hidden;
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  background: rgba(15, 23, 42, 0.95);
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.preview-header .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #64748b;
+}
+
+.preview-header .preview-title {
+  margin-left: 6px;
+}
+
+.preview-steps {
+  list-style: none;
+  margin: 0;
+  padding: 10px 16px 14px;
+  font-size: 13px;
+}
+
+.preview-steps li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.35);
+}
+
+.preview-steps li:last-child {
+  border-bottom: none;
+}
+
+.preview-steps li.ok::before {
+  content: "✓";
+  font-size: 11px;
+  color: #22c55e;
+}
+
+.preview-steps li.locked {
+  color: #9ca3af;
+}
+
+.preview-steps li.locked::before {
+  content: "🔒";
+  font-size: 11px;
+}
+
