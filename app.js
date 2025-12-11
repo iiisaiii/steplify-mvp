@@ -545,7 +545,7 @@ function renderModelTabs(){
       if (els.modelSelect) els.modelSelect.value = name;
       renderModelTabs(); renderSteps(); renderNotesPanel();
       const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
-      const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
+      syncHomeAndLayout();
     });
     bar.appendChild(btn);
   });
@@ -561,8 +561,13 @@ function ensureSidebarHover(){
   if (!hz || !sb) return;
 
   let hideTimer = null;
-  const open = ()=>{ document.body.classList.add('sidebar-open'); if (hideTimer){ clearTimeout(hideTimer); hideTimer=null; } };
+  const open = ()=>{
+    if (!currentModel) return;          // model yoksa sidebar hiç açma
+    document.body.classList.add('sidebar-open');
+    if (hideTimer){ clearTimeout(hideTimer); hideTimer=null; }
+  };
   const close= ()=>{ document.body.classList.remove('sidebar-open'); };
+
 
   hz.addEventListener('pointerenter', open);
   hz.addEventListener('pointerleave', ()=>{
@@ -572,6 +577,19 @@ function ensureSidebarHover(){
   sb.addEventListener('pointerleave', ()=>{
     hideTimer = setTimeout(()=>{ if (!hz.matches(':hover')) close(); }, 120);
   });
+}
+
+function syncHomeAndLayout(){
+  const layout = document.querySelector('.layout');
+  const home   = document.getElementById('homeLanding');
+  const hasModel = !!currentModel;
+
+  if (layout){
+    layout.style.display = hasModel ? 'grid' : 'none';
+  }
+  if (home){
+    home.style.display = hasModel ? 'none' : 'block';
+  }
 }
 
 /* --------- Render --------- */
@@ -594,8 +612,7 @@ function renderModels(){
   renderSteps();
   renderNotesPanel();
 
-  const home = document.getElementById('homeLanding');
-  if (home) home.style.display = currentModel ? 'none' : 'block';
+  syncHomeAndLayout();
 
   // Derin link: step id varsa
   if (currentModel && Number.isFinite(id)){
@@ -945,7 +962,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderModelTabs();
       renderSteps();
       renderNotesPanel();
-      const home = document.getElementById('homeLanding');
+      syncHomeAndLayout();
+      try{ history.replaceState(null, '', location.pathname + location.search); }catch(_){}
       if (home) home.style.display = 'block';
       try{ history.replaceState(null, '', location.pathname + location.search); }catch(_){}
     });
@@ -1064,7 +1082,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (els.modelSelect) els.modelSelect.value = currentModel;
       renderModelTabs(); renderSteps();
       const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
-      const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
+      syncHomeAndLayout();
     });
   }
 
@@ -1090,7 +1108,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (els.modelSelect) els.modelSelect.value = currentModel;
         renderModelTabs(); renderSteps(); renderNotesPanel();
         const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
-        const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
+        syncHomeAndLayout();;
       } else {
         alert('Henüz model yok.');
       }
@@ -1111,7 +1129,7 @@ els.modelSelect.addEventListener('change', e=>{
   currentModel = e.target.value;
   renderModelTabs(); renderSteps(); renderNotesPanel();
   const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
-  const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
+  syncHomeAndLayout();
 });
 
 // İlerlemeyi sıfırla (seçimler dahil) — notlar ayrı tutulur
