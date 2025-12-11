@@ -202,12 +202,17 @@ function setupSupabaseAuthHandlers(){
       if (!serverProg || new Date(merged.updated_at) > new Date(serverProg.updated_at || 0)){
         await syncProgressToServer(user.id, merged);
       }
-      setLoggedInUI(user);   // <-- ekle
-      // TODO: UI güncellemesi (renderModel gibi çağrı)
-       
+      // UI güncelle
+      setLoggedInUI(user);
     } else {
       // logout: local mod devam eder
-      // TODO: UI güncellemesi (render)
+      // revert UI to guest
+      const loginBtn = document.getElementById('loginBtn');
+      if (loginBtn){
+        loginBtn.textContent = 'Giriş / Kayıt';
+        loginBtn.classList.remove('primary'); loginBtn.classList.add('outline');
+        loginBtn.onclick = null;
+      }
     }
   });
 }
@@ -221,6 +226,25 @@ async function supaSignOut(){
   if (!supabaseClient) return;
   return await supabaseClient.auth.signOut();
 }
+
+// --- Add this near the other auth helpers (right after supaSignOut) ---
+function setLoggedInUI(user){
+  try{
+    const loginBtn = document.getElementById('loginBtn');
+    if (loginBtn){
+      loginBtn.textContent = user?.user_metadata?.full_name || user?.email || 'Hesabım';
+      loginBtn.classList.remove('outline'); loginBtn.classList.add('primary');
+      loginBtn.onclick = async ()=>{
+        if (!confirm('Çıkış yapmak istiyor musunuz?')) return;
+        await supaSignOut();
+        loginBtn.textContent = 'Giriş / Kayıt';
+        loginBtn.classList.remove('primary'); loginBtn.classList.add('outline');
+        const home = document.getElementById('homeLanding'); if (home) home.style.display='block';
+      };
+    }
+  }catch(_){}
+}
+
 
 /* Başlatma örneği: DOMContentLoaded içinde veya app başlangıcında çağır
    initSupabaseClient();
@@ -1042,26 +1066,39 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   if (authSignIn){
-    authSignIn.addEventListener('click', async ()=>{
-      setStatus('Giriş yapılıyor...');
-      try{
-        const email = authEmail.value.trim();
-        const pw = authPassword.value.trim();
-        if (!email || !pw){ setStatus('Email ve parola gerekli', true); return; }
-        // supaSignInWithEmail zaten scope'ta tanımlı (file içinde üstte)
-        const r = await supaSignInWithEmail(email, pw);
-        if (r.error) {
-          setStatus('Giriş hatası: ' + (r.error.message || JSON.stringify(r.error)), true);
-        } else {
-          setStatus('Giriş başarılı.');
-          if (authModal) authModal.style.display = 'none';
-        }
-      }catch(e){
-        setStatus('Giriş sırasında hata', true);
-        console.error(e);
-      }
-    });
-  }
+     authSignIn.addEventListener('click', async ()=>{
+       setStatus('Giriş yapılıyor...');
+       try{
+         const email = authEmail.value.trim();
+         const pw = authPassword.value.trim();
+         if (!email || !pw){ setStatus('Email ve parola gerekli', true); return; }
+   
+         // doğrudan supabaseClient çağrısı (supaSignInWithEmail wrapper da kullanılabilir)
+         const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pw });
+   
+         if (error){
+           setStatus('Giriş hatası: ' + (error.message || JSON.stringify(error)), true);
+           return;
+         }
+   
+         // session/user al
+         const session = data?.session ?? await supabaseClient.auth.getSession();
+         const user = data?.user ?? session?.user ?? null;
+   
+         if (user){
+           setStatus('Giriş başarılı.');
+           if (authModal) authModal.style.display = 'none';
+           const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
+           setLoggedInUI(user);
+         } else {
+           setStatus('Oturum alınamadı', true);
+         }
+       }catch(e){
+         console.error(e);
+         setStatus('Giriş sırasında hata', true);
+       }
+     });
+   }
 
   if (authSignOutBtn){
     authSignOutBtn.addEventListener('click', async ()=>{
