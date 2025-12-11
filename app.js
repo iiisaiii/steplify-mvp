@@ -12,8 +12,13 @@ const FREE_LIMIT = 5;
 const PREMIUM_KEY = "steplify_premium";
 const THEME_KEY   = "steplify_theme";   // 'light' | 'dark' | (unset => system)
 
-function isPremium(){ try{ return localStorage.getItem(PREMIUM_KEY)==="1"; }catch(_){ return false; } }
-function setPremium(v){ localStorage.setItem(PREMIUM_KEY, v ? "1" : "0"); reflectPremiumUI(); }
+function isPremium(){
+  try{ return localStorage.getItem(PREMIUM_KEY)==="1"; }catch(_){ return false; }
+}
+function setPremium(v){
+  try{ localStorage.setItem(PREMIUM_KEY, v ? "1" : "0"); }catch(_){}
+  reflectPremiumUI();
+}
 
 /* ======== Theme ======== */
 function systemPrefersDark(){
@@ -34,26 +39,6 @@ function toggleTheme(){
   try{ localStorage.setItem(THEME_KEY, next); }catch(_){}
   applyThemeFromSetting();
 }
-function setLoggedInUI(user){
-  // örnek: sağ üst login butonunu kullanıcıya dönüştür
-  const loginBtn = document.getElementById('loginBtn');
-  if (loginBtn){
-    loginBtn.textContent = user.email || (user.user_metadata?.full_name || 'Hesabım');
-    loginBtn.classList.remove('outline'); loginBtn.classList.add('primary');
-    // tıklayınca profil/çıkış penceresi açılabilir
-    loginBtn.onclick = async ()=>{
-      // örnek: çıkış fonksiyonu
-      if (confirm('Çıkış yapmak istiyor musunuz?')){
-        await supabaseClient.auth.signOut();
-        // revert UI
-        loginBtn.textContent = 'Giriş / Kayıt';
-        loginBtn.classList.remove('primary'); loginBtn.classList.add('outline');
-        // göster home landing
-        const home = document.getElementById('homeLanding'); if(home) home.style.display='block';
-      }
-    };
-  }
-}
 function renderThemeToggle(){
   const actions = document.querySelector('.topbar .actions');
   if (!actions) return;
@@ -66,7 +51,6 @@ function renderThemeToggle(){
     btn.className = 'btn small outline';
     btn.title = 'Tema değiştir (Açık/Koyu)';
     btn.addEventListener('click', toggleTheme);
-    // Aksiyonların en soluna koy
     actions.insertBefore(btn, actions.firstChild);
   }
   btn.textContent = label;
@@ -77,6 +61,7 @@ if (window.matchMedia){
   mq.addEventListener?.('change', ()=>{ if (!storedTheme()) applyThemeFromSetting(); });
 }
 
+/* ========= MODELLER & JSON DOSYALARI ========= */
 let models = {};    // { modelName: steps[] }
 let currentModel = null;
 
@@ -89,10 +74,7 @@ const DATA_FILES = [
   {name:"Freelance",         path:"/public/data/freelance.json"},
 ];
 
-/* ========== SUPABASE & PROGRESS SYNC EKLEMELERİ (EKLEME BLOĞU) ==========
-   Bu blok DATA_FILES tanımının hemen sonrasına eklenecek.
-   Supabase bilgileri senin verdiğin ile dolduruldu.
-=========================================================== */
+/* ========= SUPABASE AUTH BLOĞU ========= */
 
 const SUPABASE_URL = 'https://lkppsqrpjdmuaekezdyz.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrcHBzcXJwamRtdWFla2V6ZHl6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUyNjYwNDEsImV4cCI6MjA4MDg0MjA0MX0.OcXL3lDU53rmNbEvcsjk-Qzxsd2yQxBEIDZj2I4R9Kk';
@@ -101,7 +83,7 @@ let supabaseClient = null;
 
 function initSupabaseClient(url = SUPABASE_URL, key = SUPABASE_ANON_KEY){
   if (!window.supabase || !window.supabase.createClient){
-    console.warn('supabase-js kütüphanesi bulunamadı. index.html içinde CDN scriptinin yüklü olduğundan emin olun.');
+    console.warn('supabase-js kütüphanesi bulunamadı. index.html içinde script yüklü mü kontrol edin.');
     return null;
   }
   try{
@@ -114,160 +96,54 @@ function initSupabaseClient(url = SUPABASE_URL, key = SUPABASE_ANON_KEY){
   }
 }
 
-/* Güvenli mergeProgress tanımı: eğer repo zaten bir mergeProgress içeriyorsa üzerine yazma */
-if (typeof mergeProgress === 'undefined'){
-  function mergeProgress(local, server){
-    if (!server) return local;
-    if (!local) return server;
-    try{
-      const la = new Date(local.updated_at || 0).getTime();
-      const sa = new Date(server.updated_at || 0).getTime();
-      if (sa > la) return server;
-      if (la > sa) return local;
-      const combined = {
-        model: local.model || server.model,
-        completed: Array.from(new Set([...(local.completed||[]), ...(server.completed||[])])),
-        position: Math.max(local.position||0, server.position||0),
-        updated_at: (la >= sa) ? local.updated_at : server.updated_at
-      };
-      return combined;
-    }catch(_){
-      return local;
-    }
-  }
-}
-
-/* Local progress helpers */
-const PROGRESS_KEY = 'steplify_progress';
-function loadLocalProgress(){
-  try{ const s = localStorage.getItem(PROGRESS_KEY); return s ? JSON.parse(s) : null; }catch(_){ return null; }
-}
-function saveLocalProgress(p){
-  try{ localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); }catch(_){}
-}
-
-/* Sunucudan yükleme (Supabase tablo yapısı: progress { id, user_id, data jsonb, updated_at } öngörülmüştür) */
-async function loadProgressFromServer(userId){
-  if (!supabaseClient) return null;
-  try{
-    const { data, error } = await supabaseClient
-      .from('progress')
-      .select('data, updated_at')
-      .eq('user_id', userId)
-      .single();
-    if (error){
-      // Eğer kayıt yoksa null dönebilir
-      return data ? data.data : null;
-    }
-    return data ? data.data : null;
-  }catch(err){
-    console.error('loadProgressFromServer hata:', err);
-    return null;
-  }
-}
-
-/* Sunucuya eşitleme: upsert (user_id unique constraint önerilir) */
-async function syncProgressToServer(userId, progress){
-  if (!supabaseClient) return { ok:false };
-  try{
-    const payload = { user_id: userId, data: progress };
-    const { data, error } = await supabaseClient
-      .from('progress')
-      .upsert(payload, { onConflict: ['user_id'] })
-      .select()
-      .single();
-    if (error){
-      console.error('syncProgressToServer hata:', error);
-      return { ok:false, error };
-    }
-    return { ok:true, data };
-  }catch(err){
-    console.error('syncProgressToServer hata:', err);
-    return { ok:false, error: err };
-  }
-}
-
-/* Auth / session yönetimi (onAuthStateChange kullanımı) */
-function setupSupabaseAuthHandlers(){
-  if (!supabaseClient || !supabaseClient.auth) return;
-  supabaseClient.auth.onAuthStateChange(async (event, session) => {
-    const user = session?.user ?? null;
-    if (user){
-      // login: server progress al, merge, local'a uygula, gerekirse server'a yaz
-      const serverProg = await loadProgressFromServer(user.id);
-      const localProg = loadLocalProgress();
-      const merged = mergeProgress(localProg, serverProg);
-      if (!merged.updated_at) merged.updated_at = new Date().toISOString();
-      saveLocalProgress(merged);
-      if (!serverProg || new Date(merged.updated_at) > new Date(serverProg.updated_at || 0)){
-        await syncProgressToServer(user.id, merged);
-      }
-      // UI güncelle
-      setLoggedInUI(user);
-    } else {
-      // logout: local mod devam eder
-      // revert UI to guest
-      const loginBtn = document.getElementById('loginBtn');
-      if (loginBtn){
-        loginBtn.textContent = 'Giriş / Kayıt';
-        loginBtn.classList.remove('primary'); loginBtn.classList.add('outline');
-        loginBtn.onclick = null;
-      }
-    }
-  });
-}
-
-/* Basit auth yardımcıları (UI tarafından tetiklenebilir) */
-async function supaSignInWithEmail(email, password){
-  if (!supabaseClient) return { error: 'no_client' };
-  return await supabaseClient.auth.signInWithPassword({ email, password });
-}
-async function supaSignOut(){
-  if (!supabaseClient) return;
-  return await supabaseClient.auth.signOut();
-}
-
-// --- Add this near the other auth helpers (right after supaSignOut) ---
 function setLoggedInUI(user){
   try{
     const loginBtn = document.getElementById('loginBtn');
     if (loginBtn){
       loginBtn.textContent = user?.user_metadata?.full_name || user?.email || 'Hesabım';
-      loginBtn.classList.remove('outline'); loginBtn.classList.add('primary');
-      loginBtn.onclick = async ()=>{
-        if (!confirm('Çıkış yapmak istiyor musunuz?')) return;
-        await supaSignOut();
-        loginBtn.textContent = 'Giriş / Kayıt';
-        loginBtn.classList.remove('primary'); loginBtn.classList.add('outline');
-        const home = document.getElementById('homeLanding'); if (home) home.style.display='block';
-      };
+      loginBtn.classList.remove('outline');
+      loginBtn.classList.add('primary');
     }
+    const home = document.getElementById('homeLanding');
+    if (home) home.style.display = 'none';
   }catch(_){}
 }
-// --- add this after supaSignOut() ---
-function setLoggedInUI(user){
+
+function resetLoggedOutUI(){
+  const loginBtn = document.getElementById('loginBtn');
+  if (loginBtn){
+    loginBtn.textContent = 'Giriş / Kayıt';
+    loginBtn.classList.remove('primary');
+    loginBtn.classList.add('outline');
+  }
+  // Home sadece model seçili değilse gösterilsin
+  const home = document.getElementById('homeLanding');
+  if (home && !currentModel) home.style.display = 'block';
+}
+
+function setupSupabaseAuthHandlers(){
+  if (!supabaseClient || !supabaseClient.auth) return;
+  supabaseClient.auth.onAuthStateChange((event, session) => {
+    const user = session?.user ?? null;
+    if (user){
+      setLoggedInUI(user);
+    } else {
+      resetLoggedOutUI();
+    }
+  });
+}
+
+async function supaSignOut(){
+  if (!supabaseClient || !supabaseClient.auth) return;
   try{
-    const loginBtn = document.getElementById('loginBtn');
-    if (!loginBtn) return;
-    loginBtn.textContent = user?.user_metadata?.full_name || user?.email || 'Hesabım';
-    loginBtn.classList.remove('outline'); loginBtn.classList.add('primary');
-    loginBtn.onclick = async () => {
-      if (!confirm('Çıkış yapmak istiyor musunuz?')) return;
-      await supaSignOut();
-      loginBtn.textContent = 'Giriş / Kayıt';
-      loginBtn.classList.remove('primary'); loginBtn.classList.add('outline');
-      // show home landing again
-      const home = document.getElementById('homeLanding'); if (home) home.style.display = 'block';
-    };
-  }catch(_){}
+    await supabaseClient.auth.signOut();
+  }catch(e){
+    console.error('Supabase signOut error:', e);
+  }
 }
 
-/* Başlatma örneği: DOMContentLoaded içinde veya app başlangıcında çağır
-   initSupabaseClient();
-   setupSupabaseAuthHandlers();
-*/
+/* ========= DOM ELEMANLARI ========= */
 
-// DOM elemanları
 const els = {
   jsonInput: document.getElementById('jsonInput'),
   modelSelect: document.getElementById('modelSelect'),
@@ -342,10 +218,10 @@ function lsKey(model){ return `steplify_progress::${model}`; }
 function selKey(model){ return `steplify_selection::${model}`; }
 
 function getProgress(m){ try{ return JSON.parse(localStorage.getItem(lsKey(m))||'{}'); }catch(_){ return {}; } }
-function setProgress(m,obj){ localStorage.setItem(lsKey(m), JSON.stringify(obj||{})); }
+function setProgress(m,obj){ try{ localStorage.setItem(lsKey(m), JSON.stringify(obj||{})); }catch(_){ } }
 
 function getSelections(m){ try{ return JSON.parse(localStorage.getItem(selKey(m))||'{}'); }catch(_){ return {}; } }
-function setSelections(m,obj){ localStorage.setItem(selKey(m), JSON.stringify(obj||{})); }
+function setSelections(m,obj){ try{ localStorage.setItem(selKey(m), JSON.stringify(obj||{})); }catch(_){ } }
 
 function noteKey(model, stepId){ return `notes::${model}::${stepId}`; }
 function getNote(model, stepId){ try{ return localStorage.getItem(noteKey(model, stepId)) || ''; }catch(_){ return ''; } }
@@ -355,7 +231,10 @@ function clearNotesForModel(model){
   try{
     const prefix = `notes::${model}::`;
     const toDel = [];
-    for (let i=0;i<localStorage.length;i++){ const k = localStorage.key(i); if (k && k.startsWith(prefix)) toDel.push(k); }
+    for (let i=0;i<localStorage.length;i++){
+      const k = localStorage.key(i);
+      if (k && k.startsWith(prefix)) toDel.push(k);
+    }
     toDel.forEach(k=>localStorage.removeItem(k));
   }catch(_){}
 }
@@ -409,16 +288,15 @@ function getVisibleOrderedSteps(){
   return order.filter(s => evaluateVisibility(s.visibleIf, sels));
 }
 
-function reflectPremiumUI(){ 
-  const on = isPremium(); 
-  if (els.premiumBtn) els.premiumBtn.style.display = on ? 'none' : ''; 
+function reflectPremiumUI(){
+  const on = isPremium();
+  if (els.premiumBtn) els.premiumBtn.style.display = on ? 'none' : '';
 
-  // Premium açıldığında adımların kilidini UI tarafında da yenile
+  // Premium açıldığında kilitleri yeniden hesapla
   if (currentModel && models[currentModel]) {
     renderSteps();
   }
 }
-
 
 function markActive(stepId){
   [...els.stepsList.querySelectorAll('.step')].forEach(li=>li.classList.remove('active'));
@@ -541,7 +419,7 @@ function ensureNotesPanel(){
   const head = document.createElement('div');
   head.style.display='flex'; head.style.alignItems='center'; head.style.justifyContent='space-between'; head.style.gap='8px';
 
-  const h = document.createElement('h3'); h.textContent='Tüm Notlar'; h.style.margin='0'; head.appendChild(h);
+  const h = document.createElement('h'); h.textContent='Tüm Notlar'; h.style.margin='0'; head.appendChild(h);
 
   const clear = document.createElement('button');
   clear.className='btn small outline'; clear.textContent='Notları Sıfırla';
@@ -572,29 +450,52 @@ function renderNotesPanel(){
 
   const steps = computeOrder(models[currentModel] || []);
   const items = [];
-  steps.forEach(s=>{ const n=getNote(currentModel, s.id); if (n && n.trim()) items.push({id:s.id, title:s.title, text:n.trim()}); });
+  steps.forEach(s=>{
+    const n=getNote(currentModel, s.id);
+    if (n && n.trim()) items.push({id:s.id, title:s.title, text:n.trim()});
+  });
 
-  if (!items.length){ const empty=document.createElement('div'); empty.className='muted'; empty.textContent='Bu model için kayıtlı not bulunmuyor.'; list.appendChild(empty); return; }
+  if (!items.length){
+    const empty=document.createElement('div');
+    empty.className='muted';
+    empty.textContent='Bu model için kayıtlı not bulunmuyor.';
+    list.appendChild(empty);
+    return;
+  }
 
   items.forEach(({id, title, text})=>{
     const li=document.createElement('li');
-    li.style.border='1px solid #e5e7eb'; li.style.borderRadius='10px'; li.style.padding='10px';
+    li.style.border='1px solid #e5e7eb';
+    li.style.borderRadius='10px';
+    li.style.padding='10px';
 
     const row=document.createElement('div');
-    row.style.display='flex'; row.style.alignItems='center'; row.style.justifyContent='space-between'; row.style.gap='8px';
+    row.style.display='flex';
+    row.style.alignItems='center';
+    row.style.justifyContent='space-between';
+    row.style.gap='8px';
 
-    const left=document.createElement('div'); left.style.display='flex'; left.style.flexDirection='column';
+    const left=document.createElement('div');
+    left.style.display='flex';
+    left.style.flexDirection='column';
     const h=document.createElement('div'); h.style.fontWeight='600'; h.textContent=`${id}. ${title}`; left.appendChild(h);
     const preview=document.createElement('div'); preview.className='muted'; preview.style.fontSize='12px'; preview.style.marginTop='4px';
-    const firstLine=text.split(/\r?\n/)[0].slice(0,140); preview.textContent=firstLine + (text.length>firstLine.length ? '…' : ''); left.appendChild(preview);
+    const firstLine=text.split(/\r?\n/)[0].slice(0,140);
+    preview.textContent=firstLine + (text.length>firstLine.length ? '…' : '');
+    left.appendChild(preview);
     row.appendChild(left);
 
     const actions=document.createElement('div'); actions.style.display='flex'; actions.style.gap='6px';
     const openBtn=document.createElement('button'); openBtn.className='btn small'; openBtn.textContent='Aç';
     openBtn.addEventListener('click', ()=>{
-      const vis = getVisibleOrderedSteps(); const idx = vis.findIndex(s=>s.id===id);
+      const vis = getVisibleOrderedSteps();
+      const idx = vis.findIndex(s=>s.id===id);
       if (idx>=0) showStep(vis[idx], idx);
-      else { const order=computeOrder(models[currentModel]||[]); const rawIdx=order.findIndex(s=>s.id===id); if (rawIdx>=0) showStep(order[rawIdx], rawIdx); }
+      else {
+        const order=computeOrder(models[currentModel]||[]);
+        const rawIdx=order.findIndex(s=>s.id===id);
+        if (rawIdx>=0) showStep(order[rawIdx], rawIdx);
+      }
     });
     actions.appendChild(openBtn);
 
@@ -602,7 +503,9 @@ function renderNotesPanel(){
     delBtn.addEventListener('click', ()=>{ removeNote(currentModel, id); renderNotesPanel(); });
     actions.appendChild(delBtn);
 
-    row.appendChild(actions); li.appendChild(row); list.appendChild(li);
+    row.appendChild(actions);
+    li.appendChild(row);
+    list.appendChild(li);
   });
 }
 
@@ -634,13 +537,15 @@ function renderModelTabs(){
   names.forEach(name=>{
     const btn = document.createElement('button');
     btn.className = 'btn small ' + (name===currentModel ? 'primary' : 'outline');
-    btn.textContent = name; btn.style.whiteSpace='nowrap';
+    btn.textContent = name;
+    btn.style.whiteSpace='nowrap';
     btn.addEventListener('click', ()=>{
       if (currentModel === name) return;
       currentModel = name;
       if (els.modelSelect) els.modelSelect.value = name;
       renderModelTabs(); renderSteps(); renderNotesPanel();
       const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
+      const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
     });
     bar.appendChild(btn);
   });
@@ -660,33 +565,39 @@ function ensureSidebarHover(){
   const close= ()=>{ document.body.classList.remove('sidebar-open'); };
 
   hz.addEventListener('pointerenter', open);
-  hz.addEventListener('pointerleave', ()=>{ hideTimer = setTimeout(()=>{ if (!sb.matches(':hover')) close(); }, 120); });
+  hz.addEventListener('pointerleave', ()=>{
+    hideTimer = setTimeout(()=>{ if (!sb.matches(':hover')) close(); }, 120);
+  });
   sb.addEventListener('pointerenter', open);
-  sb.addEventListener('pointerleave', ()=>{ hideTimer = setTimeout(()=>{ if (!hz.matches(':hover')) close(); }, 120); });
+  sb.addEventListener('pointerleave', ()=>{
+    hideTimer = setTimeout(()=>{ if (!hz.matches(':hover')) close(); }, 120);
+  });
 }
 
 /* --------- Render --------- */
 function renderModels(){
   els.modelSelect.innerHTML = '';
   const names = Object.keys(models);
-  names.forEach(n=>{ const opt=document.createElement('option'); opt.value=n; opt.textContent=n; els.modelSelect.appendChild(opt); });
+  names.forEach(n=>{
+    const opt=document.createElement('option');
+    opt.value=n; opt.textContent=n;
+    els.modelSelect.appendChild(opt);
+  });
 
-  // Determine currentModel from hash only; do NOT default to first model.
+  // Sadece hash varsa model seç; yoksa home göster
   const {model,id} = getHash();
   currentModel = (model && models[model]) ? model : null;
 
-  // Update modelSelect UI (if present)
   if (els.modelSelect && currentModel) els.modelSelect.value = currentModel;
 
   renderModelTabs();
   renderSteps();
   renderNotesPanel();
 
-  // Show or hide the home landing based on whether a model is selected
   const home = document.getElementById('homeLanding');
   if (home) home.style.display = currentModel ? 'none' : 'block';
 
-  // If URL had a hash with a step id, show that step (deep link)
+  // Derin link: step id varsa
   if (currentModel && Number.isFinite(id)){
     const vis = getVisibleOrderedSteps();
     const idx = vis.findIndex(s=>s.id===id);
@@ -697,8 +608,10 @@ function renderModels(){
 function renderSteps(){
   if (!currentModel || !models[currentModel] || !Array.isArray(models[currentModel]) || models[currentModel].length===0){
     els.sidebarTitle.textContent='Adımlar';
-    els.stepsList.innerHTML=''; els.linksList.innerHTML='';
-    els.progressBar.style.width='0%'; els.progressBar.title='0% tamamlandı';
+    els.stepsList.innerHTML='';
+    els.linksList.innerHTML='';
+    els.progressBar.style.width='0%';
+    els.progressBar.title='0% tamamlandı';
     renderNotesPanel();
     return;
   }
@@ -717,19 +630,25 @@ function renderSteps(){
     const locked = (idx >= FREE_LIMIT) && !isPremium();
     if (locked) li.classList.add('locked');
 
-    const cb=document.createElement('input'); cb.type='checkbox'; cb.disabled = locked; cb.checked = !!progress[s.id];
+    const cb=document.createElement('input');
+    cb.type='checkbox';
+    cb.disabled = locked;
+    cb.checked = !!progress[s.id];
     if (cb.checked) doneCount++;
 
     cb.addEventListener('click',(e)=>{
       e.stopPropagation();
-      const p = getProgress(currentModel); p[s.id] = !!e.target.checked; setProgress(currentModel,p);
+      const p = getProgress(currentModel);
+      p[s.id] = !!e.target.checked;
+      setProgress(currentModel,p);
       renderSteps();
     });
 
     const title=document.createElement('div'); title.className='title';
     title.textContent = `${s.id}. ${s.title}`;
 
-    li.appendChild(cb); li.appendChild(title);
+    li.appendChild(cb);
+    li.appendChild(title);
     li.addEventListener('click',()=>showStep(s, idx));
     els.stepsList.appendChild(li);
   });
@@ -748,7 +667,9 @@ function nextVisibleAfter(stepId){
 function showStep(step, index){
   const vis = getVisibleOrderedSteps();
   if (!vis.some(s=>s.id===step.id)){
-    const first = vis[0]; if (first) return showStep(first, 0); else return;
+    const first = vis[0];
+    if (first) return showStep(first, 0);
+    return;
   }
 
   els.stepView.innerHTML = '';
@@ -761,7 +682,10 @@ function showStep(step, index){
 
   const sels = getSelections(currentModel);
   if (sels[step.id]){
-    const info=document.createElement('div'); info.className='muted'; info.style.marginTop='4px'; info.textContent=`Seçimin: ${sels[step.id]}`;
+    const info=document.createElement('div');
+    info.className='muted';
+    info.style.marginTop='4px';
+    info.textContent=`Seçimin: ${sels[step.id]}`;
     els.stepView.appendChild(info);
   }
 
@@ -771,7 +695,10 @@ function showStep(step, index){
   if (options.length){
     const optionsWrap=document.createElement('div'); optionsWrap.className='options';
     options.forEach(label=>{
-      const b=document.createElement('button'); b.className='btn option-btn'; b.textContent = label; b.dataset.option=label;
+      const b=document.createElement('button');
+      b.className='btn option-btn';
+      b.textContent = label;
+      b.dataset.option=label;
       if (sels[step.id] === label) b.classList.add('selected');
       if (locked) b.disabled = true;
 
@@ -781,7 +708,9 @@ function showStep(step, index){
         let modalHtml = '';
         const od = (step.optionDetails && step.optionDetails[label]) || null;
         if (od){
-          const p = (arr)=> arr && arr.length ? `<ul style="margin:.4rem 0 .2rem 1rem;">${arr.map(x=>`<li>${x}</li>`).join('')}</ul>` : '<span class="muted">–</span>';
+          const p = (arr)=> arr && arr.length
+            ? `<ul style="margin:.4rem 0 .2rem 1rem;">${arr.map(x=>`<li>${x}</li>`).join('')}</ul>`
+            : '<span class="muted">–</span>';
           modalHtml =
             `<div style="line-height:1.5">
               <div><b>Bilgi:</b> ${od.info || '<span class="muted">–</span>'}</div>
@@ -796,8 +725,12 @@ function showStep(step, index){
         const ok = await openModal(label, modalHtml);
         if (!ok) return;
 
-        const _sels = getSelections(currentModel); _sels[step.id] = label; setSelections(currentModel, _sels);
-        const p = getProgress(currentModel); p[step.id] = true; setProgress(currentModel, p);
+        const _sels = getSelections(currentModel);
+        _sels[step.id] = label;
+        setSelections(currentModel, _sels);
+        const p = getProgress(currentModel);
+        p[step.id] = true;
+        setProgress(currentModel, p);
 
         renderSteps();
         const {next, nextIdx} = nextVisibleAfter(step.id);
@@ -838,7 +771,11 @@ function showStep(step, index){
   });
 
   if (locked){
-    const lock=document.createElement('div'); lock.className='card'; lock.style.marginTop='12px'; lock.style.background='#fff7ed'; lock.style.borderColor='#fdba74';
+    const lock=document.createElement('div');
+    lock.className='card';
+    lock.style.marginTop='12px';
+    lock.style.background='#fff7ed';
+    lock.style.borderColor='#fdba74';
     lock.innerHTML = `<b>Premium Kilit</b><br/>Bu adımı görmek için Premium'a geç.
       <div style="margin-top:8px"><a id="buyPremium" class="btn small primary" href="/premium.html">Premium'a Geç</a></div>`;
     els.stepView.appendChild(lock);
@@ -860,7 +797,10 @@ async function loadDataFiles(){
   }
   renderModels();
   reflectPremiumUI();
-  if (isPremium()){ console.log("Premium aktif! UI güncelleniyor..."); renderSteps(); }
+  if (isPremium()){
+    console.log("Premium aktif! UI güncelleniyor...");
+    renderSteps();
+  }
 }
 
 /* ---- JSON güvenliği (sanitize) ---- */
@@ -885,168 +825,133 @@ function sanitizePlan(obj){
 }
 
 /* ---- Eventler ---- */
-// === REPLACE THE EXISTING DOMContentLoaded BLOCK WITH THIS CORRECTED VERSION ===
 document.addEventListener('DOMContentLoaded', async () => {
-  // Mevcut init adımları
   applyThemeFromSetting();
   ensureModal(); closeModal(false);
   reflectPremiumUI();
   await loadDataFiles();
 
-  // Supabase init & auth handler'larını başlat
+  // Supabase init & auth
   initSupabaseClient();
   setupSupabaseAuthHandlers();
 
-  // Eğer supaSignUpWithEmail fonksiyonu tanımlı değilse (tek yerden tanımlama)
-  if (typeof supaSignUpWithEmail === 'undefined') {
-    async function supaSignUpWithEmail(email, password){
-      if (!supabaseClient) return { error: 'no_client' };
-      try{
-        const res = await supabaseClient.auth.signUp({ email, password });
-        return res;
-      }catch(err){
-        return { error: err };
-      }
-    }
-    // expose to outer scope if needed
-    window.supaSignUpWithEmail = supaSignUpWithEmail;
-  }
-
-  // DOM elemanları (auth modal ve butonlar)
   const loginBtn = document.getElementById('loginBtn');
   const authModal = document.getElementById('authModal');
   const closeAuth = document.getElementById('closeAuth');
 
+  function openAuthModal(){
+    if (!authModal) return;
+    authModal.style.display = 'flex';
+    authModal.style.position = 'fixed';
+    authModal.style.inset = '0';
+    authModal.style.alignItems = 'center';
+    authModal.style.justifyContent = 'center';
+    authModal.style.zIndex = '99999';
+  }
+
   if (loginBtn){
-    loginBtn.addEventListener('click', ()=>{
-        if (authModal) {
-          // gösterirken flex yaparak ortala
-          authModal.style.display = 'flex';
-          authModal.style.position = 'fixed';
-          authModal.style.inset = '0';
-          authModal.style.alignItems = 'center';
-          authModal.style.justifyContent = 'center';
-          authModal.style.zIndex = '99999';
-        }
-      });
+    loginBtn.onclick = openAuthModal;
   }
   if (closeAuth){
-    closeAuth.addEventListener('click', ()=>{ if (authModal) authModal.style.display = 'none'; });
+    closeAuth.onclick = ()=>{ if (authModal) authModal.style.display = 'none'; };
   }
 
-   // --- Home inline auth handlers (add inside DOMContentLoaded handler) ---
-   const homeEmail = document.getElementById('homeEmail');
-   const homePassword = document.getElementById('homePassword');
-   const homeSignUp = document.getElementById('homeSignUp');
-   const homeSignIn = document.getElementById('homeSignIn');
-   const homeGoogle = document.getElementById('homeGoogle');
-   const homeAuthStatus = document.getElementById('homeAuthStatus');
-   
-   function homeSetStatus(txt, isError=false){
-     if (!homeAuthStatus) return;
-     homeAuthStatus.textContent = txt || '';
-     homeAuthStatus.style.color = isError ? '#b00020' : '#0b6f3a';
-   }
-   
-   if (homeSignUp){
-     homeSignUp.addEventListener('click', async ()=>{
-       homeSetStatus('Kayıt oluşturuluyor...');
-       if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
-       const email = (homeEmail?.value || '').trim();
-       const pw = (homePassword?.value || '').trim();
-       if (!email || !pw){ homeSetStatus('Email ve parola gerekli', true); return; }
-       try{
-         const res = await supabaseClient.auth.signUp({ email, password: pw });
-         if (res.error) homeSetStatus('Kayıt hatası: ' + (res.error.message || JSON.stringify(res.error)), true);
-         else homeSetStatus('Kayıt isteği gönderildi. E-postayı onaylayın (varsa).');
-       }catch(e){
-         console.error(e); homeSetStatus('Kayıt sırasında hata', true);
-       }
-     });
-   }
-   
-   if (homeSignIn){
-     // Replace your existing sign-in handler with this robust version
-      homeSignIn.addEventListener('click', async () => {
-        homeSetStatus('Giriş yapılıyor...');
-        if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
-      
-        const email = (homeEmail?.value || '').trim();
-        const pw = (homePassword?.value || '').trim();
-        if (!email || !pw){ homeSetStatus('Email ve parola gerekli', true); return; }
-      
-        try {
-          const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pw });
-      
-          if (error) {
-            homeSetStatus('Giriş hatası: ' + (error.message || JSON.stringify(error)), true);
-            return;
-          }
-      
-          // Eğer access token / session geldi ise
-          // data: { session, user }   (supabase v2)
-          console.log('signin data', data);
-          const session = data?.session ?? await supabaseClient.auth.getSession();
-          const user = data?.user ?? (session?.user ? session.user : null);
-      
-          if (user) {
-            homeSetStatus('Giriş başarılı.');
-            // CLOSE auth UI
-            const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
-            const authModal = document.getElementById('authModal'); if (authModal) authModal.style.display='none';
-      
-            // Update UI immediately (example: change login button)
-            setLoggedInUI(user);
-          } else {
-            homeSetStatus('Oturum oluşturulamadı.', true);
-          }
-        } catch (e) {
-          console.error('signin err', e);
-          homeSetStatus('Giriş sırasında beklenmedik hata', true);
-        }
-      });
-   }
-   
-   // Google OAuth (redirect-based): works after provider is enabled in Supabase
-   if (homeGoogle){
-     homeGoogle.addEventListener('click', async ()=>{
-       homeSetStatus('Google yönlendiriliyor...');
-       if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
-       try{
-         // Supabase JS v2 OAuth
-         await supabaseClient.auth.signInWithOAuth({
-           provider: 'google',
-           options: {
-             // redirectTo optional: you can set to current origin if needed
-             redirectTo: window.location.href
-           }
-         });
-       }catch(e){
-         console.error(e); homeSetStatus('Google ile giriş hatası', true);
-       }
-     });
-   }
+  // Home inline auth
+  const homeEmail = document.getElementById('homeEmail');
+  const homePassword = document.getElementById('homePassword');
+  const homeSignUp = document.getElementById('homeSignUp');
+  const homeSignIn = document.getElementById('homeSignIn');
+  const homeGoogle = document.getElementById('homeGoogle');
+  const homeAuthStatus = document.getElementById('homeAuthStatus');
 
-   // --- Brand (Steplify) click: go to home landing ---
-   const brandEl = document.getElementById('brandLink') || document.querySelector('.topbar .brand');
-   if (brandEl){
-     brandEl.style.cursor = 'pointer';
-     brandEl.addEventListener('click', (e) => {
-       e.preventDefault?.();
-       // reset selection to show home landing
-       currentModel = null;
-       if (els.modelSelect) els.modelSelect.value = '';
-       renderModelTabs();
-       renderSteps();
-       renderNotesPanel();
-       const home = document.getElementById('homeLanding');
-       if (home) home.style.display = 'block';
-       // remove hash so deep-link doesn't immediately reopen a model
-       try { history.replaceState(null, '', location.pathname + location.search); } catch(_) {}
-     });
-   }
-   
-  // Auth form controls
+  function homeSetStatus(txt, isError=false){
+    if (!homeAuthStatus) return;
+    homeAuthStatus.textContent = txt || '';
+    homeAuthStatus.style.color = isError ? '#b00020' : '#0b6f3a';
+  }
+
+  if (homeSignUp){
+    homeSignUp.addEventListener('click', async ()=>{
+      homeSetStatus('Kayıt oluşturuluyor...');
+      if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
+      const email = (homeEmail?.value || '').trim();
+      const pw = (homePassword?.value || '').trim();
+      if (!email || !pw){ homeSetStatus('Email ve parola gerekli', true); return; }
+      try{
+        const { data, error } = await supabaseClient.auth.signUp({ email, password: pw });
+        if (error) homeSetStatus('Kayıt hatası: ' + (error.message || JSON.stringify(error)), true);
+        else homeSetStatus('Kayıt isteği gönderildi. E-postayı onaylayın (varsa).');
+      }catch(e){
+        console.error(e); homeSetStatus('Kayıt sırasında hata', true);
+      }
+    });
+  }
+
+  if (homeSignIn){
+    homeSignIn.addEventListener('click', async ()=>{
+      homeSetStatus('Giriş yapılıyor...');
+      if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
+      const email = (homeEmail?.value || '').trim();
+      const pw = (homePassword?.value || '').trim();
+      if (!email || !pw){ homeSetStatus('Email ve parola gerekli', true); return; }
+
+      try{
+        const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pw });
+        if (error){
+          homeSetStatus('Giriş hatası: ' + (error.message || JSON.stringify(error)), true);
+          return;
+        }
+        const { data: sessionData } = await supabaseClient.auth.getSession();
+        const session = sessionData?.session;
+        const user = data?.user ?? session?.user ?? null;
+
+        if (user){
+          homeSetStatus('Giriş başarılı.');
+          setLoggedInUI(user);
+        } else {
+          homeSetStatus('Oturum oluşturulamadı.', true);
+        }
+      }catch(e){
+        console.error(e);
+        homeSetStatus('Giriş sırasında beklenmedik hata', true);
+      }
+    });
+  }
+
+  if (homeGoogle){
+    homeGoogle.addEventListener('click', async ()=>{
+      homeSetStatus('Google yönlendiriliyor...');
+      if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
+      try{
+        await supabaseClient.auth.signInWithOAuth({
+          provider: 'google',
+          options: { redirectTo: window.location.href }
+        });
+      }catch(e){
+        console.error(e);
+        homeSetStatus('Google ile giriş hatası', true);
+      }
+    });
+  }
+
+  // Brand (Steplify) → home'a dön
+  const brandEl = document.getElementById('brandLink') || document.querySelector('.topbar .brand');
+  if (brandEl){
+    brandEl.style.cursor = 'pointer';
+    brandEl.addEventListener('click', (e)=>{
+      e.preventDefault?.();
+      currentModel = null;
+      if (els.modelSelect) els.modelSelect.value = '';
+      renderModelTabs();
+      renderSteps();
+      renderNotesPanel();
+      const home = document.getElementById('homeLanding');
+      if (home) home.style.display = 'block';
+      try{ history.replaceState(null, '', location.pathname + location.search); }catch(_){}
+    });
+  }
+
+  // Auth modal içi kontroller
   const authEmail = document.getElementById('authEmail');
   const authPassword = document.getElementById('authPassword');
   const authSignUp = document.getElementById('authSignUp');
@@ -1063,14 +968,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (authSignUp){
     authSignUp.addEventListener('click', async ()=>{
       setStatus('Kayıt oluşturuluyor...');
+      if (!supabaseClient){ setStatus('Supabase yüklenmedi.', true); return; }
       try{
         const email = authEmail.value.trim();
         const pw = authPassword.value.trim();
         if (!email || !pw){ setStatus('Email ve parola gerekli', true); return; }
-        const r = await window.supaSignUpWithEmail(email, pw);
-        if (r.error) {
-          // Supabase hata yapısı farklı olabilir, güvenli gösterim
-          setStatus('Kayıt hatası: ' + (r.error.message || JSON.stringify(r.error)), true);
+        const { data, error } = await supabaseClient.auth.signUp({ email, password: pw });
+        if (error){
+          setStatus('Kayıt hatası: ' + (error.message || JSON.stringify(error)), true);
         } else {
           setStatus('Kayıt isteği gönderildi. E-postayı onaylayın (varsa).');
         }
@@ -1082,39 +987,36 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   if (authSignIn){
-     authSignIn.addEventListener('click', async ()=>{
-       setStatus('Giriş yapılıyor...');
-       try{
-         const email = authEmail.value.trim();
-         const pw = authPassword.value.trim();
-         if (!email || !pw){ setStatus('Email ve parola gerekli', true); return; }
-   
-         // doğrudan supabaseClient çağrısı (supaSignInWithEmail wrapper da kullanılabilir)
-         const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pw });
-   
-         if (error){
-           setStatus('Giriş hatası: ' + (error.message || JSON.stringify(error)), true);
-           return;
-         }
-   
-         // session/user al
-         const session = data?.session ?? await supabaseClient.auth.getSession();
-         const user = data?.user ?? session?.user ?? null;
-   
-         if (user){
-           setStatus('Giriş başarılı.');
-           if (authModal) authModal.style.display = 'none';
-           const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
-           setLoggedInUI(user);
-         } else {
-           setStatus('Oturum alınamadı', true);
-         }
-       }catch(e){
-         console.error(e);
-         setStatus('Giriş sırasında hata', true);
-       }
-     });
-   }
+    authSignIn.addEventListener('click', async ()=>{
+      setStatus('Giriş yapılıyor...');
+      if (!supabaseClient){ setStatus('Supabase yüklenmedi.', true); return; }
+      try{
+        const email = authEmail.value.trim();
+        const pw = authPassword.value.trim();
+        if (!email || !pw){ setStatus('Email ve parola gerekli', true); return; }
+
+        const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pw });
+        if (error){
+          setStatus('Giriş hatası: ' + (error.message || JSON.stringify(error)), true);
+          return;
+        }
+        const { data: sessionData } = await supabaseClient.auth.getSession();
+        const session = sessionData?.session;
+        const user = data?.user ?? session?.user ?? null;
+
+        if (user){
+          setStatus('Giriş başarılı.');
+          if (authModal) authModal.style.display = 'none';
+          setLoggedInUI(user);
+        } else {
+          setStatus('Oturum alınamadı', true);
+        }
+      }catch(e){
+        console.error(e);
+        setStatus('Giriş sırasında hata', true);
+      }
+    });
+  }
 
   if (authSignOutBtn){
     authSignOutBtn.addEventListener('click', async ()=>{
@@ -1122,7 +1024,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       try{
         await supaSignOut();
         setStatus('Çıkış yapıldı.');
+        resetLoggedOutUI();
       }catch(e){
+        console.error(e);
         setStatus('Çıkış hatası', true);
       }
     });
@@ -1134,7 +1038,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (lbl && lbl.parentElement) lbl.parentElement.removeChild(lbl);
   }
 
-  // Üst menüye "Notları Sıfırla" butonu ekle (mevcut kodu koru)
+  // Üst menüye "Notları Sıfırla" butonu ekle
   if (els.resetProgress && !document.getElementById('clearNotesBtn')){
     const clearNotesBtn = document.createElement('button');
     clearNotesBtn.id = 'clearNotesBtn';
@@ -1154,57 +1058,60 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   if (els.loadSample){
     els.loadSample.addEventListener('click', ()=>{
-      const names = Object.keys(models); if (!names.length) return alert('Örnekler yüklenemedi. JSON dosyaları bulunamadı.');
+      const names = Object.keys(models);
+      if (!names.length) return alert('Örnekler yüklenemedi. JSON dosyaları bulunamadı.');
       currentModel = names[0];
       if (els.modelSelect) els.modelSelect.value = currentModel;
       renderModelTabs(); renderSteps();
       const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
+      const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
     });
   }
 
-  // Hash changes
+  // Hash değişince
   window.addEventListener('hashchange', ()=>{
-    const {model,id} = getHash(); if (!model || !models[model] || !Number.isFinite(id)) return;
+    const {model,id} = getHash();
+    if (!model || !models[model] || !Number.isFinite(id)) return;
     currentModel = model;
     if (els.modelSelect) els.modelSelect.value = model;
     renderModelTabs(); renderSteps();
-    const vis = getVisibleOrderedSteps(); const idx = vis.findIndex(s=>s.id===id); if (idx>=0) showStep(vis[idx], idx);
+    const vis = getVisibleOrderedSteps();
+    const idx = vis.findIndex(s=>s.id===id);
+    if (idx>=0) showStep(vis[idx], idx);
   });
 
-   // inside DOMContentLoaded handler near end:
-   const exploreBtn = document.getElementById('exploreModelsBtn');
-   if (exploreBtn){
-     exploreBtn.addEventListener('click', ()=>{
-       // açılacak ilk model varsa onu seç
-       const names = Object.keys(models);
-       if (names.length){
-         currentModel = names[0];
-         if (els.modelSelect) els.modelSelect.value = currentModel;
-         renderModelTabs(); renderSteps(); renderNotesPanel();
-         const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
-         const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
-       } else {
-         alert('Henüz model yok.');
-       }
-     });
-   }
-   
-   // open auth modal from home
-   const openFromHome = document.getElementById('openAuthFromHome');
-   if (openFromHome){
-     openFromHome.addEventListener('click', ()=>{
-       const authModal = document.getElementById('authModal');
-       if (authModal) authModal.style.display = 'flex';
-     });
-   }
+  // Home'dan "Modeli Keşfet"
+  const exploreBtn = document.getElementById('exploreModelsBtn');
+  if (exploreBtn){
+    exploreBtn.addEventListener('click', ()=>{
+      const names = Object.keys(models);
+      if (names.length){
+        currentModel = names[0];
+        if (els.modelSelect) els.modelSelect.value = currentModel;
+        renderModelTabs(); renderSteps(); renderNotesPanel();
+        const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
+        const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
+      } else {
+        alert('Henüz model yok.');
+      }
+    });
+  }
+
+  // Home'dan auth modal aç
+  const openFromHome = document.getElementById('openAuthFromHome');
+  if (openFromHome){
+    openFromHome.addEventListener('click', ()=>{
+      openAuthModal();
+    });
+  }
 });
-// === END REPLACEMENT ===
 
 // Model değişimi (fallback: dropdown gizli ama çalışır)
 els.modelSelect.addEventListener('change', e=>{
   currentModel = e.target.value;
   renderModelTabs(); renderSteps(); renderNotesPanel();
   const vis = getVisibleOrderedSteps(); if (vis[0]) showStep(vis[0], 0);
+  const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
 });
 
 // İlerlemeyi sıfırla (seçimler dahil) — notlar ayrı tutulur
@@ -1222,7 +1129,8 @@ if (els.jsonInput){
     const reader=new FileReader();
     reader.onload=()=>{
       try{
-        const raw=JSON.parse(reader.result); const obj=sanitizePlan(raw);
+        const raw=JSON.parse(reader.result);
+        const obj=sanitizePlan(raw);
         if(obj){
           models[obj.model]=obj.steps;
           renderModels();
