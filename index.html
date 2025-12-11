@@ -22,36 +22,64 @@
   </header>
 
   <!-- Home Landing -->
-  <section id="homeLanding" class="home-landing" style="padding:28px 20px; display:block;">
-    <div class="card" style="max-width:980px; margin:12px auto; text-align:left; padding:28px;">
-      <h1 style="margin:0 0 8px 0">Steplify</h1>
-      <p style="margin:0 0 14px 0; color:#334155;">
-        Adım adım iş planları — Affiliate, Dropshipping, YouTube, POD ve daha fazlası. Başlamak için bir model seçebilir veya oturum açabilirsiniz.
-      </p>
-      <div style="display:flex; gap:8px; align-items:center;">
-        <button id="exploreModelsBtn" class="btn primary">Modeli Keşfet</button>
-        <button id="openAuthFromHome" class="btn outline">Giriş / Kayıt</button>
-      </div>
+  <section id="homeLanding" class="home-landing">
+    <div class="home-inner">
+      <!-- Sol tarafta metin -->
+      <div class="home-copy">
+        <div class="eyebrow">Adım adım iş planı oluştur</div>
+        <h1>İş fikrini, net bir plana dönüştür.</h1>
+        <p class="lead">
+          Steplify; Affiliate, Dropshipping, YouTube, POD ve E-ticaret için
+          adım adım yol haritaları oluşturur. Ne zaman ne yapacağını bil,
+          kafan rahat olsun.
+        </p>
 
-      <!-- Inline home auth -->
-      <div id="homeAuth" class="card" style="max-width:420px; margin-top:16px;">
-        <h3 style="margin:0 0 8px 0">Hızlı Giriş / Kayıt</h3>
-        <label for="homeEmail" style="font-size:13px;color:#334155">E-posta</label>
-        <input id="homeEmail" type="email" placeholder="you@example.com" style="width:100%;padding:8px;margin-top:6px;border:1px solid #e6eef6;border-radius:6px" />
-
-        <label for="homePassword" style="font-size:13px;color:#334155;margin-top:8px;display:block">Parola</label>
-        <input id="homePassword" type="password" placeholder="En az 6 karakter" style="width:100%;padding:8px;margin-top:6px;border:1px solid #e6eef6;border-radius:6px" />
-
-        <div style="display:flex; gap:8px; margin-top:10px; align-items:center">
-          <button id="homeSignUp" class="btn small">Kayıt Ol</button>
-          <button id="homeSignIn" class="btn primary small">Giriş Yap</button>
-          <button id="homeGoogle" class="btn outline small">Google ile Giriş</button>
+        <div class="home-cta-row">
+          <button id="exploreModelsBtn" class="btn primary big">
+            Ücretsiz Dene
+          </button>
+          <button id="openAuthFromHome" class="btn outline">
+            Giriş / Kayıt
+          </button>
         </div>
 
-        <div id="homeAuthStatus" style="margin-top:8px; font-size:13px; color:#334155;"></div>
+        <p class="muted small">
+          İlk <strong>5 adım herkese açık</strong>. 6. adımdan itibaren içerik
+          Premium abonelere kilitlenir.
+        </p>
+
+        <div class="home-tags">
+          <span class="tag">Affiliate</span>
+          <span class="tag">Dropshipping</span>
+          <span class="tag">YouTube</span>
+          <span class="tag">Print-on-Demand</span>
+          <span class="tag">E-ticaret</span>
+          <span class="tag">Freelance</span>
+        </div>
+      </div>
+
+      <!-- Sağ tarafta mini “preview” -->
+      <div class="home-preview">
+        <div class="preview-card">
+          <div class="preview-header">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="preview-title">Steplify — Demo plan</span>
+          </div>
+          <ul class="preview-steps">
+            <li class="ok">1. Nişini ve hedefini seç</li>
+            <li class="ok">2. Hedef kitleni netleştir</li>
+            <li class="ok">3. Ürün / teklif fikrini çıkar</li>
+            <li class="ok">4. Trafik kanallarını belirle</li>
+            <li class="ok">5. İlk kampanyanı başlat</li>
+            <li class="locked">6. Gelir optimizasyonu (Premium)</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
+
 
   <main class="layout">
     <aside class="sidebar">
