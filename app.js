@@ -34,6 +34,26 @@ function toggleTheme(){
   try{ localStorage.setItem(THEME_KEY, next); }catch(_){}
   applyThemeFromSetting();
 }
+function setLoggedInUI(user){
+  // örnek: sağ üst login butonunu kullanıcıya dönüştür
+  const loginBtn = document.getElementById('loginBtn');
+  if (loginBtn){
+    loginBtn.textContent = user.email || (user.user_metadata?.full_name || 'Hesabım');
+    loginBtn.classList.remove('outline'); loginBtn.classList.add('primary');
+    // tıklayınca profil/çıkış penceresi açılabilir
+    loginBtn.onclick = async ()=>{
+      // örnek: çıkış fonksiyonu
+      if (confirm('Çıkış yapmak istiyor musunuz?')){
+        await supabaseClient.auth.signOut();
+        // revert UI
+        loginBtn.textContent = 'Giriş / Kayıt';
+        loginBtn.classList.remove('primary'); loginBtn.classList.add('outline');
+        // göster home landing
+        const home = document.getElementById('homeLanding'); if(home) home.style.display='block';
+      }
+    };
+  }
+}
 function renderThemeToggle(){
   const actions = document.querySelector('.topbar .actions');
   if (!actions) return;
@@ -182,7 +202,9 @@ function setupSupabaseAuthHandlers(){
       if (!serverProg || new Date(merged.updated_at) > new Date(serverProg.updated_at || 0)){
         await syncProgressToServer(user.id, merged);
       }
+      setLoggedInUI(user);   // <-- ekle
       // TODO: UI güncellemesi (renderModel gibi çağrı)
+       
     } else {
       // logout: local mod devam eder
       // TODO: UI güncellemesi (render)
@@ -904,25 +926,45 @@ document.addEventListener('DOMContentLoaded', async () => {
    }
    
    if (homeSignIn){
-     homeSignIn.addEventListener('click', async ()=>{
-       homeSetStatus('Giriş yapılıyor...');
-       if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
-       const email = (homeEmail?.value || '').trim();
-       const pw = (homePassword?.value || '').trim();
-       if (!email || !pw){ homeSetStatus('Email ve parola gerekli', true); return; }
-       try{
-         const res = await supabaseClient.auth.signInWithPassword({ email, password: pw });
-         if (res.error) homeSetStatus('Giriş hatası: ' + (res.error.message || JSON.stringify(res.error)), true);
-         else {
-           homeSetStatus('Giriş başarılı.');
-           // modal kullanıyorsan kapat, home'ı gizle ve app state'i güncelle (onAuthStateChange handler zaten var)
-           const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
-           const authModal = document.getElementById('authModal'); if (authModal) authModal.style.display='none';
-         }
-       }catch(e){
-         console.error(e); homeSetStatus('Giriş sırasında hata', true);
-       }
-     });
+     // Replace your existing sign-in handler with this robust version
+      homeSignIn.addEventListener('click', async () => {
+        homeSetStatus('Giriş yapılıyor...');
+        if (!supabaseClient){ homeSetStatus('Supabase yüklenmedi.', true); return; }
+      
+        const email = (homeEmail?.value || '').trim();
+        const pw = (homePassword?.value || '').trim();
+        if (!email || !pw){ homeSetStatus('Email ve parola gerekli', true); return; }
+      
+        try {
+          const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: pw });
+      
+          if (error) {
+            homeSetStatus('Giriş hatası: ' + (error.message || JSON.stringify(error)), true);
+            return;
+          }
+      
+          // Eğer access token / session geldi ise
+          // data: { session, user }   (supabase v2)
+          console.log('signin data', data);
+          const session = data?.session ?? await supabaseClient.auth.getSession();
+          const user = data?.user ?? (session?.user ? session.user : null);
+      
+          if (user) {
+            homeSetStatus('Giriş başarılı.');
+            // CLOSE auth UI
+            const home = document.getElementById('homeLanding'); if (home) home.style.display='none';
+            const authModal = document.getElementById('authModal'); if (authModal) authModal.style.display='none';
+      
+            // Update UI immediately (example: change login button)
+            setLoggedInUI(user);
+          } else {
+            homeSetStatus('Oturum oluşturulamadı.', true);
+          }
+        } catch (e) {
+          console.error('signin err', e);
+          homeSetStatus('Giriş sırasında beklenmedik hata', true);
+        }
+      });
    }
    
    // Google OAuth (redirect-based): works after provider is enabled in Supabase
