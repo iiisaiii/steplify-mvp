@@ -244,7 +244,23 @@ function setLoggedInUI(user){
     }
   }catch(_){}
 }
-
+// --- add this after supaSignOut() ---
+function setLoggedInUI(user){
+  try{
+    const loginBtn = document.getElementById('loginBtn');
+    if (!loginBtn) return;
+    loginBtn.textContent = user?.user_metadata?.full_name || user?.email || 'Hesabım';
+    loginBtn.classList.remove('outline'); loginBtn.classList.add('primary');
+    loginBtn.onclick = async () => {
+      if (!confirm('Çıkış yapmak istiyor musunuz?')) return;
+      await supaSignOut();
+      loginBtn.textContent = 'Giriş / Kayıt';
+      loginBtn.classList.remove('primary'); loginBtn.classList.add('outline');
+      // show home landing again
+      const home = document.getElementById('homeLanding'); if (home) home.style.display = 'block';
+    };
+  }catch(_){}
+}
 
 /* Başlatma örneği: DOMContentLoaded içinde veya app başlangıcında çağır
    initSupabaseClient();
